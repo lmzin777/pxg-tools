@@ -1,9 +1,31 @@
-O comando para atualizar é o mesmo
+# PXG Tools
 
-Sempre que alterar algo:
+PXG Tools is a Python utility designed to help with calculations and useful information related to the PXG project.
 
-python -m PyInstaller --onefile --name PXGTools pxg.py
+## What the project does
 
-Ele vai sobrescrever os arquivos da pasta build e gerar um novo .exe em:
+The program offers several interactive tools, including:
 
-dist/PXGTools.exe
+- Lucky Drop Chance calculation
+- Average balls calculation
+- Ball type lookup
+- Boost calculator
+- Type effectiveness lookup
+- Boost table lookup
+
+## Requirements
+
+- Python 3.8 or higher
+
+## How to run
+
+In the project directory, run:
+
+```bash
+python pxg.py
+```
+
+## Notes
+
+- The project already supports types in both Portuguese and English.
+- When updating the program, the build files will be overwritten.

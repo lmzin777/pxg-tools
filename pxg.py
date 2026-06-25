@@ -1381,8 +1381,31 @@ def print_ball_types():
     print("\n===================================================")
     print("                 BALL TYPES")
     print("===================================================\n")
-    for ball, types in BALLS_DISPLAY_TYPES.items():
-        print(f"{ball}: {', '.join(types)}")
+
+    ball_catalog = [
+        ("Poké Ball", "Universal", "1x Rate"),
+        ("Great Ball", "Universal", "2x Rate"),
+        ("Super Ball", "Universal", "3x Rate"),
+        ("Ultra Ball", "Universal", "4x Rate"),
+        ("Moon Ball", "Dark or Ghost", "5x Rate"),
+        ("Tinker Ball", "Electric or Steel", "5x Rate"),
+        ("Sora Ball", "Ice or Flying", "5x Rate"),
+        ("Dusk Ball", "Rock or Fighting", "5x Rate"),
+        ("Yume Ball", "Normal or Psychic", "5x Rate"),
+        ("Tale Ball", "Dragon, Fairy or Crystal", "5x Rate"),
+        ("Net Ball", "Bug or Water", "5x Rate"),
+        ("Janguru Ball", "Poison or Grass", "5x Rate"),
+        ("Magu Ball", "Fire or Ground", "5x Rate"),
+        ("Fast Ball", "FAST Pokémon", "5x Rate"),
+        ("Heavy Ball", "HEAVY Pokémon", "5x Rate"),
+        ("Premier Ball", "Universal + Free Aura", "4x Rate"),
+        ("Nightmare Ball", "Nightmare World", "6x Rate"),
+        ("Beast Ball", "Pokémon without capture facilitation", "10x Rate"),
+    ]
+
+    for ball_name, best_for, rate in ball_catalog:
+        print(f"{ball_name} - {best_for} - {rate}")
+
     print("\n===================================================\n")
 
 
@@ -1451,11 +1474,13 @@ def format_number(number):
 
 
 def format_cost(cost):
-    if cost >= 1000:
-        return f"{format_number(cost / 1000)} KK"
+    amount = abs(cost)
 
-    if cost > 0:
-        return f"{round(cost)} K"
+    if amount >= 1_000:
+        return f"{format_number(amount / 1_000)} KK"
+
+    if amount > 0:
+        return f"{round(amount)} K"
 
     return "0 K"
 
@@ -1638,8 +1663,11 @@ def boost_calculator():
     current_boost = int(input("\nEnter current boost: "))
     target_boost = int(input("Enter desired boost: "))
 
-    stone_price = normalize_price(float(input("\nEnter the stone price: ")))
-    boost_stone_price = normalize_price(float(input("Enter the Boost Stone price: ")))
+    raw_stone_price = float(input("\nEnter the stone price: "))
+    raw_boost_stone_price = float(input("Enter the Boost Stone price: "))
+
+    stone_price = normalize_price(raw_stone_price)
+    boost_stone_price = normalize_price(raw_boost_stone_price)
 
     if boost_type not in boost_tables:
         print("\nInvalid boost.\n")
@@ -1737,24 +1765,35 @@ def menu():
 
             print("\n----------------------------------------------------------")
 
-            luckys = [0.1, 0.2, 0.35, 0.5, 0.8, 1.0, 1.5]
+            lucky_levels = [
+                (1, 0.1),
+                (2, 0.2),
+                (3, 0.35),
+                (4, 0.5),
+                (5, 0.65),
+                (6, 0.8),
+                (7, 1.0),
+                (9, 1.5),
+            ]
 
             elixir_p = 0.2
             elixir_g = 0.8
 
             if elixir == "1":
 
-                for l, mult in enumerate(luckys, start=1):
-
-                    print(f"Lucky {l}: " f"{round(drop_percentage * (1 + mult), 2)}")
+                for lucky_level, mult in lucky_levels:
 
                     print(
-                        f"Lucky {l} +20%: "
+                        f"Lucky {lucky_level}: {round(drop_percentage * (1 + mult), 2)}"
+                    )
+
+                    print(
+                        f"Lucky {lucky_level} +20%: "
                         f"{round(drop_percentage * (1 + (mult + elixir_p)), 2)}"
                     )
 
                     print(
-                        f"Lucky {l} +80%: "
+                        f"Lucky {lucky_level} +80%: "
                         f"{round(drop_percentage * (1 + (mult + elixir_g)), 2)}\n"
                     )
 
@@ -1762,9 +1801,11 @@ def menu():
 
             else:
 
-                for l, mult in enumerate(luckys, start=1):
+                for lucky_level, mult in lucky_levels:
 
-                    print(f"Lucky {l}: " f"{round(drop_percentage * (1 + mult), 2)}\n")
+                    print(
+                        f"Lucky {lucky_level}: {round(drop_percentage * (1 + mult), 2)}\n"
+                    )
 
         # =================================================
         # 2 - Average Balls
@@ -1784,10 +1825,12 @@ def menu():
             chosen_ball, detected_type = find_ball_by_type(pokemon_type)
 
             if not chosen_ball:
-                chosen_ball = "Ball Elemental"
+                chosen_ball = "Elemental Ball"
                 detected_type = pokemon_type
 
-            pokeball_price = int(input(f"\n\tEnter the price of {chosen_ball}: "))
+            elemental_ball_price = int(
+                input(f"\n\tEnter the Elemental Ball Price of {chosen_ball}: ")
+            )
 
             elemental_average = 2 * (npc_price / elemental)
             ub_average = 2 * (npc_price / ub)
@@ -1798,7 +1841,7 @@ def menu():
                 f"(${math.ceil((ub_average * ub) / 1000)}k) "
                 f"or "
                 f"{math.ceil(elemental_average)} {chosen_ball} (type: {detected_type}) "
-                f"(${math.ceil((elemental_average * pokeball_price) / 1000)}k)\n"
+                f"(${math.ceil((elemental_average * elemental_ball_price) / 1000)}k)\n"
             )
 
             print("\n----------------------------------------------------------")

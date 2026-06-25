@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PXG Tools</title>
+    <meta
+      name="description"
+      content="A compact PXG utility dashboard for calculations, references, and planning."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark"></span>
+        <span>PXG Tools</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">PXG utility dashboard</p>
+          <h1>A clean workspace for PXG Tools.</h1>
+          <p class="hero-text">
+            Keep catch planning, boost costs, type checks, and reference tables in one simple place.
+          </p>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-header">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="panel-content">
+            <div class="panel-card">
+              <p class="panel-label">Available tools</p>
+              <h3>6 interactive panels</h3>
+              <p>Choose a panel below to calculate, compare, or check the reference you need.</p>
+              <ul class="tool-summary">
+                <li>Lucky Drop Chance for quick drop-rate checks.</li>
+                <li>Average Balls to estimate capture resources.</li>
+                <li>Ball Types to review best uses and catch rates.</li>
+                <li>Boost Calculator for common and boost stone costs.</li>
+                <li>Type Chart for attack effectiveness matchups.</li>
+                <li>Boost Table for stone requirements by level.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-title">
+          <p class="eyebrow">Available tools</p>
+          <h2>Select a panel to open it.</h2>
+        </div>
+
+        <div class="feature-list" role="tablist" aria-label="PXG tool panels">
+          <button class="feature-item active" data-target="lucky">1. Lucky Drop Chance</button>
+          <button class="feature-item" data-target="average">2. Average Balls</button>
+          <button class="feature-item" data-target="ball-types">3. Ball Types</button>
+          <button class="feature-item" data-target="boost-calc">4. Boost Calculator</button>
+          <button class="feature-item" data-target="effectiveness">5. Type Chart</button>
+          <button class="feature-item" data-target="boost-table">6. Boost Table</button>
+        </div>
+
+        <div class="feature-panels">
+          <section class="feature-panel active" id="panel-lucky">
+            <form id="lucky-form" class="tool-form">
+              <label>
+                Drop percentage
+                <input name="dropPercentage" type="number" step="0.01" min="0" required />
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" name="hasElixir" />
+                Use Elixir
+              </label>
+              <button type="submit">Calculate</button>
+            </form>
+            <div id="lucky-result" class="result-box"></div>
+          </section>
+
+          <section class="feature-panel" id="panel-average">
+            <form id="average-form" class="tool-form">
+              <label>
+                NPC price
+                <input name="npcPrice" type="number" min="0" required />
+              </label>
+              <label>
+                Pokémon type
+                <input name="pokemonType" type="text" placeholder="Fire, Fogo, Water..." required />
+              </label>
+              <label>
+                Elemental Ball Price
+                <input name="elementalBallPrice" type="number" min="0" required />
+              </label>
+              <button type="submit">Calculate</button>
+            </form>
+            <div id="average-result" class="result-box"></div>
+          </section>
+
+          <section class="feature-panel" id="panel-ball-types">
+            <div class="ball-guide">
+              <div id="ball-catalog" class="ball-catalog"></div>
+            </div>
+          </section>
+
+          <section class="feature-panel" id="panel-boost-calc">
+            <form id="boost-form" class="tool-form">
+              <label>
+                Boost type
+                <select name="boostType">
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="50">50</option>
+                </select>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" name="useSpecial" />
+                Use special stone
+              </label>
+              <label>
+                Current boost
+                <input name="currentBoost" type="number" min="0" max="50" required />
+              </label>
+              <label>
+                Desired boost
+                <input name="targetBoost" type="number" min="0" max="50" required />
+              </label>
+              <label>
+                Stone price
+                <input name="stonePrice" type="number" step="0.01" min="0" required />
+              </label>
+              <label>
+                Boost stone price
+                <input name="boostStonePrice" type="number" step="0.01" min="0" required />
+              </label>
+              <button type="submit">Calculate</button>
+            </form>
+            <div id="boost-result" class="result-box"></div>
+          </section>
+
+          <section class="feature-panel" id="panel-effectiveness">
+            <form id="effectiveness-form" class="tool-form">
+              <label>
+                Type(s)
+                <input name="typeInput" type="text" placeholder="Fire, Ground / Water, Ice" required />
+              </label>
+              <button type="submit">Check type chart</button>
+            </form>
+            <div id="effectiveness-result" class="result-box"></div>
+          </section>
+
+          <section class="feature-panel" id="panel-boost-table">
+            <form id="boost-table-form" class="tool-form">
+              <label>
+                Boost type
+                <select name="boostType">
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="50">50</option>
+                </select>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" name="useSpecial" />
+                Use special stone
+              </label>
+              <button type="submit">Show table</button>
+            </form>
+            <div id="boost-table-result" class="result-box"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>PXG Tools - Utility dashboard</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
