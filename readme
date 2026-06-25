@@ -1,0 +1,9 @@
+O comando para atualizar é o mesmo
+
+Sempre que alterar algo:
+
+python -m PyInstaller --onefile --name PXGTools pxg.py
+
+Ele vai sobrescrever os arquivos da pasta build e gerar um novo .exe em:
+
+dist/PXGTools.exe
