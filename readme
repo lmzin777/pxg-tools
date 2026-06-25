@@ -29,3 +29,39 @@ python pxg.py
 
 - The project already supports types in both Portuguese and English.
 - When updating the program, the build files will be overwritten.
+
+
+
+PT-BR
+
+# PXG Tools
+
+PXG Tools é uma ferramenta desenvolvida em Python para auxiliar em cálculos e na consulta de informações úteis relacionadas ao projeto PXG.
+
+## Funcionalidades
+
+O programa oferece diversas ferramentas interativas, incluindo:
+
+* Cálculo da chance de Lucky Drop
+* Cálculo da média de balls
+* Consulta de tipos de balls
+* Calculadora de boost
+* Consulta de efetividade de tipos
+* Consulta da tabela de boosts
+
+## Requisitos
+
+* Python 3.8 ou superior
+
+## Como executar
+
+No diretório do projeto, execute:
+
+```bash
+python pxg.py
+```
+
+## Observações
+
+* O projeto já oferece suporte aos tipos em português e inglês.
+* Ao atualizar o programa, os arquivos de build serão sobrescritos.
