@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --primary: #648181;
   --primary-dark: #4b6868;
   --bg: #071111;
@@ -76,7 +76,7 @@ body {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
   align-items: center;
-  padding: 4rem 5vw 2.5rem;
+  padding: 2.8rem 5vw 2rem;
 }
 
 .eyebrow {
@@ -112,7 +112,7 @@ body {
 
 .hero-panel {
   padding: 1.2rem;
-  border-radius: 24px;
+  border-radius: 18px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(100, 129, 129, 0.1));
 }
 
@@ -216,6 +216,18 @@ body {
   gap: 0.9rem;
   align-items: end;
 }
+.average-form {
+  grid-template-columns: minmax(180px, 0.9fr) repeat(2, minmax(180px, 1fr));
+}
+
+.average-form .price-field {
+  max-width: 320px;
+}
+
+.average-form .form-actions {
+  grid-column: span 2;
+  align-self: end;
+}
 
 .tool-form label {
   display: flex;
@@ -281,6 +293,27 @@ input[type="number"] {
   align-items: center;
   gap: 0.55rem;
 }
+.form-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 0.55rem;
+}
+
+.form-actions button {
+  flex: 1 1 auto;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: var(--border) !important;
+  color: var(--muted) !important;
+}
+
+.secondary-button:hover {
+  color: var(--text) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
 
 .result-box {
   margin-top: 1rem;
@@ -293,6 +326,98 @@ input[type="number"] {
 
 .result-box.compact {
   font-size: 0.95rem;
+}
+.result-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.average-result-list {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+}
+
+
+.muted-inline {
+  color: var(--muted);
+}
+
+.ball-inline-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ball-inline-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.ball-icon-shell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.effectiveness-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.effectiveness-card {
+  min-width: 0;
+  padding: 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.effectiveness-card h3 {
+  margin: 0 0 0.65rem;
+  color: var(--primary);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.effectiveness-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.effectiveness-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.multiplier-pill {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.empty-state {
+  color: var(--muted);
 }
 
 .result-table {
@@ -316,6 +441,39 @@ input[type="number"] {
   text-transform: uppercase;
 }
 
+.type-summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.55rem;
+}
+
+.type-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  margin-right: 0.55rem;
+  vertical-align: middle;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.type-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  object-fit: contain;
+}
+
+.type-separator {
+  color: var(--muted);
+  font-weight: 700;
+  margin-right: 0.55rem;
+}
+
 .panel-caption {
   margin: 0 0 1rem;
   color: var(--muted);
@@ -324,13 +482,14 @@ input[type="number"] {
 .ball-catalog {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
+  gap: 0.65rem;
 }
 
 .ball-card {
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 64px;
   padding: 0.9rem 1rem;
   border-radius: 14px;
   border: 1px solid var(--border);
@@ -339,7 +498,22 @@ input[type="number"] {
   text-align: left;
 }
 
-.ball-card span {
+.ball-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  image-rendering: auto;
+  object-fit: contain;
+}
+
+.ball-card-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.ball-card-copy span {
   color: var(--muted);
   font-size: 0.92rem;
 }
@@ -366,15 +540,40 @@ input[type="number"] {
   .tool-summary {
     grid-template-columns: 1fr;
   }
-}
 
+  .average-form {
+    grid-template-columns: 1fr;
+  }
+
+  .average-form .price-field,
+  .average-form .form-actions {
+    max-width: none;
+    grid-column: auto;
+  }
+}
 @media (max-width: 640px) {
   .topbar {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.65rem;
   }
 
   .feature-list {
     grid-template-columns: 1fr;
   }
+
+  .effectiveness-grid,
+  .ball-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
 }
+
+
+
+
+
+
+

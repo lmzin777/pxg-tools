@@ -1,4 +1,4 @@
-const featureButtons = document.querySelectorAll('.feature-item');
+﻿const featureButtons = document.querySelectorAll('.feature-item');
 const panels = document.querySelectorAll('.feature-panel');
 
 featureButtons.forEach((button) => {
@@ -535,12 +535,12 @@ const TYPE_ALIASES = {
   fogo: 'Fire',
   water: 'Water',
   agua: 'Water',
-  água: 'Water',
+  'água': 'Water',
   grass: 'Grass',
   planta: 'Grass',
   electric: 'Electric',
   eletrico: 'Electric',
-  elétrico: 'Electric',
+  'elétrico': 'Electric',
   ice: 'Ice',
   gelo: 'Ice',
   fighting: 'Fighting',
@@ -552,7 +552,7 @@ const TYPE_ALIASES = {
   flying: 'Flying',
   voador: 'Flying',
   psychic: 'Psychic',
-  psíquico: 'Psychic',
+  'psíquico': 'Psychic',
   psiquico: 'Psychic',
   bug: 'Bug',
   inseto: 'Bug',
@@ -562,7 +562,7 @@ const TYPE_ALIASES = {
   fantasma: 'Ghost',
   dragon: 'Dragon',
   dragao: 'Dragon',
-  dragão: 'Dragon',
+  'dragão': 'Dragon',
   dark: 'Dark',
   noturno: 'Dark',
   steel: 'Steel',
@@ -572,6 +572,64 @@ const TYPE_ALIASES = {
   crystal: 'Crystal',
   cristal: 'Crystal',
 };
+
+const TYPE_ICON_FILES = {
+  Fighting: '01_fighting_circle.png',
+  Psychic: '02_psychic_circle.png',
+  Poison: '03_poison_circle.png',
+  Dragon: '04_dragon_circle.png',
+  Ghost: '05_ghost_circle.png',
+  Dark: '06_dark_circle.png',
+  Ground: '07_ground_circle.png',
+  Fire: '08_fire_circle.png',
+  Fairy: '09_fairy_circle.png',
+  Water: '10_water_circle.png',
+  Flying: '11_flying_circle.png',
+  Normal: '12_normal_circle.png',
+  Rock: '13_rock_circle.png',
+  Electric: '14_electric_circle.png',
+  Bug: '15_bug_circle.png',
+  Grass: '16_grass_circle.png',
+  Ice: '17_ice_circle.png',
+  Steel: '18_steel_circle.png',
+  Crystal: '19_crystal_circle.png',
+};
+
+
+const TYPE_OPTIONS = Object.keys(TYPE_EFFECTIVENESS);
+
+function populateTypeSelects() {
+  document.querySelectorAll('[data-type-select]').forEach((select) => {
+    const existingValue = select.value;
+    const isOptional = select.hasAttribute('data-optional-type');
+    select.innerHTML = isOptional ? '<option value="">None</option>' : '';
+
+    TYPE_OPTIONS.forEach((type) => {
+      const option = document.createElement('option');
+      option.value = type;
+      option.textContent = type;
+      select.appendChild(option);
+    });
+
+    if (existingValue) {
+      select.value = existingValue;
+    }
+  });
+}
+function renderTypeLabel(type) {
+  const iconFile = TYPE_ICON_FILES[type];
+
+  if (!iconFile) {
+    return `<span class="type-label">${type}</span>`;
+  }
+
+  return `
+    <span class="type-label">
+      <img class="type-icon" src="assets/type-icons/${iconFile}" alt="${type} type icon" loading="lazy">
+      <span>${type}</span>
+    </span>
+  `;
+}
 
 const BOOST_TABLES = {
   '2': {
@@ -1307,16 +1365,18 @@ const BOOST_TABLES = {
 };
 
 function parseDefenseTypes(typeInput) {
-  const tokens = String(typeInput || '')
-    .split(/[\/,]/)
-    .map((token) => token.trim())
-    .filter(Boolean);
+  const tokens = Array.isArray(typeInput)
+    ? typeInput.map((token) => String(token || '').trim()).filter(Boolean)
+    : String(typeInput || '')
+      .split(/[\/,]/)
+      .map((token) => token.trim())
+      .filter(Boolean);
 
   if (!tokens.length || tokens.length > 2) {
     return null;
   }
 
-  const parsed = tokens.map((token) => TYPE_ALIASES[normalizeText(token)] || null);
+  const parsed = tokens.map((token) => TYPE_ALIASES[normalizeText(token)] || (TYPE_EFFECTIVENESS[token] ? token : null));
   if (parsed.some((value) => !value)) {
     return null;
   }
@@ -1354,12 +1414,12 @@ function getDisplayType(typeInput) {
     fogo: 'Fire',
     water: 'Water',
     agua: 'Water',
-    água: 'Water',
+    'água': 'Water',
     grass: 'Grass',
     planta: 'Grass',
     electric: 'Electric',
     eletrico: 'Electric',
-    elétrico: 'Electric',
+    'elétrico': 'Electric',
     ice: 'Ice',
     gelo: 'Ice',
     fighting: 'Fighting',
@@ -1371,7 +1431,7 @@ function getDisplayType(typeInput) {
     flying: 'Flying',
     voador: 'Flying',
     psychic: 'Psychic',
-    psíquico: 'Psychic',
+    'psíquico': 'Psychic',
     psiquico: 'Psychic',
     bug: 'Bug',
     inseto: 'Bug',
@@ -1381,7 +1441,7 @@ function getDisplayType(typeInput) {
     fantasma: 'Ghost',
     dragon: 'Dragon',
     dragao: 'Dragon',
-    dragão: 'Dragon',
+    'dragão': 'Dragon',
     dark: 'Dark',
     noturno: 'Dark',
     steel: 'Steel',
@@ -1417,11 +1477,11 @@ function getElementalBallByType(typeInput) {
     lutador: 'Dusk Ball',
     normal: 'Yume Ball',
     psychic: 'Yume Ball',
-    psíquico: 'Yume Ball',
+    'psíquico': 'Yume Ball',
     psiquico: 'Yume Ball',
     dragon: 'Tale Ball',
     dragao: 'Tale Ball',
-    dragão: 'Tale Ball',
+    'dragão': 'Tale Ball',
     fairy: 'Tale Ball',
     fada: 'Tale Ball',
     crystal: 'Tale Ball',
@@ -1480,21 +1540,39 @@ function buildAverageResult(data) {
   const elemental = 250;
   const ub = 130;
   const elementalAverage = 2 * (data.npcPrice / elemental);
-  const ubAverage = 2 * (data.npcPrice / ub);
-  const chosenBall = getElementalBallByType(data.pokemonType);
-  const displayType = getDisplayType(data.pokemonType);
-  const ubCost = Math.ceil((ubAverage * ub) / 1000);
-  const elementalCost = Math.ceil((elementalAverage * data.elementalBallPrice) / 1000);
+  const ultraAverage = 2 * (data.npcPrice / ub);
+  const ultraCost = Math.ceil((ultraAverage * ub) / 1000);
+  const primaryElementalPrice = Number(data.elementalBallPrice) || 0;
+  const secondaryElementalPrice = Number(data.secondaryElementalBallPrice) || primaryElementalPrice;
+  const selectedTypes = [data.pokemonType, data.secondaryPokemonType]
+    .map((type) => getDisplayType(type))
+    .filter((type, index, list) => type && list.indexOf(type) === index);
+
+  const elementalRows = selectedTypes.map((type, index) => {
+    const chosenBall = getElementalBallByType(type);
+    const ballPrice = index === 0 ? primaryElementalPrice : secondaryElementalPrice;
+    const elementalCost = Math.ceil((elementalAverage * ballPrice) / 1000);
+
+    return `
+      <div class="result-line">
+        ${renderBallLabel(chosenBall)}: ${Math.ceil(elementalAverage)} average
+        <span class="muted-inline">- type: ${renderTypeLabel(type)}</span>
+        (${formatMoneyLabel(elementalCost * 1000)})
+      </div>
+    `;
+  }).join('');
 
   return `
-    <strong>You will need approximately</strong><br>
-    ${Math.ceil(ubAverage)} UB/PB (${formatMoneyLabel(ubCost * 1000)})<br>
-    ${Math.ceil(elementalAverage)} ${chosenBall} (type: ${displayType}) (${formatMoneyLabel(elementalCost * 1000)})
+    <strong>Average capture estimate</strong>
+    <div class="average-result-list">
+      <div class="result-line">${renderBallLabel('Ultra Ball')}: ${Math.ceil(ultraAverage)} average (${formatMoneyLabel(ultraCost * 1000)})</div>
+      ${elementalRows}
+    </div>
   `;
 }
 
 const ballCatalogData = [
-  { name: 'Poké Ball', bestFor: 'Universal', rate: '1x Rate' },
+  { name: 'Poke Ball', bestFor: 'Universal', rate: '1x Rate' },
   { name: 'Great Ball', bestFor: 'Universal', rate: '2x Rate' },
   { name: 'Super Ball', bestFor: 'Universal', rate: '3x Rate' },
   { name: 'Ultra Ball', bestFor: 'Universal', rate: '4x Rate' },
@@ -1507,12 +1585,46 @@ const ballCatalogData = [
   { name: 'Net Ball', bestFor: 'Bug or Water', rate: '5x Rate' },
   { name: 'Janguru Ball', bestFor: 'Poison or Grass', rate: '5x Rate' },
   { name: 'Magu Ball', bestFor: 'Fire or Ground', rate: '5x Rate' },
-  { name: 'Fast Ball', bestFor: 'FAST Pokémon', rate: '5x Rate' },
-  { name: 'Heavy Ball', bestFor: 'HEAVY Pokémon', rate: '5x Rate' },
+  { name: 'Fast Ball', bestFor: 'Fast Pokemon', rate: '5x Rate' },
+  { name: 'Heavy Ball', bestFor: 'Heavy Pokemon', rate: '5x Rate' },
   { name: 'Premier Ball', bestFor: 'Universal + Free Aura', rate: '4x Rate' },
   { name: 'Nightmare Ball', bestFor: 'Nightmare World', rate: '6x Rate' },
-  { name: 'Beast Ball', bestFor: 'Pokémon without capture facilitation', rate: '10x Rate' },
+  { name: 'Beast Ball', bestFor: 'Pokemon without capture facilitation', rate: '10x Rate' },
 ];
+const BALL_ICON_FILES = {
+  'Poke Ball': 'poke-ball.png',
+  'Great Ball': 'great-ball.png',
+  'Super Ball': 'super-ball.png',
+  'Ultra Ball': 'ultra-ball.png',
+  'Moon Ball': 'moon-ball.png',
+  'Tinker Ball': 'tinker-ball.png',
+  'Sora Ball': 'sora-ball.png',
+  'Dusk Ball': 'dusk-ball.png',
+  'Yume Ball': 'yume-ball.png',
+  'Tale Ball': 'tale-ball.png',
+  'Net Ball': 'net-ball.png',
+  'Janguru Ball': 'janguru-ball.png',
+  'Magu Ball': 'magu-ball.png',
+  'Fast Ball': 'fast-ball.png',
+  'Heavy Ball': 'heavy-ball.png',
+  'Premier Ball': 'premier-ball.png',
+  'Nightmare Ball': 'nightmare-ball.png',
+  'Beast Ball': 'beast-ball.png',
+};
+function renderBallLabel(ballName) {
+  const iconFile = BALL_ICON_FILES[ballName];
+
+  if (!iconFile) {
+    return `<span class="ball-inline-label">${ballName}</span>`;
+  }
+
+  return `
+    <span class="ball-inline-label">
+      <img class="ball-inline-icon" src="assets/ball-icons/${iconFile}" alt="${ballName} icon" loading="lazy">
+      <span>${ballName}</span>
+    </span>
+  `;
+}
 
 function renderBallCatalog() {
   const container = document.getElementById('ball-catalog');
@@ -1526,7 +1638,14 @@ function renderBallCatalog() {
   ballCatalogData.forEach((ball) => {
     const card = document.createElement('div');
     card.className = 'ball-card';
-    card.innerHTML = `<strong>${ball.name}</strong><span>${ball.bestFor} - ${ball.rate}</span>`;
+    const iconFile = BALL_ICON_FILES[ball.name];
+    card.innerHTML = `
+      ${iconFile ? `<span class="ball-icon-shell"><img class="ball-icon" src="assets/ball-icons/${iconFile}" alt="${ball.name} icon" loading="lazy"></span>` : ''}
+      <span class="ball-card-copy">
+        <strong>${ball.name}</strong>
+        <span>${ball.bestFor} - ${ball.rate}</span>
+      </span>
+    `;
     container.appendChild(card);
   });
 }
@@ -1569,7 +1688,7 @@ function buildBoostResult(data) {
 function buildEffectivenessResult(typeInput) {
   const defenseTypes = parseDefenseTypes(typeInput);
   if (!defenseTypes) {
-    return 'Enter one or two valid types such as Fire, Ground or Water, Ice.';
+    return 'Choose one or two valid defense types.';
   }
 
   const results = Object.entries(TYPE_EFFECTIVENESS)
@@ -1587,28 +1706,33 @@ function buildEffectivenessResult(typeInput) {
     })
     .sort((left, right) => right.multiplier - left.multiplier || left.attackType.localeCompare(right.attackType));
 
-  const effectiveTypes = results.filter((entry) => entry.multiplier > 1).map((entry) => entry.attackType);
-  const rows = results.map((entry) => `
-    <tr>
-      <td>${entry.attackType}</td>
-      <td>${formatMultiplier(entry.multiplier)}</td>
-      <td>${entry.category}</td>
-    </tr>
+  const groups = [
+    { title: 'Super effective', entries: results.filter((entry) => entry.multiplier > 1) },
+    { title: 'Normal damage', entries: results.filter((entry) => entry.multiplier === 1) },
+    { title: 'Ineffective', entries: results.filter((entry) => entry.multiplier > 0 && entry.multiplier < 1) },
+    { title: 'No effect', entries: results.filter((entry) => entry.multiplier === 0) },
+  ];
+
+  const defenseTypeLabels = defenseTypes.map(renderTypeLabel).join('<span class="type-separator">/</span>');
+  const groupCards = groups.map((group) => `
+    <section class="effectiveness-card">
+      <h3>${group.title}</h3>
+      <div class="effectiveness-list">
+        ${group.entries.length
+          ? group.entries.map((entry) => `
+            <span class="effectiveness-pill">
+              ${renderTypeLabel(entry.attackType)}
+              <span class="multiplier-pill">${formatMultiplier(entry.multiplier)}</span>
+            </span>
+          `).join('')
+          : '<span class="empty-state">None</span>'}
+      </div>
+    </section>
   `).join('');
 
   return `
-    <strong>Defense type:</strong> ${defenseTypes.join(' / ')}<br>
-    <strong>Most effective attack types:</strong> ${effectiveTypes.length ? effectiveTypes.join(', ') : 'None'}<br><br>
-    <table class="result-table">
-      <thead>
-        <tr>
-          <th>Attack</th>
-          <th>Multiplier</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>
-    </table>
+    <div class="type-summary-row"><strong>Defense type:</strong> ${defenseTypeLabels}</div>
+    <div class="effectiveness-grid">${groupCards}</div>
   `;
 }
 
@@ -1648,6 +1772,73 @@ function buildBoostTableResult(boostType, useSpecial) {
   `;
 }
 
+function formStorageKey(form) {
+  return `pxg-tools:${form.id}`;
+}
+
+function formToObject(form) {
+  const data = {};
+  Array.from(form.elements).forEach((field) => {
+    if (!field.name) {
+      return;
+    }
+    data[field.name] = field.type === 'checkbox' ? field.checked : field.value;
+  });
+  return data;
+}
+
+function restoreFormState(form) {
+  const raw = localStorage.getItem(formStorageKey(form));
+  if (!raw) {
+    return;
+  }
+
+  try {
+    const data = JSON.parse(raw);
+    Object.entries(data).forEach(([name, value]) => {
+      const field = form.elements[name];
+      if (!field) {
+        return;
+      }
+      if (field.type === 'checkbox') {
+        field.checked = Boolean(value);
+      } else {
+        field.value = value;
+      }
+    });
+  } catch {
+    localStorage.removeItem(formStorageKey(form));
+  }
+}
+
+function saveFormState(form) {
+  localStorage.setItem(formStorageKey(form), JSON.stringify(formToObject(form)));
+}
+
+function bindFormPersistence(form, resultId) {
+  restoreFormState(form);
+
+  form.addEventListener('input', () => saveFormState(form));
+  form.addEventListener('change', () => saveFormState(form));
+  form.addEventListener('reset', () => {
+    localStorage.removeItem(formStorageKey(form));
+    window.setTimeout(() => {
+      saveFormState(form);
+      const result = document.getElementById(resultId);
+      if (result) {
+        result.innerHTML = '';
+      }
+    }, 0);
+  });
+}
+
+populateTypeSelects();
+
+document.querySelectorAll('form[id]').forEach((form) => {
+  const resultId = form.id.replace('-form', '-result');
+  bindFormPersistence(form, resultId);
+});
+
 document.getElementById('lucky-form')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -1655,6 +1846,7 @@ document.getElementById('lucky-form')?.addEventListener('submit', (event) => {
     dropPercentage: Number(formData.get('dropPercentage') || 0),
     hasElixir: Boolean(formData.get('hasElixir')),
   };
+  saveFormState(event.target);
   document.getElementById('lucky-result').innerHTML = buildLuckyResult(payload);
 });
 
@@ -1664,8 +1856,11 @@ document.getElementById('average-form')?.addEventListener('submit', (event) => {
   const payload = {
     npcPrice: Number(formData.get('npcPrice') || 0),
     pokemonType: String(formData.get('pokemonType') || ''),
+    secondaryPokemonType: String(formData.get('secondaryPokemonType') || ''),
     elementalBallPrice: Number(formData.get('elementalBallPrice') || 0),
+    secondaryElementalBallPrice: Number(formData.get('secondaryElementalBallPrice') || 0),
   };
+  saveFormState(event.target);
   document.getElementById('average-result').innerHTML = buildAverageResult(payload);
 });
 
@@ -1682,14 +1877,19 @@ document.getElementById('boost-form')?.addEventListener('submit', (event) => {
     stonePrice: formData.get('stonePrice') || '0',
     boostStonePrice: formData.get('boostStonePrice') || '0',
   };
+  saveFormState(event.target);
   document.getElementById('boost-result').innerHTML = buildBoostResult(payload);
 });
 
 document.getElementById('effectiveness-form')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
-  const typeInput = String(formData.get('typeInput') || '');
-  document.getElementById('effectiveness-result').innerHTML = buildEffectivenessResult(typeInput);
+  const selectedTypes = [
+    String(formData.get('primaryType') || ''),
+    String(formData.get('secondaryType') || ''),
+  ].filter(Boolean);
+  saveFormState(event.target);
+  document.getElementById('effectiveness-result').innerHTML = buildEffectivenessResult(selectedTypes);
 });
 
 document.getElementById('boost-table-form')?.addEventListener('submit', (event) => {
@@ -1697,5 +1897,11 @@ document.getElementById('boost-table-form')?.addEventListener('submit', (event) 
   const formData = new FormData(event.target);
   const boostType = formData.get('boostType') || '2';
   const useSpecial = Boolean(formData.get('useSpecial'));
+  saveFormState(event.target);
   document.getElementById('boost-table-result').innerHTML = buildBoostTableResult(boostType, useSpecial);
 });
+
+
+
+
+
