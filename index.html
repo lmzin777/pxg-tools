@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,9 +28,9 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">PXG utility dashboard</p>
-          <h1>A clean workspace for PXG Tools.</h1>
+          <h1>PXG Tools.</h1>
           <p class="hero-text">
-            Keep catch planning, boost costs, type checks, and reference tables in one simple place.
+            Calculadoras e referencias rapidas para captura, boosts, tipos e pokebolas.
           </p>
         </div>
 
@@ -61,7 +61,7 @@
       <section class="section" id="features">
         <div class="section-title">
           <p class="eyebrow">Available tools</p>
-          <h2>Select a panel to open it.</h2>
+          <h2>Choose a tool.</h2>
         </div>
 
         <div class="feature-list" role="tablist" aria-label="PXG tool panels">
@@ -84,26 +84,42 @@
                 <input type="checkbox" name="hasElixir" />
                 Use Elixir
               </label>
-              <button type="submit">Calculate</button>
+              <div class="form-actions">
+                <button type="submit">Calculate</button>
+                <button class="secondary-button" type="reset">Clear</button>
+              </div>
             </form>
             <div id="lucky-result" class="result-box"></div>
           </section>
 
           <section class="feature-panel" id="panel-average">
-            <form id="average-form" class="tool-form">
+            <form id="average-form" class="tool-form average-form">
               <label>
                 NPC price
                 <input name="npcPrice" type="number" min="0" required />
               </label>
               <label>
-                Pokémon type
-                <input name="pokemonType" type="text" placeholder="Fire, Fogo, Water..." required />
+                Primary Pokemon type
+                <select name="pokemonType" data-type-select required></select>
               </label>
               <label>
-                Elemental Ball Price
+                Secondary Pokemon type
+                <select name="secondaryPokemonType" data-type-select data-optional-type>
+                  <option value="">None</option>
+                </select>
+              </label>
+              <label class="price-field">
+                Primary Elemental Ball Price
                 <input name="elementalBallPrice" type="number" min="0" required />
               </label>
-              <button type="submit">Calculate</button>
+              <label class="price-field">
+                Secondary Elemental Ball Price
+                <input name="secondaryElementalBallPrice" type="number" min="0" placeholder="" />
+              </label>
+              <div class="form-actions">
+                <button type="submit">Calculate</button>
+                <button class="secondary-button" type="reset">Clear</button>
+              </div>
             </form>
             <div id="average-result" class="result-box"></div>
           </section>
@@ -155,7 +171,10 @@
                 Boost stone price
                 <input name="boostStonePrice" type="number" step="0.01" min="0" required />
               </label>
-              <button type="submit">Calculate</button>
+              <div class="form-actions">
+                <button type="submit">Calculate</button>
+                <button class="secondary-button" type="reset">Clear</button>
+              </div>
             </form>
             <div id="boost-result" class="result-box"></div>
           </section>
@@ -163,10 +182,19 @@
           <section class="feature-panel" id="panel-effectiveness">
             <form id="effectiveness-form" class="tool-form">
               <label>
-                Type(s)
-                <input name="typeInput" type="text" placeholder="Fire, Ground / Water, Ice" required />
+                Primary type
+                <select name="primaryType" data-type-select required></select>
               </label>
-              <button type="submit">Check type chart</button>
+              <label>
+                Secondary type
+                <select name="secondaryType" data-type-select data-optional-type>
+                  <option value="">None</option>
+                </select>
+              </label>
+              <div class="form-actions">
+                <button type="submit">Check type chart</button>
+                <button class="secondary-button" type="reset">Clear</button>
+              </div>
             </form>
             <div id="effectiveness-result" class="result-box"></div>
           </section>
@@ -196,7 +224,10 @@
                 <input type="checkbox" name="useSpecial" />
                 Use special stone
               </label>
-              <button type="submit">Show table</button>
+              <div class="form-actions">
+                <button type="submit">Show table</button>
+                <button class="secondary-button" type="reset">Clear</button>
+              </div>
             </form>
             <div id="boost-table-result" class="result-box"></div>
           </section>
@@ -205,9 +236,18 @@
     </main>
 
     <footer class="footer">
-      <p>PXG Tools - Utility dashboard</p>
+      <p>PXG Tools</p>
     </footer>
 
     <script src="app.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
