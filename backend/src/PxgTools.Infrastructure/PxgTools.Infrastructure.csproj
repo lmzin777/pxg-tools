@@ -2,6 +2,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PxgTools.Application\PxgTools.Application.csproj" />
     <ProjectReference Include="..\PxgTools.Domain\PxgTools.Domain.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.*" />
     <PackageReference Include="Npgsql" Version="10.*" />
   </ItemGroup>
   <PropertyGroup>

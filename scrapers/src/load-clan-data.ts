@@ -1,11 +1,10 @@
 import { readFile } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 import pg from 'pg';
+import { loadProjectEnv, ROOT_DIR } from './env.js';
 
 const { Pool } = pg;
 
-const ROOT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const CLANS_PATH = resolve(ROOT_DIR, 'data/clans.json');
 const CLAN_DETAILS_PATH = resolve(ROOT_DIR, 'data/clan-details.json');
 
@@ -44,10 +43,13 @@ function slugify(value: string) {
 }
 
 async function readJson<T>(path: string): Promise<T> {
-  return JSON.parse(await readFile(path, 'utf8')) as T;
+  const content = await readFile(path, 'utf8');
+  return JSON.parse(content.replace(/^\uFEFF/, '')) as T;
 }
 
 async function main() {
+  loadProjectEnv();
+
   const connectionString = process.env.DATABASE_URL;
 
   if (!connectionString) {

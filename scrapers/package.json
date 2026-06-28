@@ -6,14 +6,17 @@
     "scrape:clans": "tsx src/scrape-clans.ts",
     "scrape:clan-details": "tsx src/scrape-clan-details.ts",
     "scrape:all": "npm run scrape:clans && npm run scrape:clan-details",
+    "db:test-neon": "tsx src/check-neon.ts",
     "db:load-clans": "tsx src/load-clan-data.ts"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "dotenv": "^17.4.2",
     "pg": "^8.13.0"
   },
   "devDependencies": {
-    "@types/pg": "^8.11.0",
     "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
     "tsx": "^4.19.0",
     "typescript": "^5.5.0"
   }
