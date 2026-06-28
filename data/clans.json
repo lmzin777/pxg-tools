@@ -1,0 +1,182 @@
+{
+  "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+  "scrapedAt": "2026-06-28T15:13:10.441Z",
+  "clans": [
+    {
+      "name": "Volcanic",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/5/55/Volcanicvetorr.png/120px-Volcanicvetorr.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Fire"
+      ],
+      "focus": "Fire specialists",
+      "summary": "Volcanic clan members are the most destructive trainers, constantly training their Fire-type Pokemon to become stronger than any opponent.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Volcanic\" title=\"Volcanic\" img alt=\"Volcanicvetorr.png\" src=\"/images/thumb/5/55/Volcanicvetorr.png/190px-Volcanicvetorr.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/5/55/Volcanicvetorr.png/285px-Volcanicvetorr.png 1.5x, /images/thumb/5/55/V",
+        "olcanicvetorr.png/380px-Volcanicvetorr.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Volcanic_Tasks\" title=\"Volcanic Tasks\" img alt=\"Vetortaskvolcanic.png\" src=\"/images/thumb/2/2b/Vetortaskvolcanic.png/120px-Vetortaskvolcanic.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/2/2b/Vetortaskvolcanic.png/180px-Vetortas",
+        "kvolcanic.png 1.5x, /images/thumb/2/2b/Vetortaskvolcanic.png/240px-Vetortaskvolcanic.png 2x\" / /a"
+      ]
+    },
+    {
+      "name": "Raibolt",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/4/46/Raiboltvetor.png/120px-Raiboltvetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Electric"
+      ],
+      "focus": "Electric specialists",
+      "summary": "Raibolt clan members are highly intelligent and know everything needed to handle Electric-type Pokemon and defeat enemies with ease.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Raibolt\" title=\"Raibolt\" img alt=\"Raiboltvetor.png\" src=\"/images/thumb/4/46/Raiboltvetor.png/190px-Raiboltvetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/4/46/Raiboltvetor.png/285px-Raiboltvetor.png 1.5x, /images/thumb/4/46/Raiboltvet",
+        "or.png/380px-Raiboltvetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Raibolt_Tasks\" title=\"Raibolt Tasks\" img alt=\"Vetortaskraibolt.png\" src=\"/images/thumb/5/5f/Vetortaskraibolt.png/120px-Vetortaskraibolt.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/5/5f/Vetortaskraibolt.png/180px-Vetortaskrai",
+        "bolt.png 1.5x, /images/thumb/5/5f/Vetortaskraibolt.png/240px-Vetortaskraibolt.png 2x\" / /a"
+      ]
+    },
+    {
+      "name": "Orebound",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/6/6f/Oreboundvetor.png/120px-Oreboundvetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Ground",
+        "Rock"
+      ],
+      "focus": "Ground and rock specialists",
+      "summary": "Orebound clan members dedicate their lives to mastering the strongest Ground- and Rock-type Pokemon to defeat any opponent they encounter.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center&quot;\" style=\"border-style: hidden;\" a href=\"/index.php/Orebound\" title=\"Orebound\" img alt=\"Oreboundvetor.png\" src=\"/images/thumb/6/6f/Oreboundvetor.png/190px-Oreboundvetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/6/6f/Oreboundvetor.png/285px-Oreboundvetor.png 1.5x, /imag",
+        "es/thumb/6/6f/Oreboundvetor.png/380px-Oreboundvetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Orebound_Tasks\" title=\"Orebound Tasks\" img alt=\"Vetortaskore.png\" src=\"/images/thumb/4/4d/Vetortaskore.png/120px-Vetortaskore.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/4/4d/Vetortaskore.png/180px-Vetortaskore.png 1.5x, /imag"
+      ]
+    },
+    {
+      "name": "Naturia",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/7/7a/Naturiavetor.png/120px-Naturiavetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Grass",
+        "Bug"
+      ],
+      "focus": "Grass and bug specialists",
+      "summary": "Naturia clan members are known for their passion for nature, preferring to live in forests and jungles alongside Grass- and Bug-type Pokemon.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Naturia\" title=\"Naturia\" img alt=\"Naturiavetor.png\" src=\"/images/thumb/7/7a/Naturiavetor.png/190px-Naturiavetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/7/7a/Naturiavetor.png/285px-Naturiavetor.png 1.5x, /images/thumb/7/7a/Naturiavet",
+        "or.png/380px-Naturiavetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Naturia_Tasks\" title=\"Naturia Tasks\" img alt=\"Vetortasknaturia.png\" src=\"/images/thumb/7/7a/Vetortasknaturia.png/120px-Vetortasknaturia.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/7/7a/Vetortasknaturia.png/180px-Vetortasknat",
+        "uria.png 1.5x, /images/thumb/7/7a/Vetortasknaturia.png/240px-Vetortasknaturia.png 2x\" / /a"
+      ]
+    },
+    {
+      "name": "Gardestrike",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/8/82/Gardestrikevetor.png/120px-Gardestrikevetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Normal",
+        "Fighting"
+      ],
+      "focus": "Normal and fighting specialists",
+      "summary": "Gardestrike clan members are strong, earning their power through long training with Normal- and Fighting-type Pokemon.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Gardestrike\" title=\"Gardestrike\" img alt=\"Gardestrikevetor.png\" src=\"/images/thumb/8/82/Gardestrikevetor.png/190px-Gardestrikevetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/8/82/Gardestrikevetor.png/285px-Gardestrikevetor.",
+        "png 1.5x, /images/thumb/8/82/Gardestrikevetor.png/380px-Gardestrikevetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Gardestrike_Tasks\" title=\"Gardestrike Tasks\" img alt=\"Vetortaskgarde.png\" src=\"/images/thumb/4/4b/Vetortaskgarde.png/120px-Vetortaskgarde.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/4/4b/Vetortaskgarde.png/180px-Vetortaskgarde.png 1"
+      ]
+    },
+    {
+      "name": "Ironhard",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/8/82/Ironhardvetor.png/120px-Ironhardvetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Steel",
+        "Crystal"
+      ],
+      "focus": "Steel and crystal specialists",
+      "summary": "Ironhard clan Pokemon are known for brute force, resistance, and range, mastering Steel techniques after years of breaking every limit.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center&quot;\" style=\"border-style: hidden;\" a href=\"/index.php/Ironhard\" title=\"Ironhard\" img alt=\"Ironhardvetor.png\" src=\"/images/thumb/8/82/Ironhardvetor.png/190px-Ironhardvetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/8/82/Ironhardvetor.png/285px-Ironhardvetor.png 1.5x, /imag",
+        "es/thumb/8/82/Ironhardvetor.png/380px-Ironhardvetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Ironhard_Tasks\" title=\"Ironhard Tasks\" img alt=\"Vetortaskiron.png\" src=\"/images/thumb/8/8a/Vetortaskiron.png/120px-Vetortaskiron.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/8/8a/Vetortaskiron.png/180px-Vetortaskiron.png 1.5x,"
+      ]
+    },
+    {
+      "name": "Wingeon",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/5/58/Wingeonvetor.png/120px-Wingeonvetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Flying",
+        "Dragon"
+      ],
+      "focus": "Flying and dragon specialists",
+      "summary": "Wingeon clan members live far from cities, preferring the highest mountains among Flying- and Dragon-type Pokemon.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Wingeon\" title=\"Wingeon\" img alt=\"Wingeonvetor.png\" src=\"/images/thumb/5/58/Wingeonvetor.png/190px-Wingeonvetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/5/58/Wingeonvetor.png/285px-Wingeonvetor.png 1.5x, /images/thumb/5/58/Wingeonvet",
+        "or.png/380px-Wingeonvetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Wingeon_Tasks\" title=\"Wingeon Tasks\" img alt=\"Vetortaskwingeon.png\" src=\"/images/thumb/b/bc/Vetortaskwingeon.png/120px-Vetortaskwingeon.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/b/bc/Vetortaskwingeon.png/180px-Vetortaskwin",
+        "geon.png 1.5x, /images/thumb/b/bc/Vetortaskwingeon.png/240px-Vetortaskwingeon.png 2x\" / /a"
+      ]
+    },
+    {
+      "name": "Psycraft",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/7/76/Psycraftvetor.png/120px-Psycraftvetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Psychic",
+        "Fairy"
+      ],
+      "focus": "Psychic and fairy specialists",
+      "summary": "Psycraft clan members are enigmatic, said to control the minds of Psychic-type Pokemon and share a strong bond with affectionate Fairy-type Pokemon.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Psycraft\" title=\"Psycraft\" img alt=\"Psycraftvetor.png\" src=\"/images/thumb/7/76/Psycraftvetor.png/190px-Psycraftvetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/7/76/Psycraftvetor.png/285px-Psycraftvetor.png 1.5x, /images/thumb/7/76/Psycra",
+        "ftvetor.png/380px-Psycraftvetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Psycraft_Tasks\" title=\"Psycraft Tasks\" img alt=\"Vetortaskpsycraft.png\" src=\"/images/thumb/1/18/Vetortaskpsycraft.png/120px-Vetortaskpsycraft.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/1/18/Vetortaskpsycraft.png/180px-Vetortas",
+        "kpsycraft.png 1.5x, /images/thumb/1/18/Vetortaskpsycraft.png/240px-Vetortaskpsycraft.png 2x\" / /a"
+      ]
+    },
+    {
+      "name": "Seavell",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/a/a8/Seavellvetor.png/120px-Seavellvetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Water",
+        "Ice"
+      ],
+      "focus": "Water and ice specialists",
+      "summary": "Seavell clan members are known for their knowledge of the sea and its creatures, handling the most powerful Water- and Ice-type Pokemon.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Seavell\" title=\"Seavell\" img alt=\"Seavellvetor.png\" src=\"/images/thumb/a/a8/Seavellvetor.png/190px-Seavellvetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/a/a8/Seavellvetor.png/285px-Seavellvetor.png 1.5x, /images/thumb/a/a8/Seavellvet",
+        "or.png/380px-Seavellvetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Seavell_Tasks\" title=\"Seavell Tasks\" img alt=\"Vetortaskseavell.png\" src=\"/images/thumb/0/08/Vetortaskseavell.png/120px-Vetortaskseavell.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/0/08/Vetortaskseavell.png/180px-Vetortasksea",
+        "vell.png 1.5x, /images/thumb/0/08/Vetortaskseavell.png/240px-Vetortaskseavell.png 2x\" / /a"
+      ]
+    },
+    {
+      "name": "Malefic",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/a/a6/Maleficvetor.png/120px-Maleficvetor.png",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Cl%C3%A3s",
+      "status": "synced",
+      "types": [
+        "Ghost",
+        "Dark",
+        "Poison"
+      ],
+      "focus": "Ghost, dark and poison specialists",
+      "summary": "Malefic clan members are mysterious, rarely speaking about their personal lives while controlling Ghost-, Dark-, and Poison-type Pokemon.",
+      "rawMatches": [
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Malefic\" title=\"Malefic\" img alt=\"Maleficvetor.png\" src=\"/images/thumb/a/a6/Maleficvetor.png/190px-Maleficvetor.png\" decoding=\"async\" width=\"190\" height=\"167\" srcset=\"/images/thumb/a/a6/Maleficvetor.png/285px-Maleficvetor.png 1.5x, /images/thumb/a/a6/Maleficvet",
+        "or.png/380px-Maleficvetor.png 2x\" / /a",
+        "td width=\"10%\" align=\"center\" style=\"border-style: hidden;\" a href=\"/index.php/Malefic_Tasks\" title=\"Malefic Tasks\" img alt=\"Vetortaskmalefic.png\" src=\"/images/thumb/b/b2/Vetortaskmalefic.png/120px-Vetortaskmalefic.png\" decoding=\"async\" width=\"120\" height=\"27\" srcset=\"/images/thumb/b/b2/Vetortaskmalefic.png/180px-Vetortaskmal",
+        "efic.png 1.5x, /images/thumb/b/b2/Vetortaskmalefic.png/240px-Vetortaskmalefic.png 2x\" / /a"
+      ]
+    }
+  ]
+}

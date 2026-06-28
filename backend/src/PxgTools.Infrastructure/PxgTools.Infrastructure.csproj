@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\PxgTools.Application\PxgTools.Application.csproj" />
+    <ProjectReference Include="..\PxgTools.Domain\PxgTools.Domain.csproj" />
+    <PackageReference Include="Npgsql" Version="10.*" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+</Project>

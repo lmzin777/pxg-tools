@@ -1,0 +1,70 @@
+# PXG Tools
+
+PXG Tools is a Python utility designed to help with calculations and useful information related to the PXG project.
+
+## What the project does
+
+The program offers several interactive tools, including:
+
+- Lucky Drop Chance calculation
+- Average balls calculation
+- Ball type lookup
+- Boost calculator
+- Type effectiveness lookup
+- Boost table lookup
+
+## Requirements
+
+- Python 3.8 or higher
+
+## How to run
+
+In the project directory, run:
+
+```bash
+python pxg.py
+```
+
+## Notes
+
+- The project already supports types in both Portuguese and English.
+- When updating the program, the build files will be overwritten.
+- Clan data now has a first scraper scaffold in `scrapers/src/scrape-clans.ts`.
+- To run it later, install Node.js, enter `scrapers`, run `npm install`, then `npm run scrape:clans`.
+- The current local network returned an unauthorized page for the official wiki, so `data/clans.json` is a pending-sync seed.
+
+
+
+PT-BR
+
+# PXG Tools
+
+PXG Tools é uma ferramenta desenvolvida em Python para auxiliar em cálculos e na consulta de informações úteis relacionadas ao projeto PXG.
+
+## Funcionalidades
+
+O programa oferece diversas ferramentas interativas, incluindo:
+
+* Cálculo da chance de Lucky Drop
+* Cálculo da média de balls
+* Consulta de tipos de balls
+* Calculadora de boost
+* Consulta de efetividade de tipos
+* Consulta da tabela de boosts
+
+## Requisitos
+
+* Python 3.8 ou superior
+
+## Como executar
+
+No diretório do projeto, execute:
+
+```bash
+python pxg.py
+```
+
+## Observações
+
+* O projeto já oferece suporte aos tipos em português e inglês.
+* Ao atualizar o programa, os arquivos de build serão sobrescritos.
