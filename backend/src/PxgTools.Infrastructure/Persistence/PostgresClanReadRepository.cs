@@ -144,10 +144,10 @@ public sealed class PostgresClanReadRepository(NpgsqlDataSource dataSource) : IC
         return result;
     }
 
-    private async Task<IReadOnlyList<string>> ReadTierPokemonAsync(Guid groupId, CancellationToken cancellationToken)
+    private async Task<IReadOnlyList<ClanTierPokemon>> ReadTierPokemonAsync(Guid groupId, CancellationToken cancellationToken)
     {
         const string sql = """
-            select pokemon_name
+            select id, dex_number, icon_url, pokemon_name
             from clan_tier_pokemon
             where tier_group_id = @groupId
             order by sort_order;
@@ -156,14 +156,68 @@ public sealed class PostgresClanReadRepository(NpgsqlDataSource dataSource) : IC
         await using var command = dataSource.CreateCommand(sql);
         command.Parameters.AddWithValue("groupId", groupId);
         await using var reader = await command.ExecuteReaderAsync(cancellationToken);
-        var rows = new List<string>();
+        var rows = new List<(Guid Id, string Dex, string Icon, string Name)>();
 
         while (await reader.ReadAsync(cancellationToken))
         {
-            rows.Add(reader.GetString(0));
+            rows.Add((reader.GetGuid(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)));
         }
 
-        return rows;
+        await reader.DisposeAsync();
+
+        var ids = rows.Select(row => row.Id).ToArray();
+        var elements = await ReadIconLabelsAsync("clan_tier_pokemon_elements", ids, cancellationToken);
+        var pveRoles = await ReadIconLabelsAsync("clan_tier_pokemon_pve_roles", ids, cancellationToken);
+        var pvpRoles = await ReadIconLabelsAsync("clan_tier_pokemon_pvp_roles", ids, cancellationToken);
+        var helds = await ReadIconLabelsAsync("clan_tier_pokemon_helds", ids, cancellationToken);
+
+        return rows
+            .Select(row => new ClanTierPokemon(
+                row.Dex,
+                row.Icon,
+                row.Name,
+                elements.GetValueOrDefault(row.Id, []),
+                pveRoles.GetValueOrDefault(row.Id, []),
+                pvpRoles.GetValueOrDefault(row.Id, []),
+                helds.GetValueOrDefault(row.Id, [])))
+            .ToList();
+    }
+
+    private async Task<Dictionary<Guid, IReadOnlyList<ClanIconLabel>>> ReadIconLabelsAsync(
+        string tableName,
+        Guid[] tierPokemonIds,
+        CancellationToken cancellationToken)
+    {
+        if (tierPokemonIds.Length == 0)
+        {
+            return [];
+        }
+
+        var sql = $"""
+            select tier_pokemon_id, label, icon_url
+            from {tableName}
+            where tier_pokemon_id = any(@ids)
+            order by tier_pokemon_id, sort_order;
+            """;
+
+        await using var command = dataSource.CreateCommand(sql);
+        command.Parameters.AddWithValue("ids", tierPokemonIds);
+        await using var reader = await command.ExecuteReaderAsync(cancellationToken);
+        var rows = new Dictionary<Guid, List<ClanIconLabel>>();
+
+        while (await reader.ReadAsync(cancellationToken))
+        {
+            var tierPokemonId = reader.GetGuid(0);
+            if (!rows.TryGetValue(tierPokemonId, out var labels))
+            {
+                labels = [];
+                rows[tierPokemonId] = labels;
+            }
+
+            labels.Add(new ClanIconLabel(reader.GetString(1), reader.GetString(2)));
+        }
+
+        return rows.ToDictionary(row => row.Key, row => (IReadOnlyList<ClanIconLabel>)row.Value);
     }
 
     private async Task<IReadOnlyList<ClanRotationGroup>> ReadRotationAsync(Guid clanId, CancellationToken cancellationToken)

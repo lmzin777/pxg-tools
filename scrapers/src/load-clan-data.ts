@@ -24,13 +24,35 @@ type ClanDetailPayload = {
     sourceUrl: string;
     bonus: Array<{ type: string; attack: string; defense: string }>;
     npcPokemon: Array<{ label: string; pokemon: string; npc: string; location: string }>;
-    tiers: Array<{ tier: string; pokemon: string[] }>;
+    tiers: Array<{
+      tier: string;
+      pokemon: string[];
+      rows?: Array<{
+        dex: string;
+        icon: string;
+        name: string;
+        elements: IconLabel[];
+        pveRoles: IconLabel[];
+        pvpRoles: IconLabel[];
+        helds: IconLabel[];
+      }>;
+    }>;
     rotation: Array<{
       element: string;
-      rows: Array<{ pokemon: string; role: string; roleIcon: string; tier: string }>;
+      rows: Array<{ pokemon: string; icon?: string; role: string; roleIcon: string; tier: string }>;
     }>;
     pvpExclusive: string[];
   }>;
+};
+
+type IconLabel = {
+  label: string;
+  icon: string;
+};
+
+type IconLabelInsert = IconLabel & {
+  tierPokemonId: string;
+  sortOrder: number;
 };
 
 function slugify(value: string) {
@@ -42,9 +64,47 @@ function slugify(value: string) {
     .replace(/(^-|-$)/g, '');
 }
 
+function pokemonKey(value: string) {
+  return slugify(value);
+}
+
 async function readJson<T>(path: string): Promise<T> {
   const content = await readFile(path, 'utf8');
   return JSON.parse(content.replace(/^\uFEFF/, '')) as T;
+}
+
+async function insertIconLabels(
+  client: pg.PoolClient,
+  table: string,
+  values: IconLabelInsert[],
+) {
+  if (values.length === 0) {
+    return;
+  }
+
+  const placeholders = values
+    .map((_, index) => {
+      const offset = index * 4;
+      return `($${offset + 1}, $${offset + 2}, $${offset + 3}, $${offset + 4})`;
+    })
+    .join(', ');
+  const parameters = values.flatMap((value) => [value.tierPokemonId, value.label, value.icon, value.sortOrder]);
+
+  await client.query(
+    `insert into ${table} (tier_pokemon_id, label, icon_url, sort_order) values ${placeholders}`,
+    parameters,
+  );
+}
+
+function collectIconLabels(target: IconLabelInsert[], tierPokemonId: string, values: IconLabel[]) {
+  target.push(
+    ...values.map((value, index) => ({
+      tierPokemonId,
+      label: value.label,
+      icon: value.icon,
+      sortOrder: index,
+    })),
+  );
 }
 
 async function main() {
@@ -123,12 +183,44 @@ async function main() {
         );
         const tierGroupId = tierResult.rows[0].id;
 
-        for (const [pokemonIndex, pokemon] of tier.pokemon.entries()) {
-          await client.query(
-            'insert into clan_tier_pokemon (tier_group_id, pokemon_name, sort_order) values ($1, $2, $3)',
-            [tierGroupId, pokemon, pokemonIndex],
+        const tierRows = tier.rows?.length
+          ? tier.rows
+          : tier.pokemon.map((pokemon) => ({
+              dex: '',
+              icon: '',
+              name: pokemon,
+              elements: [],
+              pveRoles: [],
+              pvpRoles: [],
+              helds: [],
+            }));
+
+        const elementRows: IconLabelInsert[] = [];
+        const pveRoleRows: IconLabelInsert[] = [];
+        const pvpRoleRows: IconLabelInsert[] = [];
+        const heldRows: IconLabelInsert[] = [];
+
+        for (const [pokemonIndex, pokemon] of tierRows.entries()) {
+          const tierPokemonResult = await client.query<{ id: string }>(
+            `
+              insert into clan_tier_pokemon (tier_group_id, dex_number, icon_url, pokemon_name, sort_order)
+              values ($1, $2, $3, $4, $5)
+              returning id
+            `,
+            [tierGroupId, pokemon.dex, pokemon.icon, pokemon.name, pokemonIndex],
           );
+          const tierPokemonId = tierPokemonResult.rows[0].id;
+
+          collectIconLabels(elementRows, tierPokemonId, pokemon.elements);
+          collectIconLabels(pveRoleRows, tierPokemonId, pokemon.pveRoles);
+          collectIconLabels(pvpRoleRows, tierPokemonId, pokemon.pvpRoles);
+          collectIconLabels(heldRows, tierPokemonId, pokemon.helds);
         }
+
+        await insertIconLabels(client, 'clan_tier_pokemon_elements', elementRows);
+        await insertIconLabels(client, 'clan_tier_pokemon_pve_roles', pveRoleRows);
+        await insertIconLabels(client, 'clan_tier_pokemon_pvp_roles', pvpRoleRows);
+        await insertIconLabels(client, 'clan_tier_pokemon_helds', heldRows);
       }
 
       for (const [groupIndex, rotation] of detail.rotation.entries()) {

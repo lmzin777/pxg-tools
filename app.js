@@ -1679,6 +1679,23 @@ let clanCatalogData = [
 
 let activeClanSlug = '';
 
+let professionData = {
+  intro: '',
+  professions: [],
+  relatedLinks: [],
+};
+let activeProfessionSlug = '';
+
+let pokemonData = {
+  generations: [],
+  pokemon: [],
+};
+
+let itemData = {
+  categories: [],
+};
+let activeItemCategorySlug = '';
+
 let clanDetailData = {
   volcanic: {
     name: 'Volcanic',
@@ -1993,6 +2010,42 @@ function normalizeRotationGroups(rotation) {
   return [{ element: 'Fire', rows: rotation }];
 }
 
+function normalizePokemonNameKey(value) {
+  return normalizeText(value || '')
+    .replace(/\s*\((?:TM|TR)\)\s*$/i, '')
+    .replace(/^mega\s+/i, '')
+    .replace(/^shiny\s+/i, '');
+}
+
+function buildTierPokemonIconMap(tiers) {
+  const iconMap = new Map();
+
+  (tiers || []).forEach((tier) => {
+    (tier.rows || []).forEach((row) => {
+      if (!row.name || !row.icon) {
+        return;
+      }
+
+      iconMap.set(normalizePokemonNameKey(row.name), row.icon);
+      iconMap.set(normalizeText(row.name), row.icon);
+    });
+  });
+
+  return iconMap;
+}
+
+function renderRotationPokemon(entry, iconMap) {
+  const name = entry.pokemon || '';
+  const icon = entry.icon || entry.pokemonIcon || iconMap.get(normalizeText(name)) || iconMap.get(normalizePokemonNameKey(name));
+
+  return `
+    <span class="rotation-pokemon">
+      ${icon ? `<img class="pokemon-sprite" src="${icon}" alt="${name}" loading="lazy">` : ''}
+      <span>${name}</span>
+    </span>
+  `;
+}
+
 function renderClanDetail(detail) {
   const container = document.getElementById('clan-catalog');
   const toolbar = document.querySelector('.clan-toolbar');
@@ -2004,6 +2057,8 @@ function renderClanDetail(detail) {
   if (toolbar) {
     toolbar.hidden = true;
   }
+
+  const rotationPokemonIcons = buildTierPokemonIconMap(detail.tiers);
 
   container.classList.add('detail-mode');
   container.innerHTML = `
@@ -2067,7 +2122,7 @@ function renderClanDetail(detail) {
                 <tbody>
                   ${group.rows.map((entry) => `
                     <tr>
-                      <td>${entry.pokemon}</td>
+                      <td>${renderRotationPokemon(entry, rotationPokemonIcons)}</td>
                       <td>${renderRoleLabel(entry)}</td>
                       <td>${entry.tier || '-'}</td>
                     </tr>
@@ -2179,6 +2234,436 @@ function renderClanView() {
   }
 
   renderClanCatalog();
+}
+
+function slugifyProfessionName(name) {
+  return normalizeText(name).replace(/\s+/g, '-');
+}
+
+function normalizeProfessionPayload(payload) {
+  return {
+    intro: payload?.intro || '',
+    professions: Array.isArray(payload?.professions) ? payload.professions : [],
+    relatedLinks: Array.isArray(payload?.relatedLinks) ? payload.relatedLinks : [],
+  };
+}
+
+async function loadProfessions() {
+  try {
+    const response = await fetch('data/professions.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Profession data request failed with HTTP ${response.status}.`);
+    }
+
+    professionData = normalizeProfessionPayload(await response.json());
+    renderProfessionView();
+  } catch (error) {
+    console.warn('Profession data could not be loaded from data/professions.json.', error);
+  }
+}
+
+function renderProfessionLinkCard(link) {
+  return `
+    <article class="profession-link-card">
+      <div class="profession-link-head">
+        ${link.iconUrl ? `<img src="${link.iconUrl}" alt="${link.title}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">${link.kind}</span>
+          <strong>${link.title}</strong>
+        </div>
+      </div>
+      <p>${link.summary || 'Loaded from the official wiki.'}</p>
+      <a href="${link.sourceUrl}" target="_blank" rel="noreferrer">Wiki</a>
+    </article>
+  `;
+}
+
+function renderProfessionLinkSection(title, links) {
+  if (!Array.isArray(links) || !links.length) {
+    return '';
+  }
+
+  return `
+    <section class="clan-detail-section">
+      <h4>${title}</h4>
+      <div class="profession-link-grid">
+        ${links.map(renderProfessionLinkCard).join('')}
+      </div>
+    </section>
+  `;
+}
+
+function renderProfessionDetail(detail) {
+  const container = document.getElementById('profession-catalog');
+  const toolbar = document.querySelector('.profession-toolbar');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = true;
+  }
+
+  container.classList.add('detail-mode');
+  container.innerHTML = `
+    <article class="clan-detail profession-detail">
+      <div class="clan-detail-toolbar">
+        <button class="clan-back-button" type="button" data-profession-back>Voltar as profissoes</button>
+        <a href="${detail.sourceUrl}" target="_blank" rel="noreferrer">Abrir na Wiki</a>
+      </div>
+      <div class="profession-detail-header">
+        ${detail.iconUrl ? `<img src="${detail.iconUrl}" alt="${detail.name}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">Official wiki sync</span>
+          <h3>${detail.name}</h3>
+          <p>${detail.summary}</p>
+        </div>
+      </div>
+
+      ${renderProfessionLinkSection('Crafts relacionados', detail.crafts)}
+      ${renderProfessionLinkSection('Especializacoes e subprofissoes', detail.specializations)}
+      ${renderProfessionLinkSection('Subsecoes', detail.subsections)}
+
+      <section class="clan-detail-section">
+        <h4>Secoes da pagina</h4>
+        <div class="pill-list">
+          ${detail.sections?.length ? detail.sections.map((section) => `<a class="data-pill" href="${detail.sourceUrl}#${section.anchor}" target="_blank" rel="noreferrer">${section.title}</a>`).join('') : '<span class="empty-state">Sem secoes listadas.</span>'}
+        </div>
+      </section>
+    </article>
+  `;
+}
+
+function renderProfessionCatalog() {
+  const container = document.getElementById('profession-catalog');
+  const toolbar = document.querySelector('.profession-toolbar');
+  const searchInput = document.getElementById('profession-search');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = false;
+  }
+
+  container.classList.remove('detail-mode');
+  const searchTerm = normalizeText(searchInput?.value || '');
+  const filteredProfessions = professionData.professions.filter((profession) => {
+    const searchable = [
+      profession.name,
+      profession.summary,
+      ...(profession.crafts || []).map((link) => link.title),
+      ...(profession.specializations || []).map((link) => link.title),
+      ...(profession.subsections || []).map((link) => link.title),
+    ].join(' ');
+
+    return !searchTerm || normalizeText(searchable).includes(searchTerm);
+  });
+
+  container.innerHTML = `
+    ${professionData.intro ? `<p class="profession-intro">${professionData.intro}</p>` : ''}
+    <div class="profession-grid">
+      ${filteredProfessions.length ? filteredProfessions.map((profession) => `
+        <article class="profession-card">
+          <button class="profession-card-button" type="button" data-profession-open="${profession.slug || slugifyProfessionName(profession.name)}">
+            ${profession.iconUrl ? `<img src="${profession.iconUrl}" alt="${profession.name}" loading="lazy">` : ''}
+            <span>
+              <strong>${profession.name}</strong>
+              <small>${profession.specializations?.length || 0} especializacoes - ${profession.crafts?.length || 0} crafts</small>
+            </span>
+          </button>
+          <p>${profession.summary}</p>
+        </article>
+      `).join('') : '<div class="empty-state">No professions found for this search.</div>'}
+    </div>
+    ${professionData.relatedLinks.length ? `
+      <section class="clan-detail-section profession-related">
+        <h4>Links relacionados</h4>
+        <div class="profession-link-grid">
+          ${professionData.relatedLinks.map(renderProfessionLinkCard).join('')}
+        </div>
+      </section>
+    ` : ''}
+  `;
+}
+
+function renderProfessionView() {
+  if (activeProfessionSlug) {
+    const detail = professionData.professions.find((profession) => (profession.slug || slugifyProfessionName(profession.name)) === activeProfessionSlug);
+
+    if (detail) {
+      renderProfessionDetail(detail);
+      return;
+    }
+  }
+
+  renderProfessionCatalog();
+}
+
+function normalizePokemonPayload(payload) {
+  return {
+    generations: Array.isArray(payload?.generations) ? payload.generations : [],
+    pokemon: Array.isArray(payload?.pokemon) ? payload.pokemon : [],
+  };
+}
+
+async function loadPokemon() {
+  try {
+    const response = await fetch('data/pokemon.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Pokemon data request failed with HTTP ${response.status}.`);
+    }
+
+    pokemonData = normalizePokemonPayload(await response.json());
+    renderPokemonGenerationOptions();
+    renderPokemonCatalog();
+  } catch (error) {
+    console.warn('Pokemon data could not be loaded from data/pokemon.json.', error);
+    renderPokemonCatalog();
+  }
+}
+
+function renderPokemonGenerationOptions() {
+  const select = document.getElementById('pokemon-generation-filter');
+
+  if (!select) {
+    return;
+  }
+
+  const selected = select.value;
+  select.innerHTML = '<option value="">All generations</option>';
+  pokemonData.generations.forEach((generation) => {
+    const option = document.createElement('option');
+    option.value = generation;
+    option.textContent = generation;
+    select.appendChild(option);
+  });
+  select.value = selected;
+}
+
+function renderPokemonTypeList(elements) {
+  if (!Array.isArray(elements) || !elements.length) {
+    return '<span class="empty-state compact">-</span>';
+  }
+
+  return `<div class="pokemon-types">${elements.map(renderTypeLabel).join('')}</div>`;
+}
+
+function getFilteredPokemon() {
+  const searchTerm = normalizeText(document.getElementById('pokemon-search')?.value || '');
+  const generation = document.getElementById('pokemon-generation-filter')?.value || '';
+
+  return pokemonData.pokemon.filter((pokemon) => {
+    const dex = pokemon.dex || `#${String(pokemon.dexNumber || '').padStart(3, '0')}`;
+    const matchesSearch = !searchTerm || normalizeText(`${dex} ${pokemon.dexNumber} ${pokemon.name}`).includes(searchTerm);
+    const matchesGeneration = !generation || pokemon.generation === generation;
+    return matchesSearch && matchesGeneration;
+  });
+}
+
+function renderPokemonCatalog() {
+  const container = document.getElementById('pokemon-catalog');
+
+  if (!container) {
+    return;
+  }
+
+  const pokemon = getFilteredPokemon();
+  container.innerHTML = `
+    <div class="pokemon-summary-row">
+      <strong>${pokemon.length}</strong>
+      <span>${pokemon.length === 1 ? 'Pokemon found' : 'Pokemon found'}</span>
+    </div>
+    <div class="pokemon-table-wrap">
+      <table class="result-table pokemon-table">
+        <thead>
+          <tr>
+            <th>Dex</th>
+            <th>Pokemon</th>
+            <th>Generation</th>
+            <th>Elements</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${pokemon.length ? pokemon.map((entry) => `
+            <tr>
+              <td>${entry.dex || `#${String(entry.dexNumber || '').padStart(3, '0')}`}</td>
+              <td>
+                <span class="pokemon-name-cell">
+                  ${entry.spriteUrl ? `<img src="${entry.spriteUrl}" alt="${entry.name}" loading="lazy">` : ''}
+                  <span>${entry.name}</span>
+                </span>
+              </td>
+              <td>${entry.generation || '-'}</td>
+              <td>${renderPokemonTypeList(entry.elements)}</td>
+              <td>${entry.level || '-'}</td>
+            </tr>
+          `).join('') : '<tr><td colspan="5"><span class="empty-state">No Pokemon found for these filters.</span></td></tr>'}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function normalizeItemPayload(payload) {
+  return {
+    categories: Array.isArray(payload?.categories) ? payload.categories : [],
+  };
+}
+
+async function loadItems() {
+  try {
+    const response = await fetch('data/items.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Item data request failed with HTTP ${response.status}.`);
+    }
+
+    itemData = normalizeItemPayload(await response.json());
+    renderItemView();
+  } catch (error) {
+    console.warn('Item data could not be loaded from data/items.json.', error);
+    renderItemView();
+  }
+}
+
+function renderItemAttributeList(item) {
+  const attributes = Object.entries(item.attributes || {})
+    .filter(([, value]) => value)
+    .slice(0, 4);
+
+  if (!attributes.length) {
+    return '<span class="empty-state compact">-</span>';
+  }
+
+  return `
+    <div class="item-attribute-list">
+      ${attributes.map(([name, value]) => `<span><strong>${name}:</strong> ${value}</span>`).join('')}
+    </div>
+  `;
+}
+
+function renderItemCategoryDetail(category) {
+  const container = document.getElementById('item-catalog');
+  const toolbar = document.querySelector('.item-toolbar');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = true;
+  }
+
+  container.classList.add('detail-mode');
+  container.innerHTML = `
+    <article class="clan-detail item-detail">
+      <div class="clan-detail-toolbar">
+        <button class="clan-back-button" type="button" data-item-back>Voltar aos itens</button>
+        <a href="${category.sourceUrl}" target="_blank" rel="noreferrer">Abrir na Wiki</a>
+      </div>
+      <div class="profession-detail-header">
+        ${category.iconUrl ? `<img src="${category.iconUrl}" alt="${category.title}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">${category.group}</span>
+          <h3>${category.title}</h3>
+          <p>${category.summary || 'Loaded from the official wiki.'}</p>
+        </div>
+      </div>
+      <section class="clan-detail-section">
+        <h4>Itens</h4>
+        <div class="pokemon-table-wrap item-table-wrap">
+          <table class="result-table pokemon-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Section</th>
+                <th>Description</th>
+                <th>Attributes</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${category.items?.length ? category.items.map((item) => `
+                <tr>
+                  <td>
+                    <span class="pokemon-name-cell">
+                      ${item.iconUrl ? `<img src="${item.iconUrl}" alt="${item.name}" loading="lazy">` : ''}
+                      <span>${item.name}</span>
+                    </span>
+                  </td>
+                  <td>${item.section || '-'}</td>
+                  <td>${item.description || '-'}</td>
+                  <td>${renderItemAttributeList(item)}</td>
+                </tr>
+              `).join('') : '<tr><td colspan="4"><span class="empty-state">No structured items were found in this category.</span></td></tr>'}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </article>
+  `;
+}
+
+function renderItemCatalog() {
+  const container = document.getElementById('item-catalog');
+  const toolbar = document.querySelector('.item-toolbar');
+  const searchInput = document.getElementById('item-search');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = false;
+  }
+
+  container.classList.remove('detail-mode');
+  const searchTerm = normalizeText(searchInput?.value || '');
+  const categories = itemData.categories.filter((category) => {
+    const searchable = [
+      category.title,
+      category.group,
+      category.summary,
+      ...(category.items || []).map((item) => item.name),
+    ].join(' ');
+
+    return !searchTerm || normalizeText(searchable).includes(searchTerm);
+  });
+
+  container.innerHTML = `
+    <div class="item-grid">
+      ${categories.length ? categories.map((category) => `
+        <article class="profession-card item-card">
+          <button class="profession-card-button" type="button" data-item-open="${category.slug}">
+            ${category.iconUrl ? `<img src="${category.iconUrl}" alt="${category.title}" loading="lazy">` : ''}
+            <span>
+              <strong>${category.title}</strong>
+              <small>${category.group} - ${category.items?.length || 0} items</small>
+            </span>
+          </button>
+          <p>${category.summary || 'Official wiki category ready for item lookup and future crafts.'}</p>
+        </article>
+      `).join('') : '<div class="empty-state">No item categories found for this search.</div>'}
+    </div>
+  `;
+}
+
+function renderItemView() {
+  if (activeItemCategorySlug) {
+    const category = itemData.categories.find((entry) => entry.slug === activeItemCategorySlug);
+
+    if (category) {
+      renderItemCategoryDetail(category);
+      return;
+    }
+  }
+
+  renderItemCatalog();
 }
 const BALL_ICON_FILES = {
   'Poke Ball': 'poke-ball.png',
@@ -2460,8 +2945,14 @@ document.getElementById('average-form')?.addEventListener('submit', (event) => {
 
 renderBallCatalog();
 renderClanView();
+renderProfessionView();
+renderPokemonCatalog();
+renderItemView();
 loadClanCatalog();
 loadClanDetails();
+loadProfessions();
+loadPokemon();
+loadItems();
 
 document.getElementById('clan-search')?.addEventListener('input', renderClanCatalog);
 document.getElementById('clan-type-filter')?.addEventListener('change', renderClanCatalog);
@@ -2483,6 +2974,52 @@ document.getElementById('clan-catalog')?.addEventListener('click', (event) => {
   if (backButton) {
     activeClanSlug = '';
     renderClanView();
+  }
+});
+
+document.getElementById('profession-search')?.addEventListener('input', renderProfessionCatalog);
+document.getElementById('profession-catalog')?.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const openButton = event.target.closest('[data-profession-open]');
+  const backButton = event.target.closest('[data-profession-back]');
+
+  if (openButton) {
+    activeProfessionSlug = openButton.dataset.professionOpen;
+    renderProfessionView();
+    document.getElementById('panel-professions')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  if (backButton) {
+    activeProfessionSlug = '';
+    renderProfessionView();
+  }
+});
+
+document.getElementById('pokemon-search')?.addEventListener('input', renderPokemonCatalog);
+document.getElementById('pokemon-generation-filter')?.addEventListener('change', renderPokemonCatalog);
+document.getElementById('item-search')?.addEventListener('input', renderItemCatalog);
+document.getElementById('item-catalog')?.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const openButton = event.target.closest('[data-item-open]');
+  const backButton = event.target.closest('[data-item-back]');
+
+  if (openButton) {
+    activeItemCategorySlug = openButton.dataset.itemOpen;
+    renderItemView();
+    document.getElementById('panel-items')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  if (backButton) {
+    activeItemCategorySlug = '';
+    renderItemView();
   }
 });
 

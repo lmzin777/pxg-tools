@@ -12,7 +12,18 @@ public sealed record ClanBonus(string Type, string Attack, string Defense);
 
 public sealed record ClanNpcPokemon(string Label, string Pokemon, string Npc, string Location);
 
-public sealed record ClanTierGroup(string Tier, IReadOnlyList<string> Pokemon);
+public sealed record ClanIconLabel(string Label, string Icon);
+
+public sealed record ClanTierPokemon(
+    string Dex,
+    string Icon,
+    string Name,
+    IReadOnlyList<ClanIconLabel> Elements,
+    IReadOnlyList<ClanIconLabel> PveRoles,
+    IReadOnlyList<ClanIconLabel> PvpRoles,
+    IReadOnlyList<ClanIconLabel> Helds);
+
+public sealed record ClanTierGroup(string Tier, IReadOnlyList<ClanTierPokemon> Pokemon);
 
 public sealed record ClanRotationPokemon(string Pokemon, string Role, string RoleIcon, string Tier);
 

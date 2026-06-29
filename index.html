@@ -43,7 +43,7 @@
           <div class="panel-content">
             <div class="panel-card">
               <p class="panel-label">Available tools</p>
-              <h3>7 interactive panels</h3>
+              <h3>10 interactive panels</h3>
               <p>Choose a panel below to calculate, compare, or check the reference you need.</p>
               <ul class="tool-summary">
                 <li>Lucky Drop Chance for quick drop-rate checks.</li>
@@ -53,6 +53,9 @@
                 <li>Type Chart for attack effectiveness matchups.</li>
                 <li>Boost Table for stone requirements by level.</li>
                 <li>Clans reference prepared for wiki synchronization.</li>
+                <li>Professions with specializations, crafts, and related wiki links.</li>
+                <li>Pokemon index with Dex, generation, and type filters.</li>
+                <li>General items grouped by official wiki categories.</li>
               </ul>
             </div>
           </div>
@@ -73,6 +76,9 @@
           <button class="feature-item" data-target="effectiveness">5. Type Chart</button>
           <button class="feature-item" data-target="boost-table">6. Boost Table</button>
           <button class="feature-item" data-target="clans">7. Clans</button>
+          <button class="feature-item" data-target="professions">8. Professions</button>
+          <button class="feature-item" data-target="pokemon">9. Pokemon</button>
+          <button class="feature-item" data-target="items">10. Items</button>
         </div>
 
         <div class="feature-panels">
@@ -249,6 +255,42 @@
             </div>
             <div id="clan-catalog" class="clan-catalog"></div>
           </section>
+
+          <section class="feature-panel" id="panel-professions">
+            <div class="profession-toolbar">
+              <label>
+                Search profession
+                <input id="profession-search" type="search" placeholder="Engenheiro, Alquimista, Workshop..." />
+              </label>
+            </div>
+            <div id="profession-catalog" class="profession-catalog"></div>
+          </section>
+
+          <section class="feature-panel" id="panel-pokemon">
+            <div class="pokemon-toolbar">
+              <label>
+                Search Pokemon
+                <input id="pokemon-search" type="search" placeholder="Bulbasaur, Charizard, #001..." />
+              </label>
+              <label>
+                Generation
+                <select id="pokemon-generation-filter">
+                  <option value="">All generations</option>
+                </select>
+              </label>
+            </div>
+            <div id="pokemon-catalog" class="pokemon-catalog"></div>
+          </section>
+
+          <section class="feature-panel" id="panel-items">
+            <div class="item-toolbar">
+              <label>
+                Search items
+                <input id="item-search" type="search" placeholder="Poké Ball, Stone, Token, Held..." />
+              </label>
+            </div>
+            <div id="item-catalog" class="item-catalog"></div>
+          </section>
         </div>
       </section>
     </main>
@@ -260,9 +302,6 @@
     <script src="app.js"></script>
   </body>
 </html>
-
-
-
 
 
 
