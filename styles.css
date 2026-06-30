@@ -690,6 +690,7 @@ input[type="number"] {
   gap: 0.2rem;
 }
 
+<<<<<<< HEAD
 .profession-title-link {
   padding: 0;
   border: 0;
@@ -705,6 +706,8 @@ input[type="number"] {
   color: var(--primary);
 }
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 .profession-link-card p {
   margin: 0;
   color: var(--muted);
@@ -720,6 +723,7 @@ input[type="number"] {
   color: var(--primary);
 }
 
+<<<<<<< HEAD
 .profession-subtabs {
   display: flex;
   flex-wrap: wrap;
@@ -1048,6 +1052,8 @@ input[type="number"] {
   text-align: center;
 }
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 .pokemon-toolbar,
 .item-toolbar {
   display: grid;
@@ -1569,10 +1575,13 @@ input[type="number"] {
   .item-toolbar,
   .profession-grid,
   .profession-link-grid,
+<<<<<<< HEAD
   .profession-resource-grid,
   .profession-craft-grid,
   .profession-craft-filter,
   .student-filter,
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
   .item-grid,
   .profession-detail-header {
     grid-template-columns: 1fr;

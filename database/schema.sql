@@ -188,6 +188,7 @@ create table if not exists profession_craft_materials (
   sort_order integer not null default 0
 );
 
+<<<<<<< HEAD
 create table if not exists crafts (
   id uuid primary key default gen_random_uuid(),
   slug text not null unique,
@@ -220,6 +221,8 @@ create table if not exists craft_ingredients (
   sort_order integer not null default 0
 );
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 create table if not exists profession_related_links (
   id uuid primary key default gen_random_uuid(),
   slug text not null,
@@ -330,6 +333,7 @@ create index if not exists ix_profession_links_kind on profession_links(kind);
 create index if not exists ix_profession_craft_items_link_id on profession_craft_items(profession_link_id);
 create index if not exists ix_profession_craft_items_rank on profession_craft_items(rank_name);
 create index if not exists ix_profession_craft_materials_item_id on profession_craft_materials(craft_item_id);
+<<<<<<< HEAD
 create index if not exists ix_crafts_slug on crafts(slug);
 create index if not exists ix_crafts_item_slug on crafts(item_slug);
 create index if not exists ix_crafts_item_name on crafts(item_name);
@@ -338,6 +342,8 @@ create index if not exists ix_crafts_category on crafts(category);
 create index if not exists ix_craft_ingredients_craft_id on craft_ingredients(craft_id);
 create index if not exists ix_craft_ingredients_item_slug on craft_ingredients(item_slug);
 create index if not exists ix_craft_ingredients_name on craft_ingredients(name);
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 create index if not exists ix_pokemon_slug on pokemon(slug);
 create index if not exists ix_pokemon_dex_number on pokemon(dex_number);
 create index if not exists ix_pokemon_generation_name on pokemon(generation_name);

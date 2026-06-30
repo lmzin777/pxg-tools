@@ -2,7 +2,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
 using PxgTools.Application.Clans;
+<<<<<<< HEAD
 using PxgTools.Application.Crafts;
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 using PxgTools.Application.Items;
 using PxgTools.Application.Pokemon;
 using PxgTools.Application.Professions;
@@ -19,7 +22,10 @@ public static class DependencyInjection
 
         services.AddSingleton(_ => new NpgsqlDataSourceBuilder(NormalizeConnectionString(connectionString)).Build());
         services.AddScoped<IClanReadRepository, PostgresClanReadRepository>();
+<<<<<<< HEAD
         services.AddScoped<ICraftReadRepository, PostgresCraftReadRepository>();
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
         services.AddScoped<IProfessionReadRepository, PostgresProfessionReadRepository>();
         services.AddScoped<IPokemonReadRepository, PostgresPokemonReadRepository>();
         services.AddScoped<IItemReadRepository, PostgresItemReadRepository>();

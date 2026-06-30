@@ -1,5 +1,8 @@
 using PxgTools.Application.Clans;
+<<<<<<< HEAD
 using PxgTools.Application.Crafts;
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 using PxgTools.Application.Items;
 using PxgTools.Application.Pokemon;
 using PxgTools.Application.Professions;
@@ -49,6 +52,7 @@ app.MapGet("/api/professions/{slug}", async (string slug, IProfessionReadReposit
     return profession is null ? Results.NotFound() : Results.Ok(profession);
 });
 
+<<<<<<< HEAD
 app.MapGet("/api/crafts", async (
     string? item,
     string? profession,
@@ -78,6 +82,8 @@ app.MapGet("/api/crafts/ingredients/{ingredient}", async (string ingredient, ICr
     return Results.Ok(crafts);
 });
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 app.MapGet("/api/pokemon", async (IPokemonReadRepository repository, CancellationToken cancellationToken) =>
 {
     var pokemon = await repository.ListAsync(cancellationToken);

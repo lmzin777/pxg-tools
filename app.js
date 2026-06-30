@@ -1685,6 +1685,7 @@ let professionData = {
   relatedLinks: [],
 };
 let activeProfessionSlug = '';
+<<<<<<< HEAD
 let activeProfessionTab = 'overview';
 
 let craftData = {
@@ -1806,6 +1807,8 @@ const PROFESSOR_STUDENT_GROUPS = [
     { name: 'Steven Student Card', level: 500, iconUrl: 'https://wiki.pokexgames.com/images/7/7e/Steven_Student_Card.png' },
   ] },
 ];
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 
 let pokemonData = {
   generations: [],
@@ -2369,6 +2372,7 @@ function normalizeProfessionPayload(payload) {
   };
 }
 
+<<<<<<< HEAD
 function normalizeCraftPayload(payload) {
   return {
     crafts: Array.isArray(payload?.crafts) ? payload.crafts : [],
@@ -2381,6 +2385,8 @@ function normalizeProfessorStudentsPayload(payload) {
   };
 }
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 async function loadProfessions() {
   try {
     const response = await fetch('data/professions.json', { cache: 'no-store' });
@@ -2396,6 +2402,7 @@ async function loadProfessions() {
   }
 }
 
+<<<<<<< HEAD
 async function loadCrafts() {
   try {
     const response = await fetch('data/crafts.json', { cache: 'no-store' });
@@ -2426,6 +2433,8 @@ async function loadProfessorStudents() {
   }
 }
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 function renderProfessionLinkCard(link) {
   return `
     <article class="profession-link-card">
@@ -2442,6 +2451,7 @@ function renderProfessionLinkCard(link) {
   `;
 }
 
+<<<<<<< HEAD
 function renderProfessionTabLinkCard(link, tabId) {
   return `
     <article class="profession-link-card">
@@ -2480,6 +2490,8 @@ function renderProfessionInternalBack(label) {
   `;
 }
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 function renderProfessionLinkSection(title, links) {
   if (!Array.isArray(links) || !links.length) {
     return '';
@@ -2495,6 +2507,7 @@ function renderProfessionLinkSection(title, links) {
   `;
 }
 
+<<<<<<< HEAD
 function findProfessionLink(detail, slug) {
   return [
     ...(detail.specializations || []),
@@ -3125,6 +3138,8 @@ function renderProfessorProfessionDetail(detail) {
   `;
 }
 
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 function renderProfessionDetail(detail) {
   const container = document.getElementById('profession-catalog');
   const toolbar = document.querySelector('.profession-toolbar');
@@ -3153,9 +3168,12 @@ function renderProfessionDetail(detail) {
         </div>
       </div>
 
+<<<<<<< HEAD
       ${(detail.slug || slugifyProfessionName(detail.name)) === 'engenheiro' ? renderEngineerProfessionDetail(detail) : ''}
       ${(detail.slug || slugifyProfessionName(detail.name)) === 'professor' ? renderProfessorProfessionDetail(detail) : ''}
       ${!['engenheiro', 'professor'].includes(detail.slug || slugifyProfessionName(detail.name)) ? `
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
       ${renderProfessionLinkSection('Crafts relacionados', detail.crafts)}
       ${renderProfessionLinkSection('Especializacoes e subprofissoes', detail.specializations)}
       ${renderProfessionLinkSection('Subsecoes', detail.subsections)}
@@ -3166,7 +3184,10 @@ function renderProfessionDetail(detail) {
           ${detail.sections?.length ? detail.sections.map((section) => `<a class="data-pill" href="${detail.sourceUrl}#${section.anchor}" target="_blank" rel="noreferrer">${section.title}</a>`).join('') : '<span class="empty-state">Sem secoes listadas.</span>'}
         </div>
       </section>
+<<<<<<< HEAD
       ` : ''}
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     </article>
   `;
 }
@@ -3214,6 +3235,17 @@ function renderProfessionCatalog() {
         </article>
       `).join('') : '<div class="empty-state">No professions found for this search.</div>'}
     </div>
+<<<<<<< HEAD
+=======
+    ${professionData.relatedLinks.length ? `
+      <section class="clan-detail-section profession-related">
+        <h4>Links relacionados</h4>
+        <div class="profession-link-grid">
+          ${professionData.relatedLinks.map(renderProfessionLinkCard).join('')}
+        </div>
+      </section>
+    ` : ''}
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
   `;
 }
 
@@ -3778,8 +3810,11 @@ renderItemView();
 loadClanCatalog();
 loadClanDetails();
 loadProfessions();
+<<<<<<< HEAD
 loadCrafts();
 loadProfessorStudents();
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 loadPokemon();
 loadItems();
 
@@ -3814,17 +3849,24 @@ document.getElementById('profession-catalog')?.addEventListener('click', (event)
 
   const openButton = event.target.closest('[data-profession-open]');
   const backButton = event.target.closest('[data-profession-back]');
+<<<<<<< HEAD
   const tabButton = event.target.closest('[data-profession-tab]');
   const craftFilter = event.target.closest('[data-craft-filter]');
 
   if (openButton) {
     activeProfessionSlug = openButton.dataset.professionOpen;
     activeProfessionTab = 'overview';
+=======
+
+  if (openButton) {
+    activeProfessionSlug = openButton.dataset.professionOpen;
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     renderProfessionView();
     document.getElementById('panel-professions')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }
 
+<<<<<<< HEAD
   if (tabButton) {
     activeProfessionTab = tabButton.dataset.professionTab || 'overview';
     renderProfessionView();
@@ -3884,6 +3926,10 @@ document.getElementById('profession-catalog')?.addEventListener('change', (event
 
   if (studentClan) {
     activeProfessorStudentClan = studentClan.value || (professorStudentData.groups[0]?.clan ?? PROFESSOR_STUDENT_GROUPS[0].clan);
+=======
+  if (backButton) {
+    activeProfessionSlug = '';
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     renderProfessionView();
   }
 });

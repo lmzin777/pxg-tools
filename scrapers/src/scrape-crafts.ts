@@ -274,7 +274,10 @@ function inferSubprofession(profession: ProfessionRecord, link: ProfessionLinkRe
 
 function shouldInspectLink(link: ProfessionLinkRecord) {
   return link.kind === 'craft'
+<<<<<<< HEAD
     || link.kind === 'specialization'
+=======
+>>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     || link.kind === 'workshop'
     || /craft|workshop|factory|stone|computadores/i.test(link.title);
 }
