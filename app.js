@@ -1679,6 +1679,144 @@ let clanCatalogData = [
 
 let activeClanSlug = '';
 
+let professionData = {
+  intro: '',
+  professions: [],
+  relatedLinks: [],
+};
+let activeProfessionSlug = '';
+let activeProfessionTab = 'overview';
+
+let craftData = {
+  crafts: [],
+};
+let professionCraftFilters = {};
+let professionCraftSorts = {};
+let professionCraftRanks = {};
+let activeProfessorStudentClan = 'Malefic';
+let professorStudentData = {
+  groups: [],
+};
+
+const PROFESSOR_STUDENT_GROUPS = [
+  { clan: 'Malefic', students: [
+    { name: 'Rocket Member Student Card', level: 50, iconUrl: 'https://wiki.pokexgames.com/images/b/b3/Card_Rocket_Member_Female.png' },
+    { name: 'Rocket Leader Student Card', level: 150, iconUrl: 'https://wiki.pokexgames.com/images/f/f4/Card_Rocket_Leader_Female.png' },
+    { name: 'Shaggy Student Card', level: 150, iconUrl: 'https://wiki.pokexgames.com/images/3/3f/Shaggy_Student_Card.png' },
+    { name: 'Malefic Lady/Lord Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/8/86/Card_Malefic_Lady.png' },
+    { name: 'James Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/d/d5/Card_James.png' },
+    { name: 'Jessie Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/3/3a/Card_Jessie.png' },
+    { name: 'Koga Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/9/9c/Card_Koga.png' },
+    { name: 'Morty Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/6/64/Morty_Student_Card.png' },
+    { name: 'Agatha Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/0/07/Card_Agatha.png' },
+    { name: 'Akame Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/1/12/Akame_Student_Card.png' },
+    { name: 'Joker Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/c/c3/Joker_Student_Card.png' },
+    { name: 'Nezuko Kamado Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/0/08/Nezuko_Kamado_Student_Card.png' },
+    { name: 'Swain Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/5/5d/Swain_Student_Card.png' },
+    { name: 'Silver Student Card', level: 500, iconUrl: 'https://wiki.pokexgames.com/images/8/84/Silver_Student_Card.png' },
+  ] },
+  { clan: 'Gardestrike', students: [
+    { name: 'Chun Li Student Card', level: 150, iconUrl: 'https://wiki.pokexgames.com/images/4/49/Card_Chun_Li.png' },
+    { name: 'Gardestrike Champion Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/3/31/Card_Gardestrike_Champion_Female.png' },
+    { name: 'Looker Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/a/a7/Card_Looker.png' },
+    { name: 'Butch Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/6/6d/Card_Butch.png' },
+    { name: 'Cassidy Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/7/70/Card_Cassidy.png' },
+    { name: 'Chuck Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/a/a6/Chuck_Student_Card.png' },
+    { name: 'Kyra Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/5/5f/Card_Kyra.png' },
+    { name: 'Luffy Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/3/35/Luffy_Student_Card.png' },
+    { name: 'Norman Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/1/1b/Norman_Student_Card.png' },
+    { name: 'Sanji Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/a/a8/Sanji_Student_Card.png' },
+    { name: 'Whitney Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/5/5a/Whitney_Student_Card.png' },
+    { name: 'Bruno Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/b/b6/Card_Bruno.png' },
+    { name: 'Harley Quinn Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/4/40/Harley_Quinn_Student_Card.png' },
+  ] },
+  { clan: 'Seavell', students: [
+    { name: 'Melody Student Card', level: 100, iconUrl: 'https://wiki.pokexgames.com/images/7/77/Card_Melody.png' },
+    { name: 'Seavell Queen/King Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/6/63/Card_Seavell_Queen.png' },
+    { name: 'Officer Jenny Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/3/30/Card_Officer_Jenny.png' },
+    { name: 'Crystal Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/d/df/Crystal_Student_Card.png' },
+    { name: 'Jon Snow Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/f/fb/Jon_Snow_Student_Card.png' },
+    { name: 'Juan Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/f/f3/Juan_Student_Card.png' },
+    { name: 'Misty Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/a/a2/Card_Misty.png' },
+    { name: 'Pryce Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/3/3e/Pryce_Student_Card.png' },
+    { name: 'Lorelei Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/3/34/Card_Lorelei.png' },
+    { name: 'Tanjiro Kamado Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/f/f5/Card_Tanjiro.png' },
+    { name: 'Gary Oak Student Card', level: 400, iconUrl: 'https://wiki.pokexgames.com/images/7/79/Card_Gary_Oak.png' },
+    { name: 'Blue Student Card', level: 550, iconUrl: 'https://wiki.pokexgames.com/images/1/13/Card_Blue.png' },
+  ] },
+  { clan: 'Volcanic', students: [
+    { name: 'Police Officer Student Card', level: 50, iconUrl: 'https://wiki.pokexgames.com/images/7/7f/Card_Police_Officer_Female.png' },
+    { name: 'Police Captain Student Card', level: 150, iconUrl: 'https://wiki.pokexgames.com/images/4/4a/Card_Police_Captain_Female.png' },
+    { name: 'Goh Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/2/29/Goh_Student_Card.png' },
+    { name: 'Volcanic Master Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/8/8d/Volcanic_Master_Female.png' },
+    { name: 'May Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/3/38/Card_May.png' },
+    { name: 'Rin Okumura Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/9/9f/Rin_Okumura_Student_Card.png' },
+    { name: 'Blaine Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/2/20/Card_Blaine.png' },
+    { name: 'Flannery Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/e/e7/Flannery_Student_Card.png' },
+    { name: 'Annie Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/c/c8/Annie_Student_Card.png' },
+    { name: 'Gold Student Card', level: 500, iconUrl: 'https://wiki.pokexgames.com/images/6/66/Gold_Student_Card.png' },
+    { name: 'Red Student Card', level: 550, iconUrl: 'https://wiki.pokexgames.com/images/2/2c/Red_Student_Card.png' },
+  ] },
+  { clan: 'Raibolt', students: [
+    { name: 'Ritchie Student Card', level: 150, iconUrl: 'https://wiki.pokexgames.com/images/f/ff/Ritchie_Student_Card.png' },
+    { name: 'Raibolt Legend Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/7/7a/Card_Raibolt_Legend_Female.png' },
+    { name: 'Lt. Surge Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/4/43/Card_Lt_Surge.png' },
+    { name: 'Wattson Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/a/a2/Wattson_Student_Card.png' },
+    { name: 'Deadpool Student Card', level: 375, iconUrl: 'https://wiki.pokexgames.com/images/5/5c/Card_Deadpool.png' },
+    { name: 'Ash Ketchum Student Card', level: 400, iconUrl: 'https://wiki.pokexgames.com/images/9/91/Card_Ash_Ketchum.png' },
+  ] },
+  { clan: 'Naturia', students: [
+    { name: 'Naturia Keeper Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/9/94/Card_Naturia_Keeper_Female.png' },
+    { name: 'Lyra Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/a/a1/Lyra_Student_Card.png' },
+    { name: 'Tracey Student Card', level: 250, iconUrl: 'https://wiki.pokexgames.com/images/7/7e/Card_Tracey.png' },
+    { name: 'Bugsy Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/3/33/Bugsy_Student_Card.png' },
+    { name: 'Erika Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/9/9a/Card_Erika.png' },
+    { name: 'Doflamingo Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/0/01/Doflamingo_Student_Card.png' },
+    { name: 'Green Student Card', level: 550, iconUrl: 'https://wiki.pokexgames.com/images/6/68/Green_Student_Card.png' },
+  ] },
+  { clan: 'Orebound', students: [
+    { name: 'Orebound Heroine/Hero Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/2/2f/Card_Orebound_Heroine.png' },
+    { name: 'Brock Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/2/2a/Card_Brock.png' },
+    { name: 'Roxanne Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/1/1c/Roxanne_Student_Card.png' },
+    { name: 'Giovanni Student Card', level: 400, iconUrl: 'https://wiki.pokexgames.com/images/7/7a/Giovanni_Student_Card.png' },
+  ] },
+  { clan: 'Wingeon', students: [
+    { name: 'Wingeon Dragon Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/2/2e/Card_Wingeon_Dragon_Female.png' },
+    { name: 'Clair Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/8/8e/Clair_Student_Card.png' },
+    { name: 'Daenerys Targaryen Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/6/69/Daenerys_Targaryen_Student_Card.png' },
+    { name: 'Falkner Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/b/b0/Falkner_Student_Card.png' },
+    { name: 'Winona Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/2/2c/Winona_Student_Card.png' },
+    { name: 'Killer Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/5/52/Killer_Student_Card.png' },
+    { name: 'Lance Student Card', level: 375, iconUrl: 'https://wiki.pokexgames.com/images/9/99/Card_Lance.png' },
+    { name: 'Cynthia Student Card', level: 500, iconUrl: 'https://wiki.pokexgames.com/images/9/93/Cynthia_Student_Card.png' },
+  ] },
+  { clan: 'Psycraft', students: [
+    { name: 'Velma Student Card', level: 150, iconUrl: 'https://wiki.pokexgames.com/images/7/7f/Velma_Student_Card.png' },
+    { name: 'Psycraft Medium Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/0/0b/Card_Psycraft_Medium_Female.png' },
+    { name: 'Liza Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/5/5e/Liza_Student_Card.png' },
+    { name: 'Tate Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/f/f3/Tate_Student_Card.png' },
+    { name: 'Sabrina Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/a/ae/Card_Sabrina.png' },
+    { name: 'Ahri Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/1/11/Ahri_Student_Card.png' },
+    { name: 'Satoru Gojo Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/c/ce/Satoru_Gojo_Student_Card.png' },
+    { name: 'Trafalgar Law Student Card', level: 350, iconUrl: 'https://wiki.pokexgames.com/images/6/67/Trafalgar_Law_Student_Card.png' },
+  ] },
+  { clan: 'Ironhard', students: [
+    { name: 'Ironhard Titan Student Card', level: 200, iconUrl: 'https://wiki.pokexgames.com/images/d/d5/Card_Ironhard_Titan_Female.png' },
+    { name: 'Jasmine Student Card', level: 300, iconUrl: 'https://wiki.pokexgames.com/images/d/d8/Jasmine_Student_Card.png' },
+    { name: 'Steven Student Card', level: 500, iconUrl: 'https://wiki.pokexgames.com/images/7/7e/Steven_Student_Card.png' },
+  ] },
+];
+
+let pokemonData = {
+  generations: [],
+  pokemon: [],
+};
+
+let itemData = {
+  categories: [],
+};
+let activeItemCategorySlug = '';
+
 let clanDetailData = {
   volcanic: {
     name: 'Volcanic',
@@ -1993,6 +2131,42 @@ function normalizeRotationGroups(rotation) {
   return [{ element: 'Fire', rows: rotation }];
 }
 
+function normalizePokemonNameKey(value) {
+  return normalizeText(value || '')
+    .replace(/\s*\((?:TM|TR)\)\s*$/i, '')
+    .replace(/^mega\s+/i, '')
+    .replace(/^shiny\s+/i, '');
+}
+
+function buildTierPokemonIconMap(tiers) {
+  const iconMap = new Map();
+
+  (tiers || []).forEach((tier) => {
+    (tier.rows || []).forEach((row) => {
+      if (!row.name || !row.icon) {
+        return;
+      }
+
+      iconMap.set(normalizePokemonNameKey(row.name), row.icon);
+      iconMap.set(normalizeText(row.name), row.icon);
+    });
+  });
+
+  return iconMap;
+}
+
+function renderRotationPokemon(entry, iconMap) {
+  const name = entry.pokemon || '';
+  const icon = entry.icon || entry.pokemonIcon || iconMap.get(normalizeText(name)) || iconMap.get(normalizePokemonNameKey(name));
+
+  return `
+    <span class="rotation-pokemon">
+      ${icon ? `<img class="pokemon-sprite" src="${icon}" alt="${name}" loading="lazy">` : ''}
+      <span>${name}</span>
+    </span>
+  `;
+}
+
 function renderClanDetail(detail) {
   const container = document.getElementById('clan-catalog');
   const toolbar = document.querySelector('.clan-toolbar');
@@ -2004,6 +2178,8 @@ function renderClanDetail(detail) {
   if (toolbar) {
     toolbar.hidden = true;
   }
+
+  const rotationPokemonIcons = buildTierPokemonIconMap(detail.tiers);
 
   container.classList.add('detail-mode');
   container.innerHTML = `
@@ -2067,7 +2243,7 @@ function renderClanDetail(detail) {
                 <tbody>
                   ${group.rows.map((entry) => `
                     <tr>
-                      <td>${entry.pokemon}</td>
+                      <td>${renderRotationPokemon(entry, rotationPokemonIcons)}</td>
                       <td>${renderRoleLabel(entry)}</td>
                       <td>${entry.tier || '-'}</td>
                     </tr>
@@ -2179,6 +2355,1142 @@ function renderClanView() {
   }
 
   renderClanCatalog();
+}
+
+function slugifyProfessionName(name) {
+  return normalizeText(name).replace(/\s+/g, '-');
+}
+
+function normalizeProfessionPayload(payload) {
+  return {
+    intro: payload?.intro || '',
+    professions: Array.isArray(payload?.professions) ? payload.professions : [],
+    relatedLinks: Array.isArray(payload?.relatedLinks) ? payload.relatedLinks : [],
+  };
+}
+
+function normalizeCraftPayload(payload) {
+  return {
+    crafts: Array.isArray(payload?.crafts) ? payload.crafts : [],
+  };
+}
+
+function normalizeProfessorStudentsPayload(payload) {
+  return {
+    groups: Array.isArray(payload?.groups) ? payload.groups : [],
+  };
+}
+
+async function loadProfessions() {
+  try {
+    const response = await fetch('data/professions.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Profession data request failed with HTTP ${response.status}.`);
+    }
+
+    professionData = normalizeProfessionPayload(await response.json());
+    renderProfessionView();
+  } catch (error) {
+    console.warn('Profession data could not be loaded from data/professions.json.', error);
+  }
+}
+
+async function loadCrafts() {
+  try {
+    const response = await fetch('data/crafts.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Craft data request failed with HTTP ${response.status}.`);
+    }
+
+    craftData = normalizeCraftPayload(await response.json());
+    renderProfessionView();
+  } catch (error) {
+    console.warn('Craft data could not be loaded from data/crafts.json.', error);
+  }
+}
+
+async function loadProfessorStudents() {
+  try {
+    const response = await fetch('data/professor-students.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Professor student data request failed with HTTP ${response.status}.`);
+    }
+
+    professorStudentData = normalizeProfessorStudentsPayload(await response.json());
+    renderProfessionView();
+  } catch (error) {
+    console.warn('Professor student data could not be loaded from data/professor-students.json.', error);
+  }
+}
+
+function renderProfessionLinkCard(link) {
+  return `
+    <article class="profession-link-card">
+      <div class="profession-link-head">
+        ${link.iconUrl ? `<img src="${link.iconUrl}" alt="${link.title}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">${link.kind}</span>
+          <strong>${link.title}</strong>
+        </div>
+      </div>
+      <p>${link.summary || 'Loaded from the official wiki.'}</p>
+      <a href="${link.sourceUrl}" target="_blank" rel="noreferrer">Wiki</a>
+    </article>
+  `;
+}
+
+function renderProfessionTabLinkCard(link, tabId) {
+  return `
+    <article class="profession-link-card">
+      <div class="profession-link-head">
+        ${link.iconUrl ? `<img src="${link.iconUrl}" alt="${link.title}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">${link.kind}</span>
+          <button class="profession-title-link" type="button" data-profession-tab="${tabId}">${link.title}</button>
+        </div>
+      </div>
+      <p>${link.summary || 'Loaded from the official wiki.'}</p>
+    </article>
+  `;
+}
+
+function renderProfessionFeatureCard(title, summary, iconUrl, tabId, kind = 'caracteristica') {
+  return `
+    <article class="profession-link-card">
+      <div class="profession-link-head">
+        ${iconUrl ? `<img src="${iconUrl}" alt="${title}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">${kind}</span>
+          <button class="profession-title-link" type="button" data-profession-tab="${tabId}">${title}</button>
+        </div>
+      </div>
+      <p>${summary}</p>
+    </article>
+  `;
+}
+
+function renderProfessionInternalBack(label) {
+  return `
+    <button class="profession-card-inline-link profession-section-back" type="button" data-profession-tab="overview">
+      Voltar para ${label}
+    </button>
+  `;
+}
+
+function renderProfessionLinkSection(title, links) {
+  if (!Array.isArray(links) || !links.length) {
+    return '';
+  }
+
+  return `
+    <section class="clan-detail-section">
+      <h4>${title}</h4>
+      <div class="profession-link-grid">
+        ${links.map(renderProfessionLinkCard).join('')}
+      </div>
+    </section>
+  `;
+}
+
+function findProfessionLink(detail, slug) {
+  return [
+    ...(detail.specializations || []),
+    ...(detail.subsections || []),
+    ...(detail.crafts || []),
+  ].find((link) => link.slug === slug);
+}
+
+function getProfessionCrafts(professionSlug, predicate = () => true) {
+  return craftData.crafts.filter((craft) => craft.professionSlug === professionSlug && predicate(craft));
+}
+
+function renderCraftIngredientList(ingredients) {
+  if (!Array.isArray(ingredients) || !ingredients.length) {
+    return '<span class="empty-state">Ingredientes nao listados.</span>';
+  }
+
+  return `
+    <ul class="craft-ingredient-list">
+      ${ingredients.map((ingredient) => `
+        <li>
+          ${ingredient.iconUrl ? `<img src="${ingredient.iconUrl}" alt="${ingredient.name}" loading="lazy">` : ''}
+          <span>${ingredient.quantity} ${ingredient.name}</span>
+        </li>
+      `).join('')}
+    </ul>
+  `;
+}
+
+function craftMatchesSearch(craft, searchTerm) {
+  if (!searchTerm) {
+    return true;
+  }
+
+  const searchable = [
+    craft.itemName,
+    craft.itemSlug,
+    craft.category,
+    craft.rank,
+    ...(craft.ingredients || []).flatMap((ingredient) => [ingredient.name, ingredient.itemSlug]),
+  ].join(' ');
+
+  return normalizeText(searchable).includes(searchTerm);
+}
+
+function parseCraftSkillValue(skill) {
+  const match = String(skill || '').match(/\d+/);
+  return match ? Number(match[0]) : 0;
+}
+
+function parseCraftWaitMinutes(craftTime) {
+  const normalized = normalizeText(craftTime).replace(',', '.');
+  const match = normalized.match(/(\d+(?:\.\d+)?)/);
+
+  if (!match) {
+    return 0;
+  }
+
+  const amount = Number(match[1]);
+
+  if (/dia/.test(normalized)) {
+    return amount * 24 * 60;
+  }
+
+  if (/hora/.test(normalized)) {
+    return amount * 60;
+  }
+
+  if (/minuto/.test(normalized)) {
+    return amount;
+  }
+
+  if (/segundo/.test(normalized)) {
+    return amount / 60;
+  }
+
+  return amount;
+}
+
+function sortCrafts(crafts, sortMode) {
+  const sorted = [...crafts];
+
+  sorted.sort((a, b) => {
+    if (sortMode === 'name-asc') {
+      return String(a.itemName || '').localeCompare(String(b.itemName || ''), 'pt-BR');
+    }
+
+    if (sortMode === 'name-desc') {
+      return String(b.itemName || '').localeCompare(String(a.itemName || ''), 'pt-BR');
+    }
+
+    if (sortMode === 'time-desc') {
+      return parseCraftWaitMinutes(b.craftTime) - parseCraftWaitMinutes(a.craftTime);
+    }
+
+    if (sortMode === 'time-asc') {
+      return parseCraftWaitMinutes(a.craftTime) - parseCraftWaitMinutes(b.craftTime);
+    }
+
+    if (sortMode === 'skill-desc') {
+      return parseCraftSkillValue(b.skill) - parseCraftSkillValue(a.skill);
+    }
+
+    if (sortMode === 'skill-asc') {
+      return parseCraftSkillValue(a.skill) - parseCraftSkillValue(b.skill);
+    }
+
+    return 0;
+  });
+
+  return sorted;
+}
+
+function getCraftRank(craft) {
+  return craft.rank || (/^Rank\s+[A-Z]$/i.test(craft.category || '') ? craft.category : '');
+}
+
+function getCraftRankOptions(crafts) {
+  const rankOrder = ['Rank E', 'Rank D', 'Rank C', 'Rank B', 'Rank A', 'Rank S'];
+  const availableRanks = new Set((Array.isArray(crafts) ? crafts : [])
+    .map(getCraftRank)
+    .filter(Boolean));
+
+  const orderedRanks = rankOrder.filter((rank) => availableRanks.has(rank));
+  const extraRanks = [...availableRanks]
+    .filter((rank) => !rankOrder.includes(rank))
+    .sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  return [...orderedRanks, ...extraRanks];
+}
+
+function renderCraftCards(crafts, options = {}) {
+  const {
+    limit = 24,
+    filterId = 'default',
+    placeholder = 'Buscar craft ou ingrediente...',
+    showRankFilter = false,
+  } = options;
+  const searchValue = professionCraftFilters[filterId] || '';
+  const sortValue = professionCraftSorts[filterId] || 'default';
+  const rankValue = professionCraftRanks[filterId] || '';
+  const searchTerm = normalizeText(searchValue);
+  const rankOptions = getCraftRankOptions(crafts);
+  const filteredCrafts = sortCrafts(
+    (Array.isArray(crafts) ? crafts : [])
+      .filter((craft) => !rankValue || getCraftRank(craft) === rankValue)
+      .filter((craft) => craftMatchesSearch(craft, searchTerm)),
+    sortValue,
+  );
+
+  if (!Array.isArray(crafts) || !crafts.length) {
+    return `
+      <div class="profession-craft-filter${showRankFilter ? ' has-rank-filter' : ''}">
+        <input type="search" placeholder="${placeholder}" data-craft-filter="${filterId}" value="${searchValue}">
+        ${showRankFilter ? `
+          <select data-craft-rank="${filterId}" aria-label="Filtrar por rank">
+            <option value="">Todos os ranks</option>
+            ${rankOptions.map((rank) => `<option value="${rank}"${rankValue === rank ? ' selected' : ''}>${rank}</option>`).join('')}
+          </select>
+        ` : ''}
+        <select data-craft-sort="${filterId}" aria-label="Ordenar crafts">
+          <option value="default"${sortValue === 'default' ? ' selected' : ''}>Ordem original</option>
+          <option value="name-asc"${sortValue === 'name-asc' ? ' selected' : ''}>Nome A-Z</option>
+          <option value="name-desc"${sortValue === 'name-desc' ? ' selected' : ''}>Nome Z-A</option>
+          <option value="time-desc"${sortValue === 'time-desc' ? ' selected' : ''}>Tempo: maior para menor</option>
+          <option value="time-asc"${sortValue === 'time-asc' ? ' selected' : ''}>Tempo: menor para maior</option>
+          <option value="skill-desc"${sortValue === 'skill-desc' ? ' selected' : ''}>Habilidade: maior para menor</option>
+          <option value="skill-asc"${sortValue === 'skill-asc' ? ' selected' : ''}>Habilidade: menor para maior</option>
+        </select>
+      </div>
+      <div class="empty-state">Nenhum craft encontrado nesta aba ainda.</div>
+    `;
+  }
+
+  const visibleCrafts = filteredCrafts.slice(0, limit);
+  return `
+    <div class="profession-craft-filter${showRankFilter ? ' has-rank-filter' : ''}">
+      <input type="search" placeholder="${placeholder}" data-craft-filter="${filterId}" value="${searchValue}">
+      ${showRankFilter ? `
+        <select data-craft-rank="${filterId}" aria-label="Filtrar por rank">
+          <option value="">Todos os ranks</option>
+          ${rankOptions.map((rank) => `<option value="${rank}"${rankValue === rank ? ' selected' : ''}>${rank}</option>`).join('')}
+        </select>
+      ` : ''}
+      <select data-craft-sort="${filterId}" aria-label="Ordenar crafts">
+        <option value="default"${sortValue === 'default' ? ' selected' : ''}>Ordem original</option>
+        <option value="name-asc"${sortValue === 'name-asc' ? ' selected' : ''}>Nome A-Z</option>
+        <option value="name-desc"${sortValue === 'name-desc' ? ' selected' : ''}>Nome Z-A</option>
+        <option value="time-desc"${sortValue === 'time-desc' ? ' selected' : ''}>Tempo: maior para menor</option>
+        <option value="time-asc"${sortValue === 'time-asc' ? ' selected' : ''}>Tempo: menor para maior</option>
+        <option value="skill-desc"${sortValue === 'skill-desc' ? ' selected' : ''}>Habilidade: maior para menor</option>
+        <option value="skill-asc"${sortValue === 'skill-asc' ? ' selected' : ''}>Habilidade: menor para maior</option>
+      </select>
+      <span>${filteredCrafts.length} de ${crafts.length} crafts</span>
+    </div>
+    ${filteredCrafts.length ? `
+    <div class="profession-craft-grid">
+      ${visibleCrafts.map((craft) => `
+        <article class="profession-craft-card">
+          <div class="profession-craft-head">
+            ${craft.imageUrl ? `<img src="${craft.imageUrl}" alt="${craft.itemName}" loading="lazy">` : ''}
+            <div>
+              <span class="clan-note">${craft.category || craft.rank || 'Craft'}</span>
+              <strong>${craft.itemName}</strong>
+              <small>${[craft.skill ? `Habilidade: ${craft.skill}` : '', craft.craftTime ? `Tempo de espera: ${craft.craftTime}` : ''].filter(Boolean).join(' - ')}</small>
+            </div>
+          </div>
+          ${renderCraftIngredientList(craft.ingredients)}
+        </article>
+      `).join('')}
+    </div>
+    ${filteredCrafts.length > limit ? `<p class="profession-more-note">Mostrando ${limit} de ${filteredCrafts.length} crafts filtrados.</p>` : ''}
+    ` : '<div class="empty-state">Nenhum craft encontrado para esse filtro.</div>'}
+  `;
+}
+
+function renderProfessionTabs(tabs) {
+  return `
+    <div class="profession-subtabs" role="tablist" aria-label="Abas da profissao">
+      ${tabs.map((tab) => `
+        <button
+          class="profession-subtab${activeProfessionTab === tab.id ? ' active' : ''}"
+          type="button"
+          role="tab"
+          aria-selected="${activeProfessionTab === tab.id}"
+          data-profession-tab="${tab.id}"
+        >${tab.label}</button>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderProfessionResourceBlock(title, description) {
+  return `
+    <section class="profession-info-block">
+      <h5>${title}</h5>
+      ${Array.isArray(description)
+        ? `<ul>${description.map((item) => `<li>${item}</li>`).join('')}</ul>`
+        : `<p>${description}</p>`}
+    </section>
+  `;
+}
+
+function renderEngineerProfessionDetail(detail) {
+  const mechanic = findProfessionLink(detail, 'mecanico');
+  const hacker = findProfessionLink(detail, 'hacker');
+  const miniFactory = findProfessionLink(detail, 'mini-ammunition-factory');
+  const generalCraftLink = detail.crafts?.[0];
+  const tabs = [
+    { id: 'overview', label: 'Engenheiro' },
+    { id: 'mechanic', label: 'Mecanico' },
+    { id: 'hacker', label: 'Hacker' },
+    { id: 'mini-factory', label: 'Mini Ammunition Factory' },
+    { id: 'general-crafts', label: 'Crafts gerais' },
+  ];
+  const generalCrafts = getProfessionCrafts('engenheiro', (craft) => !craft.subprofessionSlug && craft.sourcePage !== 'Mini Ammunition Factory');
+  const mechanicCrafts = getProfessionCrafts('engenheiro', (craft) => craft.subprofessionSlug === 'mecanico' && craft.category !== 'Mini Ammunition Factory');
+  const miniFactoryCrafts = getProfessionCrafts('engenheiro', (craft) => craft.sourcePage === 'Mini Ammunition Factory' || craft.category === 'Mini Ammunition Factory');
+  const mechanicHighlights = generalCrafts.filter((craft) => ['mecha-device', 'enhancement-kit'].includes(craft.itemSlug));
+  const hackerHighlights = generalCrafts.filter((craft) => ['nightmare-pokegear', 'nintendo-switch'].includes(craft.itemSlug));
+  const activeTabExists = tabs.some((tab) => tab.id === activeProfessionTab);
+
+  if (!activeTabExists) {
+    activeProfessionTab = 'overview';
+  }
+
+  const tabContent = {
+    overview: `
+      <section class="clan-detail-section">
+        <h4>Descricao</h4>
+        <p>O Engenheiro e o mestre da tecnologia e producao de objetos mecanicos e eletronicos. O jogador que for engenheiro tera a habilidade de criar varios aparelhos eletronicos para ajudar na sua jornada, principalmente Pok&eacute;bolas que sao essenciais para qualquer treinador Pok&eacute;mon. Em niveis mais avancados, o Engenheiro ainda sera capaz de produzir Pok&eacute;bolas exclusivas e que possuem maior chance de capturar determinados Pok&eacute;mon.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Lucro</h4>
+        <p>O principal modo de lucrar como um Engenheiro e vendendo Pok&eacute;bolas, pois, em razao da sua necessidade no jogo, o comercio se torna estavel. Alem disso, engenheiros podem construir eletronicos de decoracao, addons e utilitarios importantes para jogadores experientes, como Smartphone, Health Check, Digital Clock, Duelist Radar, Boss Detector e outros equipamentos sofisticados.</p>
+        <p><strong>Obs:</strong> Todos os itens produzidos podem ser vendidos no NPC Machvise que esta na mesma sala do Kurt.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Especializacoes</h4>
+        <div class="profession-link-grid">
+          ${mechanic ? renderProfessionTabLinkCard({ ...mechanic, kind: 'especializacao' }, 'mechanic') : ''}
+          ${hacker ? renderProfessionTabLinkCard({ ...hacker, kind: 'especializacao' }, 'hacker') : ''}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Caracteristicas</h4>
+        <div class="profession-link-grid">
+          ${miniFactory ? renderProfessionFeatureCard('Mini Ammunition Factory', 'Fabricacao de municoes usadas pelas turrets do Engenheiro.', miniFactory.iconUrl, 'mini-factory', 'sistema') : ''}
+          ${renderProfessionFeatureCard('Crafts gerais', 'Crafts da profissao que nao dependem de especializacao, organizados por rank.', generalCraftLink?.iconUrl || detail.iconUrl, 'general-crafts', 'crafts')}
+        </div>
+      </section>
+    `,
+    mechanic: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Engenheiro')}
+        <div class="profession-link-head">
+          ${mechanic?.iconUrl ? `<img src="${mechanic.iconUrl}" alt="${mechanic.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${mechanic?.title || 'Mecanico'}</h4>
+          </div>
+        </div>
+        <p>O mecanico e alguem que possui habilidades e conhecimentos especializados na engenharia mecanica, abrindo espaco para a confeccao de diversos materiais uteis para os jogadores.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Recurso comum', [
+            'Corrupted Iron Ore e compartilhado por Mecanico e Hacker.',
+            'E obtido minerando os minerios da Nightmare World com a Pickaxe padrao do Engenheiro ou com a Blacksteel Pickaxe comprada no NPC Dustin.',
+            'A Blacksteel Pickaxe coleta o recurso comum mais rapido dentro e fora da Nightmare World.',
+            'Esse recurso entra em crafts como moveis tecnologicos, Nightmare Balls e Beast Balls.',
+          ])}
+          ${renderProfessionResourceBlock('Recurso exclusivo', [
+            'Tech Data e o recurso exclusivo do Mecanico.',
+            'Ele e obtido estudando criaturas robotizadas espalhadas pelo mapa com o Mechanic Tablet.',
+            'O Mechanic Tablet deve ser comprado no NPC Billy depois que o jogador vira Mecanico.',
+            'O High-Tech Device pode converter Tech Data em Corrupted Iron Ore.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Crafts Exclusivos</h4>
+        <p>Os Mecanicos sao responsaveis pela criacao de itens como Mecha Device, Enhancement Kit e outros equipamentos mecanicos.</p>
+        ${renderCraftCards([...mechanicCrafts, ...mechanicHighlights], {
+          filterId: 'engineer-mechanic',
+          placeholder: 'Buscar craft de Mecanico ou ingrediente...',
+        })}
+      </section>
+    `,
+    hacker: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Engenheiro')}
+        <div class="profession-link-head">
+          ${hacker?.iconUrl ? `<img src="${hacker.iconUrl}" alt="${hacker.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${hacker?.title || 'Hacker'}</h4>
+          </div>
+        </div>
+        <p>O Hacker tem conhecimentos avancados sobre tecnologia e e responsavel por obter informacoes de computadores existentes no Nightmare World.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Recurso comum', [
+            'Corrupted Iron Ore e compartilhado por Hacker e Mecanico.',
+            'E obtido nos minerios da Nightmare World com a Pickaxe do Engenheiro ou com a Blacksteel Pickaxe.',
+            'A Blacksteel Pickaxe pode ser comprada no NPC Dustin e acelera a coleta do recurso comum.',
+          ])}
+          ${renderProfessionResourceBlock('Recurso exclusivo', [
+            'Crypto Diamond Token e o recurso exclusivo do Hacker.',
+            'Ele e obtido estudando computadores do Nightmare World com o Hacker Flash Drive.',
+            'O Hacker Flash Drive deve ser comprado no NPC Billy depois de escolher a especializacao.',
+            'Computadores possuem recarga de 50 minutos para nova coleta e 1 minuto para religar quando outro Hacker usa.',
+            'A cada 5 computadores, o Hacker precisa fazer um minigame para continuar coletando.',
+            'Hackers recebem bonus de coleta nos primeiros 80 computadores.',
+            'O High-Tech Device pode converter Crypto Diamond Token em Corrupted Iron Ore.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Crafts Exclusivos</h4>
+        <p>Os Hackers sao responsaveis pela criacao de itens como Nightmare Pok&eacute;gear, Nintendo Switch e outros dispositivos avancados.</p>
+        ${renderCraftCards(getProfessionCrafts('engenheiro', (craft) => craft.subprofessionSlug === 'hacker'), {
+          filterId: 'engineer-hacker',
+          placeholder: 'Buscar craft de Hacker ou ingrediente...',
+        })}
+      </section>
+    `,
+    'mini-factory': `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Engenheiro')}
+        <div class="profession-link-head">
+          ${miniFactory?.iconUrl ? `<img src="${miniFactory.iconUrl}" alt="${miniFactory.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Turrets</span>
+            <h4>Mini Ammunition Factory</h4>
+          </div>
+        </div>
+        <p>O Mini Ammunition Factory e usado para fabricar municao.</p>
+        ${miniFactory?.sourceUrl ? `<a class="profession-source-link" href="${miniFactory.sourceUrl}" target="_blank" rel="noreferrer">Abrir pagina da Wiki</a>` : ''}
+      </section>
+      <section class="clan-detail-section">
+        <h4>Municoes das turrets</h4>
+        ${renderCraftCards(miniFactoryCrafts, {
+          filterId: 'engineer-mini-factory',
+          placeholder: 'Buscar municao ou ingrediente...',
+        })}
+      </section>
+    `,
+    'general-crafts': `
+      <section class="clan-detail-section">
+        ${renderProfessionInternalBack('Engenheiro')}
+        <h4>Crafts gerais</h4>
+        <p>${generalCraftLink?.summary || 'Crafts da profissao que nao dependem de especializacao.'}</p>
+        ${generalCraftLink?.sourceUrl ? `<a class="profession-source-link" href="${generalCraftLink.sourceUrl}" target="_blank" rel="noreferrer">Abrir lista completa na Wiki</a>` : ''}
+        ${renderCraftCards(generalCrafts, {
+          limit: 36,
+          filterId: 'engineer-general',
+          placeholder: 'Buscar craft geral ou ingrediente...',
+          showRankFilter: true,
+        })}
+      </section>
+    `,
+  };
+
+  return `
+    <div class="profession-tab-panel">
+      ${tabContent[activeProfessionTab] || tabContent.overview}
+    </div>
+  `;
+}
+
+function renderProfessorStudents() {
+  const groups = professorStudentData.groups.length ? professorStudentData.groups : PROFESSOR_STUDENT_GROUPS;
+  const selectedGroup = groups.find((group) => group.clan === activeProfessorStudentClan) || groups[0];
+
+  return `
+    <section class="clan-detail-section">
+      <h4>Estudantes</h4>
+      <p>Os estudantes sao cards de aluno usados pelo Professor. Eles podem realizar missoes e trazer recompensas, com resultados melhores conforme evoluem. O Professor pode manter ate 5 estudantes simultaneamente em missoes.</p>
+      <div class="student-filter">
+        <label>
+          Cla
+          <select data-professor-student-clan>
+            ${groups.map((group) => `<option value="${group.clan}"${selectedGroup.clan === group.clan ? ' selected' : ''}>${group.clan}</option>`).join('')}
+          </select>
+        </label>
+        <span>${selectedGroup.students.length} alunos</span>
+      </div>
+      <div class="student-table-wrap">
+        <table class="student-table">
+          <thead>
+            <tr>
+              <th>Card</th>
+              <th>Level</th>
+              <th>Pokemon</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${selectedGroup.students.map((student) => `
+              <tr>
+                <td>
+                  <div class="student-card-cell">
+                    ${student.iconUrl ? `<img src="${student.iconUrl}" alt="${student.name}" loading="lazy">` : ''}
+                    <strong>${student.name}</strong>
+                  </div>
+                </td>
+                <td>${student.level}</td>
+                <td>
+                  <div class="student-pokemon-list">
+                    ${(student.pokemon || []).map((pokemon) => `
+                      <span>
+                        ${pokemon.iconUrl ? `<img src="${pokemon.iconUrl}" alt="${pokemon.name}" loading="lazy">` : ''}
+                        <small>${pokemon.name}</small>
+                      </span>
+                    `).join('') || '<span class="empty-state">Pokemon nao listados.</span>'}
+                  </div>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  `;
+}
+
+function renderProfessorProfessionDetail(detail) {
+  const alchemist = findProfessionLink(detail, 'alquimista');
+  const academic = findProfessionLink(detail, 'academico');
+  const students = findProfessionLink(detail, 'estudantes');
+  const philosopherStone = findProfessionLink(detail, 'philosopher-s-stone');
+  const generalCraftLink = detail.crafts?.[0];
+  const tabs = [
+    { id: 'overview', label: 'Professor' },
+    { id: 'alchemist', label: 'Alquimista' },
+    { id: 'academic', label: 'Academico' },
+    { id: 'students', label: 'Estudantes' },
+    { id: 'general-crafts', label: 'Crafts gerais' },
+  ];
+  const generalCrafts = getProfessionCrafts('professor', (craft) => !craft.subprofessionSlug);
+  const alchemistCrafts = getProfessionCrafts('professor', (craft) => craft.subprofessionSlug === 'alquimista');
+  const academicCrafts = getProfessionCrafts('professor', (craft) => craft.subprofessionSlug === 'academico');
+  const activeTabExists = tabs.some((tab) => tab.id === activeProfessionTab);
+
+  if (!activeTabExists) {
+    activeProfessionTab = 'overview';
+  }
+
+  const tabContent = {
+    overview: `
+      <section class="clan-detail-section">
+        <h4>Descricao</h4>
+        <p>Conhecido por ser um estudioso dos Pok&eacute;mon e da Natureza, mas tambem em razao de seus alunos, capazes de realizar missoes especiais sob seu comando. O professor e um amante da natureza e sempre estuda as plantas, produz arbustos estilizados de Pok&eacute;mon e sementes, berries, que possuem efeitos unicos no mundo Pok&eacute;mon.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Lucro</h4>
+        <p>No inicio da jornada o Professor nao tera tanta facilidade, mas quando atinge niveis mais altos o lucro se torna muito forte.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Estudantes', [
+            'Ao realizar missoes, estudantes trazem recompensas ao Professor.',
+            'Essas recompensas passam a ser mais valiosas quando os estudantes estao em niveis mais altos.',
+            'O Professor pode ter no maximo 5 estudantes simultaneos realizando missoes.',
+          ])}
+          ${renderProfessionResourceBlock('Berries', [
+            'Uma plantacao de berries bem controlada pode gerar otimos lucros.',
+            'E necessario ter uma casa para planta-las.',
+            'Cuidado para nao deixar as berries plantadas por muito tempo, pois elas podem apodrecer e toda a plantacao pode ser perdida.',
+          ])}
+          ${renderProfessionResourceBlock('Alquimia', [
+            'Com conhecimentos de alquimia, o Professor pode construir laboratorio de Boost para Pok&eacute;mon.',
+            'Esse caminho permite lucrar bastante com crafts de alto nivel.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Especializacoes</h4>
+        <div class="profession-link-grid">
+          ${alchemist ? renderProfessionTabLinkCard({ ...alchemist, kind: 'especializacao' }, 'alchemist') : ''}
+          ${academic ? renderProfessionTabLinkCard({ ...academic, kind: 'especializacao' }, 'academic') : ''}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Caracteristicas</h4>
+        <div class="profession-link-grid">
+          ${students ? renderProfessionFeatureCard('Estudantes', 'Cards de aluno, missoes e filtros por cla para consultar os estudantes disponiveis.', students.iconUrl, 'students', 'sistema') : ''}
+          ${renderProfessionFeatureCard('Crafts gerais', 'Crafts da profissao que nao dependem de especializacao, organizados por rank.', generalCraftLink?.iconUrl || detail.iconUrl, 'general-crafts', 'crafts')}
+        </div>
+      </section>
+    `,
+    alchemist: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Professor')}
+        <div class="profession-link-head">
+          ${alchemist?.iconUrl ? `<img src="${alchemist.iconUrl}" alt="${alchemist.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${alchemist?.title || 'Alquimista'}</h4>
+          </div>
+        </div>
+        <p>Os Alquimistas sao responsaveis pela criacao de itens muito importantes para jogadores de alto nivel, como Pink Star Piece, Philosopher's Stone, Elixires exclusivos, entre outros.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Recurso comum', [
+            'O recurso base e compartilhado entre Alquimista e Academico.',
+            'Com o Tablet, o jogador estuda Darkrai Minions para obter Darkrai Essences.',
+            'Tambem e possivel estudar Nightmare Crystals destruidos para obter Black Darkrai Essence.',
+            'O Mortar transforma Medicinal Leaves em Crushed Leaves; esse item pode ser usado por qualquer profissao.',
+          ])}
+          ${renderProfessionResourceBlock('Recurso exclusivo', [
+            'Dew Beckers sao coletados com Alchemist Empty Becker em Wet Strange Plants.',
+            'As Wet Strange Plants ficam espalhadas pela Nightmare World, especialmente entre cidades e ilhas como Cosmic Island e Lost Island.',
+            'Os primeiros 50 recursos coletados no dia recebem bonus de 50%.',
+            'Wet Strange Plants possuem cooldown interno de 30 minutos.',
+            'Red Darkrai Essence vem de Darkrai Glimpse, criatura que pode aparecer apos certa quantidade de coletas de orvalho.',
+            'O High-Tech Device pode transformar Dew Beckers em Darkrai Essences.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Craft Philosopher's Stone</h4>
+        <p>${philosopherStone?.summary || 'Craft especial de Alquimista usado para produzir elixires importantes.'}</p>
+        ${renderCraftCards(alchemistCrafts.filter((craft) => craft.sourcePage === "Philosopher's Stone" || craft.itemName === "Philosopher's Stone"), {
+          filterId: 'professor-alchemist-stone',
+          placeholder: 'Buscar craft ou ingrediente...',
+        })}
+      </section>
+      <section class="clan-detail-section">
+        <h4>Craft Workshop</h4>
+        ${renderCraftCards(alchemistCrafts.filter((craft) => craft.sourcePage !== "Philosopher's Stone" && craft.itemName !== "Philosopher's Stone"), {
+          filterId: 'professor-alchemist-workshop',
+          placeholder: 'Buscar craft de Alquimista ou ingrediente...',
+        })}
+      </section>
+    `,
+    academic: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Professor')}
+        <div class="profession-link-head">
+          ${academic?.iconUrl ? `<img src="${academic.iconUrl}" alt="${academic.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${academic?.title || 'Academico'}</h4>
+          </div>
+        </div>
+        <p>A especializacao Academico tem como foco os alunos e disponibiliza missoes especiais de academico, permitindo que o jogador colete recursos fora do Nightmare World.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Recurso comum', [
+            'O recurso base e compartilhado entre Academico e Alquimista.',
+            'Com o Tablet, o jogador estuda Darkrai Minions para obter Darkrai Essences.',
+            'Nightmare Crystals destruidos podem conceder Black Darkrai Essence.',
+            'Medicinal Leaves podem ser transformadas em Crushed Leaves usando o Mortar.',
+          ])}
+          ${renderProfessionResourceBlock('Recurso exclusivo', [
+            'Study Notes sao o recurso exclusivo do Academico.',
+            'Eles sao obtidos ao concluir missoes especiais pelo Student Monitor.',
+            'Cada missao academica concluida concede 20 Study Notes.',
+            'E possivel concluir 10 missoes academicas por dia.',
+            'O jogador pode substituir missoes academicas 3 vezes por dia.',
+            'O High-Tech Device pode transformar Study Notes em Darkrai Essences.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Crafts Exclusivos</h4>
+        ${renderCraftCards(academicCrafts, {
+          filterId: 'professor-academic',
+          placeholder: 'Buscar craft de Academico ou ingrediente...',
+        })}
+      </section>
+    `,
+    students: `${renderProfessionInternalBack('Professor')}${renderProfessorStudents()}`,
+    'general-crafts': `
+      <section class="clan-detail-section">
+        ${renderProfessionInternalBack('Professor')}
+        <h4>Crafts gerais</h4>
+        <p>${generalCraftLink?.summary || 'Crafts da profissao que nao dependem de especializacao.'}</p>
+        ${generalCraftLink?.sourceUrl ? `<a class="profession-source-link" href="${generalCraftLink.sourceUrl}" target="_blank" rel="noreferrer">Abrir lista completa na Wiki</a>` : ''}
+        ${renderCraftCards(generalCrafts, {
+          limit: 36,
+          filterId: 'professor-general',
+          placeholder: 'Buscar craft geral ou ingrediente...',
+          showRankFilter: true,
+        })}
+      </section>
+    `,
+  };
+
+  return `
+    <div class="profession-tab-panel">
+      ${tabContent[activeProfessionTab] || tabContent.overview}
+    </div>
+  `;
+}
+
+function renderProfessionDetail(detail) {
+  const container = document.getElementById('profession-catalog');
+  const toolbar = document.querySelector('.profession-toolbar');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = true;
+  }
+
+  container.classList.add('detail-mode');
+  container.innerHTML = `
+    <article class="clan-detail profession-detail">
+      <div class="clan-detail-toolbar">
+        <button class="clan-back-button" type="button" data-profession-back>Voltar as profissoes</button>
+        <a href="${detail.sourceUrl}" target="_blank" rel="noreferrer">Abrir na Wiki</a>
+      </div>
+      <div class="profession-detail-header">
+        ${detail.iconUrl ? `<img src="${detail.iconUrl}" alt="${detail.name}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">Official wiki sync</span>
+          <h3>${detail.name}</h3>
+          <p>${detail.summary}</p>
+        </div>
+      </div>
+
+      ${(detail.slug || slugifyProfessionName(detail.name)) === 'engenheiro' ? renderEngineerProfessionDetail(detail) : ''}
+      ${(detail.slug || slugifyProfessionName(detail.name)) === 'professor' ? renderProfessorProfessionDetail(detail) : ''}
+      ${!['engenheiro', 'professor'].includes(detail.slug || slugifyProfessionName(detail.name)) ? `
+      ${renderProfessionLinkSection('Crafts relacionados', detail.crafts)}
+      ${renderProfessionLinkSection('Especializacoes e subprofissoes', detail.specializations)}
+      ${renderProfessionLinkSection('Subsecoes', detail.subsections)}
+
+      <section class="clan-detail-section">
+        <h4>Secoes da pagina</h4>
+        <div class="pill-list">
+          ${detail.sections?.length ? detail.sections.map((section) => `<a class="data-pill" href="${detail.sourceUrl}#${section.anchor}" target="_blank" rel="noreferrer">${section.title}</a>`).join('') : '<span class="empty-state">Sem secoes listadas.</span>'}
+        </div>
+      </section>
+      ` : ''}
+    </article>
+  `;
+}
+
+function renderProfessionCatalog() {
+  const container = document.getElementById('profession-catalog');
+  const toolbar = document.querySelector('.profession-toolbar');
+  const searchInput = document.getElementById('profession-search');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = false;
+  }
+
+  container.classList.remove('detail-mode');
+  const searchTerm = normalizeText(searchInput?.value || '');
+  const filteredProfessions = professionData.professions.filter((profession) => {
+    const searchable = [
+      profession.name,
+      profession.summary,
+      ...(profession.crafts || []).map((link) => link.title),
+      ...(profession.specializations || []).map((link) => link.title),
+      ...(profession.subsections || []).map((link) => link.title),
+    ].join(' ');
+
+    return !searchTerm || normalizeText(searchable).includes(searchTerm);
+  });
+
+  container.innerHTML = `
+    ${professionData.intro ? `<p class="profession-intro">${professionData.intro}</p>` : ''}
+    <div class="profession-grid">
+      ${filteredProfessions.length ? filteredProfessions.map((profession) => `
+        <article class="profession-card">
+          <button class="profession-card-button" type="button" data-profession-open="${profession.slug || slugifyProfessionName(profession.name)}">
+            ${profession.iconUrl ? `<img src="${profession.iconUrl}" alt="${profession.name}" loading="lazy">` : ''}
+            <span>
+              <strong>${profession.name}</strong>
+              <small>${profession.specializations?.length || 0} especializacoes - ${profession.crafts?.length || 0} crafts</small>
+            </span>
+          </button>
+          <p>${profession.summary}</p>
+        </article>
+      `).join('') : '<div class="empty-state">No professions found for this search.</div>'}
+    </div>
+  `;
+}
+
+function renderProfessionView() {
+  if (activeProfessionSlug) {
+    const detail = professionData.professions.find((profession) => (profession.slug || slugifyProfessionName(profession.name)) === activeProfessionSlug);
+
+    if (detail) {
+      renderProfessionDetail(detail);
+      return;
+    }
+  }
+
+  renderProfessionCatalog();
+}
+
+function normalizePokemonPayload(payload) {
+  return {
+    generations: Array.isArray(payload?.generations) ? payload.generations : [],
+    pokemon: Array.isArray(payload?.pokemon) ? payload.pokemon : [],
+  };
+}
+
+async function loadPokemon() {
+  try {
+    const response = await fetch('data/pokemon.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Pokemon data request failed with HTTP ${response.status}.`);
+    }
+
+    pokemonData = normalizePokemonPayload(await response.json());
+    renderPokemonGenerationOptions();
+    renderPokemonCatalog();
+  } catch (error) {
+    console.warn('Pokemon data could not be loaded from data/pokemon.json.', error);
+    renderPokemonCatalog();
+  }
+}
+
+function renderPokemonGenerationOptions() {
+  const select = document.getElementById('pokemon-generation-filter');
+
+  if (!select) {
+    return;
+  }
+
+  const selected = select.value;
+  select.innerHTML = '<option value="">All generations</option>';
+  pokemonData.generations.forEach((generation) => {
+    const option = document.createElement('option');
+    option.value = generation;
+    option.textContent = generation;
+    select.appendChild(option);
+  });
+  select.value = selected;
+}
+
+function renderPokemonTypeList(elements) {
+  if (!Array.isArray(elements) || !elements.length) {
+    return '<span class="empty-state compact">-</span>';
+  }
+
+  return `<div class="pokemon-types">${elements.map(renderTypeLabel).join('')}</div>`;
+}
+
+function getFilteredPokemon() {
+  const searchTerm = normalizeText(document.getElementById('pokemon-search')?.value || '');
+  const generation = document.getElementById('pokemon-generation-filter')?.value || '';
+
+  return pokemonData.pokemon.filter((pokemon) => {
+    const dex = pokemon.dex || `#${String(pokemon.dexNumber || '').padStart(3, '0')}`;
+    const matchesSearch = !searchTerm || normalizeText(`${dex} ${pokemon.dexNumber} ${pokemon.name}`).includes(searchTerm);
+    const matchesGeneration = !generation || pokemon.generation === generation;
+    return matchesSearch && matchesGeneration;
+  });
+}
+
+function renderPokemonCatalog() {
+  const container = document.getElementById('pokemon-catalog');
+
+  if (!container) {
+    return;
+  }
+
+  const pokemon = getFilteredPokemon();
+  container.innerHTML = `
+    <div class="pokemon-summary-row">
+      <strong>${pokemon.length}</strong>
+      <span>${pokemon.length === 1 ? 'Pokemon found' : 'Pokemon found'}</span>
+    </div>
+    <div class="pokemon-table-wrap">
+      <table class="result-table pokemon-table">
+        <thead>
+          <tr>
+            <th>Dex</th>
+            <th>Pokemon</th>
+            <th>Generation</th>
+            <th>Elements</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${pokemon.length ? pokemon.map((entry) => `
+            <tr>
+              <td>${entry.dex || `#${String(entry.dexNumber || '').padStart(3, '0')}`}</td>
+              <td>
+                <span class="pokemon-name-cell">
+                  ${entry.spriteUrl ? `<img src="${entry.spriteUrl}" alt="${entry.name}" loading="lazy">` : ''}
+                  <span>${entry.name}</span>
+                </span>
+              </td>
+              <td>${entry.generation || '-'}</td>
+              <td>${renderPokemonTypeList(entry.elements)}</td>
+              <td>${entry.level || '-'}</td>
+            </tr>
+          `).join('') : '<tr><td colspan="5"><span class="empty-state">No Pokemon found for these filters.</span></td></tr>'}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function normalizeItemPayload(payload) {
+  return {
+    categories: Array.isArray(payload?.categories) ? payload.categories : [],
+  };
+}
+
+async function loadItems() {
+  try {
+    const response = await fetch('data/items.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Item data request failed with HTTP ${response.status}.`);
+    }
+
+    itemData = normalizeItemPayload(await response.json());
+    renderItemView();
+  } catch (error) {
+    console.warn('Item data could not be loaded from data/items.json.', error);
+    renderItemView();
+  }
+}
+
+function renderItemAttributeList(item) {
+  const attributes = Object.entries(item.attributes || {})
+    .filter(([, value]) => value)
+    .slice(0, 4);
+
+  if (!attributes.length) {
+    return '<span class="empty-state compact">-</span>';
+  }
+
+  return `
+    <div class="item-attribute-list">
+      ${attributes.map(([name, value]) => `<span><strong>${name}:</strong> ${value}</span>`).join('')}
+    </div>
+  `;
+}
+
+function renderItemCategoryDetail(category) {
+  const container = document.getElementById('item-catalog');
+  const toolbar = document.querySelector('.item-toolbar');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = true;
+  }
+
+  container.classList.add('detail-mode');
+  container.innerHTML = `
+    <article class="clan-detail item-detail">
+      <div class="clan-detail-toolbar">
+        <button class="clan-back-button" type="button" data-item-back>Voltar aos itens</button>
+        <a href="${category.sourceUrl}" target="_blank" rel="noreferrer">Abrir na Wiki</a>
+      </div>
+      <div class="profession-detail-header">
+        ${category.iconUrl ? `<img src="${category.iconUrl}" alt="${category.title}" loading="lazy">` : ''}
+        <div>
+          <span class="clan-note">${category.group}</span>
+          <h3>${category.title}</h3>
+          <p>${category.summary || 'Loaded from the official wiki.'}</p>
+        </div>
+      </div>
+      <section class="clan-detail-section">
+        <h4>Itens</h4>
+        <div class="pokemon-table-wrap item-table-wrap">
+          <table class="result-table pokemon-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Section</th>
+                <th>Description</th>
+                <th>Attributes</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${category.items?.length ? category.items.map((item) => `
+                <tr>
+                  <td>
+                    <span class="pokemon-name-cell">
+                      ${item.iconUrl ? `<img src="${item.iconUrl}" alt="${item.name}" loading="lazy">` : ''}
+                      <span>${item.name}</span>
+                    </span>
+                  </td>
+                  <td>${item.section || '-'}</td>
+                  <td>${item.description || '-'}</td>
+                  <td>${renderItemAttributeList(item)}</td>
+                </tr>
+              `).join('') : '<tr><td colspan="4"><span class="empty-state">No structured items were found in this category.</span></td></tr>'}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </article>
+  `;
+}
+
+function renderItemCatalog() {
+  const container = document.getElementById('item-catalog');
+  const toolbar = document.querySelector('.item-toolbar');
+  const searchInput = document.getElementById('item-search');
+
+  if (!container) {
+    return;
+  }
+
+  if (toolbar) {
+    toolbar.hidden = false;
+  }
+
+  container.classList.remove('detail-mode');
+  const searchTerm = normalizeText(searchInput?.value || '');
+  const categories = itemData.categories.filter((category) => {
+    const searchable = [
+      category.title,
+      category.group,
+      category.summary,
+      ...(category.items || []).map((item) => item.name),
+    ].join(' ');
+
+    return !searchTerm || normalizeText(searchable).includes(searchTerm);
+  });
+
+  container.innerHTML = `
+    <div class="item-grid">
+      ${categories.length ? categories.map((category) => `
+        <article class="profession-card item-card">
+          <button class="profession-card-button" type="button" data-item-open="${category.slug}">
+            ${category.iconUrl ? `<img src="${category.iconUrl}" alt="${category.title}" loading="lazy">` : ''}
+            <span>
+              <strong>${category.title}</strong>
+              <small>${category.group} - ${category.items?.length || 0} items</small>
+            </span>
+          </button>
+          <p>${category.summary || 'Official wiki category ready for item lookup and future crafts.'}</p>
+        </article>
+      `).join('') : '<div class="empty-state">No item categories found for this search.</div>'}
+    </div>
+  `;
+}
+
+function renderItemView() {
+  if (activeItemCategorySlug) {
+    const category = itemData.categories.find((entry) => entry.slug === activeItemCategorySlug);
+
+    if (category) {
+      renderItemCategoryDetail(category);
+      return;
+    }
+  }
+
+  renderItemCatalog();
 }
 const BALL_ICON_FILES = {
   'Poke Ball': 'poke-ball.png',
@@ -2460,8 +3772,16 @@ document.getElementById('average-form')?.addEventListener('submit', (event) => {
 
 renderBallCatalog();
 renderClanView();
+renderProfessionView();
+renderPokemonCatalog();
+renderItemView();
 loadClanCatalog();
 loadClanDetails();
+loadProfessions();
+loadCrafts();
+loadProfessorStudents();
+loadPokemon();
+loadItems();
 
 document.getElementById('clan-search')?.addEventListener('input', renderClanCatalog);
 document.getElementById('clan-type-filter')?.addEventListener('change', renderClanCatalog);
@@ -2483,6 +3803,112 @@ document.getElementById('clan-catalog')?.addEventListener('click', (event) => {
   if (backButton) {
     activeClanSlug = '';
     renderClanView();
+  }
+});
+
+document.getElementById('profession-search')?.addEventListener('input', renderProfessionCatalog);
+document.getElementById('profession-catalog')?.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const openButton = event.target.closest('[data-profession-open]');
+  const backButton = event.target.closest('[data-profession-back]');
+  const tabButton = event.target.closest('[data-profession-tab]');
+  const craftFilter = event.target.closest('[data-craft-filter]');
+
+  if (openButton) {
+    activeProfessionSlug = openButton.dataset.professionOpen;
+    activeProfessionTab = 'overview';
+    renderProfessionView();
+    document.getElementById('panel-professions')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  if (tabButton) {
+    activeProfessionTab = tabButton.dataset.professionTab || 'overview';
+    renderProfessionView();
+    return;
+  }
+
+  if (craftFilter) {
+    return;
+  }
+
+  if (backButton) {
+    activeProfessionSlug = '';
+    activeProfessionTab = 'overview';
+    renderProfessionView();
+  }
+});
+
+document.getElementById('profession-catalog')?.addEventListener('input', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const craftFilter = event.target.closest('[data-craft-filter]');
+  if (!craftFilter) {
+    return;
+  }
+
+  professionCraftFilters[craftFilter.dataset.craftFilter || 'default'] = craftFilter.value || '';
+  renderProfessionView();
+  const nextInput = document.querySelector(`[data-craft-filter="${craftFilter.dataset.craftFilter}"]`);
+  nextInput?.focus();
+  if (nextInput instanceof HTMLInputElement) {
+    nextInput.setSelectionRange(nextInput.value.length, nextInput.value.length);
+  }
+});
+
+document.getElementById('profession-catalog')?.addEventListener('change', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const craftSort = event.target.closest('[data-craft-sort]');
+  const craftRank = event.target.closest('[data-craft-rank]');
+  const studentClan = event.target.closest('[data-professor-student-clan]');
+
+  if (craftSort) {
+    professionCraftSorts[craftSort.dataset.craftSort || 'default'] = craftSort.value || 'default';
+    renderProfessionView();
+    return;
+  }
+
+  if (craftRank) {
+    professionCraftRanks[craftRank.dataset.craftRank || 'default'] = craftRank.value || '';
+    renderProfessionView();
+    return;
+  }
+
+  if (studentClan) {
+    activeProfessorStudentClan = studentClan.value || (professorStudentData.groups[0]?.clan ?? PROFESSOR_STUDENT_GROUPS[0].clan);
+    renderProfessionView();
+  }
+});
+
+document.getElementById('pokemon-search')?.addEventListener('input', renderPokemonCatalog);
+document.getElementById('pokemon-generation-filter')?.addEventListener('change', renderPokemonCatalog);
+document.getElementById('item-search')?.addEventListener('input', renderItemCatalog);
+document.getElementById('item-catalog')?.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const openButton = event.target.closest('[data-item-open]');
+  const backButton = event.target.closest('[data-item-back]');
+
+  if (openButton) {
+    activeItemCategorySlug = openButton.dataset.itemOpen;
+    renderItemView();
+    document.getElementById('panel-items')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  if (backButton) {
+    activeItemCategorySlug = '';
+    renderItemView();
   }
 });
 

@@ -525,11 +525,23 @@ input[type="number"] {
   margin-bottom: 1rem;
 }
 
+.profession-toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 420px);
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
 .clan-toolbar[hidden] {
   display: none;
 }
 
-.clan-toolbar label {
+.profession-toolbar[hidden] {
+  display: none;
+}
+
+.clan-toolbar label,
+.profession-toolbar label {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -538,7 +550,8 @@ input[type="number"] {
 }
 
 .clan-toolbar input,
-.clan-toolbar select {
+.clan-toolbar select,
+.profession-toolbar input {
   width: 100%;
   padding: 0.8rem 0.9rem;
   border-radius: 12px;
@@ -546,6 +559,603 @@ input[type="number"] {
   background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   font: inherit;
+}
+
+.profession-catalog {
+  display: grid;
+  gap: 1rem;
+}
+
+.profession-catalog.detail-mode {
+  display: block;
+}
+
+.profession-intro {
+  margin: 0;
+  color: var(--muted);
+}
+
+.profession-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.profession-card {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.profession-card-button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profession-card-button img {
+  width: 52px;
+  height: 76px;
+  flex: 0 0 52px;
+  object-fit: contain;
+}
+
+.profession-card-button span {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.profession-card-button strong {
+  font-size: 1.2rem;
+}
+
+.profession-card-button small {
+  color: var(--muted);
+}
+
+.profession-card-button:hover strong {
+  color: var(--primary);
+}
+
+.profession-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.profession-detail-header {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.profession-detail-header img {
+  width: 96px;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.profession-detail-header h3 {
+  margin: 0.2rem 0;
+  font-size: 1.7rem;
+}
+
+.profession-detail-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.profession-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.profession-link-card {
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 0.85rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.profession-link-head {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.profession-link-head img {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  object-fit: contain;
+}
+
+.profession-link-head div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.profession-title-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profession-title-link:hover {
+  color: var(--primary);
+}
+
+.profession-link-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.profession-link-card a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.profession-link-card a:hover {
+  color: var(--primary);
+}
+
+.profession-subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.profession-subtab {
+  min-height: 40px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profession-subtab.active,
+.profession-subtab:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.profession-tab-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.profession-subdetail {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.profession-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.profession-info-block {
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.profession-info-block h5 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+
+.profession-info-block p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.profession-info-block ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
+.profession-info-block li {
+  line-height: 1.45;
+}
+
+.profession-card-inline-link,
+.profession-source-link {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profession-card-inline-link:hover,
+.profession-source-link:hover {
+  color: var(--primary);
+}
+
+.profession-section-back {
+  margin-bottom: 0.25rem;
+}
+
+.profession-craft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.profession-craft-filter {
+  display: grid;
+  grid-template-columns: minmax(220px, 360px) minmax(220px, 300px) auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.85rem;
+}
+
+.profession-craft-filter.has-rank-filter {
+  grid-template-columns: minmax(220px, 360px) minmax(150px, 190px) minmax(220px, 300px) auto;
+}
+
+.profession-craft-filter input,
+.profession-craft-filter select {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+}
+
+.profession-craft-filter select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--primary) 50%), linear-gradient(135deg, var(--primary) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(1em + 1px), calc(100% - 12px) calc(1em + 1px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.4rem;
+}
+
+.profession-craft-filter span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.profession-craft-card {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.profession-craft-head {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.profession-craft-head img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.profession-craft-head div {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.profession-craft-head strong,
+.profession-craft-head small {
+  overflow-wrap: anywhere;
+}
+
+.profession-craft-head small {
+  color: var(--muted);
+}
+
+.craft-ingredient-list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.craft-ingredient-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.craft-ingredient-list img {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  object-fit: contain;
+}
+
+.profession-more-note {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.student-filter {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) auto;
+  gap: 0.75rem;
+  align-items: end;
+  margin-top: 0.85rem;
+}
+
+.student-filter label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.student-filter select {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+}
+
+.student-filter select option,
+.profession-craft-filter select option,
+.tool-form select option,
+.clan-toolbar select option,
+.pokemon-toolbar select option {
+  background: #101b1b;
+  color: var(--text);
+}
+
+.student-filter span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.student-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.85rem;
+}
+
+.student-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+}
+
+.student-table th,
+.student-table td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.student-table th {
+  background: rgba(100, 129, 129, 0.24);
+  color: var(--text);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+.student-table td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.student-table td:nth-child(2) {
+  width: 110px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.student-card-cell {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.student-card-cell img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.student-card-cell strong {
+  overflow-wrap: anywhere;
+}
+
+.student-pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.student-pokemon-list span {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+  min-width: 52px;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.student-pokemon-list img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.student-pokemon-list small {
+  max-width: 86px;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.pokemon-toolbar,
+.item-toolbar {
+  display: grid;
+  grid-template-columns: 1fr minmax(180px, 260px);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.item-toolbar {
+  grid-template-columns: 1fr;
+}
+
+.pokemon-toolbar label,
+.item-toolbar label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pokemon-toolbar input,
+.pokemon-toolbar select,
+.item-toolbar input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  padding: 0.7rem 0.85rem;
+}
+
+.pokemon-catalog,
+.item-catalog {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.item-card p {
+  min-height: 4.5rem;
+}
+
+.item-table-wrap {
+  max-height: 760px;
+}
+
+.item-attribute-list {
+  display: grid;
+  gap: 0.25rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.item-attribute-list strong {
+  color: var(--text);
+}
+
+.pokemon-summary-row {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  color: var(--muted);
+}
+
+.pokemon-summary-row strong {
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.pokemon-table-wrap {
+  max-height: 680px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.pokemon-table {
+  margin: 0;
+}
+
+.pokemon-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: rgba(8, 18, 18, 0.96);
+}
+
+.pokemon-name-cell,
+.pokemon-types {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.pokemon-name-cell img {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  object-fit: contain;
 }
 
 .clan-catalog {
@@ -842,6 +1452,18 @@ input[type="number"] {
   margin-right: 0;
 }
 
+.rotation-pokemon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  font-weight: 700;
+}
+
+.rotation-pokemon .pokemon-sprite {
+  flex: 0 0 36px;
+}
+
 .role-label {
   display: inline-flex;
   align-items: center;
@@ -941,7 +1563,18 @@ input[type="number"] {
   .effectiveness-grid,
   .ball-catalog,
   .clan-catalog,
-  .clan-toolbar {
+  .clan-toolbar,
+  .profession-toolbar,
+  .pokemon-toolbar,
+  .item-toolbar,
+  .profession-grid,
+  .profession-link-grid,
+  .profession-resource-grid,
+  .profession-craft-grid,
+  .profession-craft-filter,
+  .student-filter,
+  .item-grid,
+  .profession-detail-header {
     grid-template-columns: 1fr;
   }
 

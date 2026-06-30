@@ -1,0 +1,1689 @@
+{
+  "sourceUrl": "https://wiki.pokexgames.com/index.php/Estudantes",
+  "groups": [
+    {
+      "clan": "Malefic",
+      "students": [
+        {
+          "name": "Rocket Member Student Card",
+          "level": 50,
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b3/Card_Rocket_Member_Female.png",
+          "pokemon": [
+            {
+              "name": "020-Raticate",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/57/020-Raticate.png"
+            },
+            {
+              "name": "020-Raticate",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/57/020-Raticate.png"
+            },
+            {
+              "name": "020-Raticate",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/57/020-Raticate.png"
+            }
+          ]
+        },
+        {
+          "name": "Rocket Leader Student Card",
+          "level": 150,
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f4/Card_Rocket_Leader_Female.png",
+          "pokemon": [
+            {
+              "name": "049-Sh Venomoth",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/03/049-Sh_Venomoth.png"
+            },
+            {
+              "name": "089-Muk",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/25/089-Muk.png"
+            },
+            {
+              "name": "073-Sh Tentacruel",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c9/073-Sh_Tentacruel.png"
+            }
+          ]
+        },
+        {
+          "name": "Shaggy Student Card",
+          "level": 150,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3f/Shaggy_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "229-Houndoom",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ac/229-Houndoom.png"
+            },
+            {
+              "name": "562-Yamask",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b7/562-Yamask.png"
+            },
+            {
+              "name": "584-Vanilluxe",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/ce/584-Vanilluxe.png"
+            }
+          ]
+        },
+        {
+          "name": "Malefic Lady/Lord Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/8/86/Card_Malefic_Lady.png",
+          "pokemon": [
+            {
+              "name": "049-Sh Venomoth",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/03/049-Sh_Venomoth.png"
+            },
+            {
+              "name": "089-Sh Muk",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/20/089-Sh_Muk.png"
+            },
+            {
+              "name": "Sgengar",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/61/Sgengar.png"
+            }
+          ]
+        },
+        {
+          "name": "James Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d5/Card_James.png",
+          "pokemon": [
+            {
+              "name": "071-Victreebel",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/5a/071-Victreebel.png"
+            },
+            {
+              "name": "110-Weezing",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/6b/110-Weezing.png"
+            },
+            {
+              "name": "130-Gyarados",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/46/130-Gyarados.png"
+            }
+          ]
+        },
+        {
+          "name": "Jessie Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3a/Card_Jessie.png",
+          "pokemon": [
+            {
+              "name": "024-Arbok",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/58/024-Arbok.png"
+            },
+            {
+              "name": "202-Wobbuffet",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/33/202-Wobbuffet.png"
+            },
+            {
+              "name": "336-Seviper",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f7/336-Seviper.png"
+            }
+          ]
+        },
+        {
+          "name": "Koga Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9c/Card_Koga.png",
+          "pokemon": [
+            {
+              "name": "049-Venomoth",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/ec/049-Venomoth.png"
+            },
+            {
+              "name": "089-Muk",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/25/089-Muk.png"
+            },
+            {
+              "name": "110-Weezing",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/6b/110-Weezing.png"
+            }
+          ]
+        },
+        {
+          "name": "Morty Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/6/64/Morty_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "Sgengar",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/61/Sgengar.png"
+            },
+            {
+              "name": "429-Mismagius",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/6d/429-Mismagius.png"
+            },
+            {
+              "name": "477-Dusknoir",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/7a/477-Dusknoir.png"
+            }
+          ]
+        },
+        {
+          "name": "Agatha Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/0/07/Card_Agatha.png",
+          "pokemon": [
+            {
+              "name": "094-Gengar",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/59/094-Gengar.png"
+            },
+            {
+              "name": "169-Crobat",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ae/169-Crobat.png"
+            },
+            {
+              "name": "200-Misdreavus",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/da/200-Misdreavus.png"
+            }
+          ]
+        },
+        {
+          "name": "Akame Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/1/12/Akame_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "680-Doublade",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/51/680-Doublade.png"
+            },
+            {
+              "name": "681-Aegislash",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/fc/681-Aegislash.png"
+            },
+            {
+              "name": "778-Mimikyu",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/4e/778-Mimikyu.png"
+            }
+          ]
+        },
+        {
+          "name": "Joker Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c3/Joker_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "Shinygol",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/ca/Shinygol.png"
+            },
+            {
+              "name": "101-Sh Electrode",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ac/101-Sh_Electrode.png"
+            },
+            {
+              "name": "Shiny Weezing",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/42/Shiny_Weezing.png"
+            }
+          ]
+        },
+        {
+          "name": "Nezuko Kamado Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/0/08/Nezuko_Kamado_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "094-MegaGengar",
+              "iconUrl": "https://wiki.pokexgames.com/images/9/98/094-MegaGengar.png"
+            },
+            {
+              "name": "Megahoundoom",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/be/Megahoundoom.png"
+            },
+            {
+              "name": "778-Mimikyu",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/4e/778-Mimikyu.png"
+            }
+          ]
+        },
+        {
+          "name": "Swain Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5d/Swain_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "Megahoundoom",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/be/Megahoundoom.png"
+            },
+            {
+              "name": "430-Honchkrow",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/31/430-Honchkrow.png"
+            },
+            {
+              "name": "430-Shiny Honchkrow",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/66/430-Shiny_Honchkrow.png"
+            }
+          ]
+        },
+        {
+          "name": "Silver Student Card",
+          "level": 500,
+          "iconUrl": "https://wiki.pokexgames.com/images/8/84/Silver_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "Sgengar",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/61/Sgengar.png"
+            },
+            {
+              "name": "169-Sh Crobat",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/4f/169-Sh_Crobat.png"
+            },
+            {
+              "name": "461-Weavile",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/da/461-Weavile.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Gardestrike",
+      "students": [
+        {
+          "name": "Chun Li Student Card",
+          "level": 150,
+          "iconUrl": "https://wiki.pokexgames.com/images/4/49/Card_Chun_Li.png",
+          "pokemon": [
+            {
+              "name": "106-HitmonleeNormal",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/de/106-HitmonleeNormal.png"
+            },
+            {
+              "name": "107-HitmonchanNormal",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/83/107-HitmonchanNormal.png"
+            },
+            {
+              "name": "237-HitmontopNormal",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/76/237-HitmontopNormal.png"
+            }
+          ]
+        },
+        {
+          "name": "Gardestrike Champion Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/31/Card_Gardestrike_Champion_Female.png",
+          "pokemon": [
+            {
+              "name": "068-Sh Machamp",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/8d/068-Sh_Machamp.png"
+            },
+            {
+              "name": "234-shStantler",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/47/234-shStantler.png"
+            },
+            {
+              "name": "289-Slaking",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c7/289-Slaking.png"
+            }
+          ]
+        },
+        {
+          "name": "Looker Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/a/a7/Card_Looker.png",
+          "pokemon": [
+            {
+              "name": "068-Machamp",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e7/068-Machamp.png"
+            },
+            {
+              "name": "308-Medicham",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2c/308-Medicham.png"
+            },
+            {
+              "name": "454-Toxicroak",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e5/454-Toxicroak.png"
+            }
+          ]
+        },
+        {
+          "name": "Butch Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6d/Card_Butch.png",
+          "pokemon": [
+            {
+              "name": "057-Primeape",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/12/057-Primeape.png"
+            },
+            {
+              "name": "213-Shuckle",
+              "iconUrl": "https://wiki.pokexgames.com/images/9/95/213-Shuckle.png"
+            },
+            {
+              "name": "237-HitmontopNormal",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/76/237-HitmontopNormal.png"
+            }
+          ]
+        },
+        {
+          "name": "Cassidy Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/70/Card_Cassidy.png",
+          "pokemon": [
+            {
+              "name": "020-Raticate",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/57/020-Raticate.png"
+            },
+            {
+              "name": "210-Granbull",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a4/210-Granbull.png"
+            },
+            {
+              "name": "302-Sableye",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/4c/302-Sableye.png"
+            }
+          ]
+        },
+        {
+          "name": "Chuck Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/a/a6/Chuck_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "057-Champion Primeape",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/34/057-Champion_Primeape.png"
+            },
+            {
+              "name": "062-Poliwrath",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0c/062-Poliwrath.png"
+            },
+            {
+              "name": "068-Sh Machamp",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/8d/068-Sh_Machamp.png"
+            }
+          ]
+        },
+        {
+          "name": "Kyra Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5f/Card_Kyra.png",
+          "pokemon": [
+            {
+              "name": "115-Kangaskhan",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/38/115-Kangaskhan.png"
+            },
+            {
+              "name": "143-Snorlax",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c9/143-Snorlax.png"
+            },
+            {
+              "name": "217-Ursaring",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d4/217-Ursaring.png"
+            }
+          ]
+        },
+        {
+          "name": "Luffy Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/35/Luffy_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "057-Champion Primeape",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/34/057-Champion_Primeape.png"
+            },
+            {
+              "name": "068-Sh Machamp",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/8d/068-Sh_Machamp.png"
+            },
+            {
+              "name": "link-Elite Hitmonchan",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/ec/107-Hitmonchan.png"
+            }
+          ]
+        },
+        {
+          "name": "Norman Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/1/1b/Norman_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "115-MegaKangaskhan",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/5c/115-MegaKangaskhan.png"
+            },
+            {
+              "name": "289-Slaking",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c7/289-Slaking.png"
+            },
+            {
+              "name": "289-Shiny Slaking",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/cb/289-Shiny_Slaking.png"
+            }
+          ]
+        },
+        {
+          "name": "Sanji Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/a/a8/Sanji_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "Elite Hitmonlee",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b0/Elite_Hitmonlee.png"
+            },
+            {
+              "name": "257-MegaBlaziken",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/3e/257-MegaBlaziken.png"
+            },
+            {
+              "name": "815-Cinderace",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0a/815-Cinderace.png"
+            }
+          ]
+        },
+        {
+          "name": "Whitney Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5a/Whitney_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "036-Clefable",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/ce/036-Clefable.png"
+            },
+            {
+              "name": "128-shTauros",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/28/128-shTauros.png"
+            },
+            {
+              "name": "Shiny miltank",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c6/Shiny_miltank.png"
+            }
+          ]
+        },
+        {
+          "name": "Bruno Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b6/Card_Bruno.png",
+          "pokemon": [
+            {
+              "name": "095-CrystalOnix",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/11/095-CrystalOnix.png"
+            },
+            {
+              "name": "link-Elite Hitmonchan",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/ec/107-Hitmonchan.png"
+            },
+            {
+              "name": "Elite Hitmonlee",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b0/Elite_Hitmonlee.png"
+            }
+          ]
+        },
+        {
+          "name": "Harley Quinn Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/4/40/Harley_Quinn_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "257-MegaBlaziken",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/3e/257-MegaBlaziken.png"
+            },
+            {
+              "name": "428-MegaLopunny",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/cc/428-MegaLopunny.png"
+            },
+            {
+              "name": "448-MegaLucario",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/6d/448-MegaLucario.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Seavell",
+      "students": [
+        {
+          "name": "Melody Student Card",
+          "level": 100,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/77/Card_Melody.png",
+          "pokemon": [
+            {
+              "name": "199-Slowking",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/db/199-Slowking.png"
+            },
+            {
+              "name": "238-Smoochum",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/20/238-Smoochum.png"
+            },
+            {
+              "name": "240-Magby",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a8/240-Magby.png"
+            }
+          ]
+        },
+        {
+          "name": "Seavell Queen/King Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Card_Seavell_Queen.png",
+          "pokemon": [
+            {
+              "name": "SshBlastoise",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/37/SshBlastoise.png"
+            },
+            {
+              "name": "160-shFeraligatr",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/13/160-shFeraligatr.png"
+            },
+            {
+              "name": "186-shPolitoed",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c2/186-shPolitoed.png"
+            }
+          ]
+        },
+        {
+          "name": "Officer Jenny Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/30/Card_Officer_Jenny.png",
+          "pokemon": [
+            {
+              "name": "008-Wartortle",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/37/008-Wartortle.png"
+            },
+            {
+              "name": "058-Sh Growlithe",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0b/058-Sh_Growlithe.png"
+            },
+            {
+              "name": "310-Manectric",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b2/310-Manectric.png"
+            }
+          ]
+        },
+        {
+          "name": "Crystal Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/d/df/Crystal_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "040-Wigglytuff",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/21/040-Wigglytuff.png"
+            },
+            {
+              "name": "160-shFeraligatr",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/13/160-shFeraligatr.png"
+            },
+            {
+              "name": "429-Mismagius",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/6d/429-Mismagius.png"
+            }
+          ]
+        },
+        {
+          "name": "Jon Snow Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/f/fb/Jon_Snow_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "059-Sh Arcanine",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/dc/059-Sh_Arcanine.png"
+            },
+            {
+              "name": "262-Mightyena",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/57/262-Mightyena.png"
+            },
+            {
+              "name": "448-MegaLucario",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/6d/448-MegaLucario.png"
+            }
+          ]
+        },
+        {
+          "name": "Juan Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f3/Juan_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "230-Kingdra",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c5/230-Kingdra.png"
+            },
+            {
+              "name": "365-Walrein",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/73/365-Walrein.png"
+            },
+            {
+              "name": "Shiny Whiscashh",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/37/Shiny_Whiscashh.png"
+            }
+          ]
+        },
+        {
+          "name": "Misty Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/a/a2/Card_Misty.png",
+          "pokemon": [
+            {
+              "name": "054-Psyduck",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/82/054-Psyduck.png"
+            },
+            {
+              "name": "121-Starmie",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/7a/121-Starmie.png"
+            },
+            {
+              "name": "130-Gyarados",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/46/130-Gyarados.png"
+            }
+          ]
+        },
+        {
+          "name": "Pryce Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3e/Pryce_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "124-shJynx",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/ff/124-shJynx.png"
+            },
+            {
+              "name": "461-Weavile",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/da/461-Weavile.png"
+            },
+            {
+              "name": "473-Mamoswine",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/06/473-Mamoswine.png"
+            }
+          ]
+        },
+        {
+          "name": "Lorelei Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/34/Card_Lorelei.png",
+          "pokemon": [
+            {
+              "name": "087-Dewgong",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d7/087-Dewgong.png"
+            },
+            {
+              "name": "091-Cloyster",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/70/091-Cloyster.png"
+            },
+            {
+              "name": "131-Lapras",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e9/131-Lapras.png"
+            }
+          ]
+        },
+        {
+          "name": "Tanjiro Kamado Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f5/Card_Tanjiro.png",
+          "pokemon": [
+            {
+              "name": "SshBlastoise",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/37/SshBlastoise.png"
+            },
+            {
+              "name": "006-shCharizard",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/52/006-shCharizard.png"
+            },
+            {
+              "name": "681-Aegislash",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/fc/681-Aegislash.png"
+            }
+          ]
+        },
+        {
+          "name": "Gary Oak Student Card",
+          "level": 400,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/79/Card_Gary_Oak.png",
+          "pokemon": [
+            {
+              "name": "0009-Blastoise",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/00/0009-Blastoise.png"
+            },
+            {
+              "name": "059-Arcanine",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/36/059-Arcanine.png"
+            },
+            {
+              "name": "466-Electivire",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/fd/466-Electivire.png"
+            }
+          ]
+        },
+        {
+          "name": "Blue Student Card",
+          "level": 550,
+          "iconUrl": "https://wiki.pokexgames.com/images/1/13/Card_Blue.png",
+          "pokemon": [
+            {
+              "name": "MegaBlastoise",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e2/MegaBlastoise.png"
+            },
+            {
+              "name": "018M",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a7/018M.png"
+            },
+            {
+              "name": "059-Sh Arcanine",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/dc/059-Sh_Arcanine.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Volcanic",
+      "students": [
+        {
+          "name": "Police Officer Student Card",
+          "level": 50,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7f/Card_Police_Officer_Female.png",
+          "pokemon": [
+            {
+              "name": "058-Growlithe",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0b/058-Growlithe.png"
+            },
+            {
+              "name": "058-Growlithe",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0b/058-Growlithe.png"
+            },
+            {
+              "name": "058-Growlithe",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0b/058-Growlithe.png"
+            }
+          ]
+        },
+        {
+          "name": "Police Captain Student Card",
+          "level": 150,
+          "iconUrl": "https://wiki.pokexgames.com/images/4/4a/Card_Police_Captain_Female.png",
+          "pokemon": [
+            {
+              "name": "006-shCharizard",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/52/006-shCharizard.png"
+            },
+            {
+              "name": "059-Arcanine",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/36/059-Arcanine.png"
+            },
+            {
+              "name": "059-Sh Arcanine",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/dc/059-Sh_Arcanine.png"
+            }
+          ]
+        },
+        {
+          "name": "Goh Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/2/29/Goh_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "555-Darmanitan",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/cd/555-Darmanitan.png"
+            },
+            {
+              "name": "815-Cinderace",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0a/815-Cinderace.png"
+            },
+            {
+              "name": "815-ShinyCinderace",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/3c/815-ShinyCinderace.png"
+            }
+          ]
+        },
+        {
+          "name": "Volcanic Master Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/8/8d/Volcanic_Master_Female.png",
+          "pokemon": [
+            {
+              "name": "006-shCharizard",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/52/006-shCharizard.png"
+            },
+            {
+              "name": "038-Sh Ninetales",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/fa/038-Sh_Ninetales.png"
+            },
+            {
+              "name": "126-Sh Magmar",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/63/126-Sh_Magmar.png"
+            }
+          ]
+        },
+        {
+          "name": "May Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/38/Card_May.png",
+          "pokemon": [
+            {
+              "name": "003-Venusaur",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c6/003-Venusaur.png"
+            },
+            {
+              "name": "008-Wartortle",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/37/008-Wartortle.png"
+            },
+            {
+              "name": "257-Blaziken",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/19/257-Blaziken.png"
+            }
+          ]
+        },
+        {
+          "name": "Rin Okumura Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9f/Rin_Okumura_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "006-MegaCharizardX",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f4/006-MegaCharizardX.png"
+            },
+            {
+              "name": "078-Rapidash",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/46/078-Rapidash.png"
+            },
+            {
+              "name": "157-Sh Typhlosion",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2f/157-Sh_Typhlosion.png"
+            }
+          ]
+        },
+        {
+          "name": "Blaine Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/2/20/Card_Blaine.png",
+          "pokemon": [
+            {
+              "name": "038-Ninetales",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/bf/038-Ninetales.png"
+            },
+            {
+              "name": "126-Magmar",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/19/126-Magmar.png"
+            },
+            {
+              "name": "467-Magmortar",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/84/467-Magmortar.png"
+            }
+          ]
+        },
+        {
+          "name": "Flannery Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/e/e7/Flannery_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "323-MegaCamerupt",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d1/323-MegaCamerupt.png"
+            },
+            {
+              "name": "Shiny Torkoall",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/fe/Shiny_Torkoall.png"
+            },
+            {
+              "name": "467-Magmortar",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/84/467-Magmortar.png"
+            }
+          ]
+        },
+        {
+          "name": "Annie Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c8/Annie_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "157-Sh Typhlosion",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2f/157-Sh_Typhlosion.png"
+            },
+            {
+              "name": "217-Ursaring",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d4/217-Ursaring.png"
+            },
+            {
+              "name": "467-Magmortar",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/84/467-Magmortar.png"
+            }
+          ]
+        },
+        {
+          "name": "Gold Student Card",
+          "level": 500,
+          "iconUrl": "https://wiki.pokexgames.com/images/6/66/Gold_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "157-Sh Typhlosion",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2f/157-Sh_Typhlosion.png"
+            },
+            {
+              "name": "186-shPolitoed",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c2/186-shPolitoed.png"
+            },
+            {
+              "name": "Shiny Sudowoodo",
+              "iconUrl": "https://wiki.pokexgames.com/images/9/9b/Shiny_Sudowoodo.png"
+            }
+          ]
+        },
+        {
+          "name": "Red Student Card",
+          "level": 550,
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2c/Red_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "006-MegaCharizardX",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f4/006-MegaCharizardX.png"
+            },
+            {
+              "name": "25 - PikachuLightBall",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/3f/25_-_PikachuLightBall.png"
+            },
+            {
+              "name": "Shiny snorlax",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/6d/Shiny_snorlax.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Raibolt",
+      "students": [
+        {
+          "name": "Ritchie Student Card",
+          "level": 150,
+          "iconUrl": "https://wiki.pokexgames.com/images/f/ff/Ritchie_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "005-Charmeleon",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a3/005-Charmeleon.png"
+            },
+            {
+              "name": "012-Butterfree",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/4e/012-Butterfree.png"
+            },
+            {
+              "name": "025-Pikachu",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/1a/025-Pikachu.png"
+            }
+          ]
+        },
+        {
+          "name": "Raibolt Legend Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7a/Card_Raibolt_Legend_Female.png",
+          "pokemon": [
+            {
+              "name": "026-Sh Raichu",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/50/026-Sh_Raichu.png"
+            },
+            {
+              "name": "125-Sh Electabuzz",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/25/125-Sh_Electabuzz.png"
+            },
+            {
+              "name": "181-Sh Ampharos",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2e/181-Sh_Ampharos.png"
+            }
+          ]
+        },
+        {
+          "name": "Lt. Surge Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/4/43/Card_Lt_Surge.png",
+          "pokemon": [
+            {
+              "name": "026-Raichu",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f4/026-Raichu.png"
+            },
+            {
+              "name": "101-Electrode",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/13/101-Electrode.png"
+            },
+            {
+              "name": "125-Electabuzz",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f8/125-Electabuzz.png"
+            }
+          ]
+        },
+        {
+          "name": "Wattson Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/a/a2/Wattson_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "101-Sh Electrode",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ac/101-Sh_Electrode.png"
+            },
+            {
+              "name": "310-Sh Manectric",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b5/310-Sh_Manectric.png"
+            },
+            {
+              "name": "462-Shiny Magnezone",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/20/462-Shiny_Magnezone.png"
+            }
+          ]
+        },
+        {
+          "name": "Deadpool Student Card",
+          "level": 375,
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5c/Card_Deadpool.png",
+          "pokemon": [
+            {
+              "name": "123-Sh Scyther",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b0/123-Sh_Scyther.png"
+            },
+            {
+              "name": "125-Sh Electabuzz",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/25/125-Sh_Electabuzz.png"
+            },
+            {
+              "name": "130-RedGyarados",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/29/130-RedGyarados.png"
+            }
+          ]
+        },
+        {
+          "name": "Ash Ketchum Student Card",
+          "level": 400,
+          "iconUrl": "https://wiki.pokexgames.com/images/9/91/Card_Ash_Ketchum.png",
+          "pokemon": [
+            {
+              "name": "006-Charizard",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0c/006-Charizard.png"
+            },
+            {
+              "name": "25 - PikachuLightBall",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/3f/25_-_PikachuLightBall.png"
+            },
+            {
+              "name": "143-BigSnorlax",
+              "iconUrl": "https://wiki.pokexgames.com/images/thumb/9/95/143-BigSnorlax.png/37px-143-BigSnorlax.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Naturia",
+      "students": [
+        {
+          "name": "Naturia Keeper Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/9/94/Card_Naturia_Keeper_Female.png",
+          "pokemon": [
+            {
+              "name": "Sh venu",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2a/Sh_venu.png"
+            },
+            {
+              "name": "123-Sh Scyther",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b0/123-Sh_Scyther.png"
+            },
+            {
+              "name": "154-Sh Meganium",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/1b/154-Sh_Meganium.png"
+            }
+          ]
+        },
+        {
+          "name": "Lyra Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/a/a1/Lyra_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "Sh venu",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2a/Sh_venu.png"
+            },
+            {
+              "name": "Tang",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/3a/Tang.png"
+            },
+            {
+              "name": "474-PorygonZ",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/1f/474-PorygonZ.png"
+            }
+          ]
+        },
+        {
+          "name": "Tracey Student Card",
+          "level": 250,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7e/Card_Tracey.png",
+          "pokemon": [
+            {
+              "name": "048-Venonat",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ab/048-Venonat.png"
+            },
+            {
+              "name": "123-Scyther",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/38/123-Scyther.png"
+            },
+            {
+              "name": "183-Marill",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/7d/183-Marill.png"
+            }
+          ]
+        },
+        {
+          "name": "Bugsy Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/3/33/Bugsy_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "123-Sh Scyther",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b0/123-Sh_Scyther.png"
+            },
+            {
+              "name": "127-Sh Pinsir",
+              "iconUrl": "https://wiki.pokexgames.com/images/9/92/127-Sh_Pinsir.png"
+            },
+            {
+              "name": "212-MegaScizor",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/76/212-MegaScizor.png"
+            }
+          ]
+        },
+        {
+          "name": "Erika Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9a/Card_Erika.png",
+          "pokemon": [
+            {
+              "name": "045-Vileplume",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ab/045-Vileplume.png"
+            },
+            {
+              "name": "071-Victreebel",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/5a/071-Victreebel.png"
+            },
+            {
+              "name": "114-Tangela",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f5/114-Tangela.png"
+            }
+          ]
+        },
+        {
+          "name": "Doflamingo Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/0/01/Doflamingo_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "065-shAlakazam",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2b/065-shAlakazam.png"
+            },
+            {
+              "name": "Sh ariados",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/14/Sh_ariados.png"
+            },
+            {
+              "name": "463-Lickilicky",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/58/463-Lickilicky.png"
+            }
+          ]
+        },
+        {
+          "name": "Green Student Card",
+          "level": 550,
+          "iconUrl": "https://wiki.pokexgames.com/images/6/68/Green_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "MegaBlastoise",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e2/MegaBlastoise.png"
+            },
+            {
+              "name": "038-AlolanNinetales",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c4/038-AlolanNinetales.png"
+            },
+            {
+              "name": "071-Shiny Victreebel",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c4/071-Shiny_Victreebel.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Orebound",
+      "students": [
+        {
+          "name": "Orebound Heroine/Hero Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2f/Card_Orebound_Heroine.png",
+          "pokemon": [
+            {
+              "name": "Shinyrh",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/40/Shinyrh.png"
+            },
+            {
+              "name": "142-Aerodactyl",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e9/142-Aerodactyl.png"
+            },
+            {
+              "name": "260-shMegaSwampert",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/8a/260-shMegaSwampert.png"
+            }
+          ]
+        },
+        {
+          "name": "Brock Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2a/Card_Brock.png",
+          "pokemon": [
+            {
+              "name": "074-Geodude",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/69/074-Geodude.png"
+            },
+            {
+              "name": "169-Crobat",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ae/169-Crobat.png"
+            },
+            {
+              "name": "208-Steelix",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a6/208-Steelix.png"
+            }
+          ]
+        },
+        {
+          "name": "Roxanne Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/1/1c/Roxanne_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "346-Cradily",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f2/346-Cradily.png"
+            },
+            {
+              "name": "348-Armaldo",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a0/348-Armaldo.png"
+            },
+            {
+              "name": "476-Probopass",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e4/476-Probopass.png"
+            }
+          ]
+        },
+        {
+          "name": "Giovanni Student Card",
+          "level": 400,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7a/Giovanni_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "034-Nidoking",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/ca/034-Nidoking.png"
+            },
+            {
+              "name": "Shinyrh",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/40/Shinyrh.png"
+            },
+            {
+              "name": "464-Rhyperior",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/fa/464-Rhyperior.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Wingeon",
+      "students": [
+        {
+          "name": "Wingeon Dragon Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2e/Card_Wingeon_Dragon_Female.png",
+          "pokemon": [
+            {
+              "name": "018-shPidgeot",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/12/018-shPidgeot.png"
+            },
+            {
+              "name": "148-Sh Dragonair",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d5/148-Sh_Dragonair.png"
+            },
+            {
+              "name": "373-Salamence",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/8b/373-Salamence.png"
+            }
+          ]
+        },
+        {
+          "name": "Clair Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/8/8e/Clair_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "130-Megagyarados",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2f/130-Megagyarados.png"
+            },
+            {
+              "name": "148-Sh Dragonair",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d5/148-Sh_Dragonair.png"
+            },
+            {
+              "name": "Shiny Kingdra",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/5d/Shiny_Kingdra.png"
+            }
+          ]
+        },
+        {
+          "name": "Daenerys Targaryen Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/6/69/Daenerys_Targaryen_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "006-MegaCharizardY",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/df/006-MegaCharizardY.png"
+            },
+            {
+              "name": "148-Sh Dragonair",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d5/148-Sh_Dragonair.png"
+            },
+            {
+              "name": "Mega Salamencee",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/21/Mega_Salamencee.png"
+            }
+          ]
+        },
+        {
+          "name": "Falkner Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b0/Falkner_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "018M",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a7/018M.png"
+            },
+            {
+              "name": "398-Staraptor",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/48/398-Staraptor.png"
+            },
+            {
+              "name": "430-Shiny Honchkrow",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/66/430-Shiny_Honchkrow.png"
+            }
+          ]
+        },
+        {
+          "name": "Winona Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2c/Winona_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "227-Skarmory",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c7/227-Skarmory.png"
+            },
+            {
+              "name": "279-Pelipper",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/ce/279-Pelipper.png"
+            },
+            {
+              "name": "334-MegaAltaria",
+              "iconUrl": "https://wiki.pokexgames.com/images/9/99/334-MegaAltaria.png"
+            }
+          ]
+        },
+        {
+          "name": "Killer Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/5/52/Killer_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "123-Scyther",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/38/123-Scyther.png"
+            },
+            {
+              "name": "123-Sh Scyther",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b0/123-Sh_Scyther.png"
+            },
+            {
+              "name": "227-Skarmory",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c7/227-Skarmory.png"
+            }
+          ]
+        },
+        {
+          "name": "Lance Student Card",
+          "level": 375,
+          "iconUrl": "https://wiki.pokexgames.com/images/9/99/Card_Lance.png",
+          "pokemon": [
+            {
+              "name": "130-RedGyarados",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/29/130-RedGyarados.png"
+            },
+            {
+              "name": "149-Dragonite",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/76/149-Dragonite.png"
+            },
+            {
+              "name": "373-Salamence",
+              "iconUrl": "https://wiki.pokexgames.com/images/8/8b/373-Salamence.png"
+            }
+          ]
+        },
+        {
+          "name": "Cynthia Student Card",
+          "level": 500,
+          "iconUrl": "https://wiki.pokexgames.com/images/9/93/Cynthia_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "350-Milotic",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a7/350-Milotic.png"
+            },
+            {
+              "name": "445-MegaGarchomp",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/af/445-MegaGarchomp.png"
+            },
+            {
+              "name": "468-Togekiss",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/0d/468-Togekiss.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Psycraft",
+      "students": [
+        {
+          "name": "Velma Student Card",
+          "level": 150,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7f/Velma_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "065-Alakazam",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/03/065-Alakazam.png"
+            },
+            {
+              "name": "229-Houndoom",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/ac/229-Houndoom.png"
+            },
+            {
+              "name": "562-Yamask",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b7/562-Yamask.png"
+            }
+          ]
+        },
+        {
+          "name": "Psycraft Medium Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0b/Card_Psycraft_Medium_Female.png",
+          "pokemon": [
+            {
+              "name": "065-shAlakazam",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2b/065-shAlakazam.png"
+            },
+            {
+              "name": "178-shXatu",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/ec/178-shXatu.png"
+            },
+            {
+              "name": "376-Metagross",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b7/376-Metagross.png"
+            }
+          ]
+        },
+        {
+          "name": "Liza Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5e/Liza_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "178-shXatu",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/ec/178-shXatu.png"
+            },
+            {
+              "name": "282-MegaGardevoir",
+              "iconUrl": "https://wiki.pokexgames.com/images/1/18/282-MegaGardevoir.png"
+            },
+            {
+              "name": "337-Lunatone",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b3/337-Lunatone.png"
+            }
+          ]
+        },
+        {
+          "name": "Tate Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f3/Tate_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "338-Solrock",
+              "iconUrl": "https://wiki.pokexgames.com/images/6/61/338-Solrock.png"
+            },
+            {
+              "name": "437-Sh Bronzong",
+              "iconUrl": "https://wiki.pokexgames.com/images/5/56/437-Sh_Bronzong.png"
+            },
+            {
+              "name": "475-Shiny Gallade",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d7/475-Shiny_Gallade.png"
+            }
+          ]
+        },
+        {
+          "name": "Sabrina Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ae/Card_Sabrina.png",
+          "pokemon": [
+            {
+              "name": "065-Alakazam",
+              "iconUrl": "https://wiki.pokexgames.com/images/0/03/065-Alakazam.png"
+            },
+            {
+              "name": "093-Haunter",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/4c/093-Haunter.png"
+            },
+            {
+              "name": "122-Mr.Mime",
+              "iconUrl": "https://wiki.pokexgames.com/images/a/a7/122-Mr.Mime.png"
+            }
+          ]
+        },
+        {
+          "name": "Ahri Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/1/11/Ahri_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "038-Sh Ninetales.png",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/bb/038-Sh_Ninetales.png.png"
+            },
+            {
+              "name": "038-AlolanNinetales",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c4/038-AlolanNinetales.png"
+            },
+            {
+              "name": "655-ShinyDelphox",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b1/655-ShinyDelphox.png"
+            }
+          ]
+        },
+        {
+          "name": "Satoru Gojo Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/c/ce/Satoru_Gojo_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "122-Sh Mr",
+              "iconUrl": "https://wiki.pokexgames.com/images/4/4a/122-Sh_Mr.png"
+            },
+            {
+              "name": "196-Espeon",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b1/196-Espeon.png"
+            },
+            {
+              "name": "202-Wobbuffet",
+              "iconUrl": "https://wiki.pokexgames.com/images/3/33/202-Wobbuffet.png"
+            }
+          ]
+        },
+        {
+          "name": "Trafalgar Law Student Card",
+          "level": 350,
+          "iconUrl": "https://wiki.pokexgames.com/images/6/67/Trafalgar_Law_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "065-shAlakazam",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/2b/065-shAlakazam.png"
+            },
+            {
+              "name": "065-MegaAlakazam",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/ce/065-MegaAlakazam.png"
+            },
+            {
+              "name": "475-Shiny Gallade",
+              "iconUrl": "https://wiki.pokexgames.com/images/d/d7/475-Shiny_Gallade.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clan": "Ironhard",
+      "students": [
+        {
+          "name": "Ironhard Titan Student Card",
+          "level": 200,
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d5/Card_Ironhard_Titan_Female.png",
+          "pokemon": [
+            {
+              "name": "303-MegaMawile",
+              "iconUrl": "https://wiki.pokexgames.com/images/9/90/303-MegaMawile.png"
+            },
+            {
+              "name": "306-MegaAggron",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f2/306-MegaAggron.png"
+            },
+            {
+              "name": "376-Metagross",
+              "iconUrl": "https://wiki.pokexgames.com/images/b/b7/376-Metagross.png"
+            }
+          ]
+        },
+        {
+          "name": "Jasmine Student Card",
+          "level": 300,
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d8/Jasmine_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "Shiny steelix",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/29/Shiny_steelix.png"
+            },
+            {
+              "name": "208-MegaSteelix",
+              "iconUrl": "https://wiki.pokexgames.com/images/e/e9/208-MegaSteelix.png"
+            },
+            {
+              "name": "462-Shiny Magnezone",
+              "iconUrl": "https://wiki.pokexgames.com/images/2/20/462-Shiny_Magnezone.png"
+            }
+          ]
+        },
+        {
+          "name": "Steven Student Card",
+          "level": 500,
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7e/Steven_Student_Card.png",
+          "pokemon": [
+            {
+              "name": "227-Skarmory",
+              "iconUrl": "https://wiki.pokexgames.com/images/c/c7/227-Skarmory.png"
+            },
+            {
+              "name": "306-MegaAggron",
+              "iconUrl": "https://wiki.pokexgames.com/images/f/f2/306-MegaAggron.png"
+            },
+            {
+              "name": "Megametagross",
+              "iconUrl": "https://wiki.pokexgames.com/images/7/78/Megametagross.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

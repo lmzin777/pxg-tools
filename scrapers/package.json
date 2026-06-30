@@ -5,12 +5,23 @@
   "scripts": {
     "scrape:clans": "tsx src/scrape-clans.ts",
     "scrape:clan-details": "tsx src/scrape-clan-details.ts",
-    "scrape:all": "npm run scrape:clans && npm run scrape:clan-details",
+    "scrape:professions": "tsx src/scrape-professions.ts",
+    "scrape:pokemon": "tsx src/scrape-pokemon.ts",
+    "scrape:items": "tsx src/scrape-items.ts",
+    "scrape:crafts": "tsx src/scrape-crafts.ts",
+    "scrape:students": "tsx src/scrape-students.ts",
+    "scrape:all": "npm run scrape:clans && npm run scrape:clan-details && npm run scrape:professions && npm run scrape:pokemon && npm run scrape:items && npm run scrape:crafts",
     "db:test-neon": "tsx src/check-neon.ts",
-    "db:load-clans": "tsx src/load-clan-data.ts"
+    "db:apply-schema": "tsx src/apply-schema.ts",
+    "db:load-clans": "tsx src/load-clan-data.ts",
+    "db:load-professions": "tsx src/load-profession-data.ts",
+    "db:load-pokemon": "tsx src/load-pokemon-data.ts",
+    "db:load-items": "tsx src/load-item-data.ts",
+    "db:load-crafts": "tsx src/load-craft-data.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
+    "cheerio": "^1.2.0",
     "dotenv": "^17.4.2",
     "pg": "^8.13.0"
   },

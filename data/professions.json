@@ -1,0 +1,1372 @@
+{
+  "sourceUrl": "https://wiki.pokexgames.com/index.php/Profiss%C3%B5es",
+  "scrapedAt": "2026-06-28T19:20:33.912Z",
+  "intro": "A partir do nível 10, os jogadores VIPs podem se especializar em uma das quatro profissões disponíveis no jogo. Cada profissão possui suas exclusividades e todas elas mudam a forma com a qual o jogador interage com o ambiente do jogo.",
+  "professions": [
+    {
+      "slug": "engenheiro",
+      "name": "Engenheiro",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Engenheiro",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/3/33/Vetor_Engenheiro.png/206px-Vetor_Engenheiro.png",
+      "summary": "O Engenheiro é o mestre da tecnologia e produção de objetos mecânicos e eletrônicos. O jogador que for engenheiro terá a habilidade de criar vários aparelhos eletrônicos para ajudar na sua jornada, principalmente Pokébolas que são essenciais para qualquer treinador Pokémon. Em níveis mais avançados, o Engenheiro ainda será capaz de produzir Pokébolas exclusivas e que possuem maior chance de capturar determinados Pokémon.",
+      "sections": [
+        {
+          "title": "Tornando-se um Engenheiro",
+          "anchor": "Tornando-se_um_Engenheiro",
+          "level": 3
+        },
+        {
+          "title": "Primeiros passos",
+          "anchor": "Primeiros_passos",
+          "level": 3
+        },
+        {
+          "title": "Coleta de recursos",
+          "anchor": "Coleta_de_recursos",
+          "level": 3
+        },
+        {
+          "title": "Turrets",
+          "anchor": "Turrets",
+          "level": 3
+        },
+        {
+          "title": "Lucro",
+          "anchor": "Lucro",
+          "level": 3
+        },
+        {
+          "title": "Exclusividade",
+          "anchor": "Exclusividade",
+          "level": 3
+        }
+      ],
+      "crafts": [
+        {
+          "slug": "craft-profissoes-engenheiro",
+          "title": "Craft Profissões - Engenheiro",
+          "kind": "craft",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Craft_Profiss%C3%B5es_-_Engenheiro",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/4/4a/Crafts_-_Engenheiro.png/180px-Crafts_-_Engenheiro.png",
+          "summary": "Aqui você encontra a lista de craft gerais para a profissão Engenheiro, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:",
+          "sections": [
+            {
+              "title": "Informações Gerais",
+              "anchor": "Informações_Gerais",
+              "level": 1
+            },
+            {
+              "title": "Workshop Portátil",
+              "anchor": "Workshop_Portátil",
+              "level": 2
+            },
+            {
+              "title": "Rank E",
+              "anchor": "Rank_E",
+              "level": 2
+            },
+            {
+              "title": "Rank D",
+              "anchor": "Rank_D",
+              "level": 2
+            },
+            {
+              "title": "Rank C",
+              "anchor": "Rank_C",
+              "level": 2
+            },
+            {
+              "title": "Rank B",
+              "anchor": "Rank_B",
+              "level": 2
+            },
+            {
+              "title": "Rank A",
+              "anchor": "Rank_A",
+              "level": 2
+            },
+            {
+              "title": "Rank S",
+              "anchor": "Rank_S",
+              "level": 2
+            }
+          ]
+        }
+      ],
+      "specializations": [
+        {
+          "slug": "mecanico",
+          "title": "Mecânico",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Mec%C3%A2nico",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/5/50/Vetor_Mecanico.png/180px-Vetor_Mecanico.png",
+          "summary": "O mecânico é alguém que possui habilidades e conhecimentos especializados na engenharia mecânica, abrindo espaço para a confecção de diversos materiais úteis para os jogadores.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 1
+            },
+            {
+              "title": "Tornando-se um Mecânico",
+              "anchor": "Tornando-se_um_Mecânico",
+              "level": 3
+            },
+            {
+              "title": "Outfits",
+              "anchor": "Outfits",
+              "level": 3
+            },
+            {
+              "title": "Primeiros passos",
+              "anchor": "Primeiros_passos",
+              "level": 2
+            },
+            {
+              "title": "Recurso exclusivo",
+              "anchor": "Recurso_exclusivo",
+              "level": 1
+            },
+            {
+              "title": "Recurso comum",
+              "anchor": "Recurso_comum",
+              "level": 1
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "slug": "hacker",
+          "title": "Hacker",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Hacker",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/6/67/Vetor_Hacker.png/180px-Vetor_Hacker.png",
+          "summary": "O Hacker tem conhecimentos avançados sobre tecnologia e é responsável por obter informações de computadores existentes no Nightmare World.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 2
+            },
+            {
+              "title": "Tornando-se um Hacker",
+              "anchor": "Tornando-se_um_Hacker",
+              "level": 3
+            },
+            {
+              "title": "Outfits",
+              "anchor": "Outfits",
+              "level": 3
+            },
+            {
+              "title": "Primeiros passos",
+              "anchor": "Primeiros_passos",
+              "level": 2
+            },
+            {
+              "title": "Recurso exclusivo",
+              "anchor": "Recurso_exclusivo",
+              "level": 2
+            },
+            {
+              "title": "Recurso comum",
+              "anchor": "Recurso_comum",
+              "level": 2
+            },
+            {
+              "title": "Exclusividades",
+              "anchor": "Exclusividades",
+              "level": 2
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 3
+            }
+          ]
+        }
+      ],
+      "subsections": [
+        {
+          "slug": "mini-ammunition-factory",
+          "title": "Mini Ammunition Factory",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Mini_Ammunition_Factory",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/b/b8/Mechanic_Factory.png/180px-Mechanic_Factory.png",
+          "summary": "Apesar de ser um craft exclusivo de engenheiro, qualquer jogador pode fabricar os materiais aqui encontrados, sendo possível utilizar a mesa em sua mochila ou no chão.",
+          "sections": []
+        },
+        {
+          "slug": "computadores-de-hacker",
+          "title": "Computadores de Hacker",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Computadores_de_Hacker",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/8/82/Vetor_Computadores.png/180px-Vetor_Computadores.png",
+          "summary": "Os computadores são os recursos de especialização dos Hackers. Disponibilizaremos as coordenadas já encontradas, basta adicionar manualmente ao seu mapa. Não existe uma rota a ser seguida, o jogador deve decidir o melhor caminho.",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "slug": "professor",
+      "name": "Professor",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Professor",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/9/99/Vetor_Professor.png/199px-Vetor_Professor.png",
+      "summary": "Conhecido por ser um estudioso dos Pokémon e da Natureza, mas também em razão de seus alunos, capazes de realizar missões especiais sob seu comando. O professor é um amante da natureza e sempre estuda as plantas, produz arbustos estilizados de Pokémon e sementes (berries) que possuem efeitos únicos no mundo Pokémon.",
+      "sections": [
+        {
+          "title": "Tornando-se um Professor",
+          "anchor": "Tornando-se_um_Professor",
+          "level": 3
+        },
+        {
+          "title": "Primeiros passos",
+          "anchor": "Primeiros_passos",
+          "level": 3
+        },
+        {
+          "title": "Coleta de recursos",
+          "anchor": "Coleta_de_recursos",
+          "level": 3
+        },
+        {
+          "title": "Estudantes",
+          "anchor": "Estudantes",
+          "level": 3
+        },
+        {
+          "title": "Lucro",
+          "anchor": "Lucro",
+          "level": 3
+        },
+        {
+          "title": "Exclusividade",
+          "anchor": "Exclusividade",
+          "level": 3
+        }
+      ],
+      "crafts": [
+        {
+          "slug": "craft-profissoes-professor",
+          "title": "Craft Profissões - Professor",
+          "kind": "craft",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Craft_Profiss%C3%B5es_-_Professor",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/3/35/Craft_-_Professor.png/180px-Craft_-_Professor.png",
+          "summary": "Aqui você encontra a lista de craft gerais para a profissão Professor, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:",
+          "sections": [
+            {
+              "title": "Informações Gerais",
+              "anchor": "Informações_Gerais",
+              "level": 1
+            },
+            {
+              "title": "Workshop Portátil",
+              "anchor": "Workshop_Portátil",
+              "level": 2
+            },
+            {
+              "title": "Rank E",
+              "anchor": "Rank_E",
+              "level": 2
+            },
+            {
+              "title": "Rank D",
+              "anchor": "Rank_D",
+              "level": 2
+            },
+            {
+              "title": "Rank C",
+              "anchor": "Rank_C",
+              "level": 2
+            },
+            {
+              "title": "Rank B",
+              "anchor": "Rank_B",
+              "level": 2
+            },
+            {
+              "title": "Rank A",
+              "anchor": "Rank_A",
+              "level": 2
+            },
+            {
+              "title": "Rank S",
+              "anchor": "Rank_S",
+              "level": 2
+            }
+          ]
+        }
+      ],
+      "specializations": [
+        {
+          "slug": "alquimista",
+          "title": "Alquimista",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alquimista",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/c/cb/Vetor_Alquimista.png/180px-Vetor_Alquimista.png",
+          "summary": "Os Alquimistas são responsáveis pela criação de itens muito importantes para jogadores de alto nível, como Pink Star Piece (Boost +80), Philosopher's Stone, Elixires exclusivos, entre outros.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 1
+            },
+            {
+              "title": "Tornando-se um Alquimista",
+              "anchor": "Tornando-se_um_Alquimista",
+              "level": 2
+            },
+            {
+              "title": "Outfits de Alquimista",
+              "anchor": "Outfits_de_Alquimista",
+              "level": 3
+            },
+            {
+              "title": "Recursos",
+              "anchor": "Recursos",
+              "level": 1
+            },
+            {
+              "title": "Recurso Base",
+              "anchor": "Recurso_Base",
+              "level": 2
+            },
+            {
+              "title": "Mortar",
+              "anchor": "Mortar",
+              "level": 2
+            },
+            {
+              "title": "Recursos exclusivos",
+              "anchor": "Recursos_exclusivos",
+              "level": 2
+            },
+            {
+              "title": "NPCs Semanais",
+              "anchor": "NPCs_Semanais",
+              "level": 2
+            },
+            {
+              "title": "Árvore de Berry",
+              "anchor": "Árvore_de_Berry",
+              "level": 1
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 1
+            }
+          ]
+        },
+        {
+          "slug": "academico",
+          "title": "Acadêmico",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Acad%C3%AAmico",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/b/ba/Vetor_Acad%C3%AAmico.png/180px-Vetor_Acad%C3%AAmico.png",
+          "summary": "A especialização Acadêmico tem como foco os alunos e disponibiliza missões especiais de acadêmico, permitindo que o jogador colete recursos fora do Nightmare World.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 1
+            },
+            {
+              "title": "Tornando-se um Acadêmico",
+              "anchor": "Tornando-se_um_Acadêmico",
+              "level": 2
+            },
+            {
+              "title": "Outfits de Acadêmico",
+              "anchor": "Outfits_de_Acadêmico",
+              "level": 3
+            },
+            {
+              "title": "Recursos",
+              "anchor": "Recursos",
+              "level": 1
+            },
+            {
+              "title": "Recurso Base",
+              "anchor": "Recurso_Base",
+              "level": 2
+            },
+            {
+              "title": "Mortar",
+              "anchor": "Mortar",
+              "level": 2
+            },
+            {
+              "title": "Recurso exclusivo",
+              "anchor": "Recurso_exclusivo",
+              "level": 2
+            },
+            {
+              "title": "Missões de Acadêmico",
+              "anchor": "Missões_de_Acadêmico",
+              "level": 1
+            },
+            {
+              "title": "Missões de Caça e Captura",
+              "anchor": "Missões_de_Caça_e_Captura",
+              "level": 2
+            },
+            {
+              "title": "Missões de caça",
+              "anchor": "Missões_de_caça",
+              "level": 3
+            },
+            {
+              "title": "Captura",
+              "anchor": "Captura",
+              "level": 3
+            },
+            {
+              "title": "Bônus no Sistema de Mentoria",
+              "anchor": "Bônus_no_Sistema_de_Mentoria",
+              "level": 1
+            },
+            {
+              "title": "Blank Student Card",
+              "anchor": "Blank_Student_Card",
+              "level": 1
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 1
+            }
+          ]
+        }
+      ],
+      "subsections": [
+        {
+          "slug": "philosopher-s-stone",
+          "title": "Philosopher's Stone",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Philosopher%27s_Stone",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/6/61/Craft_Philosopher%27s_Stone.png/180px-Craft_Philosopher%27s_Stone.png",
+          "summary": "A Philosopher's Stone é um item fabricado pelo Alquimista que o permite produzir um elixir muito útil em diversos conteúdos do jogo.",
+          "sections": [
+            {
+              "title": "Elixir Of Life",
+              "anchor": "Elixir_Of_Life",
+              "level": 1
+            }
+          ]
+        },
+        {
+          "slug": "estudantes",
+          "title": "Estudantes",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Estudantes",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/8/8e/Vetor_Estudantes.png/180px-Vetor_Estudantes.png",
+          "summary": "O Blank Trainer Student Card é um item, fabricado por Acadêmicos (de nível 117 ou maior), que possibilita transformar um jogador em um card de aluno.",
+          "sections": [
+            {
+              "title": "Alunos Especiais",
+              "anchor": "Alunos_Especiais",
+              "level": 2
+            },
+            {
+              "title": "Blank Student Card",
+              "anchor": "Blank_Student_Card",
+              "level": 3
+            },
+            {
+              "title": "Atributos do Aluno",
+              "anchor": "Atributos_do_Aluno",
+              "level": 2
+            },
+            {
+              "title": "Marcar Seguidor",
+              "anchor": "Marcar_Seguidor",
+              "level": 3
+            },
+            {
+              "title": "Troca de Pokémon Livremente",
+              "anchor": "Troca_de_Pokémon_Livremente",
+              "level": 3
+            },
+            {
+              "title": "Trava de Aluno",
+              "anchor": "Trava_de_Aluno",
+              "level": 3
+            },
+            {
+              "title": "Pokémon do Aluno",
+              "anchor": "Pokémon_do_Aluno",
+              "level": 2
+            },
+            {
+              "title": "Observações:",
+              "anchor": "Observações:",
+              "level": 3
+            },
+            {
+              "title": "Missões de Aluno",
+              "anchor": "Missões_de_Aluno",
+              "level": 2
+            },
+            {
+              "title": "Tipos de Missão",
+              "anchor": "Tipos_de_Missão",
+              "level": 3
+            },
+            {
+              "title": "Training",
+              "anchor": "Training",
+              "level": 4
+            },
+            {
+              "title": "Hunting",
+              "anchor": "Hunting",
+              "level": 4
+            },
+            {
+              "title": "Capturing",
+              "anchor": "Capturing",
+              "level": 4
+            },
+            {
+              "title": "Special",
+              "anchor": "Special",
+              "level": 4
+            },
+            {
+              "title": "Academic",
+              "anchor": "Academic",
+              "level": 4
+            },
+            {
+              "title": "Tabela de Experiência",
+              "anchor": "Tabela_de_Experiência",
+              "level": 3
+            },
+            {
+              "title": "Efetividades",
+              "anchor": "Efetividades",
+              "level": 2
+            }
+          ]
+        },
+        {
+          "slug": "dungeons-de-academico",
+          "title": "Dungeons de Acadêmico",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Dungeons_de_Acad%C3%AAmico",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/e/e6/Vetor_Dungeons_Academico.png/180px-Vetor_Dungeons_Academico.png",
+          "summary": "Os jogadores da especialização Acadêmico conseguem coletar os recursos exclusivos por meio das Missões de Acadêmico. São missões diversas em que o jogador poderá controlar o seu aluno, sendo possível escolher o de sua preferência. Aqui vão algumas informações importantes.",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "slug": "estilista",
+      "name": "Estilista",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Estilista",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/0/00/Vetor_Estilista.png/202px-Vetor_Estilista.png",
+      "summary": "Um mestre na arte da criação de roupas e objetos, o jogador terá a capacidade de criar vários itens decorativos para enfeitar casas, bem como roupas para jogadores e addons para Pokémon. Além disso, também é capaz de criar Toys exclusivos da terceira e quarta geração, Pokémon Figures e Pikachu Cosplay Figures, sendo uma profissão bastante lucrativa. Estilista é a profissão ideal para os jogadores que gostam de colecionar itens.",
+      "sections": [
+        {
+          "title": "Tornando-se um Estilista",
+          "anchor": "Tornando-se_um_Estilista",
+          "level": 3
+        },
+        {
+          "title": "Primeiros passos",
+          "anchor": "Primeiros_passos",
+          "level": 3
+        },
+        {
+          "title": "Coleta de recursos",
+          "anchor": "Coleta_de_recursos",
+          "level": 3
+        },
+        {
+          "title": "XP Banners",
+          "anchor": "XP_Banners",
+          "level": 3
+        },
+        {
+          "title": "Lucro",
+          "anchor": "Lucro",
+          "level": 3
+        },
+        {
+          "title": "Exclusividade",
+          "anchor": "Exclusividade",
+          "level": 3
+        }
+      ],
+      "crafts": [
+        {
+          "slug": "craft-profissoes-estilista",
+          "title": "Craft Profissões - Estilista",
+          "kind": "craft",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Craft_Profiss%C3%B5es_-_Estilista",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/8/80/Crafts_-_Stylist.png/180px-Crafts_-_Stylist.png",
+          "summary": "Aqui você encontra a lista de craft gerais para a profissão Estilista, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:",
+          "sections": [
+            {
+              "title": "Informações Gerais",
+              "anchor": "Informações_Gerais",
+              "level": 1
+            },
+            {
+              "title": "Workshop Portátil",
+              "anchor": "Workshop_Portátil",
+              "level": 2
+            },
+            {
+              "title": "Rank E",
+              "anchor": "Rank_E",
+              "level": 2
+            },
+            {
+              "title": "Rank D",
+              "anchor": "Rank_D",
+              "level": 2
+            },
+            {
+              "title": "Rank C",
+              "anchor": "Rank_C",
+              "level": 2
+            },
+            {
+              "title": "Rank B",
+              "anchor": "Rank_B",
+              "level": 2
+            },
+            {
+              "title": "Rank A",
+              "anchor": "Rank_A",
+              "level": 2
+            },
+            {
+              "title": "Rank S",
+              "anchor": "Rank_S",
+              "level": 2
+            }
+          ]
+        }
+      ],
+      "specializations": [
+        {
+          "slug": "decorador",
+          "title": "Decorador",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Decorador",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/c/c4/Vetor_Decorador.png/180px-Vetor_Decorador.png",
+          "summary": "O decorador é alguém que possui habilidades e conhecimentos especializados em design de interiores ou exteriores, com o objetivo de criar espaços esteticamente agradáveis. Além disso, também é capaz de criar Toys, Upgrades para Premier Ball e Camas que concedem bônus de captura, sorte e experiência.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 1
+            },
+            {
+              "title": "Tornando-se um Decorador",
+              "anchor": "Tornando-se_um_Decorador",
+              "level": 2
+            },
+            {
+              "title": "Outfits",
+              "anchor": "Outfits",
+              "level": 3
+            },
+            {
+              "title": "Primeiros passos",
+              "anchor": "Primeiros_passos",
+              "level": 2
+            },
+            {
+              "title": "Recurso exclusivo",
+              "anchor": "Recurso_exclusivo",
+              "level": 1
+            },
+            {
+              "title": "Recurso comum",
+              "anchor": "Recurso_comum",
+              "level": 1
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 3
+            }
+          ]
+        },
+        {
+          "slug": "designer",
+          "title": "Designer",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Designer",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/5/56/Vetor_Designer.png/180px-Vetor_Designer.png",
+          "summary": "O Designer é o responsável pela estética de seus Pokémon e seus personagens, com a criação de Addons e Outfits. Além disso, ele também pode fabricar o Critical Catch Charm, um item importante para aqueles que tem a captura de Pokémon como um objetivo de jogo.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 1
+            },
+            {
+              "title": "Tornando-se um Designer",
+              "anchor": "Tornando-se_um_Designer",
+              "level": 2
+            },
+            {
+              "title": "Outfits de Designer",
+              "anchor": "Outfits_de_Designer",
+              "level": 3
+            },
+            {
+              "title": "Primeiros Passos",
+              "anchor": "Primeiros_Passos",
+              "level": 2
+            },
+            {
+              "title": "Recurso comum",
+              "anchor": "Recurso_comum",
+              "level": 3
+            },
+            {
+              "title": "Recurso exclusivo",
+              "anchor": "Recurso_exclusivo",
+              "level": 3
+            },
+            {
+              "title": "Exclusividade",
+              "anchor": "Exclusividade",
+              "level": 2
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 3
+            }
+          ]
+        }
+      ],
+      "subsections": [
+        {
+          "slug": "decorator-workshop",
+          "title": "Decorator Workshop",
+          "kind": "workshop",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Decorator_Workshop",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/9/93/Crafts_Decorator_Workshop.png/180px-Crafts_Decorator_Workshop.png",
+          "summary": "Os Estilista são capazes fabricar e utilizar o Decorator Workshop ao atingir o Rank S da profissão. Apesar da utilização não ser exclusiva de Decoradores, é necessário ser estilista e possuir Drawing Clipboard para fabricar seus itens e a workshop.",
+          "sections": []
+        },
+        {
+          "slug": "designer-workshop",
+          "title": "Designer Workshop",
+          "kind": "workshop",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Designer_Workshop",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/9/95/Crafts_Designer_Workshop.png/180px-Crafts_Designer_Workshop.png",
+          "summary": "Os Estilista são capazes de fabricar e utilizar o Designer Workshop ao atingir o Rank S da profissão. Apesar da utilização não ser exclusiva de Designers, é necessário ser estilista e possuir um Designer Drawing Book para fabricar seus itens e a workshop.",
+          "sections": []
+        },
+        {
+          "slug": "monumentos",
+          "title": "Monumentos",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Monumentos",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/8/86/Vetor_monumentos.png/180px-Vetor_monumentos.png",
+          "summary": "Os monumentos espalhados pelo mapa do Nightmare World são recursos que Decoradores podem estudar para adquirir conhecimento. Disponibilizaremos as coordenadas já encontradas, basta adicionar manualmente no seu mapa. Não existe uma rota específica a ser seguida, cada jogador deve decidir o melhor caminho.",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "slug": "aventureiro",
+      "name": "Aventureiro",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Aventureiro",
+      "iconUrl": "https://wiki.pokexgames.com/images/thumb/c/cc/Vetor_Adventurer.png/198px-Vetor_Adventurer.png",
+      "summary": "Esta é a profissão perfeita para aqueles que gostam de viajar pelo mapa todo em busca de mistérios, tentando desvendar fatos até então desconhecidos. Diferente das outras profissões, o aventureiro possui uma jornada mais dinâmica e espontânea, não sabendo o que o futuro lhe reserva. Seu foco não consiste na produção de itens como nas outras profissões, mas sim em encontrá-los em tumbas escondidas ou abrindo baús do tesouro pelo mapa. O item mais importante para a sua profissão é o Lockpick, utensílio indispensável para abrir os baús encontrados. Além disso, dependendo da experiência e persistência do jogador, essa pode ser a profissão com maior progressão no jogo.",
+      "sections": [
+        {
+          "title": "Tornando-se um aventureiro",
+          "anchor": "Tornando-se_um_aventureiro",
+          "level": 3
+        },
+        {
+          "title": "Primeiros passos",
+          "anchor": "Primeiros_passos",
+          "level": 3
+        },
+        {
+          "title": "Lockpick",
+          "anchor": "Lockpick",
+          "level": 3
+        },
+        {
+          "title": "Item Finder",
+          "anchor": "Item_Finder",
+          "level": 3
+        },
+        {
+          "title": "Como usar o Item Finder",
+          "anchor": "Como_usar_o_Item_Finder",
+          "level": 3
+        },
+        {
+          "title": "Informações adicionais",
+          "anchor": "Informações_adicionais",
+          "level": 3
+        },
+        {
+          "title": "Lucro",
+          "anchor": "Lucro",
+          "level": 3
+        },
+        {
+          "title": "Exclusividade",
+          "anchor": "Exclusividade",
+          "level": 3
+        }
+      ],
+      "crafts": [
+        {
+          "slug": "craft-profissoes-aventureiro",
+          "title": "Craft Profissões - Aventureiro",
+          "kind": "craft",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Craft_Profiss%C3%B5es_-_Aventureiro",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/3/37/Crafts_-_Adventurer.png/180px-Crafts_-_Adventurer.png",
+          "summary": "Aqui você encontra a lista de craft gerais para a profissão Aventureiro, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:",
+          "sections": [
+            {
+              "title": "Informações Gerais",
+              "anchor": "Informações_Gerais",
+              "level": 1
+            },
+            {
+              "title": "Workshop Portátil",
+              "anchor": "Workshop_Portátil",
+              "level": 2
+            },
+            {
+              "title": "Rank E",
+              "anchor": "Rank_E",
+              "level": 2
+            },
+            {
+              "title": "Rank D",
+              "anchor": "Rank_D",
+              "level": 2
+            },
+            {
+              "title": "Rank C",
+              "anchor": "Rank_C",
+              "level": 2
+            },
+            {
+              "title": "Rank B",
+              "anchor": "Rank_B",
+              "level": 2
+            },
+            {
+              "title": "Rank A",
+              "anchor": "Rank_A",
+              "level": 2
+            },
+            {
+              "title": "Rank S",
+              "anchor": "Rank_S",
+              "level": 2
+            }
+          ]
+        },
+        {
+          "slug": "crafts-de-cozinheiro",
+          "title": "Crafts de Cozinheiro",
+          "kind": "craft",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Crafts_de_Cozinheiro",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/2/2a/Crafts_-_Cozinheiro.png/180px-Crafts_-_Cozinheiro.png",
+          "summary": "As Comidas criadas pelos Cozinheiros tem sua fama por toda a Nightmare Wolrd, saciando a fome e gerando Buffs de diversos atributos para os pokémon que as consomem. Se tornaram um recurso indispensável na hora de realizar conteúdos que necessitam de maior desempenho principalmente em Boss Fights, como as Legendary Beasts, Nightmare Terrors entre outros. Estas comidas podem ser feitas apenas nos Fogões, air fryers e microwave criados exclusivamente por Cozinheiros.",
+          "sections": []
+        }
+      ],
+      "specializations": [
+        {
+          "slug": "cozinheiro",
+          "title": "Cozinheiro",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Cozinheiro",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/e/e8/Vetor_Cozinheiro.png/180px-Vetor_Cozinheiro.png",
+          "summary": "Os Cozinheiros são mestres na arte da culinária, utilizam os recursos coletados de pokémon derrotados para criar uma variedade de alimentos deliciosos. Além disso, os alimentos preparados pelos Cozinheiros fornecem buffs temporários aos Pokémon que os consomem, tornando-os essenciais para enfrentar desafios e maximizar o desempenho em batalhas difíceis, principalmente em Boss Fights como as Legendary Beasts, Nightmare Terrors entre outros. Os cozinheiros também podem criar alimentos que auxiliam na aparição de pokémon raros na hunt.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 2
+            },
+            {
+              "title": "Tornando-se um Cozinheiro",
+              "anchor": "Tornando-se_um_Cozinheiro",
+              "level": 2
+            },
+            {
+              "title": "Outfits de Cozinheiro",
+              "anchor": "Outfits_de_Cozinheiro",
+              "level": 3
+            },
+            {
+              "title": "Recursos",
+              "anchor": "Recursos",
+              "level": 2
+            },
+            {
+              "title": "Food Bags",
+              "anchor": "Food_Bags",
+              "level": 3
+            },
+            {
+              "title": "Nightmare Chests",
+              "anchor": "Nightmare_Chests",
+              "level": 3
+            },
+            {
+              "title": "Diária Cozinheiro",
+              "anchor": "Diária_Cozinheiro",
+              "level": 2
+            },
+            {
+              "title": "Localização dos NPCs",
+              "anchor": "Localização_dos_NPCs",
+              "level": 3
+            },
+            {
+              "title": "Nightmare Cooking Tokens",
+              "anchor": "Nightmare_Cooking_Tokens",
+              "level": 3
+            },
+            {
+              "title": "Exclusividade de Locomoção",
+              "anchor": "Exclusividade_de_Locomoção",
+              "level": 2
+            },
+            {
+              "title": "Workshops exclusivas",
+              "anchor": "Workshops_exclusivas",
+              "level": 2
+            }
+          ]
+        },
+        {
+          "slug": "arqueologo",
+          "title": "Arqueólogo",
+          "kind": "specialization",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Arque%C3%B3logo",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/e/ec/Vetor_Arque%C3%B3logo.png/180px-Vetor_Arque%C3%B3logo.png",
+          "summary": "Os Arqueólogos, aqueles aventureiros que optaram por desvendar os mistérios ocultos nas ruínas deixadas pela destruição de Darkrai, saem pela Nightmare World em busca de relíquias e tesouros escondidos. Eles são os responsáveis por criarem algumas das Rift Crystals, utilizadas para acessar desafios extremos na Nightmare World como as Nightmare Rifts.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 2
+            },
+            {
+              "title": "Tornando-se um Arqueólogo",
+              "anchor": "Tornando-se_um_Arqueólogo",
+              "level": 2
+            },
+            {
+              "title": "Outfits de Arqueólogo",
+              "anchor": "Outfits_de_Arqueólogo",
+              "level": 3
+            },
+            {
+              "title": "Recursos",
+              "anchor": "Recursos",
+              "level": 2
+            },
+            {
+              "title": "Hidden Relic",
+              "anchor": "Hidden_Relic",
+              "level": 3
+            },
+            {
+              "title": "Nightmare Chests",
+              "anchor": "Nightmare_Chests",
+              "level": 3
+            },
+            {
+              "title": "Centro de Escavação",
+              "anchor": "Centro_de_Escavação",
+              "level": 2
+            },
+            {
+              "title": "Digger Hiram",
+              "anchor": "Digger_Hiram",
+              "level": 3
+            },
+            {
+              "title": "Digger Frank",
+              "anchor": "Digger_Frank",
+              "level": 3
+            },
+            {
+              "title": "Digger Anette",
+              "anchor": "Digger_Anette",
+              "level": 3
+            },
+            {
+              "title": "Professor Sycamore",
+              "anchor": "Professor_Sycamore",
+              "level": 3
+            },
+            {
+              "title": "Semanal de Arqueólogo",
+              "anchor": "Semanal_de_Arqueólogo",
+              "level": 2
+            },
+            {
+              "title": "Acessando uma Dungeon",
+              "anchor": "Acessando_uma_Dungeon",
+              "level": 2
+            },
+            {
+              "title": "Dungeons",
+              "anchor": "Dungeons",
+              "level": 2
+            },
+            {
+              "title": "Exclusividades da Especialização",
+              "anchor": "Exclusividades_da_Especialização",
+              "level": 1
+            },
+            {
+              "title": "Nightmare Compass",
+              "anchor": "Nightmare_Compass",
+              "level": 3
+            },
+            {
+              "title": "Adventurer's Utility Belt",
+              "anchor": "Adventurer's_Utility_Belt",
+              "level": 3
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 2
+            }
+          ]
+        }
+      ],
+      "subsections": [
+        {
+          "slug": "mapas-de-aventureiro",
+          "title": "Mapas de Aventureiro",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Mapas_de_Aventureiro",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/c/ca/Mapas_-_Adventurer.png/180px-Mapas_-_Adventurer.png",
+          "summary": "Um dos objetivos dos Aventureiros no jogo é encontrar tesouros escondidos pelo mapa. Uma das formas é por meio de mapas, que mostrarão a localização exata do local que o jogador deverá cavar para cair em uma Dungeon aleatória. Existem diversas Dungeons e cada uma terá uma recompensa diferente para o jogador que conseguir chegar até o baú.",
+          "sections": [
+            {
+              "title": "Como conseguir",
+              "anchor": "Como_conseguir",
+              "level": 2
+            },
+            {
+              "title": "Funcionamento das Coordenadas",
+              "anchor": "Funcionamento_das_Coordenadas",
+              "level": 2
+            },
+            {
+              "title": "Buscador de Mapas de Aventureiro",
+              "anchor": "Buscador_de_Mapas_de_Aventureiro",
+              "level": 2
+            }
+          ]
+        },
+        {
+          "slug": "dungeons-de-arqueologo",
+          "title": "Dungeons de Arqueólogo",
+          "kind": "subsection",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Arque%C3%B3logo#Dungeons",
+          "iconUrl": "https://wiki.pokexgames.com/images/thumb/9/9b/Vetor_Dungeons_Arqueologo.png/180px-Vetor_Dungeons_Arqueologo.png",
+          "summary": "Os Arqueólogos, aqueles aventureiros que optaram por desvendar os mistérios ocultos nas ruínas deixadas pela destruição de Darkrai, saem pela Nightmare World em busca de relíquias e tesouros escondidos. Eles são os responsáveis por criarem algumas das Rift Crystals, utilizadas para acessar desafios extremos na Nightmare World como as Nightmare Rifts.",
+          "sections": [
+            {
+              "title": "Introdução",
+              "anchor": "Introdução",
+              "level": 2
+            },
+            {
+              "title": "Tornando-se um Arqueólogo",
+              "anchor": "Tornando-se_um_Arqueólogo",
+              "level": 2
+            },
+            {
+              "title": "Outfits de Arqueólogo",
+              "anchor": "Outfits_de_Arqueólogo",
+              "level": 3
+            },
+            {
+              "title": "Recursos",
+              "anchor": "Recursos",
+              "level": 2
+            },
+            {
+              "title": "Hidden Relic",
+              "anchor": "Hidden_Relic",
+              "level": 3
+            },
+            {
+              "title": "Nightmare Chests",
+              "anchor": "Nightmare_Chests",
+              "level": 3
+            },
+            {
+              "title": "Centro de Escavação",
+              "anchor": "Centro_de_Escavação",
+              "level": 2
+            },
+            {
+              "title": "Digger Hiram",
+              "anchor": "Digger_Hiram",
+              "level": 3
+            },
+            {
+              "title": "Digger Frank",
+              "anchor": "Digger_Frank",
+              "level": 3
+            },
+            {
+              "title": "Digger Anette",
+              "anchor": "Digger_Anette",
+              "level": 3
+            },
+            {
+              "title": "Professor Sycamore",
+              "anchor": "Professor_Sycamore",
+              "level": 3
+            },
+            {
+              "title": "Semanal de Arqueólogo",
+              "anchor": "Semanal_de_Arqueólogo",
+              "level": 2
+            },
+            {
+              "title": "Acessando uma Dungeon",
+              "anchor": "Acessando_uma_Dungeon",
+              "level": 2
+            },
+            {
+              "title": "Dungeons",
+              "anchor": "Dungeons",
+              "level": 2
+            },
+            {
+              "title": "Exclusividades da Especialização",
+              "anchor": "Exclusividades_da_Especialização",
+              "level": 1
+            },
+            {
+              "title": "Nightmare Compass",
+              "anchor": "Nightmare_Compass",
+              "level": 3
+            },
+            {
+              "title": "Adventurer's Utility Belt",
+              "anchor": "Adventurer's_Utility_Belt",
+              "level": 3
+            },
+            {
+              "title": "Crafts Exclusivos",
+              "anchor": "Crafts_Exclusivos",
+              "level": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "relatedLinks": [
+    {
+      "slug": "workshop",
+      "title": "Workshop",
+      "kind": "workshop",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Workshop",
+      "iconUrl": "",
+      "summary": "Workshops são estações de trabalho utilizados na fabricação de diversos itens. Eles podem ser de profissões, de eventos, de quests ou de uso geral dos jogadores. São eles:",
+      "sections": [
+        {
+          "title": "Workshops",
+          "anchor": "Workshops",
+          "level": 1
+        },
+        {
+          "title": "Profissões",
+          "anchor": "Profissões",
+          "level": 2
+        },
+        {
+          "title": "Workshops de Especializações",
+          "anchor": "Workshops_de_Especializações",
+          "level": 2
+        },
+        {
+          "title": "Utilitários",
+          "anchor": "Utilitários",
+          "level": 2
+        },
+        {
+          "title": "Temáticos de Evento",
+          "anchor": "Temáticos_de_Evento",
+          "level": 2
+        },
+        {
+          "title": "Workshop de Quest",
+          "anchor": "Workshop_de_Quest",
+          "level": 2
+        },
+        {
+          "title": "Workshop de Sistemas",
+          "anchor": "Workshop_de_Sistemas",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "slug": "super-recursos",
+      "title": "Super Recursos",
+      "kind": "resource",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Super_Recursos",
+      "iconUrl": "",
+      "summary": "Os Super Recursos são versões gigantes dos recursos comuns que já são encontrados pelo mapa. Com ele, os jogadores conseguem coletar o mesmo recurso ao mesmo tempo, sem a necessidade de disputarem entre si.",
+      "sections": [
+        {
+          "title": "<b>Introdução</b>",
+          "anchor": "Introdução",
+          "level": 2
+        },
+        {
+          "title": "<b>Encontrando um Super Recurso</b>",
+          "anchor": "Encontrando_um_Super_Recurso",
+          "level": 2
+        },
+        {
+          "title": "<b>Centro de Escavação</b>",
+          "anchor": "Centro_de_Escavação",
+          "level": 2
+        },
+        {
+          "title": "<b>Missão semanal</b>",
+          "anchor": "Missão_semanal",
+          "level": 3
+        },
+        {
+          "title": "<b>Trocando fragmentos por itens</b>",
+          "anchor": "Trocando_fragmentos_por_itens",
+          "level": 3
+        },
+        {
+          "title": "<b>Configurando as notificações</b>",
+          "anchor": "Configurando_as_notificações",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "slug": "minigame-de-profissao",
+      "title": "Minigame de profissão",
+      "kind": "minigame",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Minigame_de_profiss%C3%A3o",
+      "iconUrl": "",
+      "summary": "Ao realizar a coleta de recursos das profissões, em certos momentos, os jogadores precisam realizar um pequeno desafio, também conhecido como minigame, para efetivar a coleta. A seguir estão descritos os tipos de minigame e seu funcionamento.",
+      "sections": [
+        {
+          "title": "Introdução",
+          "anchor": "Introdução",
+          "level": 1
+        },
+        {
+          "title": "Desafio: Onde está o Pokémon?",
+          "anchor": "Desafio:_Onde_está_o_Pokémon?",
+          "level": 1
+        },
+        {
+          "title": "Aventureiro",
+          "anchor": "Aventureiro",
+          "level": 1
+        },
+        {
+          "title": "Cozinheiro",
+          "anchor": "Cozinheiro",
+          "level": 2
+        },
+        {
+          "title": "Engenheiro",
+          "anchor": "Engenheiro",
+          "level": 1
+        },
+        {
+          "title": "Hacker",
+          "anchor": "Hacker",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "slug": "quantias-de-coleta-de-profissao",
+      "title": "Quantias de coleta de profissão",
+      "kind": "collection",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Quantias_de_coleta_de_profiss%C3%A3o",
+      "iconUrl": "",
+      "summary": "Nesta página, o jogador encontrará informações sobre a quantidade de recurso coletada em cada Rank de sua profissão.",
+      "sections": [
+        {
+          "title": "Professor",
+          "anchor": "Professor",
+          "level": 2
+        },
+        {
+          "title": "Estilista",
+          "anchor": "Estilista",
+          "level": 2
+        },
+        {
+          "title": "Engenheiro",
+          "anchor": "Engenheiro",
+          "level": 2
+        },
+        {
+          "title": "Aventureiro",
+          "anchor": "Aventureiro",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "slug": "high-tech-device",
+      "title": "High-Tech Device",
+      "kind": "subsection",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/High-Tech_Device",
+      "iconUrl": "",
+      "summary": "O High-Tech Device é um Item adquirido pelos jogadores que completaram a Introdução às Especializações na Nightmare World, tendo a função em converter recursos de especialização em recursos-base da profissão Rank S.",
+      "sections": [
+        {
+          "title": "<b>Introdução</b>",
+          "anchor": "Introdução",
+          "level": 1
+        },
+        {
+          "title": "<b>Modo de uso</b>",
+          "anchor": "Modo_de_uso",
+          "level": 2
+        },
+        {
+          "title": "<b>Tabela de Conversão</b>",
+          "anchor": "Tabela_de_Conversão",
+          "level": 2
+        }
+      ]
+    }
+  ]
+}
