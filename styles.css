@@ -1,13 +1,16 @@
 :root {
-  --primary: #648181;
-  --primary-dark: #4b6868;
-  --bg: #071111;
-  --surface: #101b1b;
-  --surface-strong: #162626;
-  --text: #f3f8f8;
-  --muted: #9fb3b3;
-  --border: rgba(255, 255, 255, 0.08);
-  --shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+  --primary: #22d3ee;
+  --primary-dark: #0891b2;
+  --on-primary: #061018;
+  --accent: #facc15;
+  --danger-accent: #fb7185;
+  --bg: #070b12;
+  --surface: #101826;
+  --surface-strong: #172235;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: rgba(148, 163, 184, 0.18);
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
 }
 
 * {
@@ -22,7 +25,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top left, rgba(100, 129, 129, 0.18), transparent 24%), linear-gradient(135deg, #071111 0%, #0d1717 100%);
+  background: radial-gradient(circle at top left, rgba(34, 211, 238, 0.18), transparent 24%), linear-gradient(135deg, #070b12 0%, #101826 100%);
   min-height: 100vh;
 }
 
@@ -35,7 +38,7 @@ body {
   align-items: center;
   padding: 1.2rem 5vw;
   backdrop-filter: blur(16px);
-  background: rgba(7, 17, 17, 0.8);
+  background: rgba(7, 11, 18, 0.84);
   border-bottom: 1px solid var(--border);
 }
 
@@ -53,8 +56,46 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), #8fb2b2);
-  box-shadow: 0 0 18px rgba(100, 129, 129, 0.6);
+  background: linear-gradient(135deg, var(--primary), #facc15);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.58);
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.language-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 32px;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.language-option.active {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(34, 211, 238, 0.18);
+  color: var(--text);
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+  color: var(--text);
+  outline: none;
 }
 
 .nav {
@@ -113,7 +154,7 @@ body {
 .hero-panel {
   padding: 1.2rem;
   border-radius: 18px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(100, 129, 129, 0.1));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(34, 211, 238, 0.10));
 }
 
 .panel-header {
@@ -182,7 +223,7 @@ body {
   display: block;
   width: 100%;
   border-radius: 16px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(100, 129, 129, 0.08));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(34, 211, 238, 0.08));
   color: var(--text);
   padding: 0.95rem 1rem;
   text-align: left;
@@ -192,7 +233,7 @@ body {
 
 .feature-item.active {
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
 }
 
 .feature-panels {
@@ -203,7 +244,7 @@ body {
   display: none;
   padding: 1.2rem;
   border-radius: 20px;
-  background: rgba(10, 20, 20, 0.86);
+  background: rgba(16, 24, 38, 0.9);
 }
 
 .feature-panel.active {
@@ -267,7 +308,7 @@ body {
 .tool-form select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(100, 129, 129, 0.2);
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.22);
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -285,7 +326,8 @@ input[type="number"] {
   cursor: pointer;
   background: var(--primary);
   border-color: var(--primary);
-  font-weight: 600;
+  color: var(--on-primary);
+  font-weight: 700;
 }
 
 .checkbox-row {
@@ -744,7 +786,7 @@ input[type="number"] {
 .profession-subtab.active,
 .profession-subtab:hover {
   background: var(--primary);
-  color: #fff;
+  color: var(--on-primary);
 }
 
 .profession-tab-panel {
@@ -952,13 +994,36 @@ input[type="number"] {
   font: inherit;
 }
 
+.tool-form select,
+.clan-toolbar select,
+.profession-craft-filter select,
+.student-filter select,
+.monument-filter select,
+.adventurer-map-filter select,
+.pokemon-toolbar select {
+  color-scheme: light;
+}
+
 .student-filter select option,
 .profession-craft-filter select option,
 .tool-form select option,
 .clan-toolbar select option,
-.pokemon-toolbar select option {
-  background: #101b1b;
-  color: var(--text);
+.pokemon-toolbar select option,
+.monument-filter select option,
+.adventurer-map-filter select option {
+  background-color: #f7f7fa;
+  color: #050909;
+}
+
+.student-filter select option:checked,
+.profession-craft-filter select option:checked,
+.tool-form select option:checked,
+.clan-toolbar select option:checked,
+.pokemon-toolbar select option:checked,
+.monument-filter select option:checked,
+.adventurer-map-filter select option:checked {
+  background: #d7d7dd;
+  color: #050909;
 }
 
 .student-filter span {
@@ -986,7 +1051,7 @@ input[type="number"] {
 }
 
 .student-table th {
-  background: rgba(100, 129, 129, 0.24);
+  background: rgba(34, 211, 238, 0.16);
   color: var(--text);
   font-size: 0.86rem;
   text-align: center;
@@ -1077,7 +1142,7 @@ input[type="number"] {
 }
 
 .monument-filter select option {
-  background: #101b1b;
+  background: #101826;
   color: var(--text);
 }
 
@@ -1106,7 +1171,7 @@ input[type="number"] {
 }
 
 .monument-table th {
-  background: rgba(100, 129, 129, 0.24);
+  background: rgba(34, 211, 238, 0.16);
   color: var(--text);
   font-size: 0.86rem;
   text-align: left;
@@ -1158,7 +1223,7 @@ input[type="number"] {
 }
 
 .coordinate-table th {
-  background: rgba(100, 129, 129, 0.24);
+  background: rgba(34, 211, 238, 0.16);
   color: var(--text);
   font-size: 0.82rem;
   text-align: left;
@@ -1209,7 +1274,7 @@ input[type="number"] {
 }
 
 .adventurer-map-filter select option {
-  background: #101b1b;
+  background: #101826;
   color: var(--text);
 }
 
@@ -1808,6 +1873,20 @@ input[type="number"] {
 
 
 
+
+
+
+
+
+.flag-icon {
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  flex: 0 0 24px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
 
 
 

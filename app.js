@@ -1,3 +1,350 @@
+const I18N_STORAGE_KEY = 'pxg-tools:language';
+const I18N = {
+  en: {
+    htmlLang: 'en', languageToggleLabel: 'Change language', currentFlag: 'uk', otherFlag: 'br',
+    heroEyebrow: 'PXG utility dashboard', heroText: 'Fast calculators and references for capture, boosts, types, and Pokeballs.',
+    availableTools: 'Available tools', interactivePanels: '10 interactive panels', choosePanel: 'Choose a panel below to calculate, compare, or check the reference you need.',
+    summaryLucky: 'Lucky Drop Chance for quick drop-rate checks.', summaryAverage: 'Average Balls to estimate capture resources.', summaryBallTypes: 'Ball Types to review best uses and catch rates.', summaryBoostCalc: 'Boost Calculator for common and boost stone costs.', summaryTypeChart: 'Type Chart for attack effectiveness matchups.', summaryBoostTable: 'Boost Table for stone requirements by level.', summaryClans: 'Clans reference prepared for wiki synchronization.', summaryProfessions: 'Professions with specializations, crafts, and related wiki links.', summaryPokemon: 'Pokemon index with Dex, generation, and type filters.', summaryItems: 'General items grouped by official wiki categories.',
+    chooseTool: 'Choose a tool.', luckyDrop: 'Lucky Drop Chance', averageBalls: 'Average Balls', ballTypes: 'Ball Types', boostCalculator: 'Boost Calculator', typeChart: 'Type Chart', boostTable: 'Boost Table', clans: 'Clans', professions: 'Professions', pokemon: 'Pokemon', items: 'Items',
+    dropPercentage: 'Drop percentage', useElixir: 'Use Elixir', calculate: 'Calculate', clear: 'Clear', npcPrice: 'NPC price', primaryPokemonType: 'Primary Pokemon type', secondaryPokemonType: 'Secondary Pokemon type', primaryElementalBallPrice: 'Primary Elemental Ball Price', secondaryElementalBallPrice: 'Secondary Elemental Ball Price', boostType: 'Boost type', useSpecialStone: 'Use special stone', currentBoost: 'Current boost', desiredBoost: 'Desired boost', stonePrice: 'Stone price', boostStonePrice: 'Boost stone price', primaryType: 'Primary type', secondaryType: 'Secondary type', checkTypeChart: 'Check type chart', showTable: 'Show table', searchClan: 'Search clan', filterByType: 'Filter by type', searchProfession: 'Search profession', searchPokemon: 'Search Pokemon', generation: 'Generation', searchItems: 'Search items', none: 'None', allTypes: 'All types', allGenerations: 'All generations',
+    averageCaptureEstimate: 'Average capture estimate', average: 'average', type: 'type', universal: 'Universal', rate: 'Rate', or: 'or', currentBoostResult: 'Current boost:', desiredBoostResult: 'Desired boost:', commonStonesUsed: 'Common stones used:', boostStonesUsed: 'Boost Stones used:', boostsWithBoostStone: 'Boosts done with Boost Stone:', commonStoneCost: 'Common stone cost:', boostStoneCost: 'Boost Stone cost:', totalCost: 'TOTAL COST:', currentBoostCannotExceed: 'Current boost cannot be higher than the desired boost.', chooseDefenseTypes: 'Choose one or two valid defense types.', superEffective: 'Super effective', normalDamage: 'Normal damage', ineffective: 'Ineffective', noEffect: 'No effect', defenseType: 'Defense type:', chooseValidBoostType: 'Choose a valid boost type.', noSpecialTable: 'This boost type does not have a special table yet.', boostTableFor: 'Boost table for', special: 'special', level: 'Level', stones: 'Stones',
+    backToProfessions: 'Back to professions', backToItems: 'Back to items', openWiki: 'Open on Wiki', officialWikiSync: 'Official wiki sync', loadedWiki: 'Loaded from the official wiki.', pokemonFound: 'Pokemon found', elements: 'Elements', noPokemon: 'No Pokemon found for these filters.', section: 'Section', description: 'Description', attributes: 'Attributes', noItems: 'No structured items were found in this category.', itemCategoriesFound: 'No item categories found for this search.', professionsFound: 'No professions found for this search.', itemsCount: 'items', specializations: 'specializations', ingredientsMissing: 'Ingredients not listed.', originalOrder: 'Original order', nameAsc: 'Name A-Z', nameDesc: 'Name Z-A', timeDesc: 'Time: high to low', timeAsc: 'Time: low to high', skillDesc: 'Skill: high to low', skillAsc: 'Skill: low to high', allRanks: 'All ranks', filterRank: 'Filter by rank', sortCrafts: 'Sort crafts', noCraftTab: 'No crafts found in this tab yet.', noCraftFilter: 'No crafts found for this filter.', showingCrafts: 'Showing', of: 'of', filteredCrafts: 'filtered crafts', searchCraft: 'Search craft or ingredient...', skillLabel: 'Skill', waitTimeLabel: 'Wait time', craftsWord: 'crafts', professionTabsLabel: 'Profession tabs'
+  },
+  pt: {
+    htmlLang: 'pt-BR', languageToggleLabel: 'Alterar idioma', currentFlag: 'br', otherFlag: 'uk',
+    heroEyebrow: 'Painel de utilidades PXG', heroText: 'Calculadoras e referencias rapidas para captura, boosts, tipos e pokebolas.',
+    availableTools: 'Ferramentas disponiveis', interactivePanels: '10 paineis interativos', choosePanel: 'Escolha um painel abaixo para calcular, comparar ou consultar a referencia que precisa.',
+    summaryLucky: 'Lucky Drop Chance para checar taxas de drop rapidamente.', summaryAverage: 'Média de Balls para estimar recursos de captura.', summaryBallTypes: 'Tipos de Balls para revisar melhores usos e taxas de captura.', summaryBoostCalc: 'Calculadora de Boost para custos com stones comuns e Boost Stones.', summaryTypeChart: 'Tabela de Tipos para conferir efetividade de ataques.', summaryBoostTable: 'Tabela de Boost para requisitos de stones por nivel.', summaryClans: 'Referência de Clãs preparada para sincronização com a wiki.', summaryProfessions: 'Profissões com especializações, crafts e links da wiki.', summaryPokemon: 'Indice de Pokemon com filtros por Dex, geracao e tipo.', summaryItems: 'Itens gerais agrupados por categorias oficiais da wiki.',
+    chooseTool: 'Escolha uma ferramenta.', luckyDrop: 'Chance de Drop Lucky', averageBalls: 'Média de Balls', ballTypes: 'Tipos de Balls', boostCalculator: 'Calculadora de Boost', typeChart: 'Tabela de Tipos', boostTable: 'Tabela de Boost', clans: 'Clãs', professions: 'Profissões', pokemon: 'Pokemon', items: 'Itens',
+    dropPercentage: 'Porcentagem de drop', useElixir: 'Usar Elixir', calculate: 'Calcular', clear: 'Limpar', npcPrice: 'Preco no NPC', primaryPokemonType: 'Tipo primario do Pokemon', secondaryPokemonType: 'Tipo secundario do Pokemon', primaryElementalBallPrice: 'Preco da Ball elemental primaria', secondaryElementalBallPrice: 'Preco da Ball elemental secundaria', boostType: 'Tipo de boost', useSpecialStone: 'Usar stone especial', currentBoost: 'Boost atual', desiredBoost: 'Boost desejado', stonePrice: 'Preco da stone', boostStonePrice: 'Preco da Boost Stone', primaryType: 'Tipo primario', secondaryType: 'Tipo secundario', checkTypeChart: 'Consultar Type Chart', showTable: 'Mostrar tabela', searchClan: 'Buscar clan', filterByType: 'Filtrar por tipo', searchProfession: 'Buscar profissao', searchPokemon: 'Buscar Pokemon', generation: 'Geracao', searchItems: 'Buscar itens', none: 'Nenhum', allTypes: 'Todos os tipos', allGenerations: 'Todas as geracoes',
+    averageCaptureEstimate: 'Estimativa media de captura', average: 'media', type: 'tipo', universal: 'Universal', rate: 'Taxa', or: 'ou', currentBoostResult: 'Boost atual:', desiredBoostResult: 'Boost desejado:', commonStonesUsed: 'Stones comuns usadas:', boostStonesUsed: 'Boost Stones usadas:', boostsWithBoostStone: 'Boosts feitos com Boost Stone:', commonStoneCost: 'Custo com stone comum:', boostStoneCost: 'Custo com Boost Stone:', totalCost: 'CUSTO TOTAL:', currentBoostCannotExceed: 'O boost atual nao pode ser maior que o boost desejado.', chooseDefenseTypes: 'Escolha um ou dois tipos defensivos validos.', superEffective: 'Super efetivo', normalDamage: 'Dano normal', ineffective: 'Pouco efetivo', noEffect: 'Sem efeito', defenseType: 'Tipo defensivo:', chooseValidBoostType: 'Escolha um tipo de boost valido.', noSpecialTable: 'Este tipo de boost ainda nao tem tabela especial.', boostTableFor: 'Tabela de boost para', special: 'especial', level: 'Nivel', stones: 'Stones',
+    backToProfessions: 'Voltar as profissoes', backToItems: 'Voltar aos itens', openWiki: 'Abrir na Wiki', officialWikiSync: 'Sincronizado com a wiki oficial', loadedWiki: 'Carregado da wiki oficial.', pokemonFound: 'Pokemon encontrados', elements: 'Elementos', noPokemon: 'Nenhum Pokemon encontrado para esses filtros.', section: 'Secao', description: 'Descricao', attributes: 'Atributos', noItems: 'Nenhum item estruturado foi encontrado nesta categoria.', itemCategoriesFound: 'Nenhuma categoria de itens encontrada para esta busca.', professionsFound: 'Nenhuma profissao encontrada para esta busca.', itemsCount: 'itens', specializations: 'especializacoes', ingredientsMissing: 'Ingredientes nao listados.', originalOrder: 'Ordem original', nameAsc: 'Nome A-Z', nameDesc: 'Nome Z-A', timeDesc: 'Tempo: maior para menor', timeAsc: 'Tempo: menor para maior', skillDesc: 'Habilidade: maior para menor', skillAsc: 'Habilidade: menor para maior', allRanks: 'Todos os ranks', filterRank: 'Filtrar por rank', sortCrafts: 'Ordenar crafts', noCraftTab: 'Nenhum craft encontrado nesta aba ainda.', noCraftFilter: 'Nenhum craft encontrado para esse filtro.', showingCrafts: 'Mostrando', of: 'de', filteredCrafts: 'crafts filtrados', searchCraft: 'Buscar craft ou ingrediente...', skillLabel: 'Habilidade', waitTimeLabel: 'Tempo de espera', craftsWord: 'crafts', professionTabsLabel: 'Abas da profissão'
+  }
+};
+let currentLanguage = localStorage.getItem(I18N_STORAGE_KEY) || 'pt';
+if (!I18N[currentLanguage]) currentLanguage = 'pt';
+function t(key) { return I18N[currentLanguage]?.[key] || I18N.en[key] || key; }
+function setText(selector, key) { const element = document.querySelector(selector); if (element) element.textContent = t(key); }
+
+function decodeMojibake(value) {
+  return String(value || '')
+    .replace(/Ã©/g, 'é').replace(/Ã‰/g, 'É')
+    .replace(/Ãª/g, 'ê').replace(/ÃŠ/g, 'Ê')
+    .replace(/Ã¡/g, 'á').replace(/Ã/g, 'Á')
+    .replace(/Ã /g, 'à').replace(/Ã€/g, 'À')
+    .replace(/Ã£/g, 'ã').replace(/Ãƒ/g, 'Ã')
+    .replace(/Ã¢/g, 'â').replace(/Ã‚/g, 'Â')
+    .replace(/Ã­/g, 'í').replace(/Ã/g, 'Í')
+    .replace(/Ã³/g, 'ó').replace(/Ã“/g, 'Ó')
+    .replace(/Ã´/g, 'ô').replace(/Ã”/g, 'Ô')
+    .replace(/Ãµ/g, 'õ').replace(/Ã•/g, 'Õ')
+    .replace(/Ãº/g, 'ú').replace(/Ãš/g, 'Ú')
+    .replace(/Ã§/g, 'ç').replace(/Ã‡/g, 'Ç')
+    .replace(/PokÃ©/g, 'Poké')
+    .replace(/PokÃƒÂ©/g, 'Poké')
+    .replace(/nÃ­vel/g, 'nível')
+    .replace(/profissÃ£o/g, 'profissão')
+    .replace(/profissÃµes/g, 'profissões')
+    .replace(/disponÃ­veis/g, 'disponíveis')
+    .replace(/possÃ­vel/g, 'possível')
+    .replace(/Ãº/g, 'ú')
+    .replace(/Ã¡/g, 'á');
+}
+
+const LOCALIZED_TEXT = {
+  pt: {
+    'Fire specialists': 'Especialistas em Fire',
+    'Electric specialists': 'Especialistas em Electric',
+    'Ground and rock specialists': 'Especialistas em Ground e Rock',
+    'Grass and bug specialists': 'Especialistas em Grass e Bug',
+    'Normal and fighting specialists': 'Especialistas em Normal e Fighting',
+    'Steel and crystal specialists': 'Especialistas em Steel e Crystal',
+    'Flying and dragon specialists': 'Especialistas em Flying e Dragon',
+    'Psychic and fairy specialists': 'Especialistas em Psychic e Fairy',
+    'Water and ice specialists': 'Especialistas em Water e Ice',
+    'Ghost, dark and poison specialists': 'Especialistas em Ghost, Dark e Poison',
+    'Synced seed': 'Sincronizado',
+    'Loaded from the official wiki data file.': 'Carregado do arquivo de dados da wiki oficial.',
+    'No clans found for this filter.': 'Nenhum clan encontrado para esse filtro.',
+    'Detail not loaded yet': 'Detalhe ainda não carregado',
+    'Volcanic is the first clan detail page prepared for this test. The next step is applying the same structure to every clan.': 'Volcanic é a primeira página de detalhe preparada para este teste. O próximo passo é aplicar a mesma estrutura a todos os clans.',
+    'Volcanic clan members are the most destructive trainers, constantly training their Fire-type Pokemon to become stronger than any opponent.': 'Membros do clan Volcanic são os treinadores mais destrutivos, sempre treinando seus Pokémon do tipo Fire para ficarem mais fortes que qualquer oponente.',
+    'Raibolt clan members are highly intelligent and know everything needed to handle Electric-type Pokemon and defeat enemies with ease.': 'Membros do clan Raibolt são muito inteligentes e sabem tudo o que precisam para lidar com Pokémon do tipo Electric e derrotar inimigos com facilidade.',
+    'Orebound clan members dedicate their lives to mastering the strongest Ground- and Rock-type Pokemon to defeat any opponent they encounter.': 'Membros do clan Orebound dedicam suas vidas a dominar os Pokémon mais fortes dos tipos Ground e Rock para derrotar qualquer oponente que encontrarem.',
+    'Naturia clan members are known for their passion for nature, preferring to live in forests and jungles alongside Grass- and Bug-type Pokemon.': 'Membros do clan Naturia são conhecidos pela paixão pela natureza, preferindo viver em florestas e selvas ao lado de Pokémon dos tipos Grass e Bug.',
+    'Gardestrike clan members are strong, earning their power through long training with Normal- and Fighting-type Pokemon.': 'Membros do clan Gardestrike são fortes, conquistando poder com longos treinos ao lado de Pokémon dos tipos Normal e Fighting.',
+    'Ironhard clan Pokemon are known for brute force, resistance, and range, mastering Steel techniques after years of breaking every limit.': 'Pokémon do clan Ironhard são conhecidos por força bruta, resistência e alcance, dominando técnicas Steel após anos superando limites.',
+    'Wingeon clan members live far from cities, preferring the highest mountains among Flying- and Dragon-type Pokemon.': 'Membros do clan Wingeon vivem longe das cidades, preferindo as montanhas mais altas entre Pokémon dos tipos Flying e Dragon.',
+    'Psycraft clan members are enigmatic, said to control the minds of Psychic-type Pokemon and share a strong bond with affectionate Fairy-type Pokemon.': 'Membros do clan Psycraft são enigmáticos, conhecidos por controlar mentes de Pokémon do tipo Psychic e criar laços fortes com Pokémon Fairy.',
+    'Seavell clan members are known for their knowledge of the sea and its creatures, handling the most powerful Water- and Ice-type Pokemon.': 'Membros do clan Seavell são conhecidos pelo conhecimento do mar e de suas criaturas, lidando com os Pokémon mais poderosos dos tipos Water e Ice.',
+    'Malefic clan members are mysterious, rarely speaking about their personal lives while controlling Ghost-, Dark-, and Poison-type Pokemon.': 'Membros do clan Malefic são misteriosos, raramente falando sobre suas vidas pessoais enquanto controlam Pokémon dos tipos Ghost, Dark e Poison.',
+    'Lucky Drop Chance': 'Chance de Drop Lucky',
+    'Average Balls': 'Média de Balls',
+    'Ball Types': 'Tipos de Balls',
+    'Boost Calculator': 'Calculadora de Boost',
+    'Type Chart': 'Tabela de Tipos',
+    'Boost Table': 'Tabela de Boost',
+    'Clans': 'Clãs',
+    'Professions': 'Profissões',
+    'Items': 'Itens',
+    'Available tools': 'Ferramentas disponíveis',
+    'Choose a tool.': 'Escolha uma ferramenta.',
+    'Choose a panel below to calculate, compare, or check the reference you need.': 'Escolha um painel abaixo para calcular, comparar ou consultar a referência que precisa.',
+    'Lucky Drop Chance for quick drop-rate checks.': 'Chance de Drop Lucky para checar taxas de drop rapidamente.',
+    'Average Balls to estimate capture resources.': 'Média de Balls para estimar recursos de captura.',
+    'Ball Types to review best uses and catch rates.': 'Tipos de Balls para revisar melhores usos e taxas de captura.',
+    'Boost Calculator for common and boost stone costs.': 'Calculadora de Boost para custos com stones comuns e Boost Stones.',
+    'Type Chart for attack effectiveness matchups.': 'Tabela de Tipos para conferir efetividade de ataques.',
+    'Boost Table for stone requirements by level.': 'Tabela de Boost para requisitos de stones por nível.',
+    'Clans reference prepared for wiki synchronization.': 'Referência de Clãs preparada para sincronização com a wiki.',
+    'Professions with specializations, crafts, and related wiki links.': 'Profissões com especializações, crafts e links da wiki.',
+    'General items grouped by official wiki categories.': 'Itens gerais agrupados por categorias oficiais da wiki.',
+    'No clans found for this filter.': 'Nenhum clã encontrado para esse filtro.',
+    'Voltar aos clas': 'Voltar aos clãs',
+    'Bonus de cla': 'Bônus de clã',
+    'Pokemons obtidos via NPC de Cla': 'Pokémon obtidos via NPC de Clã',
+    'Rotacao mid-late Game': 'Rotação mid-late Game',
+    'Exclusividade do Cla no PVP': 'Exclusividade do Clã no PvP',
+    'Funcao': 'Função',
+    'Nao informado na wiki oficial.': 'Não informado na wiki oficial.',
+    'Detail not loaded yet': 'Detalhe ainda não carregado',
+  },
+  en: {
+    'Voltar aos clas': 'Back to clans',
+    'Bônus de clã': 'Clan bonus',
+    'Bonus de cla': 'Clan bonus',
+    'Pokémons obtidos via NPC de Clã': 'Pokemon obtained through Clan NPC',
+    'Pokemons obtidos via NPC de Cla': 'Pokemon obtained through Clan NPC',
+    'Tiers': 'Tiers',
+    'Rotação mid-late Game': 'Mid-late game rotation',
+    'Rotacao mid-late Game': 'Mid-late game rotation',
+    'Exclusividade do Clã no PVP': 'Clan exclusivity in PvP',
+    'Exclusividade do Cla no PVP': 'Clan exclusivity in PvP',
+    'Lucro': 'Profit',
+    'Especializações': 'Specializations',
+    'Especializacoes': 'Specializations',
+    'Especialização': 'Specialization',
+    'Especializacao': 'Specialization',
+    'Características': 'Features',
+    'Caracteristicas': 'Features',
+    'Crafts gerais': 'General crafts',
+    'Crafts Exclusivos': 'Exclusive crafts',
+    'Recurso comum': 'Common resource',
+    'Recurso exclusivo': 'Exclusive resource',
+    'Recursos': 'Resources',
+    'Diária Cozinheiro': 'Cook daily task',
+    'Diaria Cozinheiro': 'Cook daily task',
+    'Centro de Escavação e missões': 'Excavation Center and missions',
+    'Centro de Escavacao e missoes': 'Excavation Center and missions',
+    'Semanal de Arqueólogo': 'Archeologist weekly task',
+    'Semanal de Arqueologo': 'Archeologist weekly task',
+    'Exclusividades': 'Exclusive perks',
+    'Monumentos': 'Monuments',
+    'Buscador de Mapas': 'Map Finder',
+    'Tipo de Mapa': 'Map Type',
+    'Local do X': 'X Location',
+    'Número do mapa': 'Map number',
+    'Numero do mapa': 'Map number',
+    'Selecione um mapa': 'Select a map',
+    'Selecione uma opção': 'Select an option',
+    'Selecione uma opcao': 'Select an option',
+    'Nenhum mapa encontrado para esse filtro.': 'No maps found for this filter.',
+    'Escolha o tipo de mapa e o local do X para ver os resultados.': 'Choose the map type and X location to see results.',
+    'Nenhum monumento encontrado para esse filtro.': 'No monuments found for this filter.',
+    'Área': 'Area',
+    'Area': 'Area',
+    'Buscar': 'Search',
+    'Coordenada': 'Coordinate',
+    'Nome': 'Name',
+    'Obs': 'Note',
+    'Voltar para': 'Back to',
+    'Abrir página da Wiki': 'Open Wiki page',
+    'Abrir pagina da Wiki': 'Open Wiki page',
+    'Abrir lista completa na Wiki': 'Open full list on Wiki',
+    'Secoes da pagina': 'Page sections',
+    'Seções da página': 'Page sections',
+    'Sem secoes listadas.': 'No sections listed.',
+    'Crafts relacionados': 'Related crafts',
+    'Especializacoes e subprofissoes': 'Specializations and subprofessions',
+    'Especializações e subprofissões': 'Specializations and subprofessions',
+    'Subsecoes': 'Subsections',
+    'Subseções': 'Subsections',
+    'Nenhum clan encontrado para esse filtro.': 'No clans found for this filter.',
+    'Sincronizado': 'Synced',
+    'especializacao': 'specialization',
+    'especialização': 'specialization',
+    'sistema': 'system',
+    'crafts': 'crafts',
+    'Crafts da profissao que nao dependem de especializacao, organizados por rank.': 'Profession crafts that do not depend on a specialization, organized by rank.',
+    'Crafts da profissão que não dependem de especialização, organizados por rank.': 'Profession crafts that do not depend on a specialization, organized by rank.',
+    'Crafts da profissao que nao dependem de especializacao.': 'Profession crafts that do not depend on a specialization.',
+    'O principal modo de lucrar como um Engenheiro e vendendo Pok&eacute;bolas, pois, em razao da sua necessidade no jogo, o comercio se torna estavel. Alem disso, engenheiros podem construir eletronicos de decoracao, addons e utilitarios importantes para jogadores experientes, como Smartphone, Health Check, Digital Clock, Duelist Radar, Boss Detector e outros equipamentos sofisticados.': 'The main way to profit as an Engineer is selling Pokeballs, since their constant need in the game keeps trade stable. Engineers can also build decoration electronics, addons, and important utilities for experienced players, such as Smartphone, Health Check, Digital Clock, Duelist Radar, Boss Detector, and other advanced equipment.',
+    'Todos os itens produzidos podem ser vendidos no NPC Machvise que esta na mesma sala do Kurt.': 'All crafted items can be sold to NPC Machvise, who is in the same room as Kurt.',
+    'O mecanico e alguem que possui habilidades e conhecimentos especializados na engenharia mecanica, abrindo espaco para a confeccao de diversos materiais uteis para os jogadores.': 'The Mechanic has specialized knowledge in mechanical engineering, enabling the creation of several useful materials for players.',
+    'Os Mecanicos sao responsaveis pela criacao de itens como Mecha Device, Enhancement Kit e outros equipamentos mecanicos.': 'Mechanics are responsible for creating items such as Mecha Device, Enhancement Kit, and other mechanical equipment.',
+    'O Hacker tem conhecimentos avancados sobre tecnologia e e responsavel por obter informacoes de computadores existentes no Nightmare World.': 'The Hacker has advanced technology knowledge and gathers information from computers in Nightmare World.',
+    'Os Hackers sao responsaveis pela criacao de itens como Nightmare Pok&eacute;gear, Nintendo Switch e outros dispositivos avancados.': 'Hackers are responsible for creating items such as Nightmare Pokégear, Nintendo Switch, and other advanced devices.',
+    'No inicio da jornada o Professor nao tera tanta facilidade, mas quando atinge niveis mais altos o lucro se torna muito forte.': 'At the beginning, Professor is not the easiest profession, but its profit becomes very strong at higher levels.',
+    'Uma plantacao de berries bem controlada pode gerar otimos lucros.': 'A well-managed berry plantation can generate great profit.',
+    'Existem diversas formas de lucrar sendo um Estilista. Inicialmente, o jogador pode vender addons e outfits no mercado. Conforme evolui sua skill, passa a produzir roupas mais interessantes, moveis, itens de decoracao e utilitarios como Builder Kit, Fashion Shoes e Fashion Heart.': 'There are several ways to profit as a Stylist. At first, the player can sell addons and outfits on the market. As the skill improves, they can produce more interesting clothes, furniture, decoration items, and utilities such as Builder Kit, Fashion Shoes, and Fashion Heart.',
+    'Estilista e a profissao que produz a maior quantidade de itens no Workshop. Guarde itens dropaveis, principalmente os obtidos de Pok&eacute;mon pouco cacados.': 'Stylist is the profession that produces the largest number of Workshop items. Save dropped items, especially those obtained from less-hunted Pokémon.',
+    'Esta profissao e de alto risco: dependendo da sorte, pode causar prejuizo ou gerar grande lucro. Os itens mais lucrativos podem ser encontrados em Baus e Cavernas Secretas, com destaque para Fortune Totem, Shiny Charm e Premier Balls.': 'This profession is high risk: depending on luck, it can cause losses or generate major profit. The most profitable items can be found in Chests and Secret Caves, especially Fortune Totem, Shiny Charm, and Premier Balls.',
+    'Selecione primeiro o tipo de mapa e depois o local do X para visualizar os mapas correspondentes.': 'First select the map type, then the X location to view the matching maps.',
+    'A partir do nível 10, os jogadores VIPs podem se especializar em uma das quatro profissões disponíveis no jogo. Cada profissão possui suas exclusividades e todas elas mudam a forma com a qual o jogador interage com o ambiente do jogo.': 'From level 10 onward, VIP players can specialize in one of the four professions available in the game. Each profession has exclusive features, and all of them change how the player interacts with the game environment.',
+    'O Engenheiro é o mestre da tecnologia e produção de objetos mecânicos e eletrônicos. O jogador que for engenheiro terá a habilidade de criar vários aparelhos eletrônicos para ajudar na sua jornada, principalmente Pokébolas que são essenciais para qualquer treinador Pokémon. Em níveis mais avançados, o Engenheiro ainda será capaz de produzir Pokébolas exclusivas e que possuem maior chance de capturar determinados Pokémon.': 'The Engineer is the master of technology and production of mechanical and electronic objects. Engineer players can create many electronic devices to help on their journey, especially Pokéballs, which are essential for any Pokémon trainer. At advanced levels, the Engineer can also produce exclusive Pokéballs with higher capture chances for specific Pokémon.',
+    'Conhecido por ser um estudioso dos Pokémon e da Natureza, mas também em razão de seus alunos, capazes de realizar missões especiais sob seu comando. O professor é um amante da natureza e sempre estuda as plantas, produz arbustos estilizados de Pokémon e sementes (berries) que possuem efeitos únicos no mundo Pokémon.': 'Known for studying Pokémon and nature, and also for commanding students who can complete special missions. The Professor loves nature, studies plants, and produces stylized Pokémon bushes and berries with unique effects in the Pokémon world.',
+    'Existem diversas formas de lucrar sendo um Estilista. Inicialmente, o jogador pode vender addons e outfits no mercado. Conforme evolui sua skill, passa a produzir roupas mais interessantes, móveis, itens de decoração e utilitários como Builder Kit, Fashion Shoes e Fashion Heart.': 'There are several ways to profit as a Stylist. At first, players can sell addons and outfits on the market. As their skill improves, they can produce more interesting clothes, furniture, decoration items, and utilities such as Builder Kit, Fashion Shoes, and Fashion Heart.',
+    'Esta profissão é de alto risco: dependendo da sorte, pode causar prejuízo ou gerar grande lucro. Os itens mais lucrativos podem ser encontrados em Baús e Cavernas Secretas, com destaque para Fortune Totem, Shiny Charm e Premier Balls.': 'This profession is high risk: depending on luck, it can cause losses or generate major profit. The most profitable items can be found in Chests and Secret Caves, especially Fortune Totem, Shiny Charm, and Premier Balls.',
+    'Aqui você encontra a lista de craft gerais para a profissão Engenheiro, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:': 'Here you can find the list of general crafts for the Engineer profession, from Rank E to Rank S. For specialization Workshop craft lists, use the links below:',
+    'Aqui você encontra a lista de craft gerais para a profissão Professor, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:': 'Here you can find the list of general crafts for the Professor profession, from Rank E to Rank S. For specialization Workshop craft lists, use the links below:',
+    'Aqui você encontra a lista de craft gerais para a profissão Estilista, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:': 'Here you can find the list of general crafts for the Stylist profession, from Rank E to Rank S. For specialization Workshop craft lists, use the links below:',
+    'Aqui você encontra a lista de craft gerais para a profissão Aventureiro, indo do Rank E ao Rank S. Para a lista de craft dos Workshops de especializações, acesse os links abaixo:': 'Here you can find the list of general crafts for the Adventurer profession, from Rank E to Rank S. For specialization Workshop craft lists, use the links below:',
+    'Tornando-se um Engenheiro': 'Becoming an Engineer',
+    'Tornando-se um Professor': 'Becoming a Professor',
+    'Tornando-se um Estilista': 'Becoming a Stylist',
+    'Tornando-se um Aventureiro': 'Becoming an Adventurer',
+    'Primeiros passos': 'First steps',
+    'Coleta de recursos': 'Resource gathering',
+    'Exclusividade': 'Exclusivity',
+    'Introdução': 'Introduction',
+    'Informações Gerais': 'General information',
+    'Workshop Portátil': 'Portable Workshop',
+    'Mochilas': 'Backpacks',
+    'Itens Gerais': 'General Items',
+    'Itens de Decoração': 'Decoration Items',
+    'Vendida no NPC Mark (Itens)': 'Sold by NPC Mark (Items)',
+    'Jogando determinada quantidade de Poké Ball': 'Throwing a specific amount of Poké Ball',
+    'Jogando determinada quantidade de Great Ball': 'Throwing a specific amount of Great Ball',
+    'Jogando determinada quantidade de Ultra Ball': 'Throwing a specific amount of Ultra Ball',
+    'Evento de decoração de House no Fórum em 2017 e 2018': 'House decoration event on the forum in 2017 and 2018',
+    'Capacidade': 'Capacity',
+    'Como conseguir': 'How to obtain',
+    'Como Conseguir': 'How to obtain',
+    'Preço NPC': 'NPC price',
+    'Loja': 'Shop',
+    'Localizações:': 'Locations:',
+    'Buscar craft ou ingrediente...': 'Search craft or ingredient...',
+    'caracteristica': 'feature',
+    'característica': 'feature',
+    'Estudantes': 'Students',
+    'Alquimia': 'Alchemy',
+    'Buscador de Mapas': 'Map Finder',
+    'Recompensa individual': 'Individual reward',
+    '250 pontos de experiencia nightmare.': '250 nightmare experience points.',
+    'Corrupted Iron Ore e compartilhado por Mecanico e Hacker.': 'Corrupted Iron Ore is shared by Mechanic and Hacker.',
+    'E obtido minerando os minerios da Nightmare World com a Pickaxe padrao do Engenheiro ou com a Blacksteel Pickaxe comprada no NPC Dustin.': 'It is obtained by mining Nightmare World ores with the standard Engineer Pickaxe or the Blacksteel Pickaxe bought from NPC Dustin.',
+    'A Blacksteel Pickaxe coleta o recurso comum mais rapido dentro e fora da Nightmare World.': 'Blacksteel Pickaxe gathers the common resource faster inside and outside Nightmare World.',
+    'Esse recurso entra em crafts como moveis tecnologicos, Nightmare Balls e Beast Balls.': 'This resource is used in crafts such as technology furniture, Nightmare Balls, and Beast Balls.',
+    'Tech Data e o recurso exclusivo do Mecanico.': 'Tech Data is the Mechanic exclusive resource.',
+    'Ele e obtido estudando criaturas robotizadas espalhadas pelo mapa com o Mechanic Tablet.': 'It is obtained by studying robotic creatures around the map with the Mechanic Tablet.',
+    'O Mechanic Tablet deve ser comprado no NPC Billy depois que o jogador vira Mecanico.': 'The Mechanic Tablet must be bought from NPC Billy after the player becomes a Mechanic.',
+    'O High-Tech Device pode converter Tech Data em Corrupted Iron Ore.': 'High-Tech Device can convert Tech Data into Corrupted Iron Ore.',
+    'Corrupted Iron Ore e compartilhado por Hacker e Mecanico.': 'Corrupted Iron Ore is shared by Hacker and Mechanic.',
+    'E obtido nos minerios da Nightmare World com a Pickaxe do Engenheiro ou com a Blacksteel Pickaxe.': 'It is obtained from Nightmare World ores with the Engineer Pickaxe or Blacksteel Pickaxe.',
+    'A Blacksteel Pickaxe pode ser comprada no NPC Dustin e acelera a coleta do recurso comum.': 'Blacksteel Pickaxe can be bought from NPC Dustin and speeds up common resource gathering.',
+    'Crypto Diamond Token e o recurso exclusivo do Hacker.': 'Crypto Diamond Token is the Hacker exclusive resource.',
+    'Ele e obtido estudando computadores do Nightmare World com o Hacker Flash Drive.': 'It is obtained by studying Nightmare World computers with the Hacker Flash Drive.',
+    'O Hacker Flash Drive deve ser comprado no NPC Billy depois de escolher a especializacao.': 'The Hacker Flash Drive must be bought from NPC Billy after choosing the specialization.',
+    'Computadores possuem recarga de 50 minutos para nova coleta e 1 minuto para religar quando outro Hacker usa.': 'Computers have a 50-minute recharge for another gathering and 1 minute to turn back on when another Hacker uses them.',
+    'A cada 5 computadores, o Hacker precisa fazer um minigame para continuar coletando.': 'Every 5 computers, the Hacker must complete a minigame to keep gathering.',
+    'Hackers recebem bonus de coleta nos primeiros 80 computadores.': 'Hackers receive a gathering bonus on the first 80 computers.',
+    'Ao realizar missoes, estudantes trazem recompensas ao Professor.': 'When completing missions, students bring rewards to the Professor.',
+    'Essas recompensas passam a ser mais valiosas quando os estudantes estao em niveis mais altos.': 'These rewards become more valuable when students are at higher levels.',
+    'O Professor pode ter no maximo 5 estudantes simultaneos realizando missoes.': 'The Professor can have at most 5 students doing missions at the same time.',
+    'E necessario ter uma casa para planta-las.': 'A house is required to plant them.',
+    'Cuidado para nao deixar as berries plantadas por muito tempo, pois elas podem apodrecer e toda a plantacao pode ser perdida.': 'Be careful not to leave berries planted for too long, as they can rot and the entire plantation can be lost.',
+    'Com conhecimentos de alquimia, o Professor pode construir laboratorio de Boost para Pok&eacute;mon.': 'With alchemy knowledge, the Professor can build a Boost laboratory for Pokémon.',
+    'Esse caminho permite lucrar bastante com crafts de alto nivel.': 'This path can generate strong profit with high-level crafts.',
+    'Food Bags sao o recurso exclusivo da especializacao e entram na maioria dos crafts de Cozinheiro.': 'Food Bags are the specialization exclusive resource and are used in most Cook crafts.',
+    'Sao obtidas coletando loot de Pok&eacute;mon desmaiados.': 'They are obtained by collecting loot from fainted Pokémon.',
+    'A quantidade varia de acordo com a forca do Pok&eacute;mon derrotado.': 'The amount varies according to the strength of the defeated Pokémon.',
+    'Profession Resource Boost pode aumentar a coleta de Food Bags.': 'Profession Resource Boost can increase Food Bag gathering.',
+    'Hidden Relic e o recurso exclusivo do Arqueologo.': 'Hidden Relic is the Archeologist exclusive resource.',
+    'E encontrado durante as exploracoes pela Nightmare World com auxilio de um detector de metais.': 'It is found during Nightmare World explorations with the help of a metal detector.',
+    'E usado principalmente para criar Rift Crystals.': 'It is mainly used to create Rift Crystals.',
+    'Profession Resource Boost pode aumentar a coleta de Hidden Relics.': 'Profession Resource Boost can increase Hidden Relic gathering.',
+    'Aponta para possiveis Nightmare Chests proximos ao jogador.': 'Points to possible Nightmare Chests near the player.',
+    'Funciona de forma semelhante ao Boss Detector.': 'Works similarly to Boss Detector.',
+    'Possui cooldown de 1 hora entre usos.': 'Has a 1-hour cooldown between uses.',
+    'Executa habilidades secundarias como Light, Rock Smash, Dig e Cut sem precisar de um Pok&eacute;mon.': 'Performs secondary abilities such as Light, Rock Smash, Dig, and Cut without needing a Pokémon.',
+    'Apenas Arqueologos podem craftar, mas Cozinheiros tambem podem usar.': 'Only Archeologists can craft it, but Cooks can also use it.',
+    'Pode ser usado dentro e fora da Nightmare World.': 'Can be used inside and outside Nightmare World.',
+    'Dica:': 'Tip:',
+    'Obs:': 'Note:',
+    'Fabricacao de municoes usadas pelas turrets do Engenheiro.': 'Manufacturing ammunition used by the Engineer turrets.',
+    'Fabricação de munições usadas pelas turrets do Engenheiro.': 'Manufacturing ammunition used by the Engineer turrets.',
+    'Cards de aluno, missoes e filtros por cla para consultar os estudantes disponiveis.': 'Student cards, missions, and clan filters to check available students.',
+    'Cards de aluno, missões e filtros por clã para consultar os estudantes disponíveis.': 'Student cards, missions, and clan filters to check available students.',
+    'Coordenadas dos monumentos do Nightmare World estudados por Decoradores.': 'Coordinates of Nightmare World monuments studied by Decorators.',
+    'Escolha o tipo de mapa e o local do X para encontrar imagens, coordenadas e tags dos mapas.': 'Choose the map type and X location to find images, coordinates, and map tags.',
+    'Pequenas estatuas que garantem bonus na quantidade de itens que caem dos Pok&eacute;mon em uma grande area, aumentando o lucro da hunt por tempo limitado.': 'Small statues that increase the amount of items dropped by Pokémon in a large area, improving hunt profit for a limited time.',
+    'Item extremamente raro que pode ser encontrado e vendido. Quem o possui tem maior chance de encontrar Shinies selvagens apos derrotar um Pok&eacute;mon.': 'Extremely rare item that can be found and sold. Its owner has a higher chance to find wild Shinies after defeating a Pokémon.',
+    'Pok&eacute;bolas unicas com chance de captura igual a Ultra Ball e Aura Exclusiva no Pok&eacute;mon capturado, aumentando bastante seu valor.': 'Unique Pokéballs with the same capture chance as Ultra Ball and Exclusive Aura on the captured Pokémon, greatly increasing its value.',
+  }
+};
+
+function localizeText(value) {
+  const decoded = decodeMojibake(value);
+  const direct = LOCALIZED_TEXT[currentLanguage]?.[decoded] || LOCALIZED_TEXT[currentLanguage]?.[value];
+  return direct || decoded;
+}
+
+function localizeHtml(value) {
+  let output = decodeMojibake(value);
+  const dictionary = LOCALIZED_TEXT[currentLanguage] || {};
+  Object.entries(dictionary)
+    .sort((left, right) => right[0].length - left[0].length)
+    .forEach(([source, translated]) => {
+      output = output.split(source).join(translated);
+    });
+  return output;
+}
+
+function setPlaceholder(selector, value) { const element = document.querySelector(selector); if (element) element.setAttribute('placeholder', value); }
+function relabelField(selector, key) {
+  const label = document.querySelector(selector);
+  if (!label) return;
+  const field = label.querySelector('input, select');
+  label.childNodes.forEach((node) => { if (node.nodeType === Node.TEXT_NODE) node.textContent = ''; });
+  label.prepend(document.createTextNode(t(key)));
+  if (field && !label.contains(field)) label.appendChild(field);
+}
+function applyStaticTranslations() {
+  document.documentElement.lang = t('htmlLang');
+  document.querySelector('meta[name="description"]')?.setAttribute('content', currentLanguage === 'pt' ? 'Um painel compacto de utilidades PXG para calculos, referencias e planejamento.' : 'A compact PXG utility dashboard for calculations, references, and planning.');
+  setText('.hero-copy .eyebrow', 'heroEyebrow'); setText('.hero-text', 'heroText'); setText('.panel-label', 'availableTools'); setText('.panel-card h3', 'interactivePanels'); setText('.panel-card > p:not(.panel-label)', 'choosePanel'); setText('.section-title .eyebrow', 'availableTools'); setText('.section-title h2', 'chooseTool');
+  ['summaryLucky','summaryAverage','summaryBallTypes','summaryBoostCalc','summaryTypeChart','summaryBoostTable','summaryClans','summaryProfessions','summaryPokemon','summaryItems'].forEach((key, index) => { const item = document.querySelectorAll('.tool-summary li')[index]; if (item) item.textContent = t(key); });
+  ['luckyDrop','averageBalls','ballTypes','boostCalculator','typeChart','boostTable','clans','professions','pokemon','items'].forEach((key, index) => { const item = document.querySelectorAll('.feature-item')[index]; if (item) item.textContent = (index + 1) + '. ' + t(key); });
+  [['#lucky-form label:first-child','dropPercentage'],['#lucky-form .checkbox-row','useElixir'],['#average-form label:nth-child(1)','npcPrice'],['#average-form label:nth-child(2)','primaryPokemonType'],['#average-form label:nth-child(3)','secondaryPokemonType'],['#average-form label:nth-child(4)','primaryElementalBallPrice'],['#average-form label:nth-child(5)','secondaryElementalBallPrice'],['#boost-form label:nth-child(1)','boostType'],['#boost-form .checkbox-row','useSpecialStone'],['#boost-form label:nth-child(3)','currentBoost'],['#boost-form label:nth-child(4)','desiredBoost'],['#boost-form label:nth-child(5)','stonePrice'],['#boost-form label:nth-child(6)','boostStonePrice'],['#effectiveness-form label:nth-child(1)','primaryType'],['#effectiveness-form label:nth-child(2)','secondaryType'],['#boost-table-form label:nth-child(1)','boostType'],['#boost-table-form .checkbox-row','useSpecialStone'],['.clan-toolbar label:nth-child(1)','searchClan'],['.clan-toolbar label:nth-child(2)','filterByType'],['.profession-toolbar label','searchProfession'],['.pokemon-toolbar label:nth-child(1)','searchPokemon'],['.pokemon-toolbar label:nth-child(2)','generation'],['.item-toolbar label','searchItems']].forEach(([selector, key]) => relabelField(selector, key));
+  document.querySelectorAll('button[type="submit"]').forEach((button) => { button.textContent = button.closest('#effectiveness-form') ? t('checkTypeChart') : button.closest('#boost-table-form') ? t('showTable') : t('calculate'); });
+  document.querySelectorAll('button[type="reset"]').forEach((button) => { button.textContent = t('clear'); });
+  setPlaceholder('#clan-search', 'Volcanic, Gardestrike, Naturia...'); setPlaceholder('#profession-search', currentLanguage === 'pt' ? 'Engenheiro, Alquimista, Workshop...' : 'Engineer, Alchemist, Workshop...'); setPlaceholder('#pokemon-search', 'Bulbasaur, Charizard, #001...'); setPlaceholder('#item-search', 'Poké Ball, Stone, Token, Held...');
+  document.querySelectorAll('[data-optional-type]').forEach((select) => { if (select.options.length) select.options[0].textContent = t('none'); });
+  const clanTypeFilter = document.getElementById('clan-type-filter'); if (clanTypeFilter?.options.length) clanTypeFilter.options[0].textContent = t('allTypes');
+  const generationFilter = document.getElementById('pokemon-generation-filter'); if (generationFilter?.options.length) generationFilter.options[0].textContent = t('allGenerations');
+  document.querySelectorAll('[data-language-option]').forEach((button) => {
+    const isActive = button.dataset.languageOption === currentLanguage;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+}
+function rerenderLocalizedViews() {
+populateTypeSelects(); renderBallCatalog(); renderClanView(); renderProfessionView(); renderPokemonGenerationOptions(); renderPokemonCatalog(); renderItemView(); applyStaticTranslations(); }
+function bindLanguageToggle() {
+  document.querySelectorAll('[data-language-option]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const nextLanguage = button.dataset.languageOption;
+      if (!nextLanguage || nextLanguage === currentLanguage || !I18N[nextLanguage]) {
+        return;
+      }
+
+      currentLanguage = nextLanguage;
+      localStorage.setItem(I18N_STORAGE_KEY, currentLanguage);
+      rerenderLocalizedViews();
+    });
+  });
+}
+
 const featureButtons = document.querySelectorAll('.feature-item');
 const panels = document.querySelectorAll('.feature-panel');
 
@@ -123,7 +470,7 @@ function normalizeText(value) {
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .replace(/ç/g, 'c')
+    .replace(/Ã§/g, 'c')
     .trim();
 }
 
@@ -535,12 +882,12 @@ const TYPE_ALIASES = {
   fogo: 'Fire',
   water: 'Water',
   agua: 'Water',
-  'água': 'Water',
+  'Ã¡gua': 'Water',
   grass: 'Grass',
   planta: 'Grass',
   electric: 'Electric',
   eletrico: 'Electric',
-  'elétrico': 'Electric',
+  'elÃ©trico': 'Electric',
   ice: 'Ice',
   gelo: 'Ice',
   fighting: 'Fighting',
@@ -552,7 +899,7 @@ const TYPE_ALIASES = {
   flying: 'Flying',
   voador: 'Flying',
   psychic: 'Psychic',
-  'psíquico': 'Psychic',
+  'psÃ­quico': 'Psychic',
   psiquico: 'Psychic',
   bug: 'Bug',
   inseto: 'Bug',
@@ -562,7 +909,7 @@ const TYPE_ALIASES = {
   fantasma: 'Ghost',
   dragon: 'Dragon',
   dragao: 'Dragon',
-  'dragão': 'Dragon',
+  'dragÃ£o': 'Dragon',
   dark: 'Dark',
   noturno: 'Dark',
   steel: 'Steel',
@@ -602,7 +949,7 @@ function populateTypeSelects() {
   document.querySelectorAll('[data-type-select]').forEach((select) => {
     const existingValue = select.value;
     const isOptional = select.hasAttribute('data-optional-type');
-    select.innerHTML = isOptional ? '<option value="">None</option>' : '';
+    select.innerHTML = isOptional ? `<option value="">${t('none')}</option>` : '';
 
     TYPE_OPTIONS.forEach((type) => {
       const option = document.createElement('option');
@@ -1414,12 +1761,12 @@ function getDisplayType(typeInput) {
     fogo: 'Fire',
     water: 'Water',
     agua: 'Water',
-    'água': 'Water',
+    'Ã¡gua': 'Water',
     grass: 'Grass',
     planta: 'Grass',
     electric: 'Electric',
     eletrico: 'Electric',
-    'elétrico': 'Electric',
+    'elÃ©trico': 'Electric',
     ice: 'Ice',
     gelo: 'Ice',
     fighting: 'Fighting',
@@ -1431,7 +1778,7 @@ function getDisplayType(typeInput) {
     flying: 'Flying',
     voador: 'Flying',
     psychic: 'Psychic',
-    'psíquico': 'Psychic',
+    'psÃ­quico': 'Psychic',
     psiquico: 'Psychic',
     bug: 'Bug',
     inseto: 'Bug',
@@ -1441,7 +1788,7 @@ function getDisplayType(typeInput) {
     fantasma: 'Ghost',
     dragon: 'Dragon',
     dragao: 'Dragon',
-    'dragão': 'Dragon',
+    'dragÃ£o': 'Dragon',
     dark: 'Dark',
     noturno: 'Dark',
     steel: 'Steel',
@@ -1477,11 +1824,11 @@ function getElementalBallByType(typeInput) {
     lutador: 'Dusk Ball',
     normal: 'Yume Ball',
     psychic: 'Yume Ball',
-    'psíquico': 'Yume Ball',
+    'psÃ­quico': 'Yume Ball',
     psiquico: 'Yume Ball',
     dragon: 'Tale Ball',
     dragao: 'Tale Ball',
-    'dragão': 'Tale Ball',
+    'dragÃ£o': 'Tale Ball',
     fairy: 'Tale Ball',
     fada: 'Tale Ball',
     crystal: 'Tale Ball',
@@ -1555,17 +1902,17 @@ function buildAverageResult(data) {
 
     return `
       <div class="result-line">
-        ${renderBallLabel(chosenBall)}: ${Math.ceil(elementalAverage)} average
-        <span class="muted-inline">- type: ${renderTypeLabel(type)}</span>
+        ${renderBallLabel(chosenBall)}: ${Math.ceil(elementalAverage)} ${t('average')}
+        <span class="muted-inline">- ${t('type')}: ${renderTypeLabel(type)}</span>
         (${formatMoneyLabel(elementalCost * 1000)})
       </div>
     `;
   }).join('');
 
   return `
-    <strong>Average capture estimate</strong>
+    <strong>${t('averageCaptureEstimate')}</strong>
     <div class="average-result-list">
-      <div class="result-line">${renderBallLabel('Ultra Ball')}: ${Math.ceil(ultraAverage)} average (${formatMoneyLabel(ultraCost * 1000)})</div>
+      <div class="result-line">${renderBallLabel('Ultra Ball')}: ${Math.ceil(ultraAverage)} ${t('average')} (${formatMoneyLabel(ultraCost * 1000)})</div>
       ${elementalRows}
     </div>
   `;
@@ -2095,7 +2442,7 @@ function renderTierGroup(group) {
               <th>Dex</th>
               <th>Icon</th>
               <th>Name</th>
-              <th>Elements</th>
+              <th>${t('elements')}</th>
               <th>PvE roles</th>
               <th>PvP roles</th>
               <th>Recommended helds</th>
@@ -2196,11 +2543,11 @@ function renderClanDetail(detail) {
   const rotationPokemonIcons = buildTierPokemonIconMap(detail.tiers);
 
   container.classList.add('detail-mode');
-  container.innerHTML = `
+  container.innerHTML = localizeHtml(`
     <article class="clan-detail">
       <div class="clan-detail-toolbar">
         <button class="clan-back-button" type="button" data-clan-back>Voltar aos clas</button>
-        <a href="${detail.sourceUrl}" target="_blank" rel="noreferrer">Abrir na Wiki</a>
+        <a href="${detail.sourceUrl}" target="_blank" rel="noreferrer">${t('openWiki')}</a>
       </div>
       <div class="clan-detail-header">
         <div>
@@ -2275,7 +2622,7 @@ function renderClanDetail(detail) {
         <p>${detail.pvpNote}</p>
       </section>
     </article>
-  `;
+  `);
 }
 
 function renderClanPendingDetail(slug) {
@@ -2292,7 +2639,7 @@ function renderClanPendingDetail(slug) {
   }
 
   container.classList.add('detail-mode');
-  container.innerHTML = `
+  container.innerHTML = localizeHtml(`
     <article class="clan-detail">
       <div class="clan-detail-toolbar">
         <button class="clan-back-button" type="button" data-clan-back>Voltar aos clas</button>
@@ -2307,7 +2654,7 @@ function renderClanPendingDetail(slug) {
         <p>Volcanic is the first clan detail page prepared for this test. The next step is applying the same scraper structure to every clan.</p>
       </section>
     </article>
-  `;
+  `);
 }
 
 function renderClanCatalog() {
@@ -2329,12 +2676,12 @@ function renderClanCatalog() {
   const searchTerm = normalizeText(searchInput?.value || '');
   const selectedType = typeFilter?.value || '';
   const filteredClans = clanCatalogData.filter((clan) => {
-    const matchesSearch = !searchTerm || normalizeText(`${clan.name} ${clan.focus} ${clan.summary}`).includes(searchTerm);
+    const matchesSearch = !searchTerm || normalizeText(`${clan.name} ${localizeText(clan.focus)} ${localizeText(clan.summary)}`).includes(searchTerm);
     const matchesType = !selectedType || clan.types.includes(selectedType);
     return matchesSearch && matchesType;
   });
 
-  container.innerHTML = filteredClans.length
+  container.innerHTML = localizeHtml(filteredClans.length
     ? filteredClans.map((clan) => `
       <article class="clan-card">
         <div class="clan-card-header">
@@ -2348,11 +2695,11 @@ function renderClanCatalog() {
           </div>
           <a href="${OFFICIAL_WIKI_CLANS_URL}" target="_blank" rel="noreferrer">Wiki</a>
         </div>
-        <p>${clan.summary}</p>
+        <p>${localizeText(clan.summary)}</p>
         <div class="clan-type-list">${clan.types.map(renderTypeLabel).join('')}</div>
       </article>
     `).join('')
-    : '<div class="empty-state">No clans found for this filter.</div>';
+    : '<div class="empty-state">No clans found for this filter.</div>');
 }
 
 function renderClanView() {
@@ -2517,16 +2864,17 @@ function renderProfessionTabLinkCard(link, tabId) {
 }
 
 function renderProfessionFeatureCard(title, summary, iconUrl, tabId, kind = 'caracteristica') {
+  const displayTitle = localizeText(title);
   return `
     <article class="profession-link-card">
       <div class="profession-link-head">
-        ${iconUrl ? `<img src="${iconUrl}" alt="${title}" loading="lazy">` : ''}
+        ${iconUrl ? `<img src="${iconUrl}" alt="${displayTitle}" loading="lazy">` : ''}
         <div>
-          <span class="clan-note">${kind}</span>
-          <button class="profession-title-link" type="button" data-profession-tab="${tabId}">${title}</button>
+          <span class="clan-note">${localizeText(kind)}</span>
+          <button class="profession-title-link" type="button" data-profession-tab="${tabId}">${displayTitle}</button>
         </div>
       </div>
-      <p>${summary}</p>
+      <p>${localizeText(summary)}</p>
     </article>
   `;
 }
@@ -2568,7 +2916,7 @@ function getProfessionCrafts(professionSlug, predicate = () => true) {
 
 function renderCraftIngredientList(ingredients) {
   if (!Array.isArray(ingredients) || !ingredients.length) {
-    return '<span class="empty-state">Ingredientes nao listados.</span>';
+    return `<span class="empty-state">${t('ingredientsMissing')}</span>`;
   }
 
   return `
@@ -2689,7 +3037,7 @@ function renderCraftCards(crafts, options = {}) {
   const {
     limit = 24,
     filterId = 'default',
-    placeholder = 'Buscar craft ou ingrediente...',
+    placeholder = t('searchCraft'),
     showRankFilter = false,
   } = options;
   const searchValue = professionCraftFilters[filterId] || '';
@@ -2707,47 +3055,47 @@ function renderCraftCards(crafts, options = {}) {
   if (!Array.isArray(crafts) || !crafts.length) {
     return `
       <div class="profession-craft-filter${showRankFilter ? ' has-rank-filter' : ''}">
-        <input type="search" placeholder="${placeholder}" data-craft-filter="${filterId}" value="${searchValue}">
+        <input type="search" placeholder="${localizeText(placeholder)}" data-craft-filter="${filterId}" value="${searchValue}">
         ${showRankFilter ? `
-          <select data-craft-rank="${filterId}" aria-label="Filtrar por rank">
-            <option value="">Todos os ranks</option>
+          <select data-craft-rank="${filterId}" aria-label="${t('filterRank')}">
+            <option value="">${t('allRanks')}</option>
             ${rankOptions.map((rank) => `<option value="${rank}"${rankValue === rank ? ' selected' : ''}>${rank}</option>`).join('')}
           </select>
         ` : ''}
-        <select data-craft-sort="${filterId}" aria-label="Ordenar crafts">
-          <option value="default"${sortValue === 'default' ? ' selected' : ''}>Ordem original</option>
-          <option value="name-asc"${sortValue === 'name-asc' ? ' selected' : ''}>Nome A-Z</option>
-          <option value="name-desc"${sortValue === 'name-desc' ? ' selected' : ''}>Nome Z-A</option>
-          <option value="time-desc"${sortValue === 'time-desc' ? ' selected' : ''}>Tempo: maior para menor</option>
-          <option value="time-asc"${sortValue === 'time-asc' ? ' selected' : ''}>Tempo: menor para maior</option>
-          <option value="skill-desc"${sortValue === 'skill-desc' ? ' selected' : ''}>Habilidade: maior para menor</option>
-          <option value="skill-asc"${sortValue === 'skill-asc' ? ' selected' : ''}>Habilidade: menor para maior</option>
+        <select data-craft-sort="${filterId}" aria-label="${t('sortCrafts')}">
+          <option value="default"${sortValue === 'default' ? ' selected' : ''}>${t('originalOrder')}</option>
+          <option value="name-asc"${sortValue === 'name-asc' ? ' selected' : ''}>${t('nameAsc')}</option>
+          <option value="name-desc"${sortValue === 'name-desc' ? ' selected' : ''}>${t('nameDesc')}</option>
+          <option value="time-desc"${sortValue === 'time-desc' ? ' selected' : ''}>${t('timeDesc')}</option>
+          <option value="time-asc"${sortValue === 'time-asc' ? ' selected' : ''}>${t('timeAsc')}</option>
+          <option value="skill-desc"${sortValue === 'skill-desc' ? ' selected' : ''}>${t('skillDesc')}</option>
+          <option value="skill-asc"${sortValue === 'skill-asc' ? ' selected' : ''}>${t('skillAsc')}</option>
         </select>
       </div>
-      <div class="empty-state">Nenhum craft encontrado nesta aba ainda.</div>
+      <div class="empty-state">${t('noCraftTab')}</div>
     `;
   }
 
   const visibleCrafts = filteredCrafts.slice(0, limit);
   return `
     <div class="profession-craft-filter${showRankFilter ? ' has-rank-filter' : ''}">
-      <input type="search" placeholder="${placeholder}" data-craft-filter="${filterId}" value="${searchValue}">
+      <input type="search" placeholder="${localizeText(placeholder)}" data-craft-filter="${filterId}" value="${searchValue}">
       ${showRankFilter ? `
-        <select data-craft-rank="${filterId}" aria-label="Filtrar por rank">
-          <option value="">Todos os ranks</option>
+        <select data-craft-rank="${filterId}" aria-label="${t('filterRank')}">
+          <option value="">${t('allRanks')}</option>
           ${rankOptions.map((rank) => `<option value="${rank}"${rankValue === rank ? ' selected' : ''}>${rank}</option>`).join('')}
         </select>
       ` : ''}
-      <select data-craft-sort="${filterId}" aria-label="Ordenar crafts">
-        <option value="default"${sortValue === 'default' ? ' selected' : ''}>Ordem original</option>
-        <option value="name-asc"${sortValue === 'name-asc' ? ' selected' : ''}>Nome A-Z</option>
-        <option value="name-desc"${sortValue === 'name-desc' ? ' selected' : ''}>Nome Z-A</option>
-        <option value="time-desc"${sortValue === 'time-desc' ? ' selected' : ''}>Tempo: maior para menor</option>
-        <option value="time-asc"${sortValue === 'time-asc' ? ' selected' : ''}>Tempo: menor para maior</option>
-        <option value="skill-desc"${sortValue === 'skill-desc' ? ' selected' : ''}>Habilidade: maior para menor</option>
-        <option value="skill-asc"${sortValue === 'skill-asc' ? ' selected' : ''}>Habilidade: menor para maior</option>
+      <select data-craft-sort="${filterId}" aria-label="${t('sortCrafts')}">
+        <option value="default"${sortValue === 'default' ? ' selected' : ''}>${t('originalOrder')}</option>
+        <option value="name-asc"${sortValue === 'name-asc' ? ' selected' : ''}>${t('nameAsc')}</option>
+        <option value="name-desc"${sortValue === 'name-desc' ? ' selected' : ''}>${t('nameDesc')}</option>
+        <option value="time-desc"${sortValue === 'time-desc' ? ' selected' : ''}>${t('timeDesc')}</option>
+        <option value="time-asc"${sortValue === 'time-asc' ? ' selected' : ''}>${t('timeAsc')}</option>
+        <option value="skill-desc"${sortValue === 'skill-desc' ? ' selected' : ''}>${t('skillDesc')}</option>
+        <option value="skill-asc"${sortValue === 'skill-asc' ? ' selected' : ''}>${t('skillAsc')}</option>
       </select>
-      <span>${filteredCrafts.length} de ${crafts.length} crafts</span>
+      <span>${filteredCrafts.length} ${t('of')} ${crafts.length} ${t('craftsWord')}</span>
     </div>
     ${filteredCrafts.length ? `
     <div class="profession-craft-grid">
@@ -2758,21 +3106,21 @@ function renderCraftCards(crafts, options = {}) {
             <div>
               <span class="clan-note">${craft.category || craft.rank || 'Craft'}</span>
               <strong>${craft.itemName}</strong>
-              <small>${[craft.skill ? `Habilidade: ${craft.skill}` : '', craft.craftTime ? `Tempo de espera: ${craft.craftTime}` : ''].filter(Boolean).join(' - ')}</small>
+              <small>${[craft.skill ? `${t('skillLabel')}: ${craft.skill}` : '', craft.craftTime ? `${t('waitTimeLabel')}: ${craft.craftTime}` : ''].filter(Boolean).join(' - ')}</small>
             </div>
           </div>
           ${renderCraftIngredientList(craft.ingredients)}
         </article>
       `).join('')}
     </div>
-    ${filteredCrafts.length > limit ? `<p class="profession-more-note">Mostrando ${limit} de ${filteredCrafts.length} crafts filtrados.</p>` : ''}
-    ` : '<div class="empty-state">Nenhum craft encontrado para esse filtro.</div>'}
+    ${filteredCrafts.length > limit ? `<p class="profession-more-note">${t('showingCrafts')} ${limit} ${t('of')} ${filteredCrafts.length} ${t('filteredCrafts')}.</p>` : ''}
+    ` : `<div class="empty-state">${t('noCraftFilter')}</div>`}
   `;
 }
 
 function renderProfessionTabs(tabs) {
   return `
-    <div class="profession-subtabs" role="tablist" aria-label="Abas da profissao">
+    <div class="profession-subtabs" role="tablist" aria-label="${t('professionTabsLabel')}">
       ${tabs.map((tab) => `
         <button
           class="profession-subtab${activeProfessionTab === tab.id ? ' active' : ''}"
@@ -2780,7 +3128,7 @@ function renderProfessionTabs(tabs) {
           role="tab"
           aria-selected="${activeProfessionTab === tab.id}"
           data-profession-tab="${tab.id}"
-        >${tab.label}</button>
+        >${localizeText(tab.label)}</button>
       `).join('')}
     </div>
   `;
@@ -2789,10 +3137,10 @@ function renderProfessionTabs(tabs) {
 function renderProfessionResourceBlock(title, description) {
   return `
     <section class="profession-info-block">
-      <h5>${title}</h5>
+      <h5>${localizeText(title)}</h5>
       ${Array.isArray(description)
-        ? `<ul>${description.map((item) => `<li>${item}</li>`).join('')}</ul>`
-        : `<p>${description}</p>`}
+        ? `<ul>${description.map((item) => `<li>${localizeText(item)}</li>`).join('')}</ul>`
+        : `<p>${localizeText(description)}</p>`}
     </section>
   `;
 }
@@ -2980,7 +3328,7 @@ function renderProfessorStudents() {
           <thead>
             <tr>
               <th>Card</th>
-              <th>Level</th>
+              <th>${t('level')}</th>
               <th>Pokemon</th>
             </tr>
           </thead>
@@ -3721,18 +4069,18 @@ function renderProfessionDetail(detail) {
   }
 
   container.classList.add('detail-mode');
-  container.innerHTML = `
+  container.innerHTML = localizeHtml(`
     <article class="clan-detail profession-detail">
       <div class="clan-detail-toolbar">
-        <button class="clan-back-button" type="button" data-profession-back>Voltar as profissoes</button>
-        <a href="${detail.sourceUrl}" target="_blank" rel="noreferrer">Abrir na Wiki</a>
+        <button class="clan-back-button" type="button" data-profession-back>${t('backToProfessions')}</button>
+        <a href="${detail.sourceUrl}" target="_blank" rel="noreferrer">${t('openWiki')}</a>
       </div>
       <div class="profession-detail-header">
         ${detail.iconUrl ? `<img src="${detail.iconUrl}" alt="${detail.name}" loading="lazy">` : ''}
         <div>
-          <span class="clan-note">Official wiki sync</span>
+          <span class="clan-note">${t('officialWikiSync')}</span>
           <h3>${detail.name}</h3>
-          <p>${detail.summary}</p>
+          <p>${localizeText(detail.summary)}</p>
         </div>
       </div>
 
@@ -3753,7 +4101,7 @@ function renderProfessionDetail(detail) {
       </section>
       ` : ''}
     </article>
-  `;
+  `);
 }
 
 function renderProfessionCatalog() {
@@ -3783,8 +4131,8 @@ function renderProfessionCatalog() {
     return !searchTerm || normalizeText(searchable).includes(searchTerm);
   });
 
-  container.innerHTML = `
-    ${professionData.intro ? `<p class="profession-intro">${professionData.intro}</p>` : ''}
+  container.innerHTML = localizeHtml(`
+    ${professionData.intro ? `<p class="profession-intro">${localizeText(professionData.intro)}</p>` : ''}
     <div class="profession-grid">
       ${filteredProfessions.length ? filteredProfessions.map((profession) => `
         <article class="profession-card">
@@ -3792,14 +4140,14 @@ function renderProfessionCatalog() {
             ${profession.iconUrl ? `<img src="${profession.iconUrl}" alt="${profession.name}" loading="lazy">` : ''}
             <span>
               <strong>${profession.name}</strong>
-              <small>${profession.specializations?.length || 0} especializacoes - ${profession.crafts?.length || 0} crafts</small>
+              <small>${profession.specializations?.length || 0} ${t('specializations')} - ${profession.crafts?.length || 0} crafts</small>
             </span>
           </button>
-          <p>${profession.summary}</p>
+          <p>${localizeText(profession.summary)}</p>
         </article>
-      `).join('') : '<div class="empty-state">No professions found for this search.</div>'}
+      `).join('') : `<div class="empty-state">${t('professionsFound')}</div>`}
     </div>
-  `;
+  `);
 }
 
 function renderProfessionView() {
@@ -3847,7 +4195,7 @@ function renderPokemonGenerationOptions() {
   }
 
   const selected = select.value;
-  select.innerHTML = '<option value="">All generations</option>';
+  select.innerHTML = localizeHtml(`<option value="">${t('allGenerations')}</option>`);
   pokemonData.generations.forEach((generation) => {
     const option = document.createElement('option');
     option.value = generation;
@@ -3885,10 +4233,10 @@ function renderPokemonCatalog() {
   }
 
   const pokemon = getFilteredPokemon();
-  container.innerHTML = `
+  container.innerHTML = localizeHtml(`
     <div class="pokemon-summary-row">
       <strong>${pokemon.length}</strong>
-      <span>${pokemon.length === 1 ? 'Pokemon found' : 'Pokemon found'}</span>
+      <span>${t('pokemonFound')}</span>
     </div>
     <div class="pokemon-table-wrap">
       <table class="result-table pokemon-table">
@@ -3896,9 +4244,9 @@ function renderPokemonCatalog() {
           <tr>
             <th>Dex</th>
             <th>Pokemon</th>
-            <th>Generation</th>
-            <th>Elements</th>
-            <th>Level</th>
+            <th>${t('generation')}</th>
+            <th>${t('elements')}</th>
+            <th>${t('level')}</th>
           </tr>
         </thead>
         <tbody>
@@ -3915,11 +4263,11 @@ function renderPokemonCatalog() {
               <td>${renderPokemonTypeList(entry.elements)}</td>
               <td>${entry.level || '-'}</td>
             </tr>
-          `).join('') : '<tr><td colspan="5"><span class="empty-state">No Pokemon found for these filters.</span></td></tr>'}
+          `).join('') : `<tr><td colspan="5"><span class="empty-state">${t('noPokemon')}</span></td></tr>`}
         </tbody>
       </table>
     </div>
-  `;
+  `);
 }
 
 function normalizeItemPayload(payload) {
@@ -3973,30 +4321,30 @@ function renderItemCategoryDetail(category) {
   }
 
   container.classList.add('detail-mode');
-  container.innerHTML = `
+  container.innerHTML = localizeHtml(`
     <article class="clan-detail item-detail">
       <div class="clan-detail-toolbar">
-        <button class="clan-back-button" type="button" data-item-back>Voltar aos itens</button>
-        <a href="${category.sourceUrl}" target="_blank" rel="noreferrer">Abrir na Wiki</a>
+        <button class="clan-back-button" type="button" data-item-back>${t('backToItems')}</button>
+        <a href="${category.sourceUrl}" target="_blank" rel="noreferrer">${t('openWiki')}</a>
       </div>
       <div class="profession-detail-header">
         ${category.iconUrl ? `<img src="${category.iconUrl}" alt="${category.title}" loading="lazy">` : ''}
         <div>
           <span class="clan-note">${category.group}</span>
           <h3>${category.title}</h3>
-          <p>${category.summary || 'Loaded from the official wiki.'}</p>
+          <p>${category.summary || t('loadedWiki')}</p>
         </div>
       </div>
       <section class="clan-detail-section">
-        <h4>Itens</h4>
+        <h4>${t('items')}</h4>
         <div class="pokemon-table-wrap item-table-wrap">
           <table class="result-table pokemon-table">
             <thead>
               <tr>
                 <th>Item</th>
-                <th>Section</th>
-                <th>Description</th>
-                <th>Attributes</th>
+                <th>${t('section')}</th>
+                <th>${t('description')}</th>
+                <th>${t('attributes')}</th>
               </tr>
             </thead>
             <tbody>
@@ -4012,13 +4360,13 @@ function renderItemCategoryDetail(category) {
                   <td>${item.description || '-'}</td>
                   <td>${renderItemAttributeList(item)}</td>
                 </tr>
-              `).join('') : '<tr><td colspan="4"><span class="empty-state">No structured items were found in this category.</span></td></tr>'}
+              `).join('') : `<tr><td colspan="4"><span class="empty-state">${t('noItems')}</span></td></tr>`}
             </tbody>
           </table>
         </div>
       </section>
     </article>
-  `;
+  `);
 }
 
 function renderItemCatalog() {
@@ -4047,7 +4395,7 @@ function renderItemCatalog() {
     return !searchTerm || normalizeText(searchable).includes(searchTerm);
   });
 
-  container.innerHTML = `
+  container.innerHTML = localizeHtml(`
     <div class="item-grid">
       ${categories.length ? categories.map((category) => `
         <article class="profession-card item-card">
@@ -4055,14 +4403,14 @@ function renderItemCatalog() {
             ${category.iconUrl ? `<img src="${category.iconUrl}" alt="${category.title}" loading="lazy">` : ''}
             <span>
               <strong>${category.title}</strong>
-              <small>${category.group} - ${category.items?.length || 0} items</small>
+              <small>${category.group} - ${category.items?.length || 0} ${t('itemsCount')}</small>
             </span>
           </button>
-          <p>${category.summary || 'Official wiki category ready for item lookup and future crafts.'}</p>
+          <p>${category.summary || t('loadedWiki')}</p>
         </article>
-      `).join('') : '<div class="empty-state">No item categories found for this search.</div>'}
+      `).join('') : `<div class="empty-state">${t('itemCategoriesFound')}</div>`}
     </div>
-  `;
+  `);
 }
 
 function renderItemView() {
@@ -4112,6 +4460,20 @@ function renderBallLabel(ballName) {
   `;
 }
 
+function formatBallBestFor(value) {
+  if (value === 'Universal') return t('universal');
+  return String(value)
+    .replace(/ or /g, ` ${t('or')} `)
+    .replace('Pokemon without capture facilitation', currentLanguage === 'pt' ? 'Pokemon sem facilitacao de captura' : 'Pokemon without capture facilitation')
+    .replace('Fast Pokemon', currentLanguage === 'pt' ? 'Pokemon rapido' : 'Fast Pokemon')
+    .replace('Heavy Pokemon', currentLanguage === 'pt' ? 'Pokemon pesado' : 'Heavy Pokemon')
+    .replace('Universal + Free Aura', currentLanguage === 'pt' ? 'Universal + Aura gratis' : 'Universal + Free Aura');
+}
+
+function formatBallRate(value) {
+  return String(value).replace('Rate', t('rate'));
+}
+
 function renderBallCatalog() {
   const container = document.getElementById('ball-catalog');
 
@@ -4125,13 +4487,13 @@ function renderBallCatalog() {
     const card = document.createElement('div');
     card.className = 'ball-card';
     const iconFile = BALL_ICON_FILES[ball.name];
-    card.innerHTML = `
+    card.innerHTML = localizeHtml(`
       ${iconFile ? `<span class="ball-icon-shell"><img class="ball-icon" src="assets/ball-icons/${iconFile}" alt="${ball.name} icon" loading="lazy"></span>` : ''}
       <span class="ball-card-copy">
         <strong>${ball.name}</strong>
-        <span>${ball.bestFor} - ${ball.rate}</span>
+        <span>${formatBallBestFor(ball.bestFor)} - ${formatBallRate(ball.rate)}</span>
       </span>
-    `;
+    `);
     container.appendChild(card);
   });
 }
@@ -4146,7 +4508,7 @@ function buildBoostResult(data) {
   const boostType = Number(data.boostType);
 
   if (current > target) {
-    return 'Current boost cannot be higher than the desired boost.';
+    return t('currentBoostCannotExceed');
   }
 
   const result = current === target
@@ -4160,21 +4522,21 @@ function buildBoostResult(data) {
   const totalCost = totalStoneCost + totalBoostCost;
 
   return `
-    <strong>Current boost:</strong> +${current}<br>
-    <strong>Desired boost:</strong> +${target}<br><br>
-    Common stones used: ${result.commonStones}<br>
-    Boost Stones used: ${result.boostStones}<br>
-    ${result.boostStones > 0 ? `Boosts done with Boost Stone: ${result.boostStoneLevels.map((level) => `+${level}`).join(', ')}<br><br>` : ''}
-    Common stone cost: ${formatCurrency(totalStoneCost)}<br>
-    Boost Stone cost: ${formatCurrency(totalBoostCost)}<br><br>
-    <strong>TOTAL COST: ${formatCurrency(totalCost)}</strong>
+    <strong>${t('currentBoostResult')}</strong> +${current}<br>
+    <strong>${t('desiredBoostResult')}</strong> +${target}<br><br>
+    ${t('commonStonesUsed')} ${result.commonStones}<br>
+    ${t('boostStonesUsed')} ${result.boostStones}<br>
+    ${result.boostStones > 0 ? `${t('boostsWithBoostStone')} ${result.boostStoneLevels.map((level) => `+${level}`).join(', ')}<br><br>` : ''}
+    ${t('commonStoneCost')} ${formatCurrency(totalStoneCost)}<br>
+    ${t('boostStoneCost')} ${formatCurrency(totalBoostCost)}<br><br>
+    <strong>${t('totalCost')} ${formatCurrency(totalCost)}</strong>
   `;
 }
 
 function buildEffectivenessResult(typeInput) {
   const defenseTypes = parseDefenseTypes(typeInput);
   if (!defenseTypes) {
-    return 'Choose one or two valid defense types.';
+    return t('chooseDefenseTypes');
   }
 
   const results = Object.entries(TYPE_EFFECTIVENESS)
@@ -4193,10 +4555,10 @@ function buildEffectivenessResult(typeInput) {
     .sort((left, right) => right.multiplier - left.multiplier || left.attackType.localeCompare(right.attackType));
 
   const groups = [
-    { title: 'Super effective', entries: results.filter((entry) => entry.multiplier > 1) },
-    { title: 'Normal damage', entries: results.filter((entry) => entry.multiplier === 1) },
-    { title: 'Ineffective', entries: results.filter((entry) => entry.multiplier > 0 && entry.multiplier < 1) },
-    { title: 'No effect', entries: results.filter((entry) => entry.multiplier === 0) },
+    { title: t('superEffective'), entries: results.filter((entry) => entry.multiplier > 1) },
+    { title: t('normalDamage'), entries: results.filter((entry) => entry.multiplier === 1) },
+    { title: t('ineffective'), entries: results.filter((entry) => entry.multiplier > 0 && entry.multiplier < 1) },
+    { title: t('noEffect'), entries: results.filter((entry) => entry.multiplier === 0) },
   ];
 
   const defenseTypeLabels = defenseTypes.map(renderTypeLabel).join('<span class="type-separator">/</span>');
@@ -4211,13 +4573,13 @@ function buildEffectivenessResult(typeInput) {
               <span class="multiplier-pill">${formatMultiplier(entry.multiplier)}</span>
             </span>
           `).join('')
-          : '<span class="empty-state">None</span>'}
+          : `<span class="empty-state">${t('none')}</span>`}
       </div>
     </section>
   `).join('');
 
   return `
-    <div class="type-summary-row"><strong>Defense type:</strong> ${defenseTypeLabels}</div>
+    <div class="type-summary-row"><strong>${t('defenseType')}</strong> ${defenseTypeLabels}</div>
     <div class="effectiveness-grid">${groupCards}</div>
   `;
 }
@@ -4226,13 +4588,13 @@ function buildBoostTableResult(boostType, useSpecial) {
   const labels = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '15', '20', '25', '30', '50'];
   const selected = String(boostType);
   if (!labels.includes(selected)) {
-    return 'Choose a valid boost type.';
+    return t('chooseValidBoostType');
   }
 
   const key = useSpecial ? `${selected}_special` : `${selected}`;
   const table = BOOST_TABLES[key];
   if (!table) {
-    return 'This boost type does not have a special table yet.';
+    return t('noSpecialTable');
   }
 
   const rows = Object.entries(table)
@@ -4245,12 +4607,12 @@ function buildBoostTableResult(boostType, useSpecial) {
     .join('');
 
   return `
-    <strong>Boost table for ${selected}${useSpecial ? ' (special)' : ''}</strong><br><br>
+    <strong>${t('boostTableFor')} ${selected}${useSpecial ? ` (${t('special')})` : ''}</strong><br><br>
     <table class="result-table">
       <thead>
         <tr>
-          <th>Level</th>
-          <th>Stones</th>
+          <th>${t('level')}</th>
+          <th>${t('stones')}</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>
@@ -4318,11 +4680,12 @@ function bindFormPersistence(form, resultId) {
   });
 }
 
+bindLanguageToggle();
 populateTypeSelects();
 
 const clanTypeFilter = document.getElementById('clan-type-filter');
 if (clanTypeFilter?.options.length) {
-  clanTypeFilter.options[0].textContent = 'All types';
+  clanTypeFilter.options[0].textContent = t('allTypes');
 }
 
 document.querySelectorAll('form[id]').forEach((form) => {
@@ -4369,6 +4732,7 @@ loadMonuments();
 loadAdventurerMaps();
 loadPokemon();
 loadItems();
+applyStaticTranslations();
 
 document.getElementById('clan-search')?.addEventListener('input', renderClanCatalog);
 document.getElementById('clan-type-filter')?.addEventListener('change', renderClanCatalog);
@@ -4581,6 +4945,19 @@ document.getElementById('boost-table-form')?.addEventListener('submit', (event) 
   saveFormState(event.target);
   document.getElementById('boost-table-result').innerHTML = buildBoostTableResult(boostType, useSpecial);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
