@@ -6,10 +6,15 @@ __pycache__/
 
 dist/
 build/
+.next/
+frontend/.next/
+frontend/out/
+frontend/*.tsbuildinfo
 
 .env
 .env.*
 !.env.example
+!frontend/.env.example
 
 .vs/
 .vscode/

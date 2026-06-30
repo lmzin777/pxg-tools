@@ -38,4 +38,17 @@ public sealed record ItemCategoryDetail(
     IReadOnlyList<ItemCategorySection> Sections,
     IReadOnlyList<ItemSummary> Items);
 
+public sealed record ItemDetail(
+    string Slug,
+    string Name,
+    string IconUrl,
+    string Description,
+    string Section,
+    string Table,
+    string SourceUrl,
+    string CategorySlug,
+    string CategoryTitle,
+    string CategoryGroup,
+    IReadOnlyList<ItemAttribute> Attributes);
+
 public sealed record ItemsOverview(IReadOnlyList<ItemCategorySummary> Categories);

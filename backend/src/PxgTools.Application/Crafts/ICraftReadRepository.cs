@@ -5,6 +5,8 @@ namespace PxgTools.Application.Crafts;
 public interface ICraftReadRepository
 {
     Task<CraftsOverview> ListAsync(CraftQuery query, CancellationToken cancellationToken);
+
+    Task<CraftSummary?> GetAsync(string slug, CancellationToken cancellationToken);
 }
 
 public sealed record CraftQuery(

@@ -1,0 +1,92 @@
+name: PXG Scrapers
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pxg-scrapers
+  cancel-in-progress: false
+
+jobs:
+  scrape-and-load:
+    name: Scrape wiki and load Neon
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: scrapers/package-lock.json
+
+      - name: Install scraper dependencies
+        working-directory: scrapers
+        run: npm ci
+
+      - name: Validate DATABASE_URL secret
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${DATABASE_URL:-}" ]; then
+            echo "::error::Missing DATABASE_URL. Add it in GitHub repository Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "DATABASE_URL secret is configured."
+
+      - name: Run scrapers
+        working-directory: scrapers
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'echo "::error::Scraper execution failed. Check the command output above for the failing scraper."' ERR
+          echo "::group::Scraping PokeXGames wiki"
+          npm run scrape:all
+          echo "::endgroup::"
+          echo "Scrapers finished successfully."
+
+      - name: Apply PostgreSQL schema
+        working-directory: scrapers
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'echo "::error::Schema application failed. Verify DATABASE_URL and database permissions."' ERR
+          echo "::group::Applying database schema"
+          npm run db:apply-schema
+          echo "::endgroup::"
+          echo "Schema applied successfully."
+
+      - name: Load scraped data into Neon
+        working-directory: scrapers
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'echo "::error::Neon data load failed. Check the loader output above for the failing dataset."' ERR
+          echo "::group::Loading data into Neon"
+          npm run db:load:all
+          echo "::endgroup::"
+          echo "Data loaded into Neon successfully."
+
+      - name: Summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## PXG Scrapers"
+            echo ""
+            echo "- Trigger: ${{ github.event_name }}"
+            echo "- Ref: ${{ github.ref_name }}"
+            echo "- Scrapers job: ${{ job.status }}"
+            echo "- Neon load uses repository secret: DATABASE_URL"
+          } >> "$GITHUB_STEP_SUMMARY"

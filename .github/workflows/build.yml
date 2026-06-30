@@ -1,0 +1,78 @@
+name: PXG Build
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    name: Frontend Next.js
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Typecheck
+        working-directory: frontend
+        run: npm run typecheck
+
+      - name: Build
+        working-directory: frontend
+        env:
+          API_BASE_URL: ${{ vars.API_BASE_URL || 'http://localhost:5000' }}
+          NEXT_PUBLIC_API_BASE_URL: ${{ vars.NEXT_PUBLIC_API_BASE_URL || vars.API_BASE_URL || 'http://localhost:5000' }}
+        run: npm run build
+
+  backend:
+    name: Backend .NET
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build API
+        run: dotnet build backend/src/PxgTools.Api/PxgTools.Api.csproj --configuration Release
+
+  scrapers:
+    name: Scrapers TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: scrapers/package-lock.json
+
+      - name: Install dependencies
+        working-directory: scrapers
+        run: npm ci
+
+      - name: Typecheck scrapers
+        working-directory: scrapers
+        run: npm exec tsc -- --noEmit

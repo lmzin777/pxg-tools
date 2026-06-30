@@ -9,18 +9,29 @@
     "scrape:pokemon": "tsx src/scrape-pokemon.ts",
     "scrape:items": "tsx src/scrape-items.ts",
     "scrape:crafts": "tsx src/scrape-crafts.ts",
-<<<<<<< HEAD
     "scrape:students": "tsx src/scrape-students.ts",
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
-    "scrape:all": "npm run scrape:clans && npm run scrape:clan-details && npm run scrape:professions && npm run scrape:pokemon && npm run scrape:items && npm run scrape:crafts",
+    "scrape:wiki-domain": "tsx src/scrape-wiki-domain.ts",
+    "scrape:helds": "tsx src/scrape-wiki-domain.ts helds",
+    "scrape:bosses": "tsx src/scrape-wiki-domain.ts bosses",
+    "scrape:dungeons": "tsx src/scrape-wiki-domain.ts dungeons",
+    "scrape:quests": "tsx src/scrape-wiki-domain.ts quests",
+    "scrape:npcs": "tsx src/scrape-wiki-domain.ts npcs",
+    "scrape:berries": "tsx src/scrape-wiki-domain.ts berries",
+    "scrape:addons": "tsx src/scrape-wiki-domain.ts addons",
+    "scrape:outfits": "tsx src/scrape-wiki-domain.ts outfits",
+    "scrape:tasks": "tsx src/scrape-wiki-domain.ts tasks",
+    "scrape:respawns": "tsx src/scrape-wiki-domain.ts respawns",
+    "scrape:mapas": "tsx src/scrape-wiki-domain.ts mapas",
+    "scrape:all": "npm run scrape:clans && npm run scrape:clan-details && npm run scrape:professions && npm run scrape:pokemon && npm run scrape:items && npm run scrape:crafts && npm run scrape:students",
     "db:test-neon": "tsx src/check-neon.ts",
     "db:apply-schema": "tsx src/apply-schema.ts",
     "db:load-clans": "tsx src/load-clan-data.ts",
     "db:load-professions": "tsx src/load-profession-data.ts",
     "db:load-pokemon": "tsx src/load-pokemon-data.ts",
     "db:load-items": "tsx src/load-item-data.ts",
-    "db:load-crafts": "tsx src/load-craft-data.ts"
+    "db:load-crafts": "tsx src/load-craft-data.ts",
+    "db:load-wiki": "tsx src/load-wiki-domain-data.ts",
+    "db:load:all": "npm run db:load-clans && npm run db:load-professions && npm run db:load-pokemon && npm run db:load-items && npm run db:load-crafts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

@@ -7,8 +7,13 @@ create table if not exists sync_runs (
   status text not null,
   started_at timestamptz not null default now(),
   finished_at timestamptz,
-  message text
+  message text,
+  error_message text not null default '',
+  records_loaded integer not null default 0
 );
+
+alter table sync_runs add column if not exists error_message text not null default '';
+alter table sync_runs add column if not exists records_loaded integer not null default 0;
 
 create table if not exists clans (
   id uuid primary key default gen_random_uuid(),
@@ -188,7 +193,6 @@ create table if not exists profession_craft_materials (
   sort_order integer not null default 0
 );
 
-<<<<<<< HEAD
 create table if not exists crafts (
   id uuid primary key default gen_random_uuid(),
   slug text not null unique,
@@ -221,8 +225,6 @@ create table if not exists craft_ingredients (
   sort_order integer not null default 0
 );
 
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 create table if not exists profession_related_links (
   id uuid primary key default gen_random_uuid(),
   slug text not null,
@@ -321,6 +323,54 @@ create table if not exists item_attributes (
   sort_order integer not null default 0
 );
 
+create table if not exists wiki_domains (
+  domain text primary key,
+  title text not null,
+  description text not null,
+  priority integer not null default 100,
+  source_url text not null default '',
+  scraper_script text not null default '',
+  loader_script text not null default '',
+  status text not null default 'planned',
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists wiki_entities (
+  id uuid primary key default gen_random_uuid(),
+  domain text not null references wiki_domains(domain) on delete cascade,
+  slug text not null,
+  name text not null,
+  summary text not null default '',
+  image_url text not null default '',
+  source_url text not null default '',
+  metadata_json jsonb not null default '{}'::jsonb,
+  scraped_at timestamptz not null default now(),
+  sort_order integer not null default 0,
+  updated_at timestamptz not null default now(),
+  unique (domain, slug)
+);
+
+insert into wiki_domains (domain, title, description, priority, source_url, scraper_script, loader_script, status)
+values
+  ('helds', 'Helds', 'Held items e informacoes relacionadas.', 1, 'https://wiki.pokexgames.com/index.php/Held_Items', 'scrape:helds', 'db:load-wiki -- helds', 'planned'),
+  ('bosses', 'Bosses', 'Bosses, recompensas e locais.', 2, 'https://wiki.pokexgames.com/index.php/Bosses', 'scrape:bosses', 'db:load-wiki -- bosses', 'planned'),
+  ('dungeons', 'Dungeons', 'Dungeons e informacoes de entrada.', 3, 'https://wiki.pokexgames.com/index.php/Dungeons', 'scrape:dungeons', 'db:load-wiki -- dungeons', 'planned'),
+  ('quests', 'Quests', 'Quests relevantes da Wiki.', 4, 'https://wiki.pokexgames.com/index.php/Quests', 'scrape:quests', 'db:load-wiki -- quests', 'planned'),
+  ('npcs', 'NPCs', 'NPCs, localizacao e funcoes.', 5, 'https://wiki.pokexgames.com/index.php/NPCs', 'scrape:npcs', 'db:load-wiki -- npcs', 'planned'),
+  ('berries', 'Berries', 'Berries e efeitos.', 6, 'https://wiki.pokexgames.com/index.php/Berries', 'scrape:berries', 'db:load-wiki -- berries', 'planned'),
+  ('addons', 'Addons', 'Addons de Pokemon.', 7, 'https://wiki.pokexgames.com/index.php/Addons', 'scrape:addons', 'db:load-wiki -- addons', 'planned'),
+  ('outfits', 'Outfits', 'Outfits de jogadores.', 8, 'https://wiki.pokexgames.com/index.php/Outfits', 'scrape:outfits', 'db:load-wiki -- outfits', 'planned'),
+  ('tasks', 'Tasks', 'Tasks e recompensas.', 9, 'https://wiki.pokexgames.com/index.php/Tasks', 'scrape:tasks', 'db:load-wiki -- tasks', 'planned'),
+  ('respawns', 'Respawns', 'Respawns e rotas.', 10, 'https://wiki.pokexgames.com/index.php/Respawns', 'scrape:respawns', 'db:load-wiki -- respawns', 'planned'),
+  ('mapas', 'Mapas', 'Mapas e coordenadas.', 11, 'https://wiki.pokexgames.com/index.php/Mapas', 'scrape:mapas', 'db:load-wiki -- mapas', 'planned')
+on conflict (domain) do update set
+  title = excluded.title,
+  description = excluded.description,
+  priority = excluded.priority,
+  source_url = excluded.source_url,
+  scraper_script = excluded.scraper_script,
+  loader_script = excluded.loader_script;
+
 create index if not exists ix_clans_slug on clans(slug);
 create index if not exists ix_clan_types_type_name on clan_types(type_name);
 create index if not exists ix_sync_runs_scope_started_at on sync_runs(scope, started_at desc);
@@ -333,7 +383,6 @@ create index if not exists ix_profession_links_kind on profession_links(kind);
 create index if not exists ix_profession_craft_items_link_id on profession_craft_items(profession_link_id);
 create index if not exists ix_profession_craft_items_rank on profession_craft_items(rank_name);
 create index if not exists ix_profession_craft_materials_item_id on profession_craft_materials(craft_item_id);
-<<<<<<< HEAD
 create index if not exists ix_crafts_slug on crafts(slug);
 create index if not exists ix_crafts_item_slug on crafts(item_slug);
 create index if not exists ix_crafts_item_name on crafts(item_name);
@@ -342,8 +391,6 @@ create index if not exists ix_crafts_category on crafts(category);
 create index if not exists ix_craft_ingredients_craft_id on craft_ingredients(craft_id);
 create index if not exists ix_craft_ingredients_item_slug on craft_ingredients(item_slug);
 create index if not exists ix_craft_ingredients_name on craft_ingredients(name);
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 create index if not exists ix_pokemon_slug on pokemon(slug);
 create index if not exists ix_pokemon_dex_number on pokemon(dex_number);
 create index if not exists ix_pokemon_generation_name on pokemon(generation_name);
@@ -357,3 +404,7 @@ create index if not exists ix_items_slug on items(slug);
 create index if not exists ix_items_name on items(name);
 create index if not exists ix_item_attributes_item_id on item_attributes(item_id);
 create index if not exists ix_item_attributes_name on item_attributes(name);
+create index if not exists ix_wiki_domains_priority on wiki_domains(priority);
+create index if not exists ix_wiki_entities_domain on wiki_entities(domain);
+create index if not exists ix_wiki_entities_slug on wiki_entities(slug);
+create index if not exists ix_wiki_entities_name on wiki_entities(name);

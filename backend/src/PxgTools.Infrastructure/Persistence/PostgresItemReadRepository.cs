@@ -82,6 +82,67 @@ public sealed class PostgresItemReadRepository(NpgsqlDataSource dataSource) : II
             await ReadItemsAsync(categoryId, cancellationToken));
     }
 
+    public async Task<ItemDetail?> GetItemAsync(string slug, CancellationToken cancellationToken)
+    {
+        const string sql = """
+            select
+              i.id,
+              i.slug,
+              i.name,
+              i.icon_url,
+              i.description,
+              i.section_title,
+              i.table_title,
+              i.source_url,
+              c.slug,
+              c.title,
+              c.group_name
+            from items i
+            join item_categories c on c.id = i.category_id
+            where i.slug = @slug
+            limit 1;
+            """;
+
+        await using var command = dataSource.CreateCommand(sql);
+        command.Parameters.AddWithValue("slug", slug);
+        await using var reader = await command.ExecuteReaderAsync(cancellationToken);
+
+        if (!await reader.ReadAsync(cancellationToken))
+        {
+            return null;
+        }
+
+        var itemId = reader.GetGuid(0);
+        var item = new
+        {
+            Slug = reader.GetString(1),
+            Name = reader.GetString(2),
+            IconUrl = reader.GetString(3),
+            Description = reader.GetString(4),
+            Section = reader.GetString(5),
+            Table = reader.GetString(6),
+            SourceUrl = reader.GetString(7),
+            CategorySlug = reader.GetString(8),
+            CategoryTitle = reader.GetString(9),
+            CategoryGroup = reader.GetString(10),
+        };
+        await reader.DisposeAsync();
+
+        var attributes = await ReadAttributesAsync([itemId], cancellationToken);
+        return new ItemDetail(
+            item.Slug,
+            item.Name,
+            item.IconUrl,
+            item.Description,
+            item.Section,
+            item.Table,
+            item.SourceUrl,
+            item.CategorySlug,
+            item.CategoryTitle,
+            item.CategoryGroup,
+            attributes.GetValueOrDefault(itemId, []));
+    }
+
     private async Task<IReadOnlyList<ItemCategorySection>> ReadSectionsAsync(Guid categoryId, CancellationToken cancellationToken)
     {
         const string sql = """

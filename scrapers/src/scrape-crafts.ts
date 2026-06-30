@@ -77,7 +77,7 @@ type CraftPageRecord = {
 };
 
 function fixMojibake(value: string) {
-  return /Ã|Â/.test(value) ? Buffer.from(value, 'latin1').toString('utf8') : value;
+  return /Ãƒ|Ã‚/.test(value) ? Buffer.from(value, 'latin1').toString('utf8') : value;
 }
 
 function normalizeText(value: string) {
@@ -257,16 +257,16 @@ function inferSubprofession(profession: ProfessionRecord, link: ProfessionLinkRe
     return 'Hacker';
   }
 
-  if (/mec[aâ]nico|ammunition|factory/i.test(title)) {
-    return 'Mecânico';
+  if (/mec[aÃ¢]nico|ammunition|factory/i.test(title)) {
+    return 'MecÃ¢nico';
   }
 
   if (/alquimista|philosopher/i.test(title)) {
     return 'Alquimista';
   }
 
-  if (/acad[eê]mico/i.test(title)) {
-    return 'Acadêmico';
+  if (/acad[eÃª]mico/i.test(title)) {
+    return 'AcadÃªmico';
   }
 
   return candidates.find((candidate) => title.includes(candidate)) ?? '';
@@ -274,10 +274,7 @@ function inferSubprofession(profession: ProfessionRecord, link: ProfessionLinkRe
 
 function shouldInspectLink(link: ProfessionLinkRecord) {
   return link.kind === 'craft'
-<<<<<<< HEAD
     || link.kind === 'specialization'
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     || link.kind === 'workshop'
     || /craft|workshop|factory|stone|computadores/i.test(link.title);
 }
@@ -308,7 +305,7 @@ function collectCraftPages(professions: ProfessionRecord[]) {
 
 function isCraftTable(headers: string[]) {
   const lowerHeaders = headers.map((header) => header.toLowerCase());
-  return lowerHeaders.some((header) => /materiais|itens necess[aá]rios/.test(header))
+  return lowerHeaders.some((header) => /materiais|itens necess[aÃ¡]rios/.test(header))
     && lowerHeaders.some((header) => /item|comida|nome/.test(header));
 }
 
@@ -343,7 +340,7 @@ function parseCraftTable(
   const itemIndexInRow = headers.findIndex((header) => /^(item|comidas?|nome)$/i.test(header));
   const skillIndex = headers.findIndex((header) => /habilidade|skill/i.test(header));
   const timeIndex = headers.findIndex((header) => /tempo/i.test(header));
-  const materialIndex = headers.findIndex((header) => /materiais|itens necess[aá]rios/i.test(header));
+  const materialIndex = headers.findIndex((header) => /materiais|itens necess[aÃ¡]rios/i.test(header));
   const requirementIndexes = headers
     .map((header, index) => ({ header, index }))
     .filter(({ header, index }) =>

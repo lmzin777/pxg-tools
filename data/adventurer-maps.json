@@ -1,0 +1,5519 @@
+{
+  "sourceUrl": "https://wiki.pokexgames.com/index.php/Buscador_de_Mapas_de_Aventureiro",
+  "scrapedAt": "2026-06-30T10:16:28.749Z",
+  "mapTypes": [
+    {
+      "id": "1",
+      "label": "Mapa Vermelho",
+      "locations": [
+        {
+          "name": "Areia",
+          "maps": [
+            {
+              "id": "101",
+              "local": "Green Island",
+              "coordinates": "3780, 3326, 7",
+              "tags": [
+                "Areia",
+                "Água",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4c/Mapas_de_ADV_VERMELHO_-_3780%2C_3326%2C_7.webp"
+            },
+            {
+              "id": "102",
+              "local": "Wildwind Island",
+              "coordinates": "3969, 3300, 7",
+              "tags": [
+                "Areia",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/58/Mapas_de_ADV_VERMELHO_-_3969%2C_3300%2C_7.webp"
+            },
+            {
+              "id": "103",
+              "local": "Wildwind Island",
+              "coordinates": "4002, 3320, 7",
+              "tags": [
+                "Areia",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/07/Mapas_de_ADV_VERMELHO_-_4002%2C_3320%2C_7.webp"
+            },
+            {
+              "id": "104",
+              "local": "Saffron",
+              "coordinates": "4009, 3601, 7",
+              "tags": [
+                "Areia",
+                "Árvore",
+                "Terra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f5/Mapas_de_ADV_VERMELHO_-_4009%2C_3601%2C_7.webp"
+            },
+            {
+              "id": "105",
+              "local": "Hurricane Island",
+              "coordinates": "4166, 3302, 7",
+              "tags": [
+                "Areia",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0d/Mapas_de_ADV_VERMELHO_-_4166%2C_3302%2C_7.webp"
+            },
+            {
+              "id": "106",
+              "local": "Shell Island",
+              "coordinates": "4266, 3359, 7",
+              "tags": [
+                "Areia",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b1/Mapas_de_ADV_VERMELHO_-_4266%2C_3359%2C_7.webp"
+            },
+            {
+              "id": "107",
+              "local": "Shell Island",
+              "coordinates": "4299, 3333, 6",
+              "tags": [
+                "Areia",
+                "Água",
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c4/Mapas_de_ADV_VERMELHO_-_4299%2C_3333%2C_6.webp"
+            },
+            {
+              "id": "108",
+              "local": "Shell Island",
+              "coordinates": "4342, 3311, 6",
+              "tags": [
+                "Areia",
+                "Água",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/86/Mapas_de_ADV_VERMELHO_-_4342%2C_3311%2C_6.webp"
+            },
+            {
+              "id": "109",
+              "local": "Tropical Island",
+              "coordinates": "4360, 3927, 7",
+              "tags": [
+                "Areia",
+                "Água",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/91/Mapas_de_ADV_VERMELHO_-_4360%2C_3927%2C_7.webp"
+            },
+            {
+              "id": "110",
+              "local": "Tropical Island",
+              "coordinates": "4393, 3893, 7",
+              "tags": [
+                "Areia",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8c/Mapas_de_ADV_VERMELHO_-_4393%2C_3893%2C_7.webp"
+            },
+            {
+              "id": "111",
+              "local": "Tropical Island",
+              "coordinates": "4404, 3819, 4",
+              "tags": [
+                "Areia",
+                "Água",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ec/Mapas_de_ADV_VERMELHO_-_4404%2C_3819%2C_4.webp"
+            },
+            {
+              "id": "112",
+              "local": "Power Plant",
+              "coordinates": "4434, 3503, 7",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Grama",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/2a/Mapas_de_ADV_VERMELHO_-_4434%2C_3503%2C_7.webp"
+            },
+            {
+              "id": "113",
+              "local": "Tropical Island",
+              "coordinates": "4442, 3894, 7",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/65/Mapas_de_ADV_VERMELHO_-_4442%2C_3894%2C_7.webp"
+            },
+            {
+              "id": "114",
+              "local": "Dark Light Island",
+              "coordinates": "4699, 3495, 7",
+              "tags": [
+                "Areia",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f0/Mapas_de_ADV_VERMELHO_-_4699%2C_3495%2C_7.webp"
+            },
+            {
+              "id": "115",
+              "local": "Pinkan Island",
+              "coordinates": "3263, 4999, 7",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f2/Mapas_de_ADV_VERMELHO_-_3263%2C_4999%2C_7.webp"
+            },
+            {
+              "id": "116",
+              "local": "Tarroco Island",
+              "coordinates": "3345, 4605, 7",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Água",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6f/Mapas_de_ADV_VERMELHO_-_3345%2C_4605%2C_7.webp"
+            },
+            {
+              "id": "117",
+              "local": "Valencia Island",
+              "coordinates": "3412, 6174, 7",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Água",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/68/Mapas_de_ADV_VERMELHO_-_3412%2C_6174%2C_7.webp"
+            },
+            {
+              "id": "118",
+              "local": "Kabuto Fossil Island",
+              "coordinates": "3423, 5725, 7",
+              "tags": [
+                "Areia",
+                "Água",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c6/Mapas_de_ADV_VERMELHO_-_3423%2C_5725%2C_7.webp"
+            },
+            {
+              "id": "119",
+              "local": "Old Village (Aipom)",
+              "coordinates": "3888, 6295, 7",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fb/Mapas_de_ADV_VERMELHO_-_3888%2C_6295%2C_7.webp"
+            },
+            {
+              "id": "120",
+              "local": "Seafoam Island (Castform)",
+              "coordinates": "3999, 4120, 6",
+              "tags": [
+                "Areia",
+                "Gelo",
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b7/Mapas_de_ADV_VERMELHO_-_3999%2C_4120%2C_6.webp"
+            },
+            {
+              "id": "121",
+              "local": "Cleopatra Island",
+              "coordinates": "4006, 4826, 7",
+              "tags": [
+                "Areia",
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/98/Mapas_de_ADV_VERMELHO_-_4006%2C_4826%2C_7.webp"
+            },
+            {
+              "id": "122",
+              "local": "Sphinx Island",
+              "coordinates": "4075, 5479, 7",
+              "tags": [
+                "Areia",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/db/Mapas_de_ADV_VERMELHO_-_4075%2C_5479%2C_7.webp"
+            },
+            {
+              "id": "123",
+              "local": "Kinnow Island",
+              "coordinates": "4094, 5948, 7",
+              "tags": [
+                "Areia",
+                "Árvore",
+                "Água",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/2e/Mapas_de_ADV_VERMELHO_-_4094%2C_5948%2C_7.webp"
+            },
+            {
+              "id": "124",
+              "local": "Dark Moon Island",
+              "coordinates": "4155, 4702, 5",
+              "tags": [
+                "Areia",
+                "Piso",
+                "Pirâmide",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/16/Mapas_de_ADV_VERMELHO_-_4155%2C_4702%2C_5.webp"
+            },
+            {
+              "id": "125",
+              "local": "Kinnow Island",
+              "coordinates": "4175, 5773, 7",
+              "tags": [
+                "Areia",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/2b/Mapas_de_ADV_VERMELHO_-_4175%2C_5773%2C_7.webp"
+            },
+            {
+              "id": "126",
+              "local": "Golden Island",
+              "coordinates": "4182, 6245, 6",
+              "tags": [
+                "Areia",
+                "Árvore",
+                "Grama",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ed/Mapas_de_ADV_VERMELHO_-_4182%2C_6245%2C_6.webp"
+            },
+            {
+              "id": "127",
+              "local": "Kinnow Island",
+              "coordinates": "4197, 5774, 7",
+              "tags": [
+                "Areia",
+                "Árvore",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c3/Mapas_de_ADV_VERMELHO_-_4197%2C_5774%2C_7.webp"
+            },
+            {
+              "id": "128",
+              "local": "Kinnow Island",
+              "coordinates": "4255, 5725, 7",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f4/Mapas_de_ADV_VERMELHO_-_4255%2C_5725%2C_7.webp"
+            }
+          ]
+        },
+        {
+          "name": "Gelo",
+          "maps": [
+            {
+              "id": "201",
+              "local": "Ice Island",
+              "coordinates": "3740, 5420, 3",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8b/Mapas_de_ADV_VERMELHO_-_3740%2C_5420%2C_3.webp"
+            },
+            {
+              "id": "202",
+              "local": "Ice Island",
+              "coordinates": "3757, 5418, 2",
+              "tags": [
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6d/Mapas_de_ADV_VERMELHO_-_3757%2C_5418%2C_2.webp"
+            },
+            {
+              "id": "203",
+              "local": "Seafoam Island (esquerda)",
+              "coordinates": "3871, 4269, 7",
+              "tags": [
+                "Gelo",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/20/Mapas_de_ADV_VERMELHO_-_3871%2C_4269%2C_7.webp"
+            },
+            {
+              "id": "204",
+              "local": "Seafoam Island",
+              "coordinates": "3913, 4040, 8",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fe/Mapas_de_ADV_VERMELHO_-_3940%2C_4040%2C_8.webp"
+            },
+            {
+              "id": "205",
+              "local": "Seafoam Island",
+              "coordinates": "3986, 4020, 7",
+              "tags": [
+                "Gelo",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/57/Mapas_de_ADV_VERMELHO_-_3986%2C_4020%2C_7.webp"
+            },
+            {
+              "id": "206",
+              "local": "Seafoam Island",
+              "coordinates": "4010, 4103, 5",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/26/Mapas_de_ADV_VERMELHO_-_4010%2C_4103%2C_5.webp"
+            },
+            {
+              "id": "207",
+              "local": "Camping Site",
+              "coordinates": "4016, 4225, 7",
+              "tags": [
+                "Gelo",
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/95/Mapas_de_ADV_VERMELHO_-_4016%2C_4225%2C_7.webp"
+            },
+            {
+              "id": "208",
+              "local": "Seafoam Island",
+              "coordinates": "4181, 4171, 5",
+              "tags": [
+                "Gelo",
+                "Pedra",
+                "Água",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/46/Mapas_de_ADV_VERMELHO_-_4181%2C_4171%2C_5.webp"
+            }
+          ]
+        },
+        {
+          "name": "Grama",
+          "maps": [
+            {
+              "id": "301",
+              "local": "Charicific Valley",
+              "coordinates": "3508, 3208, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/46/Mapas_de_ADV_VERMELHO_-_3508%2C_3208%2C_6.webp"
+            },
+            {
+              "id": "302",
+              "local": "Lightstorm Island",
+              "coordinates": "4637, 3333, 7",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/89/Mapas_de_ADV_VERMELHO_-_4637%2C_3333%2C_7.webp"
+            },
+            {
+              "id": "303",
+              "local": "Charicific Valley",
+              "coordinates": "3623, 3301, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/44/Mapas_de_ADV_VERMELHO_-_3623%2C_3301%2C_7.webp"
+            },
+            {
+              "id": "304",
+              "local": "Pewter",
+              "coordinates": "3645, 3504, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/59/Mapas_de_ADV_VERMELHO_-_3645%2C_3504%2C_6.webp"
+            },
+            {
+              "id": "305",
+              "local": "Charicific Valley",
+              "coordinates": "3652, 3189, 4",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/87/Mapas_de_ADV_VERMELHO_-_3652%2C_3189%2C_4.webp"
+            },
+            {
+              "id": "306",
+              "local": "Pewter",
+              "coordinates": "3748, 3564, 7",
+              "tags": [
+                "Grama",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1b/Mapas_de_ADV_VERMELHO_-_3748%2C_3564%2C_7.webp"
+            },
+            {
+              "id": "307",
+              "local": "Mt. Moon",
+              "coordinates": "3768, 3499, 5",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/13/Mapas_de_ADV_VERMELHO_-_3768%2C_3499%2C_5.webp"
+            },
+            {
+              "id": "308",
+              "local": "Green Island",
+              "coordinates": "3847, 3348, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/12/Mapas_de_ADV_VERMELHO_-_3847%2C_3348%2C_7.webp"
+            },
+            {
+              "id": "309",
+              "local": "Cerulean Swamp",
+              "coordinates": "3900, 3529, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6e/Mapas_de_ADV_VERMELHO_-_3900%2C_3529%2C_6.webp"
+            },
+            {
+              "id": "310",
+              "local": "Cerulean Swamp",
+              "coordinates": "3949, 3522, 8",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/65/Mapas_de_ADV_VERMELHO_-_3949%2C_3522%2C_8.webp"
+            },
+            {
+              "id": "311",
+              "local": "Wildwind Island",
+              "coordinates": "4054, 3277, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/2f/Mapas_de_ADV_VERMELHO_-_4054%2C_3277%2C_6.webp"
+            },
+            {
+              "id": "312",
+              "local": "Saffron",
+              "coordinates": "4159, 3548, 7",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/99/Mapas_de_ADV_VERMELHO_-_4159%2C_3548%2C_7.webp"
+            },
+            {
+              "id": "313",
+              "local": "Rock Tunnel",
+              "coordinates": "4267, 3457, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ed/Mapas_de_ADV_VERMELHO_-_4267%2C_3457%2C_7.webp"
+            },
+            {
+              "id": "314",
+              "local": "Power Plant",
+              "coordinates": "4377, 3523, 7",
+              "tags": [
+                "Grama",
+                "Água",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/05/Mapas_de_ADV_VERMELHO_-_4377%2C_3523%2C_7.webp"
+            },
+            {
+              "id": "315",
+              "local": "Power Plant",
+              "coordinates": "4398, 3508, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/02/Mapas_de_ADV_VERMELHO_-_4398%2C_3508%2C_7.webp"
+            },
+            {
+              "id": "316",
+              "local": "Power Plant (Ilha próxima ao Aerodactyl)",
+              "coordinates": "4457, 3453, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/69/Mapas_de_ADV_VERMELHO_-_4457%2C_3453%2C_7.webp"
+            },
+            {
+              "id": "317",
+              "local": "Pewter",
+              "coordinates": "3611, 3440, 7",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7c/Mapas_de_ADV_VERMELHO_-_3611%2C_3440%2C_7.webp"
+            },
+            {
+              "id": "318",
+              "local": "Valencia Island",
+              "coordinates": "3332, 6074, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/40/Mapas_de_ADV_VERMELHO_-_3332%2C_6074%2C_6.webp"
+            },
+            {
+              "id": "319",
+              "local": "Viridian Forest",
+              "coordinates": "3616, 3623, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c1/Mapas_de_ADV_VERMELHO_-_3616%2C_3623%2C_7.webp"
+            },
+            {
+              "id": "320",
+              "local": "Leaf Island",
+              "coordinates": "3658, 4215, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/cd/Mapas_de_ADV_VERMELHO_-_3658%2C_4215%2C_6.webp"
+            },
+            {
+              "id": "321",
+              "local": "Jungle Island",
+              "coordinates": "3837, 3776, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/07/Mapas_de_ADV_VERMELHO_-_3837%2C_3776%2C_6.webp"
+            },
+            {
+              "id": "322",
+              "local": "Jungle Island",
+              "coordinates": "3898, 3837, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f0/Mapas_de_ADV_VERMELHO_-_3898%2C_3837%2C_6.webp"
+            },
+            {
+              "id": "323",
+              "local": "Jungle Island",
+              "coordinates": "3936, 3774, 7",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6e/Mapas_de_ADV_VERMELHO_-_3936%2C_3774%2C_7.webp"
+            },
+            {
+              "id": "324",
+              "local": "Leek Island",
+              "coordinates": "4152, 6146, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4d/Mapas_de_ADV_VERMELHO_-_4152%2C_6146%2C_5.webp"
+            },
+            {
+              "id": "325",
+              "local": "Farfetch᾿d de Fuchsia",
+              "coordinates": "4200, 3861, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d1/Mapas_de_ADV_VERMELHO_-_4200%2C_3861%2C_6.webp"
+            },
+            {
+              "id": "326",
+              "local": "Pinkan Island",
+              "coordinates": "3207, 5019, 4",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fd/Mapas_de_ADV_VERMELHO_-_3207%2C_5019%2C_4.webp"
+            },
+            {
+              "id": "327",
+              "local": "Tarroco Island",
+              "coordinates": "3361, 4656, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/77/Mapas_de_ADV_VERMELHO_-_3361%2C_4656%2C_6.webp"
+            },
+            {
+              "id": "328",
+              "local": "Kabuto Fossil Island",
+              "coordinates": "3395, 5768, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/57/Mapas_de_ADV_VERMELHO_-_3395%2C_5768%2C_6.webp"
+            },
+            {
+              "id": "329",
+              "local": "Valencia Island",
+              "coordinates": "3439, 6114, 7",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/cc/Mapas_de_ADV_VERMELHO_-_3439%2C_6114%2C_7.webp"
+            },
+            {
+              "id": "330",
+              "local": "Lightning Island",
+              "coordinates": "3482, 5451, 6",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b8/Mapas_de_ADV_VERMELHO_-_3482%2C_5451%2C_6.webp"
+            },
+            {
+              "id": "331",
+              "local": "Shamouti Island (Smeargle)",
+              "coordinates": "3545, 5113, 7",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b3/Mapas_de_ADV_VERMELHO_-_3545%2C_5113%2C_7.webp"
+            },
+            {
+              "id": "332",
+              "local": "Shamouti Island",
+              "coordinates": "3671, 5074, 6",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/40/Mapas_de_ADV_VERMELHO_-_3671%2C_5074%2C_6.webp"
+            },
+            {
+              "id": "333",
+              "local": "Fairchild Island",
+              "coordinates": "3724, 5766, 3",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/84/Mapas_de_ADV_VERMELHO_-_3724%2C_5766%2C_3.webp"
+            },
+            {
+              "id": "334",
+              "local": "Hamlin Island",
+              "coordinates": "3783, 4516, 7",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/ac/Mapas_de_ADV_VERMELHO_-_3783%2C_4516%2C_7.webp"
+            },
+            {
+              "id": "335",
+              "local": "Mandarin Island (Politoed)",
+              "coordinates": "3928, 6055, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/06/Mapas_de_ADV_VERMELHO_-_3928%2C_6055%2C_6.webp"
+            },
+            {
+              "id": "336",
+              "local": "Fire Island",
+              "coordinates": "3940, 5350, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e7/Mapas_de_ADV_VERMELHO_-_3940%2C_5350%2C_7.webp"
+            },
+            {
+              "id": "337",
+              "local": "Butwal Island",
+              "coordinates": "4050, 4569, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8a/Mapas_de_ADV_VERMELHO_-_4050%2C_4569%2C_7.webp"
+            },
+            {
+              "id": "338",
+              "local": "Vermilion",
+              "coordinates": "4161, 3826, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1f/Mapas_de_ADV_VERMELHO_-_4161%2C_3826%2C_7.webp"
+            },
+            {
+              "id": "339",
+              "local": "Fuchsia",
+              "coordinates": "4219, 3988, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/dd/Mapas_de_ADV_VERMELHO_-_4219%2C_3988%2C_7.webp"
+            },
+            {
+              "id": "340",
+              "local": "Vermilion",
+              "coordinates": "4239, 3800, 7",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/77/Mapas_de_ADV_VERMELHO_-_4239%2C_3800%2C_7.webp"
+            },
+            {
+              "id": "341",
+              "local": "Cerulean",
+              "coordinates": "4066, 3546, 8",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/98/Mapas_de_ADV_VERMELHO_-_4066%2C_3546%2C_8.webp"
+            },
+            {
+              "id": "342",
+              "local": "Leek Island",
+              "coordinates": "4067, 6122, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/33/Mapas_de_ADV_VERMELHO_-_4067%2C_6122%2C_5.webp"
+            },
+            {
+              "id": "343",
+              "local": "Leek Island",
+              "coordinates": "4120, 6105, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/73/Mapas_de_ADV_VERMELHO_-_4120%2C_6105%2C_5.webp"
+            },
+            {
+              "id": "344",
+              "local": "Leek Island",
+              "coordinates": "4126, 6089, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/76/Mapas_de_ADV_VERMELHO_-_4126%2C_6089%2C_6.webp"
+            },
+            {
+              "id": "345",
+              "local": "Saffron",
+              "coordinates": "4132, 3556, 8",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/84/Mapas_de_ADV_VERMELHO_-_4132%2C_3556%2C_8.webp"
+            },
+            {
+              "id": "346",
+              "local": "Butwal Island",
+              "coordinates": "4163, 4552, 6",
+              "tags": [
+                "Grama",
+                "Água",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/da/Mapas_de_ADV_VERMELHO_-_4163%2C_4552%2C_6.webp"
+            },
+            {
+              "id": "347",
+              "local": "Fuchsia",
+              "coordinates": "4176, 3904, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7e/Mapas_de_ADV_VERMELHO_-_4176%2C_3904%2C_7.webp"
+            },
+            {
+              "id": "348",
+              "local": "Kinnow Island",
+              "coordinates": "4201, 5727, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e4/Mapas_de_ADV_VERMELHO_-_4201%2C_5727%2C_6.webp"
+            },
+            {
+              "id": "349",
+              "local": "Fuchsia",
+              "coordinates": "4262, 3940, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/45/Mapas_de_ADV_VERMELHO_-_4262%2C_3940%2C_7.webp"
+            },
+            {
+              "id": "350",
+              "local": "Fuchsia (Ilha abaixo de Tropical Island)",
+              "coordinates": "4339, 4000, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1e/Mapas_de_ADV_VERMELHO_-_4339%2C_4000%2C_7.webp"
+            },
+            {
+              "id": "351",
+              "local": "Ascorbia Island",
+              "coordinates": "4383, 4346, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4c/Mapas_de_ADV_VERMELHO_-_4383%2C_4346%2C_7.webp"
+            },
+            {
+              "id": "352",
+              "local": "Kinnow Island",
+              "coordinates": "4405, 5855, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0f/Mapas_de_ADV_VERMELHO_-_4405%2C_5855%2C_7.webp"
+            },
+            {
+              "id": "352",
+              "local": "Fuchsia (Ilha abaixo de Tropical Island)",
+              "coordinates": "4409, 3997, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3a/Mapas_de_ADV_VERMELHO_-_4409%2C_3997%2C_7.webp"
+            },
+            {
+              "id": "353",
+              "local": "Seven Grapefruit Islands",
+              "coordinates": "4439, 5223, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/09/Mapas_de_ADV_VERMELHO_-_4439%2C_5223%2C_7.webp"
+            },
+            {
+              "id": "354",
+              "local": "Seven Grapefruit Islands",
+              "coordinates": "4484, 5209, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/2c/Mapas_de_ADV_VERMELHO_-_4484%2C_5209%2C_7.webp"
+            },
+            {
+              "id": "355",
+              "local": "Lost Island",
+              "coordinates": "4616, 3960, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/79/Mapas_de_ADV_VERMELHO_-_4616%2C_3960%2C_7.webp"
+            },
+            {
+              "id": "356",
+              "local": "Murcott Island",
+              "coordinates": "4637, 6107, 7",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/20/Mapas_de_ADV_VERMELHO_-_4637%2C_6107%2C_7.webp"
+            },
+            {
+              "id": "357",
+              "local": "Murcott Island",
+              "coordinates": "4716, 6009, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/97/Mapas_de_ADV_VERMELHO_-_4716%2C_6009%2C_6.webp"
+            }
+          ]
+        },
+        {
+          "name": "Pedra",
+          "maps": [
+            {
+              "id": "401",
+              "local": "Pewter",
+              "coordinates": "3670, 3538, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7c/Mapas_de_ADV_VERMELHO_-_3670%2C_3538%2C_7.webp"
+            },
+            {
+              "id": "402",
+              "local": "Pewter",
+              "coordinates": "3732, 3546, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a9/Mapas_de_ADV_VERMELHO_-_3732%2C_3546%2C_6.webp"
+            },
+            {
+              "id": "403",
+              "local": "Mt. Moon",
+              "coordinates": "3851, 3490, 2",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/04/Mapas_de_ADV_VERMELHO_-_3851%2C_3490%2C_2.webp"
+            },
+            {
+              "id": "404",
+              "local": "Mt. Moon",
+              "coordinates": "3867, 3508, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/38/Mapas_de_ADV_VERMELHO_-_3867%2C_3508%2C_7.webp"
+            },
+            {
+              "id": "405",
+              "local": "Rock Tunnel",
+              "coordinates": "4224, 3572, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/31/Mapas_de_ADV_VERMELHO_-_4224%2C_3572%2C_6.webp"
+            },
+            {
+              "id": "406",
+              "local": "Power Plant (Caminho da Outland South)",
+              "coordinates": "4463, 3524, 8",
+              "tags": [
+                "Pedra",
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/99/Mapas_de_ADV_VERMELHO_-_4463%2C_3524%2C_8.webp"
+            },
+            {
+              "id": "407",
+              "local": "Saffron",
+              "coordinates": "4138, 3595, 7",
+              "tags": [
+                "Pedra",
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/97/Mapas_de_ADV_VERMELHO_-_4138%2C_3595%2C_7.webp"
+            },
+            {
+              "id": "408",
+              "local": "Machop de Lavender",
+              "coordinates": "4214, 3730, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c2/Mapas_de_ADV_VERMELHO_-_4214%2C_3730%2C_7.webp"
+            },
+            {
+              "id": "409",
+              "local": "Rock Tunnel",
+              "coordinates": "4261, 3477, 5",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6c/Mapas_de_ADV_VERMELHO_-_4261%2C_3477%2C_5.webp"
+            },
+            {
+              "id": "410",
+              "local": "Tangelo Island (Golem)",
+              "coordinates": "3013, 5938, 10",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b5/Mapas_de_ADV_VERMELHO_-_3013%2C_5938%2C_10.webp"
+            },
+            {
+              "id": "411",
+              "local": "Tangelo Island (Golduck)",
+              "coordinates": "3188, 5912, 7",
+              "tags": [
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7f/Mapas_de_ADV_VERMELHO_-_3188%2C_5912%2C_7.webp"
+            },
+            {
+              "id": "412",
+              "local": "Trovitopolis City (Snorlax)",
+              "coordinates": "3665, 6013, 7",
+              "tags": [
+                "Pedra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/ba/Mapas_de_ADV_VERMELHO_-_3665%2C_6013%2C_7.webp"
+            },
+            {
+              "id": "413",
+              "local": "Cinnabar",
+              "coordinates": "3704, 3981, 5",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0b/Mapas_de_ADV_VERMELHO_-_3704%2C_3981%2C_5.webp"
+            },
+            {
+              "id": "414",
+              "local": "Cinnabar",
+              "coordinates": "3746, 3963, 7",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/83/Mapas_de_ADV_VERMELHO_-_3746%2C3963%2C7.webp"
+            },
+            {
+              "id": "415",
+              "local": "Fairchild Island",
+              "coordinates": "3786, 5748, 4",
+              "tags": [
+                "Pedra",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/86/Mapas_de_ADV_VERMELHO_-_3786%2C_5748%2C_4.webp"
+            },
+            {
+              "id": "416",
+              "local": "Fairchild Island (Steelix)",
+              "coordinates": "3834, 5756, 8",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8f/Mapas_de_ADV_VERMELHO_-_3834%2C_5756%2C_8.webp"
+            },
+            {
+              "id": "417",
+              "local": "Fairchild Island (Giant Rhydon)",
+              "coordinates": "3908, 5792, 1",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f5/Mapas_de_ADV_VERMELHO_-_3908%2C_5792%2C_1.webp"
+            },
+            {
+              "id": "418",
+              "local": "Fire Island",
+              "coordinates": "3994, 5361, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/43/Mapas_de_ADV_VERMELHO_-_3994%2C_5361%2C_7.webp"
+            },
+            {
+              "id": "419",
+              "local": "Seafoam Island",
+              "coordinates": "4094, 4251, 6",
+              "tags": [
+                "Pedra",
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e2/Mapas_de_ADV_VERMELHO_-_4094%2C_4251%2C_6.webp"
+            },
+            {
+              "id": "420",
+              "local": "Ascorbia Island",
+              "coordinates": "4428, 4349, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b4/Mapas_de_ADV_VERMELHO_-_4428%2C_4349%2C_7.webp"
+            },
+            {
+              "id": "421",
+              "local": "Desert Island",
+              "coordinates": "4596, 3656, 8",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/2f/Mapas_de_ADV_VERMELHO_-_4596%2C_3656%2C_8.webp"
+            },
+            {
+              "id": "422",
+              "local": "Cinnabar Island",
+              "coordinates": "3704, 3985, 5",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/55/Mapas_de_ADV_VERMELHO_-_3704%2C3985%2C5.webp"
+            }
+          ]
+        },
+        {
+          "name": "Subaquático",
+          "maps": [
+            {
+              "id": "501",
+              "local": "Pewter",
+              "coordinates": "3469, 3454, 8",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8e/Mapas_de_ADV_VERMELHO_-_3469%2C_3454%2C_8.webp"
+            },
+            {
+              "id": "502",
+              "local": "Pewter",
+              "coordinates": "3595, 3562, 8",
+              "tags": [
+                "Subaquático"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d3/Mapas_de_ADV_VERMELHO_-_3595%2C_3562%2C_8.webp"
+            },
+            {
+              "id": "503",
+              "local": "Shell Island",
+              "coordinates": "4278, 3327, 7",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/04/Mapas_de_ADV_VERMELHO_-_4278%2C_3327%2C_7.webp"
+            },
+            {
+              "id": "504",
+              "local": "Shell Island",
+              "coordinates": "4352, 3351, 7",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/68/Mapas_de_ADV_VERMELHO_-_4352%2C_3351%2C_7.webp"
+            },
+            {
+              "id": "505",
+              "local": "Pewter (Omastar)",
+              "coordinates": "3507, 3579, 8",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/04/Mapas_de_ADV_VERMELHO_-_3507%2C_3579%2C_8.webp"
+            },
+            {
+              "id": "506",
+              "local": "Cerulean",
+              "coordinates": "4078, 3557, 9",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/33/Mapas_de_ADV_VERMELHO_-_4078%2C_3557%2C_9.webp"
+            },
+            {
+              "id": "507",
+              "local": "Cerulean",
+              "coordinates": "4105, 3593, 9",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1c/Mapas_de_ADV_VERMELHO_-_4105%2C_3593%2C_9.webp"
+            }
+          ]
+        },
+        {
+          "name": "Terra",
+          "maps": [
+            {
+              "id": "601",
+              "local": "Charicific Valley",
+              "coordinates": "3522, 3264, 5",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3b/Mapas_de_ADV_VERMELHO_-_3522%2C_3264%2C_5.webp"
+            },
+            {
+              "id": "602",
+              "local": "Charicific Valley",
+              "coordinates": "3561, 3256, 4",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/99/Mapas_de_ADV_VERMELHO_-_3561%2C_3256%2C_4.webp"
+            },
+            {
+              "id": "603",
+              "local": "Pewter",
+              "coordinates": "3666, 3415, 7",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b3/Mapas_de_ADV_VERMELHO_-_3666%2C_3415%2C_7.webp"
+            },
+            {
+              "id": "604",
+              "local": "Hurricane Island",
+              "coordinates": "4135, 3305, 5",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/72/Mapas_de_ADV_VERMELHO_-_4135%2C_3305%2C_5.webp"
+            },
+            {
+              "id": "605",
+              "local": "Hurricane Island",
+              "coordinates": "4150, 3283, 4",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b8/Mapas_de_ADV_VERMELHO_-_4150%2C_3283%2C_4.webp"
+            },
+            {
+              "id": "606",
+              "local": "Cubone᾿s Lair",
+              "coordinates": "4186, 3439, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/10/Mapas_de_ADV_VERMELHO_-_4186%2C_3439%2C_7.webp"
+            },
+            {
+              "id": "607",
+              "local": "Cerulean",
+              "coordinates": "4191, 3516, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c7/Mapas_de_ADV_VERMELHO_-_4191%2C_3516%2C_7.webp"
+            },
+            {
+              "id": "608",
+              "local": "Lightstorm Island",
+              "coordinates": "4624, 3263, 6",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/09/Mapas_de_ADV_VERMELHO_-_4624%2C_3263%2C_6.webp"
+            },
+            {
+              "id": "609",
+              "local": "Viridian Forest (subsolo)",
+              "coordinates": "3734, 3639, 8",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ec/Mapas_de_ADV_VERMELHO_-_3734%2C_3639%2C_8.webp"
+            },
+            {
+              "id": "610",
+              "local": "Cubone de Saffron",
+              "coordinates": "4114, 3592, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d3/Mapas_de_ADV_VERMELHO_-_4114%2C_3592%2C_7.webp"
+            },
+            {
+              "id": "611",
+              "local": "Saffron e Lavender (subsolo)",
+              "coordinates": "4191, 3613, 9",
+              "tags": [
+                "Terra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/9d/Mapas_de_ADV_VERMELHO_-_4191%2C_3613%2C_9.webp"
+            },
+            {
+              "id": "612",
+              "local": "Tangelo Island",
+              "coordinates": "3165, 5962, 5",
+              "tags": [
+                "Terra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3d/Mapas_de_ADV_VERMELHO_-_3165%2C_5962%2C_5.webp"
+            },
+            {
+              "id": "613",
+              "local": "Lakeshore Island",
+              "coordinates": "3364, 4853, 7",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/26/Mapas_de_ADV_VERMELHO_-_3364%2C_4853%2C_7.webp"
+            },
+            {
+              "id": "614",
+              "local": "Fairchild Island (Giant Pidgeot)",
+              "coordinates": "3627, 5786, 1",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/77/Mapas_de_ADV_VERMELHO_-_3627%2C_5786%2C_1.webp"
+            },
+            {
+              "id": "615",
+              "local": "Magma Island",
+              "coordinates": "3631, 4754, 8",
+              "tags": [
+                "Terra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f3/Mapas_de_ADV_VERMELHO_-_3631%2C_4754%2C_8.webp"
+            },
+            {
+              "id": "616",
+              "local": "Fairchild Island (Stantler)",
+              "coordinates": "3652, 5684, 4",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Pedra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/eb/Mapas_de_ADV_VERMELHO_-_3652%2C_5684%2C_4.webp"
+            },
+            {
+              "id": "617",
+              "local": "Magma Island",
+              "coordinates": "3683, 4743, 6",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/cb/Mapas_de_ADV_VERMELHO_-_3683%2C_4743%2C_6.webp"
+            },
+            {
+              "id": "618",
+              "local": "Magma Island",
+              "coordinates": "3698, 4753, 7",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/27/Mapas_de_ADV_VERMELHO-3698%2C4753%2C7.webp"
+            },
+            {
+              "id": "619",
+              "local": "Pewter (subsolo)",
+              "coordinates": "3720, 3527, 8",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/26/Mapas_de_ADV_VERMELHO_-_3720%2C_3527%2C_8.webp"
+            },
+            {
+              "id": "620",
+              "local": "Cinnabar",
+              "coordinates": "3740, 3992, 8",
+              "tags": [
+                "Terra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b9/Mapas_de_ADV_VERMELHO_-_3740%2C_3992%2C_8.webp"
+            },
+            {
+              "id": "621",
+              "local": "Fairchild Island",
+              "coordinates": "3748, 5779, 1",
+              "tags": [
+                "Terra",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1d/Mapas_de_ADV_VERMELHO_-_3748%2C_5779%2C_1.webp"
+            },
+            {
+              "id": "622",
+              "local": "Fairchild Island",
+              "coordinates": "3811, 5744, 6",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e1/Mapas_de_ADV_VERMELHO_-_3811%2C_5744%2C_6.webp"
+            },
+            {
+              "id": "623",
+              "local": "Jungle Island",
+              "coordinates": "3843, 3794, 7",
+              "tags": [
+                "Terra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/93/Mapas_de_ADV_VERMELHO_-_3843%2C_3794%2C_7.webp"
+            },
+            {
+              "id": "624",
+              "local": "Mt. Moon (Sandslash)",
+              "coordinates": "3859, 3411, 9",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c0/Mapas_de_ADV_VERMELHO_-_3859%2C_3411%2C_9.webp"
+            },
+            {
+              "id": "625",
+              "local": "Mt. Moon",
+              "coordinates": "3859, 3500, 8",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8e/Mapas_de_ADV_VERMELHO_-_3859%2C_3500%2C_8.webp"
+            },
+            {
+              "id": "626",
+              "local": "Mt. Moon",
+              "coordinates": "3877, 3445, 8",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8c/Mapas_de_ADV_VERMELHO_-_3877%2C_3445%2C_8.webp"
+            },
+            {
+              "id": "627",
+              "local": "Cleopatra Island",
+              "coordinates": "4009, 4841, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/81/Mapas_de_ADV_VERMELHO_-_4009%2C_4841%2C_7.webp"
+            },
+            {
+              "id": "628",
+              "local": "Cleopatra Island",
+              "coordinates": "4043, 4851, 3",
+              "tags": [
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d3/Mapas_de_ADV_VERMELHO_-_4043%2C_4851%2C_3.webp"
+            },
+            {
+              "id": "629",
+              "local": "Cleopatra Island",
+              "coordinates": "4050, 4848, 4",
+              "tags": [
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/38/Mapas_de_ADV_VERMELHO_-_4050%2C_4848%2C_4.webp"
+            },
+            {
+              "id": "630",
+              "local": "Cleopatra Island",
+              "coordinates": "4079, 4818, 7",
+              "tags": [
+                "Terra",
+                "Água",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a9/Mapas_de_ADV_VERMELHO_-_4079%2C_4818%2C_7.webp"
+            },
+            {
+              "id": "631",
+              "local": "Saffron",
+              "coordinates": "4084, 3626, 9",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6c/Mapas_de_ADV_VERMELHO_-_4084%2C_3626%2C_9.webp"
+            },
+            {
+              "id": "632",
+              "local": "Vermilion",
+              "coordinates": "4114, 3758, 8",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/bb/Mapas_de_ADV_VERMELHO_-_4114%2C_3758%2C_8.webp"
+            },
+            {
+              "id": "632",
+              "local": "Saffron",
+              "coordinates": "4150, 3637, 8",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a1/Mapas_de_ADV_VERMELHO_-_4150%2C_3637%2C_8.webp"
+            },
+            {
+              "id": "633",
+              "local": "Cubone᾿s Lair",
+              "coordinates": "4171, 3428, 8",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/bd/Mapas_de_ADV_VERMELHO_-_4171%2C_3428%2C_8.webp"
+            },
+            {
+              "id": "634",
+              "local": "Vermilion",
+              "coordinates": "4190, 3783, 9",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/41/Mapas_de_ADV_VERMELHO_-_4190%2C_3783%2C_9.webp"
+            },
+            {
+              "id": "635",
+              "local": "Fuchsia",
+              "coordinates": "4246, 3960, 8",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f4/Mapas_de_ADV_VERMELHO_-_4246%2C_3960%2C_8.webp"
+            },
+            {
+              "id": "636",
+              "local": "Moro Island",
+              "coordinates": "4447, 5598, 5",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3e/Mapas_de_ADV_VERMELHO_-_4447%2C_5598%2C_5.webp"
+            },
+            {
+              "id": "637",
+              "local": "Ascorbia Island",
+              "coordinates": "4551, 4491, 9",
+              "tags": [
+                "Terra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/60/Mapas_de_ADV_VERMELHO_-_4551%2C4491%2C9.webp"
+            },
+            {
+              "id": "638",
+              "local": "Lost Island",
+              "coordinates": "4580, 4061, 8",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8f/Mapas_de_ADV_VERMELHO_-_4580%2C_4061%2C_8.webp"
+            }
+          ]
+        },
+        {
+          "name": "Piso",
+          "maps": [
+            {
+              "id": "701",
+              "local": "Pewter",
+              "coordinates": "3698, 3447, 8",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ea/Mapas_de_ADV_VERMELHO_-_3698%2C_3447%2C_8.webp"
+            },
+            {
+              "id": "702",
+              "local": "Cemitério de Lavender",
+              "coordinates": "4302, 3662, 8",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f7/Mapas_de_ADV_VERMELHO_-_4302%2C_3662%2C_8.webp"
+            },
+            {
+              "id": "703",
+              "local": "Cemitério de Lavender",
+              "coordinates": "4356, 3641, 9",
+              "tags": [
+                "Piso",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/15/Mapas_de_ADV_VERMELHO_-_4356%2C_3641%2C_9.webp"
+            },
+            {
+              "id": "704",
+              "local": "Desert Island",
+              "coordinates": "4559, 3656, 9",
+              "tags": [
+                "Piso",
+                "Pirâmide",
+                "Fogo",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/dc/Mapas_de_ADV_VERMELHO_-_4559%2C_3656%2C_9.webp"
+            },
+            {
+              "id": "705",
+              "local": "Hamlin Island (Abandoned City)",
+              "coordinates": "3524, 4536, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/44/Mapas_de_ADV_VERMELHO_-_3524%2C_4536%2C_7.webp"
+            },
+            {
+              "id": "706",
+              "local": "Shamouti Island (Dojo)",
+              "coordinates": "3608, 4915, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/de/Mapas_de_ADV_VERMELHO_-_3608%2C_4915%2C_5.webp"
+            },
+            {
+              "id": "707",
+              "local": "Shamouti Island (Gengar)",
+              "coordinates": "3931, 5097, 13",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/69/Mapas_de_ADV_VERMELHO_-_3931%2C_5097%2C_13.webp"
+            },
+            {
+              "id": "708",
+              "local": "Sphinx Island",
+              "coordinates": "4063, 5464, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4c/Mapas_de_ADV_VERMELHO_-_4063%2C_5464%2C_7.webp"
+            },
+            {
+              "id": "709",
+              "local": "Metal Ship",
+              "coordinates": "4418, 5714, 6",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d9/Mapas_de_ADV_VERMELHO_-_4418%2C_5714%2C_6.webp"
+            },
+            {
+              "id": "710",
+              "local": "Rocket Hideout (Ascorbia)",
+              "coordinates": "4432, 4314, 8",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3a/Mapas_de_ADV_VERMELHO_-_4432%2C_4314%2C_8.webp"
+            },
+            {
+              "id": "711",
+              "local": "Lost Island",
+              "coordinates": "4581, 3955, 8",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/71/Mapas_de_ADV_VERMELHO_-_4581%2C_3955%2C_8.webp"
+            },
+            {
+              "id": "712",
+              "local": "Desert Island",
+              "coordinates": "4611, 3703, 9",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Água",
+                "Pirâmide",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c3/Mapas_de_ADV_VERMELHO_-_4611%2C_3703%2C_9.webp"
+            },
+            {
+              "id": "713",
+              "local": "Desert Island",
+              "coordinates": "4612, 3694, 10",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pedra",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/68/Mapas_de_ADV_VERMELHO_-_4612%2C_3694%2C_10.webp"
+            },
+            {
+              "id": "714",
+              "local": "Desert Island",
+              "coordinates": "4649, 3670, 8",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pedra",
+                "Fogo",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/52/Mapas_de_ADV_VERMELHO_-_4649%2C_3670%2C_8.webp"
+            },
+            {
+              "id": "715",
+              "local": "Ghost Ship",
+              "coordinates": "4673, 5599, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c7/Mapas_de_ADV_VERMELHO_-_4673%2C_5599%2C_7.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "Mapa Verde",
+      "locations": [
+        {
+          "name": "Areia",
+          "maps": [
+            {
+              "id": "1001",
+              "local": " Outland Water",
+              "coordinates": "2847, 2827, 6",
+              "tags": [
+                "Areia",
+                "Água",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b9/Mapa_Verde_ADV_-_2847%2C_2827%2C_6.webp"
+            },
+            {
+              "id": "1002",
+              "local": " Outland Water",
+              "coordinates": "2863, 2850, 6",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c9/Mapa_Verde_ADV_-_2863%2C_2850%2C_6.webp"
+            },
+            {
+              "id": "1003",
+              "local": " Respawn de Baltoy",
+              "coordinates": "5575, 5658, 5",
+              "tags": [
+                "Areia",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3f/Mapa_Verde_ADV_-_5575%2C_5658%2C_5.webp"
+            },
+            {
+              "id": "1004",
+              "local": " Respawn de Vibrava",
+              "coordinates": "5616, 5729, 7",
+              "tags": [
+                "Areia",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/67/Mapa_Verde_ADV_-_5616%2C_5729%2C_7.webp"
+            },
+            {
+              "id": "1005",
+              "local": " Respawn de Flygon",
+              "coordinates": "5730, 5708, 7",
+              "tags": [
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6b/Mapa_Verde_ADV_-_5730%2C_5708%2C_7.webp"
+            },
+            {
+              "id": "1006",
+              "local": " Respawn de Pelipper",
+              "coordinates": "5814, 6111, 7",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/06/Mapa_Verde_ADV_-_5814%2C_6111%2C_7.webp"
+            },
+            {
+              "id": "1007",
+              "local": " Outland Psychic",
+              "coordinates": "2603, 2860, 7",
+              "tags": [
+                "Areia",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/15/Mapa_Verde_ADV_-_2603%2C_2860%2C_7.webp"
+            },
+            {
+              "id": "1008",
+              "local": " Respawn de Tropius",
+              "coordinates": "5345, 5808, 7",
+              "tags": [
+                "Areia",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/86/Mapa_Verde_ADV_-_5345%2C_5808%2C_7.webp"
+            },
+            {
+              "id": "1009",
+              "local": " Respawn de Dusclops",
+              "coordinates": "5542, 5573, 7",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Fogo",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/49/Mapa_Verde_ADV_-_5542%2C_5573%2C_7.webp"
+            }
+          ]
+        },
+        {
+          "name": "Gelo",
+          "maps": [
+            {
+              "id": "2001",
+              "local": " Outland Ice",
+              "coordinates": "2562, 3244, 6",
+              "tags": [
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/40/Mapa_Verde_ADV_-_2562%2C_3244%2C_6.webp"
+            },
+            {
+              "id": "2002",
+              "local": " Outland Ice",
+              "coordinates": "2670, 3318, 8",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/71/Mapa_Verde_ADV_-_2670%2C_3318%2C_8.webp"
+            },
+            {
+              "id": "2003",
+              "local": " Outland Ice",
+              "coordinates": "2695, 3286, 7",
+              "tags": [
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e5/Mapa_Verde_ADV_-_2695%2C_3286%2C_7.webp"
+            },
+            {
+              "id": "2004",
+              "local": " Outland Dragon",
+              "coordinates": "2710, 3287, 4",
+              "tags": [
+                "Gelo",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/94/Mapa_Verde_ADV_-_2710%2C_3287%2C_4.webp"
+            },
+            {
+              "id": "2005",
+              "local": " Respawn de Swellow",
+              "coordinates": "5047, 5744, 5",
+              "tags": [
+                "Gelo",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7c/Mapa_Verde_ADV_-_5047%2C_5744%2C_5.webp"
+            },
+            {
+              "id": "2006",
+              "local": " Respawn de Walrein",
+              "coordinates": "5845, 5800, 7",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/93/Mapa_Verde_ADV_-_5845%2C_5800%2C_7.webp"
+            },
+            {
+              "id": "2007",
+              "local": " Respawn de Altaria",
+              "coordinates": "5051, 5854, 5",
+              "tags": [
+                "Gelo",
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ea/Mapa_Verde_ADV_-_5051%2C_5854%2C_5.webp"
+            },
+            {
+              "id": "2008",
+              "local": " Respawn de Shelgon",
+              "coordinates": "5340, 5697, 5",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/62/Mapa_Verde_ADV_-_5340%2C_5697%2C_5.webp"
+            },
+            {
+              "id": "2009",
+              "local": " Respawn de Froslass",
+              "coordinates": "5858, 5783, 6",
+              "tags": [
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8e/Mapa_Verde_ADV_-_5858%2C_5783%2C_6.webp"
+            },
+            {
+              "id": "2010",
+              "local": " Respawn de Glalie",
+              "coordinates": "5868, 5839, 8",
+              "tags": [
+                "Gelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/12/Mapa_Verde_ADV_-_5868%2C_5839%2C_8.webp"
+            }
+          ]
+        },
+        {
+          "name": "Grama",
+          "maps": [
+            {
+              "id": "3001",
+              "local": " Outland Bug",
+              "coordinates": "2633, 3039, 7",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/40/Mapa_Verde_ADV_-_2633%2C_3039%2C_7.webp"
+            },
+            {
+              "id": "3002",
+              "local": " Outland Water",
+              "coordinates": "2654, 2810, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/26/Mapa_Verde_ADV_-_2654%2C_2810%2C_7.webp"
+            },
+            {
+              "id": "3003",
+              "local": " Outland Grass",
+              "coordinates": "2863, 2879, 7",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8d/Mapa_Verde_ADV_-_2863%2C_2879%2C_7.webp"
+            },
+            {
+              "id": "3004",
+              "local": " Respawn de Nuzleaf",
+              "coordinates": "5355, 5962, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d8/Mapa_Verde_ADV_-_5355%2C_5962%2C_7.webp"
+            },
+            {
+              "id": "3005",
+              "local": " Respawn de Grovyle",
+              "coordinates": "5383, 5892, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/9c/Mapa_Verde_ADV_-_5383%2C_5892%2C_6.webp"
+            },
+            {
+              "id": "3006",
+              "local": " Respawn de Sceptile",
+              "coordinates": "5395, 5795, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/de/Mapa_Verde_ADV_-_5395%2C_5795%2C_6.webp"
+            },
+            {
+              "id": "3007",
+              "local": " Respawn de Zangoose",
+              "coordinates": "5417, 5757, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/49/Mapa_Verde_ADV_-_5417%2C_5757%2C_7.webp"
+            },
+            {
+              "id": "3008",
+              "local": " Respawn de Exploud",
+              "coordinates": "5437, 5561, 5",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6c/Mapa_Verde_ADV_-_5437%2C_5561%2C_5.webp"
+            },
+            {
+              "id": "3009",
+              "local": " Respawn de Ludicolo",
+              "coordinates": "5463, 5838, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c3/Mapa_Verde_ADV_-_5463%2C_5838%2C_7.webp"
+            },
+            {
+              "id": "3010",
+              "local": " Respawn de Wingull",
+              "coordinates": "5729, 6160, 7",
+              "tags": [
+                "Grama",
+                "Areia",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3f/Mapa_Verde_ADV_-_5729%2C_6160%2C_7_NEW.png"
+            },
+            {
+              "id": "3011",
+              "local": " Artificial Safari",
+              "coordinates": "5797, 5661, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3e/Mapa_Verde_ADV_-_5797%2C_5661%2C_7.webp"
+            },
+            {
+              "id": "3012",
+              "local": " Artificial Safari",
+              "coordinates": "5871, 5532, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b7/Mapa_Verde_ADV_-_5871%2C_5532%2C_7.webp"
+            },
+            {
+              "id": "3013",
+              "local": " Outland Bug",
+              "coordinates": "2694, 3034, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/04/Mapa_Verde_ADV_-_2694%2C_3034%2C_6.webp"
+            },
+            {
+              "id": "3014",
+              "local": " Outland Flying",
+              "coordinates": "2860, 3273, 5",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d2/Mapa_Verde_ADV_-_2860%2C_3273%2C_5.webp"
+            },
+            {
+              "id": "3015",
+              "local": " Outland Poison",
+              "coordinates": "2865, 2947, 7",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/21/Mapa_Verde_ADV_-_2865%2C_2947%2C_7.webp"
+            },
+            {
+              "id": "3016",
+              "local": " Outland Poison",
+              "coordinates": "2892, 2897, 7",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/03/Mapa_Verde_ADV_-_2892%2C_2897%2C_7.webp"
+            },
+            {
+              "id": "3017",
+              "local": " Outland Normal",
+              "coordinates": "2906, 3183, 7",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f8/Mapa_Verde_ADV_-_2906%2C_3183%2C_7.webp"
+            },
+            {
+              "id": "3018",
+              "local": " Outland Fairy",
+              "coordinates": "2907, 3127, 4",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7a/Mapa_Verde_ADV_-_2907%2C_3127%2C_4.webp"
+            },
+            {
+              "id": "3019",
+              "local": " Outland Flying",
+              "coordinates": "2922, 3236, 5",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1f/Mapa_Verde_ADV_-_2922%2C_3236%2C_5.webp"
+            }
+          ]
+        },
+        {
+          "name": "Pedra",
+          "maps": [
+            {
+              "id": "4001",
+              "local": " Outland Fire",
+              "coordinates": "2793, 3029, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fc/Mapa_Verde_ADV_-_2793%2C_3029%2C_7.webp"
+            },
+            {
+              "id": "4002",
+              "local": " Outland Water",
+              "coordinates": "2808, 2864, 7",
+              "tags": [
+                "Pedra",
+                "Árvore",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0a/Mapa_Verde_ADV_-_2808%2C_2864%2C_7.webp"
+            },
+            {
+              "id": "4003",
+              "local": " Respawn de Hariyama",
+              "coordinates": "5368, 5779, 5",
+              "tags": [
+                "Pedra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/45/Mapa_Verde_ADV_-_5368%2C_5779%2C_5.webp"
+            },
+            {
+              "id": "4004",
+              "local": " Respawn de Blaziken",
+              "coordinates": "5613, 5910, 4",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/ab/Mapa_Verde_ADV_-_5613%2C_5910%2C_4.webp"
+            },
+            {
+              "id": "4005",
+              "local": " Respawn de Camerupt",
+              "coordinates": "5617, 5925, 5",
+              "tags": [
+                "Pedra",
+                "Fogo",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a1/Mapa_Verde_ADV_-_5617%2C_5925%2C_5.webp"
+            },
+            {
+              "id": "4006",
+              "local": " Respawn de Claydol",
+              "coordinates": "5621, 5667, 5",
+              "tags": [
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/72/Mapa_Verde_ADV_-_5621%2C_5667%2C_5.webp"
+            },
+            {
+              "id": "4007",
+              "local": " Respawn de Torkoal",
+              "coordinates": "5650, 5914, 6",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c9/Mapa_Verde_ADV_-_5650%2C_5914%2C_6.webp"
+            },
+            {
+              "id": "4008",
+              "local": " Outland Water",
+              "coordinates": "2708, 2909, 9",
+              "tags": [
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f8/Mapa_Verde_ADV_-_2708%2C_2909%2C_9.webp"
+            },
+            {
+              "id": "4009",
+              "local": " Outland Water",
+              "coordinates": "2725, 2830, 9",
+              "tags": [
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ec/Mapa_Verde_ADV_-_2725%2C_2830%2C_9.webp"
+            },
+            {
+              "id": "4010",
+              "local": " Outland Flying",
+              "coordinates": "2787, 3308, 5",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/20/Mapa_Verde_ADV_-_2787%2C_3308%2C_5.webp"
+            },
+            {
+              "id": "4011",
+              "local": " Outland Rock",
+              "coordinates": "2884, 3118, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/97/Mapa_Verde_ADV_-_2884%2C_3118%2C_6.webp"
+            },
+            {
+              "id": "4012",
+              "local": " Outland Fairy",
+              "coordinates": "2889, 3148, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f8/Mapa_Verde_ADV_-_2889%2C_3148%2C_7.webp"
+            },
+            {
+              "id": "4013",
+              "local": " Outland Ghost",
+              "coordinates": "2899, 2931, 8",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a3/Mapa_Verde_ADV_-_2899%2C_2931%2C_8.webp"
+            },
+            {
+              "id": "4014",
+              "local": " Outland Rock",
+              "coordinates": "2923, 3074, 5",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/af/Mapa_Verde_ADV_-_2923%2C_3074%2C_5.webp"
+            },
+            {
+              "id": "4015",
+              "local": " Outland Rock",
+              "coordinates": "3060, 3063, 6",
+              "tags": [
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e0/Mapa_Verde_ADV_-_3060%2C_3063%2C_6.webp"
+            },
+            {
+              "id": "4016",
+              "local": " Caminho da Outland East",
+              "coordinates": "3786, 3979, 11",
+              "tags": [
+                "Pedra",
+                "Terra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c6/Mapa_Verde_ADV_-_3786%2C_3979%2C_11.webp"
+            },
+            {
+              "id": "4017",
+              "local": " Caminho da Outland East",
+              "coordinates": "3808, 3928, 11",
+              "tags": [
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e7/Mapa_Verde_ADV_-_3808%2C_3928%2C_11.webp"
+            },
+            {
+              "id": "4018",
+              "local": " Respawn de Mawile",
+              "coordinates": "5375, 5661, 6",
+              "tags": [
+                "Pedra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/82/Mapa_Verde_ADV_-_5375%2C_5661%2C_6.webp"
+            },
+            {
+              "id": "4019",
+              "local": " Respawn de Sableye",
+              "coordinates": "5462, 5553, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/ca/Mapa_Verde_ADV_-_5462%2C_5553%2C_7.webp"
+            },
+            {
+              "id": "4020",
+              "local": " Outland Fire",
+              "coordinates": "2759, 3064, 6",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fd/Mapa_Verde_ADV_-_2759%2C_3064%2C_6.webp"
+            }
+          ]
+        },
+        {
+          "name": "Subaquático",
+          "maps": [
+            {
+              "id": "5001",
+              "local": " Caminho da Outland North",
+              "coordinates": "4204, 4404, 12",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4b/Mapa_Verde_ADV_-_4204%2C_4404%2C_12.webp"
+            },
+            {
+              "id": "5002",
+              "local": " Área subaquática próximo aos Zangoose",
+              "coordinates": "5425, 5747, 8",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/63/Mapa_Verde_ADV_-_5425%2C_5747%2C_8.webp"
+            }
+          ]
+        },
+        {
+          "name": "Terra",
+          "maps": [
+            {
+              "id": "6001",
+              "local": " Outland Ground",
+              "coordinates": "2551, 3105, 7",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8d/Mapa_Verde_ADV_-_2551%2C_3105%2C_7.webp"
+            },
+            {
+              "id": "6002",
+              "local": " Outland Bug",
+              "coordinates": "2720, 3039, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e7/Mapa_Verde_ADV_-_2720%2C_3039%2C_7.webp"
+            },
+            {
+              "id": "6003",
+              "local": " Outland Fire",
+              "coordinates": "2842, 3073, 6",
+              "tags": [
+                "Terra",
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c7/Mapa_Verde_ADV_-_2842%2C_3071%2C_6.webp"
+            },
+            {
+              "id": "6004",
+              "local": " Outland Grass",
+              "coordinates": "2922, 2913, 6",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3f/Mapa_Verde_ADV_-_2922%2C_2913%2C_6.webp"
+            },
+            {
+              "id": "6005",
+              "local": " Respawn de Toxicroak",
+              "coordinates": "5309, 5805, 6",
+              "tags": [
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/40/Mapa_Verde_ADV_-_5309%2C_5805%2C_6.webp"
+            },
+            {
+              "id": "6006",
+              "local": " Respawn de Seviper",
+              "coordinates": "5317, 5787, 7",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/67/Mapa_Verde_ADV_-_5317%2C_5787%2C_7.webp"
+            },
+            {
+              "id": "6007",
+              "local": " Respawn de Shiftry",
+              "coordinates": "5400, 6039, 6",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d7/Mapa_Verde_ADV_-_5400%2C_6039%2C_6.webp"
+            },
+            {
+              "id": "6008",
+              "local": " Respawn de Poochyena",
+              "coordinates": "5414, 6019, 8",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/31/Mapa_Verde_ADV_-_5414%2C_6019%2C_8.webp"
+            },
+            {
+              "id": "6009",
+              "local": " Respawn de Vigoroth",
+              "coordinates": "5569, 5883, 5",
+              "tags": [
+                "Terra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b2/Mapa_Verde_ADV_-_5569%2C_5883%2C_5.webp"
+            },
+            {
+              "id": "6010",
+              "local": " Respawn de Medicham",
+              "coordinates": "5606, 5682, 6",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b3/Mapa_Verde_ADV_-_5606%2C_5682%2C_6.webp"
+            },
+            {
+              "id": "6011",
+              "local": " Entrada dos Castform de Phenac",
+              "coordinates": "5612, 5638, 7",
+              "tags": [
+                "Terra",
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a5/Mapa_Verde_ADV_-_5612%2C_5638%2C_7.webp"
+            },
+            {
+              "id": "6012",
+              "local": " Respawn de Swampert",
+              "coordinates": "5694, 5804, 7",
+              "tags": [
+                "Terra",
+                "Areia",
+                "Água",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/82/Mapa_Verde_ADV_-_5694%2C_5804%2C_7.webp"
+            },
+            {
+              "id": "6013",
+              "local": " Outland Ground",
+              "coordinates": "2628, 3109, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e7/Mapa_Verde_ADV_-_2628%2C_3109%2C_7.webp"
+            },
+            {
+              "id": "6014",
+              "local": " Outland Normal",
+              "coordinates": "2786, 3169, 7",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b1/Mapa_Verde_ADV_-_2786%2C_3169%2C_7.webp"
+            },
+            {
+              "id": "6015",
+              "local": " Outland Flying",
+              "coordinates": "2798, 3261, 6",
+              "tags": [
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/47/Mapa_Verde_ADV_-_2798%2C_3261%2C_6.webp"
+            },
+            {
+              "id": "6016",
+              "local": " Respawn de Banette",
+              "coordinates": "5510, 5611, 8",
+              "tags": [
+                "Terra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/21/Mapa_Verde_ADV_-_5510%2C_5611%2C_8.webp"
+            },
+            {
+              "id": "6017",
+              "local": " Respawn de Camerupt",
+              "coordinates": "5618, 5929, 5",
+              "tags": [
+                "Terra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c1/Mapas_de_ADV_VERDE_-_5618%2C5929%2C5.webp"
+            }
+          ]
+        },
+        {
+          "name": "Piso",
+          "maps": [
+            {
+              "id": "7001",
+              "local": " Outland Electric",
+              "coordinates": "2505, 3105, 10",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b8/Mapa_Verde_ADV_-_2505%2C_3105%2C_10.webp"
+            },
+            {
+              "id": "7002",
+              "local": " Outland Psychic",
+              "coordinates": "2586, 2968, 7",
+              "tags": [
+                "Piso",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/84/Mapa_Verde_ADV_-_2586%2C_2968%2C_7.webp"
+            },
+            {
+              "id": "7003",
+              "local": " Outland Psychic (use a habilidade light antes de cavar)",
+              "coordinates": "2607, 2958, 6",
+              "tags": [
+                "Piso",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f3/Mapa_Verde_ADV_-_2607%2C_2958%2C_6.webp"
+            },
+            {
+              "id": "7004",
+              "local": " Respawn de Lairon",
+              "coordinates": "5361, 5682, 7",
+              "tags": [
+                "Piso",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/eb/Mapa_Verde_ADV_-_5361%2C_5682%2C_7.webp"
+            },
+            {
+              "id": "7005",
+              "local": " Respawn de Metang",
+              "coordinates": "5437, 5561, 6",
+              "tags": [
+                "Piso",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b0/Mapa_Verde_ADV_-_5437%2C_5561%2C_6.webp"
+            },
+            {
+              "id": "7006",
+              "local": " Respawn de Mightyena",
+              "coordinates": "5485, 5987, 8",
+              "tags": [
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/06/Mapa_Verde_ADV_-_5485%2C_5987%2C_8.webp"
+            },
+            {
+              "id": "7007",
+              "local": " Pirâmide nos Cacturne",
+              "coordinates": "5631, 5589, 7",
+              "tags": [
+                "Piso",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/93/Mapa_Verde_ADV_-_5631%2C_5589%2C_7.webp"
+            },
+            {
+              "id": "7008",
+              "local": " Outland Psychic",
+              "coordinates": "2616, 2949, 5",
+              "tags": [
+                "Piso",
+                "Pirâmide",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4f/Mapa_Verde_ADV_-_2616%2C_2949%2C_5.webp"
+            },
+            {
+              "id": "7009",
+              "local": " Outland Ghost",
+              "coordinates": "2858, 2956, 8",
+              "tags": [
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f2/Mapa_Verde_ADV_-_2858%2C_2956%2C_8.webp"
+            },
+            {
+              "id": "7010",
+              "local": " Outland Dark - Murkrow",
+              "coordinates": "2894, 2935, 2",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/63/Mapa_Verde_ADV_-_2894%2C_2935%2C_2.webp"
+            },
+            {
+              "id": "7011",
+              "local": " Outland Fighting",
+              "coordinates": "3017, 3109, 8",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/72/Mapa_Verde_ADV_-_3017%2C_3109%2C_8.webp"
+            },
+            {
+              "id": "7012",
+              "local": " Respawn de Manectric",
+              "coordinates": "5520, 5994, 6",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/49/Mapa_Verde_ADV_-_5520%2C_5994%2C_6.webp"
+            },
+            {
+              "id": "7013",
+              "local": " Respawn de Bronzong",
+              "coordinates": "5594, 5739, 9",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/26/Mapa_Verde_ADV_-_5594%2C_5739%2C_9.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "label": "Mapa Roxo",
+      "locations": [
+        {
+          "name": "Areia",
+          "maps": [
+            {
+              "id": "10001",
+              "local": " Respawn de Spoink",
+              "coordinates": "30815, 20315, 6",
+              "tags": [
+                "Areia",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4b/Mapas_de_ADV_ROXO_-_30815%2C_20315%2C_6.webp"
+            },
+            {
+              "id": "10002",
+              "local": " Respawn de Silicobra",
+              "coordinates": "30630, 20379, 6",
+              "tags": [
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/92/Mapas_de_ADV_ROXO_-_30630%2C_20379%2C_6.webp"
+            },
+            {
+              "id": "10003",
+              "local": " Respawn de Silicobra",
+              "coordinates": "30683, 20365, 6",
+              "tags": [
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e3/Mapas_de_ADV_ROXO_-_30683%2C_20365%2C_6.webp"
+            },
+            {
+              "id": "10004",
+              "local": " Respawn de Gallade",
+              "coordinates": "30692, 20264, 4",
+              "tags": [
+                "Areia",
+                "Terra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/33/Mapas_de_ADV_ROXO_-_30692%2C_20264%2C_4.webp"
+            },
+            {
+              "id": "10005",
+              "local": " Respawn de Sandaconda",
+              "coordinates": "30716, 20373, 5",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/92/Mapas_de_ADV_ROXO_-_30716%2C_20373%2C_5.webp"
+            },
+            {
+              "id": "10006",
+              "local": " Respawn de Sandaconda",
+              "coordinates": "30788, 20349, 5",
+              "tags": [
+                "Areia",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b3/Mapas_de_ADV_ROXO_-_30788%2C_20349%2C_5.webp"
+            },
+            {
+              "id": "10007",
+              "local": " Respawn de Mantine",
+              "coordinates": "30496, 20050, 3",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Água",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/be/Mapas_de_ADV_ROXO_-_30496%2C_20050%2C_3.webp"
+            },
+            {
+              "id": "10008",
+              "local": " Respawn de Mantine",
+              "coordinates": "30518, 20057, 5",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/78/Mapas_de_ADV_ROXO_-_30518%2C_20057%2C_5.webp"
+            },
+            {
+              "id": "10009",
+              "local": " Respawn de Mantine",
+              "coordinates": "30554, 20117, 4",
+              "tags": [
+                "Areia",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/93/Mapas_de_ADV_ROXO_-_30554%2C_20117%2C_4.webp"
+            },
+            {
+              "id": "10010",
+              "local": " Respawn de Alolan Raichu",
+              "coordinates": "30427, 20959, 5",
+              "tags": [
+                "Areia",
+                "Piso",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c8/Mapas_de_ADV_ROXO_-_30427%2C_20959%2C_5.webp"
+            }
+          ]
+        },
+        {
+          "name": "Gelo",
+          "maps": [
+            {
+              "id": "20001",
+              "local": " Respawn de Dragonite e Garchomp",
+              "coordinates": "30802, 20395, 2",
+              "tags": [
+                "Gelo",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c4/Mapas_de_ADV_ROXO_-_30802%2C_20395%2C_2.webp"
+            },
+            {
+              "id": "20002",
+              "local": " Respawn de Altaria",
+              "coordinates": "30816, 20323, 3",
+              "tags": [
+                "Gelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8e/Mapas_de_ADV_ROXO_-_30816%2C_20323%2C_3.webp"
+            },
+            {
+              "id": "20003",
+              "local": " Respawn de Dratini e Dragonair",
+              "coordinates": "30851, 20351, 5",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b3/Mapas_de_ADV_ROXO_-_30851%2C_20351%2C_5.webp"
+            },
+            {
+              "id": "20004",
+              "local": " Respawn de Dragonite e Garchomp",
+              "coordinates": "30860, 20398, 2",
+              "tags": [
+                "Gelo",
+                "Pedra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ea/Mapas_de_ADV_ROXO_-_30860%2C_20398%2C_2.webp"
+            },
+            {
+              "id": "20005",
+              "local": " Respawn de Snorunt",
+              "coordinates": "30890, 20277, 5",
+              "tags": [
+                "Gelo",
+                "Pedra",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/58/Mapas_de_ADV_ROXO_-_30890%2C_20277%2C_5.webp"
+            },
+            {
+              "id": "20006",
+              "local": " Respawn de Sneasel",
+              "coordinates": "30931, 20478, 5",
+              "tags": [
+                "Gelo",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a5/Mapas_de_ADV_ROXO_-_30931%2C_20478%2C_5.webp"
+            },
+            {
+              "id": "20007",
+              "local": " Respawn de Snorunt",
+              "coordinates": "30935, 20329, 5",
+              "tags": [
+                "Gelo",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d3/Mapas_de_ADV_ROXO_-_30935%2C_20329%2C_5.webp"
+            },
+            {
+              "id": "20008",
+              "local": " Respawn de Glalie",
+              "coordinates": "30969, 20357, 6",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/75/Mapas_de_ADV_ROXO_-_30969%2C_20357%2C_6.webp"
+            },
+            {
+              "id": "20009",
+              "local": " Respawn de Piloswine",
+              "coordinates": "30994, 20342, 5",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/43/Mapas_de_ADV_ROXO_-_30994%2C_20342%2C_5.webp"
+            },
+            {
+              "id": "20010",
+              "local": " Respawn de Galarian Darmanitan",
+              "coordinates": "31172, 19989, 4",
+              "tags": [
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3c/Mapas_de_ADV_ROXO_-_31172%2C_19989%2C_4.webp"
+            },
+            {
+              "id": "20011",
+              "local": " Respawn de Abomasnow (Necessário Mecha)",
+              "coordinates": "31227, 19994, 3",
+              "tags": [
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e0/Mapas_de_ADV_ROXO_-_31227%2C_19994%2C_3.webp"
+            }
+          ]
+        },
+        {
+          "name": "Grama",
+          "maps": [
+            {
+              "id": "30001",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30792, 20621, 5",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/23/Mapas_de_ADV_ROXO_-_30792%2C_20621%2C_5.webp"
+            },
+            {
+              "id": "30002",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30823, 20758, 5",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ee/Mapas_de_ADV_ROXO_-_30823%2C_20758%2C_5.webp"
+            },
+            {
+              "id": "30003",
+              "local": " Respawn de Galarian Farfetch᾿d",
+              "coordinates": "30697, 20083, 1",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b5/Mapas_de_ADV_ROXO_-_30697%2C_20083%2C_1.webp"
+            },
+            {
+              "id": "30004",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30710, 20430, 5",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/bd/Mapas_de_ADV_ROXO_-_30710%2C_20430%2C_5.webp"
+            },
+            {
+              "id": "30005",
+              "local": " Respawn de Miltank",
+              "coordinates": "30740, 20691, 5",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Construção",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/cb/Mapas_de_ADV_ROXO_-_30740%2C_20691%2C_5.webp"
+            },
+            {
+              "id": "30006",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30748, 20449, 5",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Construção",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/62/Mapas_de_ADV_ROXO_-_30748%2C_20449%2C_5.webp"
+            },
+            {
+              "id": "30007",
+              "local": " Respawn de Beedrill",
+              "coordinates": "30503, 20233, 5",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/78/Mapas_de_ADV_ROXO_-_30503%2C_20233%2C_5.webp"
+            },
+            {
+              "id": "30008",
+              "local": " Respawn de Beedrill",
+              "coordinates": "30523, 20353, 5",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/20/Mapas_de_ADV_ROXO_-_30523%2C_20353%2C_5.webp"
+            },
+            {
+              "id": "30009",
+              "local": " Respawn de Gogoat",
+              "coordinates": "30550, 20890, 3",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/36/Mapas_de_ADV_ROXO_-_30550%2C_20890%2C_3.webp"
+            },
+            {
+              "id": "30010",
+              "local": " Respawn de Petilil",
+              "coordinates": "30559, 20967, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4e/Mapas_de_ADV_ROXO_-_30559%2C_20967%2C_5.webp"
+            },
+            {
+              "id": "30011",
+              "local": " Respawn de Ralts e Kirlia",
+              "coordinates": "30562, 20921, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a2/Mapas_de_ADV_ROXO_-_30562%2C_20921%2C_5.webp"
+            },
+            {
+              "id": "30012",
+              "local": " Respawn de Alolan Diglett",
+              "coordinates": "30570, 20420, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1a/Mapas_de_ADV_ROXO_-_30570%2C_20420%2C_5.webp"
+            },
+            {
+              "id": "30013",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30584, 20618, 5",
+              "tags": [
+                "Grama",
+                "Fogo",
+                "Construção",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/23/Mapas_de_ADV_ROXO_-_30584%2C_20618%2C_5.webp"
+            },
+            {
+              "id": "30014",
+              "local": " Respawn de Gardevoir",
+              "coordinates": "30594, 20870, 7",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6b/Mapas_de_ADV_ROXO_-_30594%2C_20870%2C_7.webp"
+            },
+            {
+              "id": "30015",
+              "local": " Respawn de Nuzleaf e Skiddo",
+              "coordinates": "30600, 20958, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/84/Mapas_de_ADV_ROXO_-_30600%2C_20958%2C_6.webp"
+            },
+            {
+              "id": "30016",
+              "local": " Respawn de Litleo",
+              "coordinates": "30604, 20737, 4",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/20/Mapas_de_ADV_ROXO_-_30604%2C_20737%2C_4.webp"
+            },
+            {
+              "id": "30017",
+              "local": " Respawn de Gogoat",
+              "coordinates": "30604, 20923, 3",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4d/Mapas_de_ADV_ROXO_-_30604%2C_20923%2C_3.webp"
+            },
+            {
+              "id": "30018",
+              "local": " Respawn de Tangela, Liligant e Exeggutor",
+              "coordinates": "30605, 20912, 4",
+              "tags": [
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1a/Mapas_de_ADV_ROXO_-_30605%2C_20912%2C_4.webp"
+            },
+            {
+              "id": "30019",
+              "local": " Respawn de Ralts e Kirlia",
+              "coordinates": "30614, 20896, 5",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d0/Mapas_de_ADV_ROXO_-_30614%2C_20896%2C_5.webp"
+            },
+            {
+              "id": "30020",
+              "local": " Respawn de Tangela, Liligant e Exeggutor",
+              "coordinates": "30618, 20876, 4",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/73/Mapas_de_ADV_ROXO_-_30618%2C_20876%2C_4.webp"
+            },
+            {
+              "id": "30021",
+              "local": " Respawn de Porygon",
+              "coordinates": "30620, 20672, 3",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Água",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/05/Mapas_de_ADV_ROXO_-_30620%2C_20672%2C_3.webp"
+            },
+            {
+              "id": "30022",
+              "local": " Respawn de Sentinelas",
+              "coordinates": "30227, 20334, 5",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Piso",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b1/Mapas_de_ADV_ROXO_-_30227%2C_20334%2C_5.webp"
+            },
+            {
+              "id": "30023",
+              "local": " Ruínas de Viridian",
+              "coordinates": "30262, 20514, 5",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/50/Mapas_de_ADV_ROXO_-_30262%2C_20514%2C_5.webp"
+            },
+            {
+              "id": "30024",
+              "local": " Respawn de Farfetch᾿d",
+              "coordinates": "30329, 20472, 4",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/cc/Mapas_de_ADV_ROXO_-_30329%2C_20472%2C_4.webp"
+            },
+            {
+              "id": "30025",
+              "local": " Ruínas de Viridian",
+              "coordinates": "30329, 20528, 5",
+              "tags": [
+                "Grama",
+                "Construção",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/18/Mapas_de_ADV_ROXO_-_30329%2C_20528%2C_5.webp"
+            },
+            {
+              "id": "30026",
+              "local": " Respawn de Weezing",
+              "coordinates": "30358, 20877, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a5/Mapas_de_ADV_ROXO_-_30358%2C_20877%2C_6.webp"
+            },
+            {
+              "id": "30027",
+              "local": " Respawn de Farfetch᾿d",
+              "coordinates": "30371, 20406, 2",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a2/Mapas_de_ADV_ROXO_-_30371%2C_20406%2C_2.webp"
+            },
+            {
+              "id": "30028",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30406, 20333, 5",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e5/Mapas_de_ADV_ROXO_-_30406%2C_20333%2C_5.webp"
+            },
+            {
+              "id": "30029",
+              "local": " Respawn de Rufflet",
+              "coordinates": "30449, 20469, 3",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fa/Mapas_de_ADV_ROXO_-_30449%2C_20469%2C_3.webp"
+            },
+            {
+              "id": "30030",
+              "local": " Respawn de Beedrill",
+              "coordinates": "30474, 20271, 5",
+              "tags": [
+                "Grama",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/33/Mapas_de_ADV_ROXO_-_30474%2C_20271%2C_5.webp"
+            },
+            {
+              "id": "30031",
+              "local": " Respawn de Beedrill",
+              "coordinates": "30479, 20316, 5",
+              "tags": [
+                "Grama",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f6/Mapas_de_ADV_ROXO_-_30479%2C_20316%2C_5.webp"
+            }
+          ]
+        },
+        {
+          "name": "Pedra",
+          "maps": [
+            {
+              "id": "40001",
+              "local": " Respawn de Cranidos",
+              "coordinates": "30800, 20697, 5",
+              "tags": [
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f1/Mapas_de_ADV_ROXO_-_30800%2C_20697%2C_5.webp"
+            },
+            {
+              "id": "40002",
+              "local": " Respawn de Cranidos",
+              "coordinates": "30838, 20548, 5",
+              "tags": [
+                "Pedra",
+                "Água",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/74/Mapas_de_ADV_ROXO_-_30838%2C_20548%2C_5.webp"
+            },
+            {
+              "id": "40003",
+              "local": " Respawn de Bagon",
+              "coordinates": "30846, 20350, 4",
+              "tags": [
+                "Pedra",
+                "Gelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/27/Mapas_de_ADV_ROXO_-_30846%2C_20350%2C_4.webp"
+            },
+            {
+              "id": "40004",
+              "local": " Respawn de Tyranitar",
+              "coordinates": "30875, 20550, 4",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/68/Mapas_de_ADV_ROXO_-_30875%2C_20550%2C_4.webp"
+            },
+            {
+              "id": "40005",
+              "local": " Respawn de Gible e Gabite",
+              "coordinates": "30896, 20314, 4",
+              "tags": [
+                "Pedra",
+                "Gelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/18/Mapas_de_ADV_ROXO_-_30896%2C_20314%2C_4.webp"
+            },
+            {
+              "id": "40006",
+              "local": " Respawn de Snorunt",
+              "coordinates": "30939, 20371, 3",
+              "tags": [
+                "Pedra",
+                "Gelo",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/10/Mapas_de_ADV_ROXO_-_30939%2C_20371%2C_3.webp"
+            },
+            {
+              "id": "40007",
+              "local": " Respawn de Druddigon",
+              "coordinates": "31080, 20733, 9",
+              "tags": [
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d5/Mapas_de_ADV_ROXO_-_31080%2C_20733%2C_9.webp"
+            },
+            {
+              "id": "40008",
+              "local": " Respawn de Porygon",
+              "coordinates": "30653, 20705, 5",
+              "tags": [
+                "Pedra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c8/Mapas_de_ADV_ROXO_-_30653%2C_20705%2C_5.webp"
+            },
+            {
+              "id": "40009",
+              "local": " Respawn de Cranidos",
+              "coordinates": "30772, 20728, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/05/Mapas_de_ADV_ROXO_-_30772%2C_20728%2C_6.webp"
+            },
+            {
+              "id": "40010",
+              "local": " Respawn de Empoleon",
+              "coordinates": "30497, 20490, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6a/Mapas_de_ADV_ROXO_-_30497%2C_20490%2C_6.webp"
+            },
+            {
+              "id": "40011",
+              "local": " Respawn de Empoleon",
+              "coordinates": "30538, 20465, 6",
+              "tags": [
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b6/Mapas_de_ADV_ROXO_-_30538%2C_20465%2C_6.webp"
+            },
+            {
+              "id": "40012",
+              "local": " Respawn de Tynamo e Eelektrik",
+              "coordinates": "30599, 20627, 7",
+              "tags": [
+                "Pedra",
+                "Construção",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/df/Mapas_de_ADV_ROXO_-_30599%2C_20627%2C_7.webp"
+            },
+            {
+              "id": "40013",
+              "local": " Respawn de Braviary",
+              "coordinates": "30233, 20363, 2",
+              "tags": [
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/53/Mapas_de_ADV_ROXO_-_30233%2C_20363%2C_2.webp"
+            },
+            {
+              "id": "40014",
+              "local": " Respawn de Alolan Muk",
+              "coordinates": "30252, 20781, 3",
+              "tags": [
+                "Pedra",
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/13/Mapas_de_ADV_ROXO_-_30252%2C_20781%2C_3.webp"
+            },
+            {
+              "id": "40015",
+              "local": " Respawn de Seviper e Muk",
+              "coordinates": "30333, 20768, 4",
+              "tags": [
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/be/Mapas_de_ADV_ROXO_-_30333%2C_20768%2C_4.webp"
+            },
+            {
+              "id": "40016",
+              "local": " Respawn de Grimer",
+              "coordinates": "30333, 20789, 5",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b1/Mapas_de_ADV_ROXO_-_30333%2C_20789%2C_5.webp"
+            },
+            {
+              "id": "40017",
+              "local": " Respawn de Klink e Klang",
+              "coordinates": "30339, 20271, 5",
+              "tags": [
+                "Pedra",
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0a/Mapas_de_ADV_ROXO_-_30339%2C_20271%2C_5.webp"
+            },
+            {
+              "id": "40018",
+              "local": " Respawn de Klinklang",
+              "coordinates": "30366, 20298, 4",
+              "tags": [
+                "Pedra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d2/Mapas_de_ADV_ROXO_-_30366%2C_20298%2C_4.webp"
+            },
+            {
+              "id": "40019",
+              "local": " Respawn de Klinklang",
+              "coordinates": "30420, 20274, 4",
+              "tags": [
+                "Pedra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/40/Mapas_de_ADV_ROXO_-_30420%2C_20274%2C_4.webp"
+            },
+            {
+              "id": "40020",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30429, 20408, 5",
+              "tags": [
+                "Pedra",
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/80/Mapas_de_ADV_ROXO_-_30429%2C_20408%2C_5.webp"
+            },
+            {
+              "id": "40021",
+              "local": " Respawn de Mantyke",
+              "coordinates": "30470, 20083, 5",
+              "tags": [
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c1/Mapas_de_ADV_ROXO_-_30470%2C_20083%2C_5.webp"
+            },
+            {
+              "id": "40022",
+              "local": " Respawn de Sentinelas",
+              "coordinates": "30156, 20295, 7",
+              "tags": [
+                "Pedra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/ab/Mapas_de_ADV_ROXO_-_30156%2C_20295%2C_7.webp"
+            },
+            {
+              "id": "40023",
+              "local": " Respawn de Sentinelas",
+              "coordinates": "30202, 20299, 7",
+              "tags": [
+                "Pedra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/af/Mapas_de_ADV_ROXO_-_30202%2C_20299%2C_7.webp"
+            }
+          ]
+        },
+        {
+          "name": "Subaquático",
+          "maps": [
+            {
+              "id": "50001",
+              "local": " Respawn de Sharpedo",
+              "coordinates": "30488, 20415, 7",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e4/Mapas_de_ADV_ROXO_-_30488%2C_20415%2C_7.webp"
+            },
+            {
+              "id": "50002",
+              "local": " Respawn de Eelektross",
+              "coordinates": "30597, 20645, 9",
+              "tags": [
+                "Subaquático",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/73/Mapas_de_ADV_ROXO_-_30597%2C_20645%2C_9.webp"
+            },
+            {
+              "id": "50003",
+              "local": " Respawn de Barboach",
+              "coordinates": "30341, 20384, 7",
+              "tags": [
+                "Subaquático",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/64/Mapas_de_ADV_ROXO_-_30341%2C_20384%2C_7.webp"
+            },
+            {
+              "id": "50004",
+              "local": " Respawn de Carvanha",
+              "coordinates": "30379, 20411, 6",
+              "tags": [
+                "Subaquático"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7a/Mapas_de_ADV_ROXO_-_30379%2C_20411%2C_6.webp"
+            }
+          ]
+        },
+        {
+          "name": "Terra",
+          "maps": [
+            {
+              "id": "60001",
+              "local": " Respawn de Sudowoodo e Rampardos",
+              "coordinates": "30841, 20620, 5",
+              "tags": [
+                "Terra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c2/Mapas_de_ADV_ROXO_-_30841%2C_20620%2C_5.webp"
+            },
+            {
+              "id": "60002",
+              "local": " Respawn de Ursaring",
+              "coordinates": "30629, 20740, 6",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/00/Mapas_de_ADV_ROXO_-_30629%2C_20740%2C_6.webp"
+            },
+            {
+              "id": "60003",
+              "local": " Respawn de Alolan Diglett",
+              "coordinates": "30636, 20383, 8",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/22/Mapas_de_ADV_ROXO_-_30636%2C_20383%2C_8.webp"
+            },
+            {
+              "id": "60004",
+              "local": " Respawn de Alolan Diglett",
+              "coordinates": "30644, 20382, 7",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3a/Mapas_de_ADV_ROXO_-_30644%2C_20382%2C_7.webp"
+            },
+            {
+              "id": "60005",
+              "local": " Respawn de Alolan Diglett",
+              "coordinates": "30653, 20390, 5",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/9d/Mapas_de_ADV_ROXO_-_30653%2C_20390%2C_5.webp"
+            },
+            {
+              "id": "60006",
+              "local": " Respawn de Petilil",
+              "coordinates": "30655, 20962, 5",
+              "tags": [
+                "Terra",
+                "Pedra",
+                "Árvore",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/97/Mapas_de_ADV_ROXO_-_30655%2C_20962%2C_5.webp"
+            },
+            {
+              "id": "60007",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30660, 20526, 5",
+              "tags": [
+                "Terra",
+                "Construção",
+                "Árvore",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3f/Mapas_de_ADV_ROXO_-_30660%2C_20526%2C_5.webp"
+            },
+            {
+              "id": "60008",
+              "local": " Respawn de Alolan Diglett",
+              "coordinates": "30669, 20401, 8",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/ab/Mapas_de_ADV_ROXO_-_30669%2C_20401%2C_8.webp"
+            },
+            {
+              "id": "60009",
+              "local": " Respawn de Galarin Farfetch᾿d",
+              "coordinates": "30686, 20094, 3",
+              "tags": [
+                "Terra",
+                "Pedra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/09/Mapas_de_ADV_ROXO_-_30686%2C_20094%2C_3.webp"
+            },
+            {
+              "id": "60010",
+              "local": " Respawn de Gallade",
+              "coordinates": "30698, 20232, 4",
+              "tags": [
+                "Terra",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d1/Mapas_de_ADV_ROXO_-_30698%2C_20232%2C_4.webp"
+            },
+            {
+              "id": "60011",
+              "local": " Respawn de Gallade",
+              "coordinates": "30702, 20201, 4",
+              "tags": [
+                "Terra",
+                "Areia",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fa/Mapas_de_ADV_ROXO_-_30702%2C_20201%2C_4.webp"
+            },
+            {
+              "id": "60012",
+              "local": " Respawn de Espurr",
+              "coordinates": "30724, 20232, 5",
+              "tags": [
+                "Terra",
+                "Pedra",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f8/Mapas_de_ADV_ROXO_-_30724%2C_20232%2C_5.webp"
+            },
+            {
+              "id": "60013",
+              "local": " Respawn de Miltank",
+              "coordinates": "30726, 20660, 5",
+              "tags": [
+                "Terra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fe/Mapas_de_ADV_ROXO_-_30726%2C_20660%2C_5.webp"
+            },
+            {
+              "id": "60014",
+              "local": " Respawn de Spoink",
+              "coordinates": "30747, 20347, 6",
+              "tags": [
+                "Terra",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fa/Mapas_de_ADV_ROXO_-_30747%2C_20347%2C_6.webp"
+            },
+            {
+              "id": "60015",
+              "local": " Respawn de Steelix",
+              "coordinates": "30752, 20437, 7",
+              "tags": [
+                "Terra",
+                "Construção",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d8/Mapas_de_ADV_ROXO_-_30752%2C_20437%2C_7.webp"
+            },
+            {
+              "id": "60016",
+              "local": " Respawn de Grumpig",
+              "coordinates": "30756, 20373, 7",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6c/Mapas_de_ADV_ROXO_-_30756%2C_20373%2C_7.webp"
+            },
+            {
+              "id": "60017",
+              "local": " Respawn de Grumpig",
+              "coordinates": "30759, 20342, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/36/Mapas_de_ADV_ROXO_-_30759%2C_20342%2C_7.webp"
+            },
+            {
+              "id": "60018",
+              "local": " Respawn de Espurr",
+              "coordinates": "30767, 20225, 5",
+              "tags": [
+                "Terra",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/83/Mapas_de_ADV_ROXO_-_30767%2C_20225%2C_5.webp"
+            },
+            {
+              "id": "60019",
+              "local": " Respawn de Magby e Pansear",
+              "coordinates": "30483, 20559, 5",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0c/Mapas_de_ADV_ROXO_-_30483%2C_20559%2C_5.webp"
+            },
+            {
+              "id": "60020",
+              "local": " Respawn de Pinsir",
+              "coordinates": "30494, 20301, 6",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fa/Mapas_de_ADV_ROXO_-_30494%2C_20301%2C_6.webp"
+            },
+            {
+              "id": "60021",
+              "local": " Respawn de Petilil",
+              "coordinates": "30499, 20878, 5",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Pedra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/59/Mapas_de_ADV_ROXO_-_30499%2C_20878%2C_5.webp"
+            },
+            {
+              "id": "60022",
+              "local": " Respawn de Pansear, Ninetales e Houndoom",
+              "coordinates": "30515, 20596, 4",
+              "tags": [
+                "Terra",
+                "Fogo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c3/Mapas_de_ADV_ROXO_-_30515%2C_20596%2C_4.webp"
+            },
+            {
+              "id": "60023",
+              "local": " Respawn de Tangela, Lilligant e Shiftry",
+              "coordinates": "30521, 20852, 5",
+              "tags": [
+                "Terra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/97/Mapas_de_ADV_ROXO_-_30521%2C_20852%2C_5.webp"
+            },
+            {
+              "id": "60024",
+              "local": " Respawn de Pinsir",
+              "coordinates": "30535, 20273, 6",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6f/Mapas_de_ADV_ROXO_-_30535%2C_20273%2C_6.webp"
+            },
+            {
+              "id": "60025",
+              "local": " Respawn de Nuzleaf e Skiddo",
+              "coordinates": "30537, 20968, 6",
+              "tags": [
+                "Terra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8a/Mapas_de_ADV_ROXO_-_30537%2C_20968%2C_6.webp"
+            },
+            {
+              "id": "60026",
+              "local": " Respawn de Pinsir",
+              "coordinates": "30557, 20328, 6",
+              "tags": [
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/72/Mapas_de_ADV_ROXO_-_30557%2C_20328%2C_6.webp"
+            },
+            {
+              "id": "60027",
+              "local": " Respawn de Pyroar",
+              "coordinates": "30592, 20741, 7",
+              "tags": [
+                "Terra",
+                "Árvore",
+                "Pedra",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/88/Mapas_de_ADV_ROXO_-_30592%2C_20741%2C_7.webp"
+            },
+            {
+              "id": "60028",
+              "local": " Respawn de Alolan Dugtrio",
+              "coordinates": "30604, 20378, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8e/Mapas_de_ADV_ROXO_-_30604%2C_20378%2C_7.webp"
+            },
+            {
+              "id": "60029",
+              "local": " Respawn de Torterra",
+              "coordinates": "30610, 20980, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b9/Mapas_de_ADV_ROXO_-_30610%2C_20980%2C_7.webp"
+            },
+            {
+              "id": "60030",
+              "local": " Respawn de Shuppet",
+              "coordinates": "30252, 20587, 5",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/ba/Mapas_de_ADV_ROXO_-_30252%2C_20587%2C_5.webp"
+            },
+            {
+              "id": "60031",
+              "local": " Respawn de Grimer",
+              "coordinates": "30270, 20834, 5",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/76/Mapas_de_ADV_ROXO_-_30270%2C_20834%2C_5.webp"
+            },
+            {
+              "id": "60032",
+              "local": " Respawn de Seviper e Muk",
+              "coordinates": "30329, 20848, 4",
+              "tags": [
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d1/Mapas_de_ADV_ROXO_-_30329%2C_20848%2C_4.webp"
+            },
+            {
+              "id": "60033",
+              "local": " Respawn de Torkoal",
+              "coordinates": "30477, 20657, 4",
+              "tags": [
+                "Terra",
+                "Fogo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/bd/Mapas_de_ADV_ROXO_-_30477%2C_20657%2C_4.webp"
+            },
+            {
+              "id": "60034",
+              "local": " Respawn de Pansear e Magby",
+              "coordinates": "30482, 20687, 5",
+              "tags": [
+                "Terra",
+                "Fogo",
+                "Pedra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/5d/Mapas_de_ADV_ROXO_-_30482%2C_20687%2C_5.webp"
+            },
+            {
+              "id": "60035",
+              "local": " Respawn de Sentinelas",
+              "coordinates": "30078, 20106, 4",
+              "tags": [
+                "Terra",
+                "Fogo",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/16/Mapas_de_ADV_ROXO_-_30078%2C_20106%2C_4.webp"
+            },
+            {
+              "id": "60036",
+              "local": " Respawn de Pidgeot",
+              "coordinates": "30206, 20425, 3",
+              "tags": [
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/94/Mapas_de_ADV_ROXO_-_30206%2C_20425%2C_3.webp"
+            },
+            {
+              "id": "60037",
+              "local": " Respawn de Grimer",
+              "coordinates": "30210, 20771, 5",
+              "tags": [
+                "Terra",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8d/Mapas_de_ADV_ROXO_-_30210%2C_20771%2C_5.webp"
+            },
+            {
+              "id": "60038",
+              "local": " Respawn de Alolan Meowth",
+              "coordinates": "30223, 20369, 5",
+              "tags": [
+                "Terra",
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b2/Mapas_de_ADV_ROXO_-_30223%2C_20369%2C_5.webp"
+            },
+            {
+              "id": "60039",
+              "local": " Respawn de Pansear e Magby",
+              "coordinates": "30389, 20574, 5",
+              "tags": [
+                "Terra",
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b6/Mapas_de_ADV_ROXO_-_30389%2C_20574%2C_5.webp"
+            }
+          ]
+        },
+        {
+          "name": "Piso",
+          "maps": [
+            {
+              "id": "70001",
+              "local": " Respawn de Infernape",
+              "coordinates": "30793, 20532, 3",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6f/Mapas_de_ADV_ROXO_-_30793%2C_20532%2C_3.webp"
+            },
+            {
+              "id": "70002",
+              "local": " Respawn de Steelix",
+              "coordinates": "30805, 20398, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/06/Mapas_de_ADV_ROXO_-_30805%2C_20398%2C_7.webp"
+            },
+            {
+              "id": "70003",
+              "local": " Respawn de Espurr",
+              "coordinates": "30807, 20231, 5",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Areia",
+                "Água",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e7/Mapas_de_ADV_ROXO_-_30807%2C_20231%2C_5.webp"
+            },
+            {
+              "id": "70004",
+              "local": " Respawn de Starmie",
+              "coordinates": "30828, 20254, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Água",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/5c/Mapas_de_ADV_ROXO_-_30828%2C_20254%2C_7.webp"
+            },
+            {
+              "id": "70005",
+              "local": " Respawn de Starmie",
+              "coordinates": "30845, 20256, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Água",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/62/Mapas_de_ADV_ROXO_-_30845%2C_20256%2C_7.webp"
+            },
+            {
+              "id": "70006",
+              "local": " Saída norte de Lavender",
+              "coordinates": "30881, 20394, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/5e/Mapas_de_ADV_ROXO_-_30881%2C_20394%2C_7.webp"
+            },
+            {
+              "id": "70007",
+              "local": " Respawn de Elekid",
+              "coordinates": "30640, 20590, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fb/Mapas_de_ADV_ROXO_-_30640%2C_20590%2C_5.webp"
+            },
+            {
+              "id": "70008",
+              "local": " Respawn de Raichu e Manectric",
+              "coordinates": "30645, 20590, 3",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0c/Mapas_de_ADV_ROXO_-_30645%2C_20590%2C_3.webp"
+            },
+            {
+              "id": "70009",
+              "local": " Respawn de Elekid",
+              "coordinates": "30681, 20636, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/03/Mapas_de_ADV_ROXO_-_30681%2C_20636%2C_5.webp"
+            },
+            {
+              "id": "70010",
+              "local": " Respawn de Alakazam",
+              "coordinates": "30711, 20227, 7",
+              "tags": [
+                "Piso",
+                "Areia",
+                "Fogo",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/21/Mapas_de_ADV_ROXO_-_30711%2C_20227%2C_7.webp"
+            },
+            {
+              "id": "70011",
+              "local": " Respawn de Machoke",
+              "coordinates": "30728, 20536, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/13/Mapas_de_ADV_ROXO_-_30728%2C_20536%2C_5.webp"
+            },
+            {
+              "id": "70012",
+              "local": " Respawn de Machamp",
+              "coordinates": "30730, 20507, 4",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/66/Mapas_de_ADV_ROXO_-_30730%2C_20507%2C_4.webp"
+            },
+            {
+              "id": "70013",
+              "local": " Respawn de Infernape",
+              "coordinates": "30743, 20520, 3",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/94/Mapas_de_ADV_ROXO_-_30743%2C_20520%2C_3.webp"
+            },
+            {
+              "id": "70014",
+              "local": " Respawn de Alakazam",
+              "coordinates": "30752, 20277, 7",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/cc/Mapas_de_ADV_ROXO_-_30752%2C_20277%2C_7.webp"
+            },
+            {
+              "id": "70015",
+              "local": " Respawn de Gallade",
+              "coordinates": "30776, 20242, 4",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/5c/Mapas_de_ADV_ROXO_-_30776%2C_20242%2C_4.webp"
+            },
+            {
+              "id": "70016",
+              "local": " Respawn de Machoke",
+              "coordinates": "30783, 20514, 5",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/74/Mapas_de_ADV_ROXO_-_30783%2C_20514%2C_5.webp"
+            },
+            {
+              "id": "70017",
+              "local": " Respawn de Machamp",
+              "coordinates": "30784, 20537, 4",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7c/Mapas_de_ADV_ROXO_-_30784%2C_20537%2C_4.webp"
+            },
+            {
+              "id": "70018",
+              "local": " Caminho entre Torterra e Gardevoir",
+              "coordinates": "30551, 20912, 7",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/71/Mapas_de_ADV_ROXO_-_30551%2C_20912%2C_7.webp"
+            },
+            {
+              "id": "70019",
+              "local": " Respawn de Litleo",
+              "coordinates": "30568, 20707, 4",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/83/Mapas_de_ADV_ROXO_-_30568%2C_20707%2C_4.webp"
+            },
+            {
+              "id": "70020",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30610, 20523, 5",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d1/Mapas_de_ADV_ROXO_-_30610%2C_20523%2C_5.webp"
+            },
+            {
+              "id": "70021",
+              "local": " Respawn de Luxray",
+              "coordinates": "30625, 20607, 4",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/5c/Mapas_de_ADV_ROXO_-_30625%2C_20607%2C_4.webp"
+            },
+            {
+              "id": "70022",
+              "local": " Respawn de Shuppet",
+              "coordinates": "30235, 20594, 6",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/cb/Mapas_de_ADV_ROXO_-_30235%2C_20594%2C_6.webp"
+            },
+            {
+              "id": "70023",
+              "local": " Respawn de Perrserker",
+              "coordinates": "30242, 20511, 10",
+              "tags": [
+                "Piso",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/66/Mapas_de_ADV_ROXO_-_30242%2C_20511%2C_10.webp"
+            },
+            {
+              "id": "70024",
+              "local": " Respawn de Galarian Meowth",
+              "coordinates": "30269, 20468, 9",
+              "tags": [
+                "Piso",
+                "Pedra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1a/Mapas_de_ADV_ROXO_-_30269%2C_20468%2C_9.webp"
+            },
+            {
+              "id": "70025",
+              "local": " Respawn de Sentinelas",
+              "coordinates": "30270, 20232, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f0/Mapas_de_ADV_ROXO_-_30270%2C_20232%2C_5.webp"
+            },
+            {
+              "id": "70026",
+              "local": " Respawn de Banette e Misdreavus",
+              "coordinates": "30284, 20519, 6",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e8/Mapas_de_ADV_ROXO_-_30284%2C_20519%2C_6.webp"
+            },
+            {
+              "id": "70027",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30317, 20416, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/5d/Mapas_de_ADV_ROXO_-_30317%2C_20416%2C_5.webp"
+            },
+            {
+              "id": "70028",
+              "local": " Respawn de Klink e Klang",
+              "coordinates": "30371, 20310, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/66/Mapas_de_ADV_ROXO_-_30371%2C_20310%2C_5.webp"
+            },
+            {
+              "id": "70029",
+              "local": " Respawn de Darkrai",
+              "coordinates": "30395, 20388, 5",
+              "tags": [
+                "Piso",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/ab/Mapas_de_ADV_ROXO_-_30395%2C_20388%2C_5.webp"
+            },
+            {
+              "id": "70030",
+              "local": " Respawn de Scizor",
+              "coordinates": "30423, 20244, 7",
+              "tags": [
+                "Piso",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/58/Mapas_de_ADV_ROXO_-_30423%2C_20244%2C_7.webp"
+            },
+            {
+              "id": "70031",
+              "local": " Respawn de Klink e Klang",
+              "coordinates": "30424, 20313, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/da/Mapas_de_ADV_ROXO_-_30424%2C_20313%2C_5.webp"
+            },
+            {
+              "id": "70032",
+              "local": " Respawn de Klink e Klang",
+              "coordinates": "30450, 20284, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/97/Mapas_de_ADV_ROXO_-_30450%2C_20284%2C_5.webp"
+            },
+            {
+              "id": "70033",
+              "local": " Respawn de Klinklang",
+              "coordinates": "30461, 20312, 4",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e9/Mapas_de_ADV_ROXO_-_30461%2C_20312%2C_4.webp"
+            },
+            {
+              "id": "70034",
+              "local": " Respawn de Alolan Meowth",
+              "coordinates": "30093, 20437, 6",
+              "tags": [
+                "Piso",
+                "Terra",
+                "Pedra",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b9/Mapas_de_ADV_ROXO_-_30093%2C_20437%2C_6.webp"
+            },
+            {
+              "id": "70035",
+              "local": " Respawn de Misdreavus e Banette",
+              "coordinates": "30098, 20515, 6",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/7f/Mapas_de_ADV_ROXO_-_30098%2C_20515%2C_6.webp"
+            },
+            {
+              "id": "70036",
+              "local": " Respawn de Alolan Meowth",
+              "coordinates": "30201, 20411, 5",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3d/Mapas_de_ADV_ROXO_-_30201%2C_20411%2C_5.webp"
+            },
+            {
+              "id": "70037",
+              "local": " Respawn de Misdreavus e Banette",
+              "coordinates": "30201, 20457, 6",
+              "tags": [
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4e/Mapas_de_ADV_ROXO_-_30201%2C_20457%2C_6.webp"
+            },
+            {
+              "id": "70038",
+              "local": " Respawn de Alolan Persian",
+              "coordinates": "30203, 20329, 6",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/ea/Mapas_de_ADV_ROXO_-_30203%2C_20329%2C_6.webp"
+            },
+            {
+              "id": "70039",
+              "local": " Respawn de Shuppet",
+              "coordinates": "30204, 20501, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d7/Mapas_de_ADV_ROXO_-_30204%2C_20501%2C_5.webp"
+            },
+            {
+              "id": "70040",
+              "local": " Respawn de Honchkrow",
+              "coordinates": "30209, 20398, 4",
+              "tags": [
+                "Piso",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/96/Mapas_de_ADV_ROXO_-_30209%2C_20398%2C_4.webp"
+            },
+            {
+              "id": "70041",
+              "local": " Respawn de Alolan Persian",
+              "coordinates": "30214, 20358, 6",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c4/Mapas_de_ADV_ROXO_-_30214%2C_20358%2C_6.webp"
+            },
+            {
+              "id": "70042",
+              "local": " Respawn de Shuppet",
+              "coordinates": "30219, 20563, 5",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/55/Mapas_de_ADV_ROXO_-_30219%2C_20563%2C_5.webp"
+            },
+            {
+              "id": "70043",
+              "local": " Respawn de Alolan Persian",
+              "coordinates": "30225, 20359, 7",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/04/Mapas_de_ADV_ROXO_-_30225%2C_20359%2C_7.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "Mapa Azul",
+      "locations": [
+        {
+          "name": "Areia",
+          "maps": [
+            {
+              "id": "100001",
+              "local": "Tangle Island",
+              "coordinates": "2260, 29935, 6",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/06/%28x%3D2260%2C_y%3D29935%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "100002",
+              "local": "Dunes of Silence",
+              "coordinates": "2314, 31112, 6",
+              "tags": [
+                "Água",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/31/%28x%3D2314%2C_y%3D31112%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "100003",
+              "local": "Palm Island",
+              "coordinates": "2636, 31162, 4",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f8/%28x%3D2636%2C_y%3D31162%2C_z%3D4%29.webp"
+            },
+            {
+              "id": "100004",
+              "local": "Coconut Island",
+              "coordinates": "2824, 31421, 5",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8b/%28x%3D2824%2C_y%3D31421%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "100005",
+              "local": "Sunny Islands",
+              "coordinates": "3269, 30668, 7",
+              "tags": [
+                "Areia",
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c4/%28x%3D3269%2C_y%3D30668%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "100006",
+              "local": "Norte de Dark Cave",
+              "coordinates": "3429, 30277, 6",
+              "tags": [
+                "Areia",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/fb/%28x%3D3429%2C_y%3D30277%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "100007",
+              "local": "Dragonstone Island",
+              "coordinates": "3545, 29995, 6",
+              "tags": [
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8a/%28x%3D3545%2C_y%3D29995%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "100008",
+              "local": "Dragonstone Island",
+              "coordinates": "3561, 30013, 6",
+              "tags": [
+                "Areia",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6d/%28x%3D3561%2C_y%3D30013%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "100009",
+              "local": "Dust Island",
+              "coordinates": "4012, 29977, 7",
+              "tags": [
+                "Areia",
+                "Terra",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/11/%28x%3D4012%2C_y%3D29977%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "100010",
+              "local": "Dust Island",
+              "coordinates": "4026, 29958, 4",
+              "tags": [
+                "Areia",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/be/%28x%3D4026%2C_y%3D29958%2C_z%3D4%29.webp"
+            }
+          ]
+        },
+        {
+          "name": "Gelo",
+          "maps": [
+            {
+              "id": "200001",
+              "local": "Ice Path",
+              "coordinates": "3420, 30162, 8",
+              "tags": [
+                "Gelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/da/%28x%3D3420%2C_y%3D30162%2C_z%3D8%29.webp"
+            }
+          ]
+        },
+        {
+          "name": "Grama",
+          "maps": [
+            {
+              "id": "300001",
+              "local": "Arborville Town",
+              "coordinates": "2622, 30054, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/70/%28x%3D2622%2C_y%3D30054%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300002",
+              "local": "Forgotten Island",
+              "coordinates": "2626, 31348, 5",
+              "tags": [
+                "Pedra",
+                "Árvore",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/46/%28x%3D2626%2C_y%3D31348%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "300003",
+              "local": "Palm Island",
+              "coordinates": "2631, 31174, 6",
+              "tags": [
+                "Grama",
+                "Areia",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/30/%28x%3D2631%2C_y%3D31174%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300004",
+              "local": "Ilex Forest",
+              "coordinates": "2786, 30902, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/33/%28x%3D2786%2C_y%3D30902%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300005",
+              "local": "Arborville Town",
+              "coordinates": "2803, 30049, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e5/%28x%3D2803%2C_y%3D30049%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300006",
+              "local": "Ecruteak City",
+              "coordinates": "3110, 30242, 6",
+              "tags": [
+                "Grama",
+                "Pântano",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/77/%28x%3D3110%2C_y%3D30242%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300007",
+              "local": "Secret Garden",
+              "coordinates": "3134, 31144, 6",
+              "tags": [
+                "Grama",
+                "Piso",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8c/%28x%3D3134%2C_y%3D31144%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300008",
+              "local": "Secret Garden",
+              "coordinates": "3167, 31125, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/27/%28x%3D3167%2C_y%3D31125%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300009",
+              "local": "Secret Garden",
+              "coordinates": "3225, 31163, 6",
+              "tags": [
+                "Água",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/bc/%28x%3D3225%2C_y%3D31163%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300010",
+              "local": "Lake of Rage",
+              "coordinates": "3258, 30011, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Cerca"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e9/%28x%3D3258%2C_y%3D30011%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300011",
+              "local": "Norte de Cherrygrove City",
+              "coordinates": "3375, 30408, 6",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/1/1c/%28x%3D3375%2C_y%3D30408%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300012",
+              "local": "Lake of Rage",
+              "coordinates": "3406, 29889, 5",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8b/%28x%3D3406%2C_y%3D29889%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "300013",
+              "local": "Lake of Rage",
+              "coordinates": "3418, 30005, 6",
+              "tags": [
+                "Grama",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/da/%28x%3D3418%2C_y%3D30005%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300014",
+              "local": "New Bark Town",
+              "coordinates": "3576, 30577, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Água"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a4/%28x%3D3576%2C_y%3D30577%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300015",
+              "local": "New Bark Town",
+              "coordinates": "3672, 30493, 6",
+              "tags": [
+                "Grama",
+                "Água",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/83/%28x%3D3672%2C_y%3D30493%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300016",
+              "local": "Mt. Ember",
+              "coordinates": "3728, 31193, 6",
+              "tags": [
+                "Grama",
+                "Árvore",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/70/%28x%3D3728%2C_y%3D31193%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "300017",
+              "local": "Blossom Island",
+              "coordinates": "3885, 30873, 5",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/2d/%28x%3D3885%2C_y%3D30873%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "300018",
+              "local": "Blossom Island",
+              "coordinates": "3955, 30891, 3",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/20/%28x%3D3955%2C_y%3D30891%2C_z%3D3%29.webp"
+            },
+            {
+              "id": "300019",
+              "local": "Quiet Island",
+              "coordinates": "3976, 31368, 6",
+              "tags": [
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/3c/%28x%3D3976%2C_y%3D31368%2C_z%3D6%29.webp"
+            }
+          ]
+        },
+        {
+          "name": "Pedra",
+          "maps": [
+            {
+              "id": "400001",
+              "local": "Cliff Cave",
+              "coordinates": "2305, 30883, 7",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/ba/%28x%3D2305%2C_y%3D30883%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "400002",
+              "local": "Cliff  Cave",
+              "coordinates": "2542, 30934, 8",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b8/%28x%3D2542%2C_y%3D30934%2C_z%3D8%29.webp"
+            },
+            {
+              "id": "400003",
+              "local": "Caverna Moomoo Farm",
+              "coordinates": "2570, 30314, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b8/%28x%3D2570%2C_y%3D30314%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "400004",
+              "local": "Caverna Moomoo Farm",
+              "coordinates": "2623, 30240, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/6b/%28x%3D2623%2C_y%3D30240%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "400005",
+              "local": "Ecruteak City",
+              "coordinates": "2922, 30078, 9",
+              "tags": [
+                "Pedra",
+                "Terra",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/91/%28x%3D2922%2C_y%3D30078%2C_z%3D9%29.webp"
+            },
+            {
+              "id": "400006",
+              "local": "Union Cave",
+              "coordinates": "2922, 30779, 11",
+              "tags": [
+                "Pedra",
+                "Água",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/72/%28x%3D2922%2C_y%3D30779%2C_z%3D11%29.webp"
+            },
+            {
+              "id": "400007",
+              "local": "Union Cave",
+              "coordinates": "3036, 30771, 11",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/9f/%28x%3D3036%2C_y%3D30771%2C_z%3D11%29.webp"
+            },
+            {
+              "id": "400008",
+              "local": "Caverna ao sul de Ecruteak City",
+              "coordinates": "3038, 30285, 9",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/9f/%28x%3D3038%2C_y%3D30285%2C_z%3D9%29.webp"
+            },
+            {
+              "id": "400009",
+              "local": "Caverna ao sul de Ecruteak City",
+              "coordinates": "3066, 30216, 13",
+              "tags": [
+                "Pedra",
+                "Cogumelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b9/%28x%3D3066%2C_y%3D30216%2C_z%3D13%29.webp"
+            },
+            {
+              "id": "400010",
+              "local": "Ecruteak City",
+              "coordinates": "3101, 30195, 11",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/56/%28x%3D3101%2C_y%3D30195%2C_z%3D11%29.webp"
+            },
+            {
+              "id": "400011",
+              "local": "Mt. Mortar",
+              "coordinates": "3129, 30081, 4",
+              "tags": [
+                "Pedra",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/da/%28x%3D3129%2C_y%3D30081%2C_z%3D4%29.webp"
+            },
+            {
+              "id": "400012",
+              "local": "Mt. Mortar",
+              "coordinates": "3252, 30113, 6",
+              "tags": [
+                "Pedra",
+                "Terra",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0e/%28x%3D3252%2C_y%3D30113%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "400013",
+              "local": "Mt. Mortar",
+              "coordinates": "3276, 30141, 4",
+              "tags": [
+                "Pedra",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/64/%28x%3D3276%2C_y%3D30141%2C_z%3D4%29.webp"
+            },
+            {
+              "id": "400014",
+              "local": "Direita de Violet City",
+              "coordinates": "3300, 30364, 8",
+              "tags": [
+                "Pedra",
+                "Água",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/59/%28x%3D3300%2C_y%3D30364%2C_z%3D8%29.webp"
+            },
+            {
+              "id": "400015",
+              "local": "New Bark Town",
+              "coordinates": "3502, 30429, 6",
+              "tags": [
+                "Pedra",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/95/%28x%3D3502%2C_y%3D30429%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "400016",
+              "local": "Dragonstone Island",
+              "coordinates": "3529, 30012, 7",
+              "tags": [
+                "Pedra",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/e/e0/%28x%3D3529%2C_y%3D30012%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "400017",
+              "local": "Spark Island",
+              "coordinates": "3544, 30743, 6",
+              "tags": [
+                "Pedra",
+                "Grama",
+                "Eletricidade"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d3/%28x%3D3544%2C_y%3D30743%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "400018",
+              "local": "Dragonstone Island",
+              "coordinates": "3547, 30008, 3",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/45/%28x%3D3547%2C_y%3D30008%2C_z%3D3%29.webp"
+            },
+            {
+              "id": "400019",
+              "local": "Norte de New Bark Town",
+              "coordinates": "3596, 30314, 4",
+              "tags": [
+                "Pedra",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/30/%28x%3D3596%2C_y%3D30314%2C_z%3D4%29.webp"
+            },
+            {
+              "id": "400020",
+              "local": "Mt. Ember",
+              "coordinates": "3601, 31269, 4",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d7/%28x%3D3601%2C_y%3D31269%2C_z%3D4%29.webp"
+            },
+            {
+              "id": "400021",
+              "local": "Blackthorn City",
+              "coordinates": "3608, 30123, 5",
+              "tags": [
+                "Pedra",
+                "Gelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/5c/%28x%3D3608%2C_y%3D30123%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "400022",
+              "local": "Norte de New Bark Town",
+              "coordinates": "3637, 30398, 6",
+              "tags": [
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/30/%28x%3D3637%2C_y%3D30398%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "400023",
+              "local": "Mt. Ember",
+              "coordinates": "3670, 31203, 1",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/df/%28x%3D3670%2C_y%3D31203%2C_z%3D1%29.webp"
+            },
+            {
+              "id": "400024",
+              "local": "Spark Island",
+              "coordinates": "3684, 30773, 10",
+              "tags": [
+                "Pedra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/41/%28x%3D3684%2C_y%3D30773%2C_z%3D10%29.webp"
+            },
+            {
+              "id": "400025",
+              "local": "Mt. Ember",
+              "coordinates": "3756, 31250, 8",
+              "tags": [
+                "Pedra",
+                "Fogo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d7/%28x%3D3756%2C_y%3D31250%2C_z%3D8%29.webp"
+            },
+            {
+              "id": "400026",
+              "local": "Blackthorn City",
+              "coordinates": "3472, 30149, 7",
+              "tags": [
+                "Gelo",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0f/%28x%3D3472%2C_y%3D30149%2C_z%3D7%29.webp"
+            }
+          ]
+        },
+        {
+          "name": "Piso",
+          "maps": [
+            {
+              "id": "500001",
+              "local": "Dunes of Silence",
+              "coordinates": "2278, 31261, 8",
+              "tags": [
+                "Piso",
+                "Pirâmide",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/bc/%28x%3D2278%2C_y%3D31261%2C_z%3D8%29.webp"
+            },
+            {
+              "id": "500002",
+              "local": "Dunes of Silence",
+              "coordinates": "2311, 31180, 7",
+              "tags": [
+                "Piso",
+                "Terra",
+                "Construção",
+                "Pirâmide"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/85/%28x%3D2311%2C_y%3D31180%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "500003",
+              "local": "Dunes of Silence",
+              "coordinates": "2437, 31222, 8",
+              "tags": [
+                "Pirâmide",
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/bf/%28x%3D2437%2C_y%3D31222%2C_z%3D8%29.webp"
+            },
+            {
+              "id": "500004",
+              "local": "Forgotten Island",
+              "coordinates": "2629, 31331, 10",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/30/%28x%3D2629%2C_y%3D31331%2C_z%3D10%29.webp"
+            },
+            {
+              "id": "500005",
+              "local": "Olivine City",
+              "coordinates": "2679, 30394, 9",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8f/%28x%3D2679%2C_y%3D30394%2C_z%3D9%29.webp"
+            },
+            {
+              "id": "500006",
+              "local": "Alakazan direita de Goldenrod City",
+              "coordinates": "2906, 30570, 10",
+              "tags": [
+                "Piso"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/3/34/%28x%3D2906%2C_y%3D30570%2C_z%3D10%29.webp"
+            },
+            {
+              "id": "500007",
+              "local": "Violet City",
+              "coordinates": "3229, 30442, 11",
+              "tags": [
+                "Piso",
+                "Construção"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/9/90/%28x%3D3229%2C_y%3D30442%2C_z%3D11%29.webp"
+            },
+            {
+              "id": "500008",
+              "local": "Lake of Rage",
+              "coordinates": "3395, 29962, 5",
+              "tags": [
+                "Piso",
+                "Construção",
+                "Eletricidade"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/8/8c/%28x%3D3395%2C_y%3D29962%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "500009",
+              "local": "Astral Ruins",
+              "coordinates": "3400, 30965, 5",
+              "tags": [
+                "Piso",
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4e/%28x%3D3400%2C_y%3D30965%2C_z%3D5%29.webp"
+            }
+          ]
+        },
+        {
+          "name": "Subaquático",
+          "maps": [
+            {
+              "id": "600001",
+              "local": "Palm Island",
+              "coordinates": "2686, 31182, 7",
+              "tags": [
+                "Subaquático",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/47/%28x%3D2686%2C_y%3D31182%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "600002",
+              "local": "Ruins of Alph",
+              "coordinates": "2994, 30416, 7",
+              "tags": [
+                "Subaquático"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/2/27/%28x%3D2994%2C_y%3D30416%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "600003",
+              "local": "Lago ao norte de Violet City",
+              "coordinates": "3200, 30225, 7",
+              "tags": [
+                "Subaquático"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c5/%28x%3D3200%2C_y%3D30225%2C_z%3D7%29.webp"
+            }
+          ]
+        },
+        {
+          "name": "Terra",
+          "maps": [
+            {
+              "id": "700001",
+              "local": "Tangle Island",
+              "coordinates": "2320, 30012, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/58/%28x%3D2320%2C_y%3D30012%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "700002",
+              "local": "Direita do Safari Zone",
+              "coordinates": "2395, 30573, 6",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/b/b7/%28x%3D2395%2C_y%3D30573%2C_z%3D6%29.webp"
+            },
+            {
+              "id": "700003",
+              "local": "Tangle Island",
+              "coordinates": "2414, 30088, 8",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/6/64/%28x%3D2414%2C_y%3D30088%2C_z%3D8%29.webp"
+            },
+            {
+              "id": "700004",
+              "local": "Esquerda da National Park",
+              "coordinates": "2740, 30345, 7",
+              "tags": [
+                "Terra",
+                "Cogumelo",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/5/52/%28x%3D2740%2C_y%3D30345%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "700005",
+              "local": "Ilex Forest",
+              "coordinates": "2830, 30814, 7",
+              "tags": [
+                "Terra",
+                "Pedra",
+                "Montanha"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/c/c2/%28x%3D2830%2C_y%3D30814%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "700006",
+              "local": "National Park",
+              "coordinates": "2881, 30294, 8",
+              "tags": [
+                "Terra",
+                "Cogumelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/0/0e/%28x%3D2881%2C_y%3D30294%2C_z%3D8%29.webp"
+            },
+            {
+              "id": "700007",
+              "local": "Azalea Town",
+              "coordinates": "2926, 30992, 7",
+              "tags": [
+                "Terra",
+                "Cogumelo",
+                "Pântano"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/74/%28x%3D2926%2C_y%3D30992%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "700008",
+              "local": "Sul de Azalea Town",
+              "coordinates": "3066, 30959, 7",
+              "tags": [
+                "Terra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/77/%28x%3D3066%2C_y%3D30959%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "700009",
+              "local": "Direita de Slowpoke Well",
+              "coordinates": "3156, 30793, 5",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/4/4d/%28x%3D3156%2C_y%3D30793%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "700010",
+              "local": "Sul de Violet City",
+              "coordinates": "3196, 30447, 7",
+              "tags": [
+                "Terra",
+                "Pântano",
+                "Cogumelo"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/a/a7/%28x%3D3196%2C_y%3D30447%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "700011",
+              "local": "Sunny Islands",
+              "coordinates": "3222, 30621, 5",
+              "tags": [
+                "Grama",
+                "Terra",
+                "Areia"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/f/f9/%28x%3D3222%2C_y%3D30621%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "700012",
+              "local": "Blossom Island",
+              "coordinates": "3962, 30895, 5",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Pedra"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/7/77/%28x%3D3962%2C_y%3D30895%2C_z%3D5%29.webp"
+            },
+            {
+              "id": "700013",
+              "local": "Blossom Island",
+              "coordinates": "3972, 30889, 7",
+              "tags": [
+                "Terra",
+                "Grama"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d2/%28x%3D3972%2C_y%3D30889%2C_z%3D7%29.webp"
+            },
+            {
+              "id": "700014",
+              "local": "Star Islands",
+              "coordinates": "4028, 30721, 5",
+              "tags": [
+                "Terra",
+                "Grama",
+                "Árvore"
+              ],
+              "imageUrl": "https://wiki.pokexgames.com/images/d/d8/%28x%3D4028%2C_y%3D30721%2C_z%3D5%29.webp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

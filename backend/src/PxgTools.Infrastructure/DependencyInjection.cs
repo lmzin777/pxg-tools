@@ -1,14 +1,14 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
+using PxgTools.Application.Admin;
 using PxgTools.Application.Clans;
-<<<<<<< HEAD
 using PxgTools.Application.Crafts;
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 using PxgTools.Application.Items;
 using PxgTools.Application.Pokemon;
 using PxgTools.Application.Professions;
+using PxgTools.Application.Search;
+using PxgTools.Application.Wiki;
 using PxgTools.Infrastructure.Persistence;
 
 namespace PxgTools.Infrastructure;
@@ -22,13 +22,13 @@ public static class DependencyInjection
 
         services.AddSingleton(_ => new NpgsqlDataSourceBuilder(NormalizeConnectionString(connectionString)).Build());
         services.AddScoped<IClanReadRepository, PostgresClanReadRepository>();
-<<<<<<< HEAD
         services.AddScoped<ICraftReadRepository, PostgresCraftReadRepository>();
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
         services.AddScoped<IProfessionReadRepository, PostgresProfessionReadRepository>();
         services.AddScoped<IPokemonReadRepository, PostgresPokemonReadRepository>();
         services.AddScoped<IItemReadRepository, PostgresItemReadRepository>();
+        services.AddScoped<IAdminReadRepository, PostgresAdminReadRepository>();
+        services.AddScoped<IWikiReadRepository, PostgresWikiReadRepository>();
+        services.AddScoped<ISearchReadRepository, PostgresSearchReadRepository>();
 
         return services;
     }

@@ -1,10 +1,6 @@
 {
   "sourceUrl": "https://wiki.pokexgames.com/index.php/Craft_Profiss%C3%B5es_-_Engenheiro",
-<<<<<<< HEAD
   "scrapedAt": "2026-06-29T22:37:06.349Z",
-=======
-  "scrapedAt": "2026-06-29T02:47:11.039Z",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
   "crafts": [
     {
       "slug": "engenheiro-geral-rank-e-poke-ball-100x",
@@ -13589,7 +13585,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "slug": "engenheiro-mecanico-crafts-exclusivos-enhancement-kit",
       "itemName": "Enhancement Kit",
       "itemSlug": "",
@@ -16235,8 +16230,6 @@
       ]
     },
     {
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
       "slug": "professor-geral-rank-e-small-potion-10x",
       "itemName": "Small Potion (10x)",
       "itemSlug": "small-potion",
@@ -26965,7 +26958,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "slug": "professor-alquimista-crafts-exclusivos-philosopher-s-stone",
       "itemName": "Philosopher's Stone",
       "itemSlug": "",
@@ -27832,8 +27824,6 @@
       ]
     },
     {
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
       "slug": "estilista-geral-rank-e-diamond-dust-20x",
       "itemName": "Diamond Dust (20x)",
       "itemSlug": "",
@@ -67827,19 +67817,11 @@
         "Item": "Shaman Costume (Zoroark)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Shadow Fox Tail 100 Darkness Stone 75 Black Wool Ball 25 Corrupted Miss Traces 25 Corrupted Doll Star 1 Big Boss Hat 1 Dog Tail"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Shadow Fox Tail 100 Darkness Stone 75 Black Wool Ball 25 Corrupted Miss Traces 25 Corrupted Doll Star 1 Big Boss Hat 1 Dog Tail"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -67914,19 +67896,11 @@
         "Item": "Faun Costume (Shiny Rampardos)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Red Solid Head 100 Rock Stone 20 Corrupted Tree Branch 20 Corrupted Lizard Tail 15 Solid Head 1 Golden Nuggets"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Red Solid Head 100 Rock Stone 20 Corrupted Tree Branch 20 Corrupted Lizard Tail 15 Solid Head 1 Golden Nuggets"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -67995,19 +67969,11 @@
         "Item": "Mage Costume (Shiny Pachirisu)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Pink Electric Box 100 Thunder Stone 50 Corrupted Magnet 20 Elefish Fin 20 Mole Hair 5 Alolan Electric Rat Tail 1 Gleam Tail 1 Eel Remains"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Pink Electric Box 100 Thunder Stone 50 Corrupted Magnet 20 Elefish Fin 20 Mole Hair 5 Alolan Electric Rat Tail 1 Gleam Tail 1 Eel Remains"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -68088,19 +68054,11 @@
         "Item": "Sorcerer Costume (Mega Pidgeot)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Shiny Feather 100 Feather Stone 70 Small Bird Beak 35 Corrupted Streak Tail 35 Corrupted Feather 20 Lovely Topknot 1 Giant Dragon Pearl"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Shiny Feather 100 Feather Stone 70 Small Bird Beak 35 Corrupted Streak Tail 35 Corrupted Feather 20 Lovely Topknot 1 Giant Dragon Pearl"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -68175,19 +68133,11 @@
         "Item": "Shogun Costume (Mega Glalie)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Snow Blocks 100 Ice Stone 40 Corrupted Ice Piece 40 Corrupted Ice Orb 40 Red Spike 1 Giant Tusk"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Snow Blocks 100 Ice Stone 40 Corrupted Ice Piece 40 Corrupted Ice Orb 40 Red Spike 1 Giant Tusk"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -68256,19 +68206,11 @@
         "Item": "Viking Costume (Shiny Heatmor)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Pot Of Dark Lava 100 Fire Stone 90 Corrupted Pot Of Lava 40 Royal Mane 40 Black Wool Ball 1 Flame Tail 1 Turtle Shell"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Pot Of Dark Lava 100 Fire Stone 90 Corrupted Pot Of Lava 40 Royal Mane 40 Black Wool Ball 1 Flame Tail 1 Turtle Shell"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -68343,19 +68285,11 @@
         "Item": "Monk Costume (Shiny Hariyama)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Big Red Hand 100 Punch Stone 100 Corrupted Champion Belt 100 Small Bird Beak 1 Bear Feet"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Big Red Hand 100 Punch Stone 100 Corrupted Champion Belt 100 Small Bird Beak 1 Bear Feet"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -68418,19 +68352,11 @@
         "Item": "Fallen Angel Costume (Shiny Gardevoir)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Fairy Flower 100 Heart Stone 35 Green Hair 35 Lovely Topknot 1 Blade Horn 1 Dog Collar"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Fairy Flower 100 Heart Stone 35 Green Hair 35 Lovely Topknot 1 Blade Horn 1 Dog Collar"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -68499,19 +68425,11 @@
         "Item": "Dark Knight Costume (Shiny Mawile)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Pink Metal Jaw 10 Metal Stone 15 Black Lucky Charm 15 Strange Fur 9 Remains Of Gears 1 Magnet Remains"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Pink Metal Jaw 10 Metal Stone 15 Black Lucky Charm 15 Strange Fur 9 Remains Of Gears 1 Magnet Remains"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -68580,19 +68498,11 @@
         "Item": "Assassin Costume (Shiny Sceptile)",
         "Habilidade": "Skill 120",
         "Tempo de espera": "3 dias",
-<<<<<<< HEAD
         "Materiais": "12000 Nightmare Style Point Cosmic Addon Recipe 200 Blue Greens 100 Leaf Stone 50 Petite Leaves 30 Bagworm Green Leaves 30 Corrupted Vines 2 Continent Thorn 2 Dragon Remains"
       },
       "ingredients": [
         {
           "name": "Nightmare Style Point Cosmic Addon Recipe",
-=======
-        "Materiais": "12000 Nightmare Style Point T1H Addons (Recipe) 200 Blue Greens 100 Leaf Stone 50 Petite Leaves 30 Bagworm Green Leaves 30 Corrupted Vines 2 Continent Thorn 2 Dragon Remains"
-      },
-      "ingredients": [
-        {
-          "name": "Nightmare Style Point T1H Addons (Recipe)",
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
           "itemSlug": "",
           "quantity": "12000",
           "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Nightmare_Style_Point.gif"
@@ -70981,7 +70891,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "slug": "estilista-decorador-crafts-exclusivos-decorator-workshop",
       "itemName": "Decorator Workshop",
       "itemSlug": "",
@@ -79698,8 +79607,6 @@
       ]
     },
     {
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
       "slug": "aventureiro-geral-rank-e-diamond-dust-20x",
       "itemName": "Diamond Dust (20x)",
       "itemSlug": "",
@@ -85157,7 +85064,6 @@
           "iconUrl": "https://wiki.pokexgames.com/images/c/c8/Leaf-stone.gif"
         }
       ]
-<<<<<<< HEAD
     },
     {
       "slug": "aventureiro-cozinheiro-workshops-exclusivas-microwave",
@@ -85938,8 +85844,6 @@
           "iconUrl": "https://wiki.pokexgames.com/images/d/d3/Sentry_Remains.png"
         }
       ]
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     }
   ]
 }

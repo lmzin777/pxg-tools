@@ -1,0 +1,608 @@
+{
+    "sourceUrl":  "https://wiki.pokexgames.com/index.php/Monumentos",
+    "scrapedAt":  "2026-06-30T10:07:19.3092065Z",
+    "intro":  "Os monumentos espalhados pelo mapa do Nightmare World sao recursos que Decoradores podem estudar para adquirir conhecimento. Disponibilizamos as coordenadas ja encontradas para adicionar manualmente no mapa.",
+    "groups":  [
+                   {
+                       "area":  "Cinnabar",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30343, 20888, 6"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30350, 20786, 4"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30366, 20808, 5"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30336, 20817, 2"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30225, 20876, 5"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "30252, 20799, 5"
+                                         },
+                                         {
+                                             "number":  "7",
+                                             "coordinates":  "30313, 20783, 3"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Fire Island",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30478, 20579, 4"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30419, 20674, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Shadow Crypt",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30209, 20556, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30247, 20520, 6"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30117, 20558, 6"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Cerulean Swamp",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30503, 20316, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30447, 20271, 2"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30538, 20227, 5"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30432, 20280, 6"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30573, 20236, 6"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "30566, 20267, 7"
+                                         },
+                                         {
+                                             "number":  "7",
+                                             "coordinates":  "30466, 20303, 8"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Alakazam Lair",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30748, 20297, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30763, 20370, 6"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30778, 20352, 7"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30847, 20241, 7"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30704, 20201, 4"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "30738, 20232, 4"
+                                         },
+                                         {
+                                             "number":  "7",
+                                             "coordinates":  "30730, 20234, 6"
+                                         },
+                                         {
+                                             "number":  "8",
+                                             "coordinates":  "30688, 20270, 7"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Wastelands",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30582, 20344, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30627, 20326, 7"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30749, 20446, 7"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30685, 20391, 6"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30658, 20399, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Wildwind Island",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30522, 20049, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30523, 20057, 4"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30470, 20086, 3"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Lightning Storm Island",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "31130, 20092, 6"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "31161, 19998, 4"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Hurricane Island",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30682, 20098, 1"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30694, 20073, 1"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Cosmic Island",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30913, 20105, 2"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30868, 20081, 1"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Cosmic Island (T1H)",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "31128, 20061, 14"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "31166, 20216, 14"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "31057, 20326, 14"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "31300, 20288, 14"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "31244, 20227, 14"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "31247, 20128, 14"
+                                         },
+                                         {
+                                             "number":  "7",
+                                             "coordinates":  "31277, 19960, 14"
+                                         },
+                                         {
+                                             "number":  "8",
+                                             "coordinates":  "31506, 20293, 14"
+                                         },
+                                         {
+                                             "number":  "9",
+                                             "coordinates":  "31563, 20216, 14"
+                                         },
+                                         {
+                                             "number":  "10",
+                                             "coordinates":  "31512, 20063, 14"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Lavender",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30790, 20425, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Dragon Tunnel",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30818, 20356, 2"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30813, 20343, 5"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30793, 20370, 4"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Fighting Dojo",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30725, 20479, 7"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30748, 20529, 3"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30731, 20589, 4"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30762, 20558, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Frozen Lands",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30947, 20313, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30980, 20382, 6"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30925, 20469, 6"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30999, 20480, 3"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30869, 20472, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Power Plant",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30612, 20634, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30607, 20643, 6"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30669, 20623, 4"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30676, 20615, 3"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30574, 20600, 8"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "30628, 20532, 5"
+                                         },
+                                         {
+                                             "number":  "7",
+                                             "coordinates":  "30765, 20601, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Fuchsia",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30711, 20693, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Dried Diving Spot",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30829, 20735, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30849, 20676, 6"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30867, 20549, 6"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30916, 20579, 2"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Safari Zone",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30653, 20731, 4"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30630, 20784, 6"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30582, 20717, 7"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Seafoam Islands",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30555, 20825, 5"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30586, 20896, 7"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30643, 20879, 6"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30595, 21005, 7"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30571, 20980, 5"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "30588, 20928, 1"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Isolated Sands",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30426, 20940, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Lost Island",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "31041, 20746, 4"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Mt. Moon",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30368, 20271, 4"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30389, 20283, 5"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Peaky Mountains",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30384, 20404, 2"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30348, 20431, 4"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30399, 20404, 4"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30357, 20381, 6"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30385, 20462, 6"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "30530, 20511, 6"
+                                         },
+                                         {
+                                             "number":  "7",
+                                             "coordinates":  "30353, 20412, 7"
+                                         },
+                                         {
+                                             "number":  "8",
+                                             "coordinates":  "30530, 20386, 6"
+                                         },
+                                         {
+                                             "number":  "9",
+                                             "coordinates":  "30479, 20437, 7"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Dark Manor",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30130, 20320, 6"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30058, 20439, 6"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30227, 20377, 7"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30223, 20366, 5"
+                                         },
+                                         {
+                                             "number":  "5",
+                                             "coordinates":  "30231, 20414, 4"
+                                         },
+                                         {
+                                             "number":  "6",
+                                             "coordinates":  "30225, 20422, 2"
+                                         },
+                                         {
+                                             "number":  "7",
+                                             "coordinates":  "30221, 20393, 3"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Sarkies Fortress",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30146, 20311, 7"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30262, 20242, 4"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Sarkies Factory",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "29967, 20153, 4"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30130, 20087, 4"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Ultra Lab",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30250, 20235, 9"
+                                         },
+                                         {
+                                             "number":  "2",
+                                             "coordinates":  "30165, 20262, 8"
+                                         },
+                                         {
+                                             "number":  "3",
+                                             "coordinates":  "30201, 20286, 10"
+                                         },
+                                         {
+                                             "number":  "4",
+                                             "coordinates":  "30213, 20215, 10"
+                                         }
+                                     ]
+                   },
+                   {
+                       "area":  "Respawn de Togetic e Togekiss",
+                       "monuments":  [
+                                         {
+                                             "number":  "1",
+                                             "coordinates":  "30780, 19837, 4"
+                                         }
+                                     ]
+                   }
+               ]
+}

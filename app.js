@@ -1,4 +1,4 @@
-﻿const featureButtons = document.querySelectorAll('.feature-item');
+const featureButtons = document.querySelectorAll('.feature-item');
 const panels = document.querySelectorAll('.feature-panel');
 
 featureButtons.forEach((button) => {
@@ -1685,7 +1685,6 @@ let professionData = {
   relatedLinks: [],
 };
 let activeProfessionSlug = '';
-<<<<<<< HEAD
 let activeProfessionTab = 'overview';
 
 let craftData = {
@@ -1698,6 +1697,20 @@ let activeProfessorStudentClan = 'Malefic';
 let professorStudentData = {
   groups: [],
 };
+let monumentData = {
+  sourceUrl: '',
+  intro: '',
+  groups: [],
+};
+let activeStylistMonumentArea = '';
+let stylistMonumentSearch = '';
+let adventurerMapData = {
+  sourceUrl: '',
+  mapTypes: [],
+};
+let activeAdventurerMapType = '';
+let activeAdventurerMapLocation = '';
+let adventurerMapNumberFilter = '';
 
 const PROFESSOR_STUDENT_GROUPS = [
   { clan: 'Malefic', students: [
@@ -1807,8 +1820,6 @@ const PROFESSOR_STUDENT_GROUPS = [
     { name: 'Steven Student Card', level: 500, iconUrl: 'https://wiki.pokexgames.com/images/7/7e/Steven_Student_Card.png' },
   ] },
 ];
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 
 let pokemonData = {
   generations: [],
@@ -2372,7 +2383,6 @@ function normalizeProfessionPayload(payload) {
   };
 }
 
-<<<<<<< HEAD
 function normalizeCraftPayload(payload) {
   return {
     crafts: Array.isArray(payload?.crafts) ? payload.crafts : [],
@@ -2385,8 +2395,21 @@ function normalizeProfessorStudentsPayload(payload) {
   };
 }
 
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
+function normalizeMonumentsPayload(payload) {
+  return {
+    sourceUrl: payload?.sourceUrl || 'https://wiki.pokexgames.com/index.php/Monumentos',
+    intro: payload?.intro || '',
+    groups: Array.isArray(payload?.groups) ? payload.groups : [],
+  };
+}
+
+function normalizeAdventurerMapsPayload(payload) {
+  return {
+    sourceUrl: payload?.sourceUrl || 'https://wiki.pokexgames.com/index.php/Buscador_de_Mapas_de_Aventureiro',
+    mapTypes: Array.isArray(payload?.mapTypes) ? payload.mapTypes : [],
+  };
+}
+
 async function loadProfessions() {
   try {
     const response = await fetch('data/professions.json', { cache: 'no-store' });
@@ -2402,7 +2425,6 @@ async function loadProfessions() {
   }
 }
 
-<<<<<<< HEAD
 async function loadCrafts() {
   try {
     const response = await fetch('data/crafts.json', { cache: 'no-store' });
@@ -2433,8 +2455,36 @@ async function loadProfessorStudents() {
   }
 }
 
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
+async function loadMonuments() {
+  try {
+    const response = await fetch('data/monuments.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Monument data request failed with HTTP ${response.status}.`);
+    }
+
+    monumentData = normalizeMonumentsPayload(await response.json());
+    renderProfessionView();
+  } catch (error) {
+    console.warn('Monument data could not be loaded from data/monuments.json.', error);
+  }
+}
+
+async function loadAdventurerMaps() {
+  try {
+    const response = await fetch('data/adventurer-maps.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error(`Adventurer map data request failed with HTTP ${response.status}.`);
+    }
+
+    adventurerMapData = normalizeAdventurerMapsPayload(await response.json());
+    renderProfessionView();
+  } catch (error) {
+    console.warn('Adventurer map data could not be loaded from data/adventurer-maps.json.', error);
+  }
+}
+
 function renderProfessionLinkCard(link) {
   return `
     <article class="profession-link-card">
@@ -2451,7 +2501,6 @@ function renderProfessionLinkCard(link) {
   `;
 }
 
-<<<<<<< HEAD
 function renderProfessionTabLinkCard(link, tabId) {
   return `
     <article class="profession-link-card">
@@ -2490,8 +2539,6 @@ function renderProfessionInternalBack(label) {
   `;
 }
 
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
 function renderProfessionLinkSection(title, links) {
   if (!Array.isArray(links) || !links.length) {
     return '';
@@ -2507,7 +2554,6 @@ function renderProfessionLinkSection(title, links) {
   `;
 }
 
-<<<<<<< HEAD
 function findProfessionLink(detail, slug) {
   return [
     ...(detail.specializations || []),
@@ -2777,10 +2823,6 @@ function renderEngineerProfessionDetail(detail) {
   const tabContent = {
     overview: `
       <section class="clan-detail-section">
-        <h4>Descricao</h4>
-        <p>O Engenheiro e o mestre da tecnologia e producao de objetos mecanicos e eletronicos. O jogador que for engenheiro tera a habilidade de criar varios aparelhos eletronicos para ajudar na sua jornada, principalmente Pok&eacute;bolas que sao essenciais para qualquer treinador Pok&eacute;mon. Em niveis mais avancados, o Engenheiro ainda sera capaz de produzir Pok&eacute;bolas exclusivas e que possuem maior chance de capturar determinados Pok&eacute;mon.</p>
-      </section>
-      <section class="clan-detail-section">
         <h4>Lucro</h4>
         <p>O principal modo de lucrar como um Engenheiro e vendendo Pok&eacute;bolas, pois, em razao da sua necessidade no jogo, o comercio se torna estavel. Alem disso, engenheiros podem construir eletronicos de decoracao, addons e utilitarios importantes para jogadores experientes, como Smartphone, Health Check, Digital Clock, Duelist Radar, Boss Detector e outros equipamentos sofisticados.</p>
         <p><strong>Obs:</strong> Todos os itens produzidos podem ser vendidos no NPC Machvise que esta na mesma sala do Kurt.</p>
@@ -2996,10 +3038,6 @@ function renderProfessorProfessionDetail(detail) {
   const tabContent = {
     overview: `
       <section class="clan-detail-section">
-        <h4>Descricao</h4>
-        <p>Conhecido por ser um estudioso dos Pok&eacute;mon e da Natureza, mas tambem em razao de seus alunos, capazes de realizar missoes especiais sob seu comando. O professor e um amante da natureza e sempre estuda as plantas, produz arbustos estilizados de Pok&eacute;mon e sementes, berries, que possuem efeitos unicos no mundo Pok&eacute;mon.</p>
-      </section>
-      <section class="clan-detail-section">
         <h4>Lucro</h4>
         <p>No inicio da jornada o Professor nao tera tanta facilidade, mas quando atinge niveis mais altos o lucro se torna muito forte.</p>
         <div class="profession-resource-grid">
@@ -3138,8 +3176,538 @@ function renderProfessorProfessionDetail(detail) {
   `;
 }
 
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
+function renderStylistMonuments() {
+  const groups = monumentData.groups || [];
+  const selectedArea = activeStylistMonumentArea;
+  const searchTerm = normalizeText(stylistMonumentSearch);
+  const visibleGroups = selectedArea
+    ? groups.filter((group) => group.area === selectedArea)
+    : groups;
+  const monuments = visibleGroups.flatMap((group) => (group.monuments || []).map((monument) => ({
+    ...monument,
+    area: group.area,
+  }))).filter((monument) => {
+    if (!searchTerm) {
+      return true;
+    }
+
+    return normalizeText([
+      monument.area,
+      monument.number,
+      monument.coordinates,
+    ].join(' ')).includes(searchTerm);
+  });
+
+  return `
+    <section class="clan-detail-section">
+      <h4>Monumentos</h4>
+      <p>${monumentData.intro || 'Os monumentos espalhados pelo mapa do Nightmare World sao recursos que Decoradores podem estudar para adquirir conhecimento. Disponibilizaremos as coordenadas ja encontradas, basta adicionar manualmente no seu mapa.'}</p>
+      ${monumentData.sourceUrl ? `<a class="profession-source-link" href="${monumentData.sourceUrl}" target="_blank" rel="noreferrer">Abrir pagina da Wiki</a>` : ''}
+      <div class="monument-filter">
+        <label>
+          Area
+          <select data-stylist-monument-area>
+            <option value="">Todas as areas</option>
+            ${groups.map((group) => `<option value="${group.area}"${selectedArea === group.area ? ' selected' : ''}>${group.area}</option>`).join('')}
+          </select>
+        </label>
+        <label>
+          Buscar
+          <input type="search" placeholder="Cinnabar, 3935, 4344..." data-stylist-monument-search value="${stylistMonumentSearch}">
+        </label>
+        <span>${monuments.length} monumentos</span>
+      </div>
+      <div class="monument-table-wrap">
+        <table class="monument-table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>N.</th>
+              <th>Coordenada</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${monuments.map((monument) => `
+              <tr>
+                <td>${monument.area}</td>
+                <td>${monument.number}</td>
+                <td><code>${monument.coordinates}</code></td>
+              </tr>
+            `).join('') || '<tr><td colspan="3">Nenhum monumento encontrado para esse filtro.</td></tr>'}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  `;
+}
+
+function renderStylistProfessionDetail(detail) {
+  const decorator = findProfessionLink(detail, 'decorador');
+  const designer = findProfessionLink(detail, 'designer');
+  const monuments = findProfessionLink(detail, 'monumentos');
+  const generalCraftLink = detail.crafts?.[0];
+  const tabs = [
+    { id: 'overview', label: 'Estilista' },
+    { id: 'decorator', label: 'Decorador' },
+    { id: 'designer', label: 'Designer' },
+    { id: 'monuments', label: 'Monumentos' },
+    { id: 'general-crafts', label: 'Crafts gerais' },
+  ];
+  const generalCrafts = getProfessionCrafts('estilista', (craft) => !craft.subprofessionSlug);
+  const decoratorCrafts = getProfessionCrafts('estilista', (craft) => craft.subprofessionSlug === 'decorador');
+  const designerCrafts = getProfessionCrafts('estilista', (craft) => craft.subprofessionSlug === 'designer');
+  const activeTabExists = tabs.some((tab) => tab.id === activeProfessionTab);
+
+  if (!activeTabExists) {
+    activeProfessionTab = 'overview';
+  }
+
+  const tabContent = {
+    overview: `
+      <section class="clan-detail-section">
+        <h4>Lucro</h4>
+        <p>Existem diversas formas de lucrar sendo um Estilista. Inicialmente, o jogador pode vender addons e outfits no mercado. Conforme evolui sua skill, passa a produzir roupas mais interessantes, moveis, itens de decoracao e utilitarios como Builder Kit, Fashion Shoes e Fashion Heart.</p>
+        <p><strong>Dica:</strong> Estilista e a profissao que produz a maior quantidade de itens no Workshop. Guarde itens dropaveis, principalmente os obtidos de Pok&eacute;mon pouco cacados.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Especializacoes</h4>
+        <div class="profession-link-grid">
+          ${decorator ? renderProfessionTabLinkCard({ ...decorator, kind: 'especializacao' }, 'decorator') : ''}
+          ${designer ? renderProfessionTabLinkCard({ ...designer, kind: 'especializacao' }, 'designer') : ''}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Caracteristicas</h4>
+        <div class="profession-link-grid">
+          ${monuments ? renderProfessionFeatureCard('Monumentos', 'Coordenadas dos monumentos do Nightmare World estudados por Decoradores.', monuments.iconUrl, 'monuments', 'sistema') : ''}
+          ${renderProfessionFeatureCard('Crafts gerais', 'Crafts da profissao que nao dependem de especializacao, organizados por rank.', generalCraftLink?.iconUrl || detail.iconUrl, 'general-crafts', 'crafts')}
+        </div>
+      </section>
+    `,
+    decorator: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Estilista')}
+        <div class="profession-link-head">
+          ${decorator?.iconUrl ? `<img src="${decorator.iconUrl}" alt="${decorator.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${decorator?.title || 'Decorador'}</h4>
+          </div>
+        </div>
+        <p>O decorador possui habilidades e conhecimentos especializados em design de interiores ou exteriores, com o objetivo de criar espacos esteticamente agradaveis. Tambem pode criar Toys, upgrades para Premier Ball e camas que concedem bonus de captura, sorte e experiencia.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Recurso comum', [
+            'Purpleheart Log e o recurso comum compartilhado por Decorador e Designer.',
+            'Ele e obtido nas arvores da Nightmare World usando a Woodcutter\'s Axe padrao do Estilista.',
+            'Com Purpleheart Log, as especializacoes podem fabricar itens de Workshop Rank S como totens, capsulas e cameras.',
+          ])}
+          ${renderProfessionResourceBlock('Recurso exclusivo', [
+            'O recurso exclusivo de Decorador e obtido estudando monumentos espalhados pelo mapa.',
+            'A coleta usa o Decorator Drawing Book comprado no NPC Lillian depois de escolher a especializacao.',
+            'Cada monumento possui tempo de recarga interno de 1 hora.',
+            'Os primeiros 50 recursos coletados no dia recebem bonus de 50% sobre a coleta base.',
+            'O High-Tech Device converte Drawing Clipboards em Purpleheart Log.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Crafts Exclusivos</h4>
+        ${renderCraftCards(decoratorCrafts, {
+          filterId: 'stylist-decorator',
+          placeholder: 'Buscar craft de Decorador ou ingrediente...',
+        })}
+      </section>
+    `,
+    designer: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Estilista')}
+        <div class="profession-link-head">
+          ${designer?.iconUrl ? `<img src="${designer.iconUrl}" alt="${designer.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${designer?.title || 'Designer'}</h4>
+          </div>
+        </div>
+        <p>O Designer e responsavel pela estetica de seus Pok&eacute;mon e personagens, com a criacao de addons e outfits. Alem disso, pode fabricar o Critical Catch Charm, item importante para quem tem a captura de Pok&eacute;mon como objetivo de jogo.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Recurso comum', [
+            'Purpleheart Log e o recurso comum compartilhado por Designer e Decorador.',
+            'Ele e obtido nas arvores da Nightmare World usando a Woodcutter\'s Axe.',
+            'Com Purpleheart Log, as especializacoes fabricam itens de Workshop Rank S como totens, capsulas e cameras.',
+          ])}
+          ${renderProfessionResourceBlock('Recurso exclusivo', [
+            'Nightmare Style Point e o recurso exclusivo do Designer.',
+            'Ele e obtido usando o Designer Drawing Book no corpo de Pok&eacute;mon derrotados.',
+            'A coleta e proporcional a dificuldade da hunt; hunts fortes rendem mais pontos.',
+            'Pok&eacute;mon Shiny ou Angry concedem bonus na coleta.',
+            'O recurso fabrica itens no Workshop Rank S, Designer Workshop, addons, outfits, recipes e Wingsuit.',
+            'O High-Tech Device pode transformar Nightmare Style Point em Purpleheart Log.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Crafts Exclusivos</h4>
+        ${renderCraftCards(designerCrafts, {
+          filterId: 'stylist-designer',
+          placeholder: 'Buscar craft de Designer ou ingrediente...',
+        })}
+      </section>
+    `,
+    monuments: `${renderProfessionInternalBack('Estilista')}${renderStylistMonuments()}`,
+    'general-crafts': `
+      <section class="clan-detail-section">
+        ${renderProfessionInternalBack('Estilista')}
+        <h4>Crafts gerais</h4>
+        <p>${generalCraftLink?.summary || 'Crafts da profissao que nao dependem de especializacao.'}</p>
+        ${generalCraftLink?.sourceUrl ? `<a class="profession-source-link" href="${generalCraftLink.sourceUrl}" target="_blank" rel="noreferrer">Abrir lista completa na Wiki</a>` : ''}
+        ${renderCraftCards(generalCrafts, {
+          limit: 36,
+          filterId: 'stylist-general',
+          placeholder: 'Buscar craft geral ou ingrediente...',
+          showRankFilter: true,
+        })}
+      </section>
+    `,
+  };
+
+  return `
+    <div class="profession-tab-panel">
+      ${tabContent[activeProfessionTab] || tabContent.overview}
+    </div>
+  `;
+}
+
+const COOK_DAILY_NPCS = [
+  { area: 'Cerulean', entries: [
+    { name: 'Camilo', coordinates: '30650, 20301, 5' },
+    { name: 'Catrina', coordinates: '30606, 20276, 5' },
+  ] },
+  { area: 'Lavender', entries: [
+    { name: 'Cristine', coordinates: '30828, 20477, 5' },
+    { name: 'Mary', coordinates: '30842, 20462, 5' },
+  ] },
+  { area: 'Fuchsia', entries: [
+    { name: 'Teodor', coordinates: '30667, 20785, 5' },
+    { name: 'Yasmin', coordinates: '30678, 20789, 5' },
+  ] },
+  { area: 'Cinnabar', entries: [
+    { name: 'Ashton', coordinates: '30343, 20725, 5' },
+    { name: 'Cleo', coordinates: '30329, 20724, 7' },
+  ] },
+  { area: 'Pallet', entries: [
+    { name: 'Alvaro', coordinates: '30290, 20599, 5' },
+    { name: 'Ryann', coordinates: '30298, 20631, 5' },
+  ] },
+  { area: 'Pewter', entries: [
+    { name: 'Nilton', coordinates: '30350, 20353, 5' },
+    { name: 'Georgia', coordinates: '30341, 20337, 5' },
+  ] },
+];
+
+const ARCHEOLOGIST_LOCATION_GROUPS = [
+  { title: 'Centro de Escavacao', entries: [
+    { name: 'Hoang', note: 'Fuchsia - inicia o acesso ao Centro de Escavacao; requer Nightmare Level 20.', coordinates: '30720, 20809, 5' },
+    { name: 'Ploy', note: 'Entrada da ilha - retorna o jogador para Fuchsia.', coordinates: '30918, 20815, 5' },
+  ] },
+  { title: 'Digger Hiram', entries: [
+    { name: 'Hiram', note: 'Entrega a missao de avisar os amigos nas resistencias.', coordinates: '30900, 20839, 6' },
+    { name: 'Moe', note: 'Cerulean.', coordinates: '30639, 20280, 5' },
+    { name: 'Larry', note: 'Lavender.', coordinates: '30863, 20415, 5' },
+    { name: 'Shemp', note: 'Cinnabar.', coordinates: '30270, 20742, 5' },
+  ] },
+  { title: 'Digger Frank', entries: [
+    { name: 'Digger Frank', note: 'Pede para derrotar 300 Darkrai e recompensa com Golden Shovel.', coordinates: '30909, 20825, 6' },
+  ] },
+  { title: 'Digger Anette', entries: [
+    { name: 'Digger Anette', note: 'Libera a busca por baus perdidos.', coordinates: '30912, 20822, 4' },
+    { name: 'Chest - Fire Island', note: 'Bau da missao da Anette.', coordinates: '30366, 20617, 5' },
+    { name: 'Chest - Seafoam Island', note: 'Bau da missao da Anette.', coordinates: '30642, 21003, 7' },
+    { name: 'Chest - Pewter Resistence', note: 'Bau da missao da Anette.', coordinates: '30266, 20438, 7' },
+    { name: 'Chest - Power Plant', note: 'Bau da missao da Anette.', coordinates: '30634, 20634, 9' },
+    { name: 'Chest - Dragon Tunnel', note: 'Bau da missao da Anette.', coordinates: '30812, 20335, 1' },
+  ] },
+  { title: 'Professor Sycamore', entries: [
+    { name: 'Professor Sycamore', note: 'Entrega a missao opcional dos livros e a Semanal de Arqueologo.', coordinates: '30915, 20819, 5' },
+  ] },
+];
+
+function renderCoordinateGroups(groups) {
+  return `
+    <div class="coordinate-group-grid">
+      ${groups.map((group) => `
+        <section class="profession-info-block coordinate-group">
+          <h5>${group.title || group.area}</h5>
+          <div class="coordinate-table-wrap">
+            <table class="coordinate-table">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Coordenada</th>
+                  ${group.entries?.some((entry) => entry.note) ? '<th>Obs</th>' : ''}
+                </tr>
+              </thead>
+              <tbody>
+                ${(group.entries || []).map((entry) => `
+                  <tr>
+                    <td>${entry.name}</td>
+                    <td><code>${entry.coordinates}</code></td>
+                    ${group.entries?.some((item) => item.note) ? `<td>${entry.note || ''}</td>` : ''}
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderAdventurerMapFinder() {
+  const mapTypes = adventurerMapData.mapTypes || [];
+  const selectedType = mapTypes.find((type) => type.id === activeAdventurerMapType);
+  const locations = selectedType?.locations || [];
+  const selectedLocation = locations.find((location) => location.name === activeAdventurerMapLocation);
+  const requestedIds = adventurerMapNumberFilter
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean);
+  const maps = (selectedLocation?.maps || []).filter((map) => {
+    if (!requestedIds.length) {
+      return true;
+    }
+
+    return requestedIds.includes(map.id);
+  });
+
+  return `
+    <section class="clan-detail-section">
+      <h4>Buscador de Mapas</h4>
+      <p>Selecione primeiro o tipo de mapa e depois o local do X para visualizar os mapas correspondentes.</p>
+      ${adventurerMapData.sourceUrl ? `<a class="profession-source-link" href="${adventurerMapData.sourceUrl}" target="_blank" rel="noreferrer">Abrir buscador da Wiki</a>` : ''}
+      <div class="adventurer-map-filter">
+        <label>
+          Tipo de Mapa
+          <select data-adventurer-map-type>
+            <option value="">Selecione um mapa</option>
+            ${mapTypes.map((type) => `<option value="${type.id}"${activeAdventurerMapType === type.id ? ' selected' : ''}>${type.label}</option>`).join('')}
+          </select>
+        </label>
+        <label>
+          Local do X
+          <select data-adventurer-map-location ${selectedType ? '' : 'disabled'}>
+            <option value="">Selecione uma opcao</option>
+            ${locations.map((location) => `<option value="${location.name}"${activeAdventurerMapLocation === location.name ? ' selected' : ''}>${location.name}</option>`).join('')}
+          </select>
+        </label>
+        <label>
+          Numero do mapa
+          <input type="search" placeholder="101, 204, 317..." data-adventurer-map-number value="${adventurerMapNumberFilter}">
+        </label>
+        <span>${maps.length} mapas</span>
+      </div>
+      ${selectedLocation ? `
+        <div class="adventurer-map-grid">
+          ${maps.map((map) => `
+            <article class="adventurer-map-card">
+              ${map.imageUrl ? `<img src="${map.imageUrl}" alt="Mapa ${map.id} - ${map.local}" loading="lazy">` : ''}
+              <div>
+                <span class="clan-note">Mapa ${map.id}</span>
+                <strong>${map.local}</strong>
+                <small>${map.coordinates}</small>
+                <div class="pill-list">${(map.tags || []).map((tag) => `<span class="data-pill">${tag}</span>`).join('')}</div>
+              </div>
+            </article>
+          `).join('') || '<div class="empty-state">Nenhum mapa encontrado para esse filtro.</div>'}
+        </div>
+      ` : '<div class="empty-state">Escolha o tipo de mapa e o local do X para ver os resultados.</div>'}
+    </section>
+  `;
+}
+
+function renderAdventurerProfessionDetail(detail) {
+  const cook = findProfessionLink(detail, 'cozinheiro');
+  const archeologist = findProfessionLink(detail, 'arqueologo');
+  const mapFinder = findProfessionLink(detail, 'mapas-de-aventureiro');
+  const generalCraftLink = detail.crafts?.find((link) => link.slug === 'craft-profissoes-aventureiro') || detail.crafts?.[0];
+  const tabs = [
+    { id: 'overview', label: 'Aventureiro' },
+    { id: 'cook', label: 'Cozinheiro' },
+    { id: 'archeologist', label: 'Arqueologo' },
+    { id: 'map-finder', label: 'Buscador de Mapas' },
+    { id: 'general-crafts', label: 'Crafts gerais' },
+  ];
+  const generalCrafts = getProfessionCrafts('aventureiro', (craft) => !craft.subprofessionSlug);
+  const cookCrafts = getProfessionCrafts('aventureiro', (craft) => craft.subprofessionSlug === 'cozinheiro');
+  const archeologistCrafts = getProfessionCrafts('aventureiro', (craft) => craft.subprofessionSlug === 'arqueologo');
+  const activeTabExists = tabs.some((tab) => tab.id === activeProfessionTab);
+
+  if (!activeTabExists) {
+    activeProfessionTab = 'overview';
+  }
+
+  const tabContent = {
+    overview: `
+      <section class="clan-detail-section">
+        <h4>Lucro</h4>
+        <p>Esta profissao e de alto risco: dependendo da sorte, pode causar prejuizo ou gerar grande lucro. Os itens mais lucrativos podem ser encontrados em Baus e Cavernas Secretas, com destaque para Fortune Totem, Shiny Charm e Premier Balls.</p>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Fortune Totem', 'Pequenas estatuas que garantem bonus na quantidade de itens que caem dos Pok&eacute;mon em uma grande area, aumentando o lucro da hunt por tempo limitado.')}
+          ${renderProfessionResourceBlock('Shiny Charm', 'Item extremamente raro que pode ser encontrado e vendido. Quem o possui tem maior chance de encontrar Shinies selvagens apos derrotar um Pok&eacute;mon.')}
+          ${renderProfessionResourceBlock('Premier Balls', 'Pok&eacute;bolas unicas com chance de captura igual a Ultra Ball e Aura Exclusiva no Pok&eacute;mon capturado, aumentando bastante seu valor.')}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Especializacoes</h4>
+        <div class="profession-link-grid">
+          ${cook ? renderProfessionTabLinkCard({ ...cook, kind: 'especializacao' }, 'cook') : ''}
+          ${archeologist ? renderProfessionTabLinkCard({ ...archeologist, kind: 'especializacao' }, 'archeologist') : ''}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Caracteristicas</h4>
+        <div class="profession-link-grid">
+          ${mapFinder ? renderProfessionFeatureCard('Buscador de Mapas', 'Escolha o tipo de mapa e o local do X para encontrar imagens, coordenadas e tags dos mapas.', mapFinder.iconUrl, 'map-finder', 'sistema') : ''}
+          ${renderProfessionFeatureCard('Crafts gerais', 'Crafts da profissao que nao dependem de especializacao, organizados por rank.', generalCraftLink?.iconUrl || detail.iconUrl, 'general-crafts', 'crafts')}
+        </div>
+      </section>
+    `,
+    cook: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Aventureiro')}
+        <div class="profession-link-head">
+          ${cook?.iconUrl ? `<img src="${cook.iconUrl}" alt="${cook.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${cook?.title || 'Cozinheiro'}</h4>
+          </div>
+        </div>
+        <p>Os Cozinheiros sao mestres na arte da culinaria, usando recursos coletados de Pok&eacute;mon derrotados para criar alimentos que fornecem buffs temporarios. Eles sao muito importantes em desafios como Boss Fights, Legendary Beasts e Nightmare Terrors, alem de criarem alimentos que auxiliam no aparecimento de Pok&eacute;mon raros na hunt.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Recursos</h4>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Food Bags', [
+            'Food Bags sao o recurso exclusivo da especializacao e entram na maioria dos crafts de Cozinheiro.',
+            'Sao obtidas coletando loot de Pok&eacute;mon desmaiados.',
+            'A quantidade varia de acordo com a forca do Pok&eacute;mon derrotado.',
+            'Profession Resource Boost pode aumentar a coleta de Food Bags.',
+          ])}
+          ${renderProfessionResourceBlock('Nightmare Chests', [
+            'Na Nightmare World, Aventureiros podem obter Corrupted Gold Bars, Strange Gold Bars e Nightmare Treasure Maps abrindo Nightmare Chests.',
+            'Corrupted Gold Bars sao usadas em varios itens da Adventurer Workshop S.',
+            'Strange Gold Bars sao mais raras e usadas em Golden Finders e Silver Finders.',
+            'High-Tech Device pode transformar Food Bags em Corrupted Gold Bars.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Diaria Cozinheiro</h4>
+        <p>A diaria consiste em entregar comidas para NPCs nas resistencias da Nightmare World. Cada NPC recebe uma comida por dia, resetando no Server Save, e os pedidos sao sempre de comidas tier 1.</p>
+        ${renderProfessionResourceBlock('Recompensa individual', [
+          '50 hundred dollars (5k).',
+          '2 Nightmare cooking tokens.',
+          '250 pontos de experiencia nightmare.',
+        ])}
+        ${renderCoordinateGroups(COOK_DAILY_NPCS)}
+      </section>
+      <section class="clan-detail-section">
+        <h4>Nightmare Cooking Tokens</h4>
+        <p>Nightmare Cooking Tokens sao recompensas da diaria de Cozinheiro e funcionam como recurso de progressao para a especializacao, conectando as entregas diarias aos crafts e comidas exclusivas.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Crafts Exclusivos</h4>
+        ${renderCraftCards(cookCrafts, {
+          filterId: 'adventurer-cook',
+          placeholder: 'Buscar craft de Cozinheiro ou ingrediente...',
+        })}
+      </section>
+    `,
+    archeologist: `
+      <section class="clan-detail-section profession-subdetail">
+        ${renderProfessionInternalBack('Aventureiro')}
+        <div class="profession-link-head">
+          ${archeologist?.iconUrl ? `<img src="${archeologist.iconUrl}" alt="${archeologist.title}" loading="lazy">` : ''}
+          <div>
+            <span class="clan-note">Especializacao</span>
+            <h4>${archeologist?.title || 'Arqueologo'}</h4>
+          </div>
+        </div>
+        <p>Os Arqueologos desvendam misterios ocultos nas ruinas deixadas pela destruicao de Darkrai e saem pela Nightmare World em busca de reliquias e tesouros escondidos. Eles criam Rift Crystals usados em desafios extremos como as Nightmare Rifts.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Recursos</h4>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Hidden Relic', [
+            'Hidden Relic e o recurso exclusivo do Arqueologo.',
+            'E encontrado durante as exploracoes pela Nightmare World com auxilio de um detector de metais.',
+            'E usado principalmente para criar Rift Crystals.',
+            'Profession Resource Boost pode aumentar a coleta de Hidden Relics.',
+          ])}
+          ${renderProfessionResourceBlock('Nightmare Chests', [
+            'Nightmare Chests podem conceder Corrupted Gold Bars, Strange Gold Bars e Nightmare Treasure Maps.',
+            'Corrupted Gold Bars sao usadas em varios itens da Adventurer Workshop S.',
+            'Strange Gold Bars sao recursos mais escassos para fabricar Golden Finders e Silver Finders.',
+            'High-Tech Device pode transformar Hidden Relic em Corrupted Gold Bars.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Centro de Escavacao e missoes</h4>
+        <p>O Centro de Escavacao e o ponto de encontro dos Arqueologos para expedicoes e busca por artefatos raros. As missoes principais passam por Hoang, Ploy, Hiram, Frank, Anette e Professor Sycamore.</p>
+        ${renderCoordinateGroups(ARCHEOLOGIST_LOCATION_GROUPS)}
+      </section>
+      <section class="clan-detail-section">
+        <h4>Semanal de Arqueologo</h4>
+        <p>Professor Sycamore pede 5 Professor Oak's research journal, obtidos ao completar Dungeons Semanais. Ao entregar os diarios, o jogador recebe uma Rift Epica Aleatoria, 200 Hidden Relics, experiencia comum e experiencia Nightmare.</p>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Exclusividades</h4>
+        <div class="profession-resource-grid">
+          ${renderProfessionResourceBlock('Nightmare Compass', [
+            'Aponta para possiveis Nightmare Chests proximos ao jogador.',
+            'Funciona de forma semelhante ao Boss Detector.',
+            'Possui cooldown de 1 hora entre usos.',
+          ])}
+          ${renderProfessionResourceBlock("Adventurer's Utility Belt", [
+            'Executa habilidades secundarias como Light, Rock Smash, Dig e Cut sem precisar de um Pok&eacute;mon.',
+            'Apenas Arqueologos podem craftar, mas Cozinheiros tambem podem usar.',
+            'Pode ser usado dentro e fora da Nightmare World.',
+          ])}
+        </div>
+      </section>
+      <section class="clan-detail-section">
+        <h4>Crafts Exclusivos</h4>
+        ${renderCraftCards(archeologistCrafts, {
+          filterId: 'adventurer-archeologist',
+          placeholder: 'Buscar craft de Arqueologo ou ingrediente...',
+        })}
+      </section>
+    `,
+    'map-finder': `${renderProfessionInternalBack('Aventureiro')}${renderAdventurerMapFinder()}`,
+    'general-crafts': `
+      <section class="clan-detail-section">
+        ${renderProfessionInternalBack('Aventureiro')}
+        <h4>Crafts gerais</h4>
+        <p>${generalCraftLink?.summary || 'Crafts da profissao que nao dependem de especializacao.'}</p>
+        ${generalCraftLink?.sourceUrl ? `<a class="profession-source-link" href="${generalCraftLink.sourceUrl}" target="_blank" rel="noreferrer">Abrir lista completa na Wiki</a>` : ''}
+        ${renderCraftCards(generalCrafts, {
+          limit: 36,
+          filterId: 'adventurer-general',
+          placeholder: 'Buscar craft geral ou ingrediente...',
+          showRankFilter: true,
+        })}
+      </section>
+    `,
+  };
+
+  return `
+    <div class="profession-tab-panel">
+      ${tabContent[activeProfessionTab] || tabContent.overview}
+    </div>
+  `;
+}
+
 function renderProfessionDetail(detail) {
   const container = document.getElementById('profession-catalog');
   const toolbar = document.querySelector('.profession-toolbar');
@@ -3168,12 +3736,11 @@ function renderProfessionDetail(detail) {
         </div>
       </div>
 
-<<<<<<< HEAD
       ${(detail.slug || slugifyProfessionName(detail.name)) === 'engenheiro' ? renderEngineerProfessionDetail(detail) : ''}
       ${(detail.slug || slugifyProfessionName(detail.name)) === 'professor' ? renderProfessorProfessionDetail(detail) : ''}
-      ${!['engenheiro', 'professor'].includes(detail.slug || slugifyProfessionName(detail.name)) ? `
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
+      ${(detail.slug || slugifyProfessionName(detail.name)) === 'estilista' ? renderStylistProfessionDetail(detail) : ''}
+      ${(detail.slug || slugifyProfessionName(detail.name)) === 'aventureiro' ? renderAdventurerProfessionDetail(detail) : ''}
+      ${!['engenheiro', 'professor', 'estilista', 'aventureiro'].includes(detail.slug || slugifyProfessionName(detail.name)) ? `
       ${renderProfessionLinkSection('Crafts relacionados', detail.crafts)}
       ${renderProfessionLinkSection('Especializacoes e subprofissoes', detail.specializations)}
       ${renderProfessionLinkSection('Subsecoes', detail.subsections)}
@@ -3184,10 +3751,7 @@ function renderProfessionDetail(detail) {
           ${detail.sections?.length ? detail.sections.map((section) => `<a class="data-pill" href="${detail.sourceUrl}#${section.anchor}" target="_blank" rel="noreferrer">${section.title}</a>`).join('') : '<span class="empty-state">Sem secoes listadas.</span>'}
         </div>
       </section>
-<<<<<<< HEAD
       ` : ''}
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     </article>
   `;
 }
@@ -3235,17 +3799,6 @@ function renderProfessionCatalog() {
         </article>
       `).join('') : '<div class="empty-state">No professions found for this search.</div>'}
     </div>
-<<<<<<< HEAD
-=======
-    ${professionData.relatedLinks.length ? `
-      <section class="clan-detail-section profession-related">
-        <h4>Links relacionados</h4>
-        <div class="profession-link-grid">
-          ${professionData.relatedLinks.map(renderProfessionLinkCard).join('')}
-        </div>
-      </section>
-    ` : ''}
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
   `;
 }
 
@@ -3810,11 +4363,10 @@ renderItemView();
 loadClanCatalog();
 loadClanDetails();
 loadProfessions();
-<<<<<<< HEAD
 loadCrafts();
 loadProfessorStudents();
-=======
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
+loadMonuments();
+loadAdventurerMaps();
 loadPokemon();
 loadItems();
 
@@ -3849,24 +4401,17 @@ document.getElementById('profession-catalog')?.addEventListener('click', (event)
 
   const openButton = event.target.closest('[data-profession-open]');
   const backButton = event.target.closest('[data-profession-back]');
-<<<<<<< HEAD
   const tabButton = event.target.closest('[data-profession-tab]');
   const craftFilter = event.target.closest('[data-craft-filter]');
 
   if (openButton) {
     activeProfessionSlug = openButton.dataset.professionOpen;
     activeProfessionTab = 'overview';
-=======
-
-  if (openButton) {
-    activeProfessionSlug = openButton.dataset.professionOpen;
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
     renderProfessionView();
     document.getElementById('panel-professions')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }
 
-<<<<<<< HEAD
   if (tabButton) {
     activeProfessionTab = tabButton.dataset.professionTab || 'overview';
     renderProfessionView();
@@ -3890,7 +4435,31 @@ document.getElementById('profession-catalog')?.addEventListener('input', (event)
   }
 
   const craftFilter = event.target.closest('[data-craft-filter]');
+  const monumentSearch = event.target.closest('[data-stylist-monument-search]');
+  const adventurerMapNumber = event.target.closest('[data-adventurer-map-number]');
   if (!craftFilter) {
+    if (!monumentSearch && !adventurerMapNumber) {
+      return;
+    }
+
+    if (adventurerMapNumber) {
+      adventurerMapNumberFilter = adventurerMapNumber.value || '';
+      renderProfessionView();
+      const nextInput = document.querySelector('[data-adventurer-map-number]');
+      nextInput?.focus();
+      if (nextInput instanceof HTMLInputElement) {
+        nextInput.setSelectionRange(nextInput.value.length, nextInput.value.length);
+      }
+      return;
+    }
+
+    stylistMonumentSearch = monumentSearch.value || '';
+    renderProfessionView();
+    const nextInput = document.querySelector('[data-stylist-monument-search]');
+    nextInput?.focus();
+    if (nextInput instanceof HTMLInputElement) {
+      nextInput.setSelectionRange(nextInput.value.length, nextInput.value.length);
+    }
     return;
   }
 
@@ -3911,6 +4480,9 @@ document.getElementById('profession-catalog')?.addEventListener('change', (event
   const craftSort = event.target.closest('[data-craft-sort]');
   const craftRank = event.target.closest('[data-craft-rank]');
   const studentClan = event.target.closest('[data-professor-student-clan]');
+  const monumentArea = event.target.closest('[data-stylist-monument-area]');
+  const adventurerMapType = event.target.closest('[data-adventurer-map-type]');
+  const adventurerMapLocation = event.target.closest('[data-adventurer-map-location]');
 
   if (craftSort) {
     professionCraftSorts[craftSort.dataset.craftSort || 'default'] = craftSort.value || 'default';
@@ -3926,10 +4498,27 @@ document.getElementById('profession-catalog')?.addEventListener('change', (event
 
   if (studentClan) {
     activeProfessorStudentClan = studentClan.value || (professorStudentData.groups[0]?.clan ?? PROFESSOR_STUDENT_GROUPS[0].clan);
-=======
-  if (backButton) {
-    activeProfessionSlug = '';
->>>>>>> 6597e17301dacdc1c3b717d51999074d3cae4642
+    renderProfessionView();
+    return;
+  }
+
+  if (monumentArea) {
+    activeStylistMonumentArea = monumentArea.value || '';
+    renderProfessionView();
+    return;
+  }
+
+  if (adventurerMapType) {
+    activeAdventurerMapType = adventurerMapType.value || '';
+    activeAdventurerMapLocation = '';
+    adventurerMapNumberFilter = '';
+    renderProfessionView();
+    return;
+  }
+
+  if (adventurerMapLocation) {
+    activeAdventurerMapLocation = adventurerMapLocation.value || '';
+    adventurerMapNumberFilter = '';
     renderProfessionView();
   }
 });
