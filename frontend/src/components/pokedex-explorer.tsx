@@ -88,8 +88,8 @@ export function PokedexExplorer({
             </div>
             <div className="mt-auto grid gap-2 text-sm text-slate-300">
               <InfoLine label="Level" value={entry.level} strong />
-              <InfoLine label="Boost" value={entry.boost} />
-              <InfoLine label="Materia" value={entry.material} />
+              <InfoLine label="Boost" value={formatCompactPokemonInfo(entry.boost)} />
+              <InfoLine label="Materia" value={formatCompactPokemonInfo(entry.material)} />
             </div>
           </Link>
         ))}
@@ -126,13 +126,25 @@ function getEntryTypes(elements: string[]) {
   return [...new Set(elements.flatMap((element) => parsePokemonTypes(element)))];
 }
 
+function formatCompactPokemonInfo(value: string) {
+  return value
+    .replace(/\([^)]*\)/g, '')
+    .replace(/\bEnhanced\b/gi, '')
+    .replace(/\s+ou\s+/gi, ' ou ')
+    .replace(/\s+/g, ' ')
+    .replace(/[.,;:]+$/g, '')
+    .trim();
+}
+
 function InfoLine({ label, value, strong = false }: { label: string; value: string; strong?: boolean }) {
   if (!value) return null;
 
   return (
-    <span className="flex items-center justify-between gap-3 rounded-md border border-white/10 bg-slate-950/60 px-2.5 py-1.5">
+    <span className="grid grid-cols-[4.75rem_minmax(0,1fr)] items-center gap-3 rounded-md border border-white/10 bg-slate-950/60 px-2.5 py-1.5">
       <span className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">{label}</span>
-      <span className={strong ? 'font-black text-amber-100' : 'truncate font-bold text-slate-200'}>{value}</span>
+      <span className={strong ? 'min-w-0 truncate text-right font-black text-amber-100' : 'min-w-0 truncate text-right font-bold text-slate-200'} title={value}>
+        {value}
+      </span>
     </span>
   );
 }

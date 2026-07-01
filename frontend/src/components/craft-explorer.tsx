@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
 import { EntityLink, itemHref } from '@/components/entity-link';
+import { FavoriteButton } from '@/components/favorite-button';
 import { normalizeText, parseCraftTimeMinutes, parseSkillValue, rankOrder } from '@/lib/format';
 import type { Craft } from '@/types/crafts';
 
@@ -170,7 +171,7 @@ export function CraftExplorer({
 export function CraftCard({ craft }: { craft: Craft }) {
   return (
     <article className="grid gap-4 rounded-lg border border-white/10 bg-white/[0.035] p-4">
-      <div className="grid grid-cols-[52px_1fr] gap-3">
+      <div className="grid grid-cols-[52px_minmax(0,1fr)_auto] gap-3">
         {craft.imageUrl ? (
           <img src={craft.imageUrl} alt={craft.itemName} className="h-14 w-14 object-contain" loading="lazy" />
         ) : (
@@ -205,15 +206,26 @@ export function CraftCard({ craft }: { craft: Craft }) {
             ) : null}
           </p>
         </div>
+        <FavoriteButton
+          compact
+          entity={{
+            type: 'Craft',
+            slug: craft.slug,
+            title: craft.itemName,
+            url: `/crafts/${craft.slug}`,
+            imageUrl: craft.imageUrl,
+            summary: [craft.profession, craft.subprofession, craft.rank || craft.category].filter(Boolean).join(' | '),
+          }}
+        />
       </div>
 
       <div className="grid gap-2">
         <span className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Ingredientes</span>
         <div className="flex flex-wrap gap-2">
           {craft.ingredients.length ? (
-            craft.ingredients.map((ingredient) => (
+            craft.ingredients.map((ingredient, index) => (
               <span
-                key={`${craft.slug}-${ingredient.name}-${ingredient.quantity}`}
+                key={`${craft.slug}-${ingredient.name}-${ingredient.quantity}-${index}`}
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950 px-2.5 py-1 text-xs font-bold text-slate-200"
               >
                 {ingredient.iconUrl ? (

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+import type { ReactNode } from 'react';
 import { useMemo, useState } from 'react';
 import { CraftExplorer } from '@/components/craft-explorer';
 import { EntityLink, entityQueryHref } from '@/components/entity-link';
@@ -23,13 +24,6 @@ type ProfessionDetailViewProps = {
   adventurerMapsData: AdventurerMapsPayload;
 };
 
-const professionTabLabels: Record<string, string> = {
-  engenheiro: 'Engenheiro',
-  professor: 'Professor',
-  estilista: 'Estilista',
-  aventureiro: 'Aventureiro',
-};
-
 export function ProfessionDetailView({
   profession,
   crafts,
@@ -38,18 +32,7 @@ export function ProfessionDetailView({
   adventurerMapsData,
 }: ProfessionDetailViewProps) {
   const [activeTab, setActiveTab] = useState('overview');
-  const specialTabs = profession.specializations.map((link) => ({
-    id: link.slug,
-    label: link.title,
-    link,
-  }));
   const featureTabs = getFeatureTabs(profession);
-  const allTabs = [
-    { id: 'overview', label: professionTabLabels[profession.slug] || profession.name },
-    ...specialTabs.map((tab) => ({ id: tab.id, label: tab.label })),
-    ...featureTabs.map((tab) => ({ id: tab.id, label: tab.label })),
-    { id: 'general-crafts', label: 'Crafts gerais' },
-  ];
   const activeSpecialization = profession.specializations.find((link) => link.slug === activeTab);
   const activeFeature = featureTabs.find((tab) => tab.id === activeTab);
   const generalCrafts = crafts.filter((craft) => !craft.subprofessionSlug);
@@ -98,24 +81,6 @@ export function ProfessionDetailView({
         </div>
       </section>
 
-      <div className="flex flex-wrap gap-2">
-        {allTabs.map((tab) => (
-          <button
-            key={tab.id}
-            type="button"
-            onClick={() => setActiveTab(tab.id)}
-            className={[
-              'min-h-10 rounded-lg border px-3 text-sm font-black transition',
-              activeTab === tab.id
-                ? 'border-cyan-300/70 bg-cyan-300/15 text-white'
-                : 'border-white/10 bg-white/[0.03] text-slate-300 hover:border-cyan-300/50',
-            ].join(' ')}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
       {activeTab === 'overview' ? (
         <ProfessionOverview
           profession={profession}
@@ -126,27 +91,37 @@ export function ProfessionDetailView({
       ) : null}
 
       {activeSpecialization ? (
-        <SpecializationPanel link={activeSpecialization} crafts={specializationCrafts} professionSlug={profession.slug} />
+        <SpecializationPanel
+          link={activeSpecialization}
+          crafts={specializationCrafts}
+          professionSlug={profession.slug}
+          onBack={() => setActiveTab('overview')}
+        />
       ) : null}
 
       {activeFeature ? (
         <FeaturePanel
           featureId={activeFeature.id}
           profession={profession}
+          crafts={crafts}
           studentsData={studentsData}
           monumentsData={monumentsData}
           adventurerMapsData={adventurerMapsData}
+          onBack={() => setActiveTab('overview')}
         />
       ) : null}
 
       {activeTab === 'general-crafts' ? (
-        <CraftExplorer
-          crafts={generalCrafts}
-          compact
-          showRankFilter
-          title="Crafts gerais"
-          description="Crafts da profissao que nao dependem de especializacao."
-        />
+        <div className="grid gap-4">
+          <BackToProfessionHome onClick={() => setActiveTab('overview')} />
+          <CraftExplorer
+            crafts={generalCrafts}
+            compact
+            showRankFilter
+            title="Crafts gerais"
+            description="Crafts da profissao que nao dependem de especializacao."
+          />
+        </div>
       ) : null}
     </article>
   );
@@ -245,9 +220,20 @@ function ImportantProfessionItems({ crafts }: { crafts: Craft[] }) {
   );
 }
 
-function SpecializationPanel({ link, crafts, professionSlug }: { link: ProfessionLink; crafts: Craft[]; professionSlug: string }) {
+function SpecializationPanel({
+  link,
+  crafts,
+  professionSlug,
+  onBack,
+}: {
+  link: ProfessionLink;
+  crafts: Craft[];
+  professionSlug: string;
+  onBack: () => void;
+}) {
   return (
     <div className="grid gap-4">
+      <BackToProfessionHome onClick={onBack} />
       <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
         <div className="grid gap-4 sm:grid-cols-[64px_1fr]">
           {link.iconUrl ? <img src={link.iconUrl} alt={link.title} className="h-16 w-16 object-contain" loading="lazy" /> : null}
@@ -276,31 +262,106 @@ function SpecializationPanel({ link, crafts, professionSlug }: { link: Professio
 function FeaturePanel({
   featureId,
   profession,
+  crafts,
   studentsData,
   monumentsData,
   adventurerMapsData,
+  onBack,
 }: {
   featureId: string;
   profession: ProfessionDetail;
+  crafts: Craft[];
   studentsData: ProfessorStudentsPayload;
   monumentsData: MonumentsPayload;
   adventurerMapsData: AdventurerMapsPayload;
+  onBack: () => void;
 }) {
-  if (featureId === 'students') return <StudentsPanel data={studentsData} />;
-  if (featureId === 'monuments') return <MonumentsPanel data={monumentsData} />;
-  if (featureId === 'map-finder') return <AdventurerMapPanel data={adventurerMapsData} />;
+  if (featureId === 'mini-ammunition-factory') {
+    const link = profession.subsections.find((item) => item.slug === featureId);
+    return <MiniAmmunitionFactoryPanel link={link} crafts={crafts} onBack={onBack} />;
+  }
+
+  if (featureId === 'students') return <PanelWithBack onBack={onBack}><StudentsPanel data={studentsData} /></PanelWithBack>;
+  if (featureId === 'monuments') return <PanelWithBack onBack={onBack}><MonumentsPanel data={monumentsData} /></PanelWithBack>;
+  if (featureId === 'map-finder') return <PanelWithBack onBack={onBack}><AdventurerMapPanel data={adventurerMapsData} /></PanelWithBack>;
 
   const link = [...profession.subsections, ...profession.crafts].find((item) => item.slug === featureId);
   return (
-    <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
-      <h3 className="text-xl font-black text-white">{link?.title || 'Caracteristica'}</h3>
-      <p className="mt-2 text-sm leading-6 text-slate-300">{link?.summary || 'Conteudo em preparacao.'}</p>
-      {link?.sourceUrl ? (
-        <a href={link.sourceUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex text-sm font-black text-cyan-200 hover:text-cyan-100">
-          Abrir na Wiki
-        </a>
-      ) : null}
-    </section>
+    <PanelWithBack onBack={onBack}>
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <h3 className="text-xl font-black text-white">{link?.title || 'Caracteristica'}</h3>
+        <p className="mt-2 text-sm leading-6 text-slate-300">{link?.summary || 'Conteudo em preparacao.'}</p>
+        {link?.sourceUrl ? (
+          <a href={link.sourceUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex text-sm font-black text-cyan-200 hover:text-cyan-100">
+            Abrir na Wiki
+          </a>
+        ) : null}
+      </section>
+    </PanelWithBack>
+  );
+}
+
+function MiniAmmunitionFactoryPanel({
+  link,
+  crafts,
+  onBack,
+}: {
+  link?: ProfessionLink;
+  crafts: Craft[];
+  onBack: () => void;
+}) {
+  const miniFactoryCrafts = crafts.filter((craft) => craft.category === 'Mini Ammunition Factory' || craft.sourcePage === 'Mini Ammunition Factory');
+
+  return (
+    <div className="grid gap-4">
+      <BackToProfessionHome onClick={onBack} />
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <div className="grid gap-4 sm:grid-cols-[64px_1fr]">
+          {link?.iconUrl ? <img src={link.iconUrl} alt={link.title} className="h-16 w-16 object-contain" loading="lazy" /> : null}
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-cyan-300">sistema</span>
+            <h3 className="mt-1 text-2xl font-black text-white">{link?.title || 'Mini Ammunition Factory'}</h3>
+            <p className="mt-2 max-w-4xl text-sm leading-6 text-slate-300">
+              {link?.summary || 'O Mini Ammunition Factory e usado para fabricar municoes.'}
+            </p>
+            {link?.sourceUrl ? (
+              <a href={link.sourceUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex text-sm font-black text-cyan-200 hover:text-cyan-100">
+                Abrir na Wiki
+              </a>
+            ) : null}
+          </div>
+        </div>
+      </section>
+      <CraftExplorer
+        crafts={miniFactoryCrafts}
+        compact
+        showRankFilter={false}
+        title="Mini Ammunition Factory"
+        description="Municoes fabricadas na Mini Ammunition Factory, com busca por item ou ingrediente."
+      />
+    </div>
+  );
+}
+
+function PanelWithBack({ children, onBack }: { children: ReactNode; onBack: () => void }) {
+  return (
+    <div className="grid gap-4">
+      <BackToProfessionHome onClick={onBack} />
+      {children}
+    </div>
+  );
+}
+
+function BackToProfessionHome({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm font-black text-cyan-100 transition hover:border-cyan-300/60 hover:bg-cyan-300/10"
+    >
+      <ArrowLeft className="h-4 w-4" />
+      Voltar para a visao geral
+    </button>
   );
 }
 

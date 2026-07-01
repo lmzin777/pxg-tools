@@ -14,7 +14,7 @@ export type FavoriteEntity = {
 
 const STORAGE_KEY = 'pxg-tools:favorites';
 
-export function FavoriteButton({ entity }: { entity: FavoriteEntity }) {
+export function FavoriteButton({ entity, compact = false }: { entity: FavoriteEntity; compact?: boolean }) {
   const [favorites, setFavorites] = useState<FavoriteEntity[]>([]);
   const key = favoriteKey(entity);
   const isFavorite = useMemo(() => favorites.some((favorite) => favoriteKey(favorite) === key), [favorites, key]);
@@ -35,15 +35,18 @@ export function FavoriteButton({ entity }: { entity: FavoriteEntity }) {
     <button
       type="button"
       onClick={toggleFavorite}
+      aria-label={isFavorite ? `Remover ${entity.title} dos favoritos` : `Favoritar ${entity.title}`}
+      title={isFavorite ? 'Remover dos favoritos' : 'Favoritar'}
       className={[
-        'inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-black transition',
+        'inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border text-sm font-black transition',
+        compact ? 'w-10 px-0' : 'px-3',
         isFavorite
           ? 'border-amber-300/60 bg-amber-300/15 text-amber-100'
           : 'border-white/10 bg-slate-900 text-slate-100 hover:border-amber-300/50 hover:text-amber-100',
       ].join(' ')}
     >
       <Heart className={['h-4 w-4', isFavorite ? 'fill-amber-200' : ''].join(' ')} />
-      {isFavorite ? 'Favorito' : 'Favoritar'}
+      {compact ? <span className="sr-only">{isFavorite ? 'Favorito' : 'Favoritar'}</span> : isFavorite ? 'Favorito' : 'Favoritar'}
     </button>
   );
 }

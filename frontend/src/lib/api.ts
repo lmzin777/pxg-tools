@@ -23,6 +23,7 @@ import {
 } from '@/lib/local-data';
 
 const DEFAULT_API_BASE_URL = 'http://localhost:5000';
+const API_TIMEOUT_MS = Number(process.env.API_TIMEOUT_MS || '4000');
 
 export class ApiError extends Error {
   constructor(
@@ -57,6 +58,8 @@ function getConnectionErrorMessage(baseUrl: string) {
 async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
   const apiBaseUrl = getApiBaseUrl();
   const url = `${apiBaseUrl}${path}`;
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), Number.isFinite(API_TIMEOUT_MS) ? API_TIMEOUT_MS : 4000);
 
   let response: Response;
   try {
@@ -67,9 +70,12 @@ async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
         ...init?.headers,
       },
       cache: 'no-store',
+      signal: init?.signal || controller.signal,
     });
   } catch {
     throw new ApiError(getConnectionErrorMessage(apiBaseUrl));
+  } finally {
+    clearTimeout(timeoutId);
   }
 
   if (!response.ok) {
@@ -104,6 +110,19 @@ async function withLocalFallback<T>(remote: Promise<T>, fallback: () => Promise<
   }
 }
 
+async function withNonEmptyLocalFallback<T>(
+  remote: Promise<T>,
+  fallback: () => Promise<T>,
+  isEmpty: (value: T) => boolean,
+): Promise<T> {
+  const value = await withLocalFallback(remote, fallback);
+  if (isEmpty(value)) {
+    return fallback();
+  }
+
+  return value;
+}
+
 async function withNullableLocalFallback<T>(remote: Promise<T>, fallback: () => Promise<T | null>): Promise<T> {
   try {
     return await remote;
@@ -123,6 +142,10 @@ export async function getClans() {
   try {
     const remoteClans = await apiFetch<Clan[]>('/api/clans');
     const localClans = await getLocalClans();
+    if (!remoteClans.length) {
+      return localClans;
+    }
+
     const localBySlug = new Map(localClans.map((clan) => [clan.slug, clan]));
 
     return remoteClans.map((clan) => ({
@@ -159,7 +182,11 @@ export async function getClanDetail(slug: string) {
 }
 
 export function getProfessions() {
-  return withLocalFallback(apiFetch<ProfessionsOverview>('/api/professions'), getLocalProfessions);
+  return withNonEmptyLocalFallback(
+    apiFetch<ProfessionsOverview>('/api/professions'),
+    getLocalProfessions,
+    (overview) => !overview.professions.length,
+  );
 }
 
 export function getProfessionDetail(slug: string) {
@@ -179,7 +206,7 @@ export function getCrafts(filters?: {
   if (filters?.profession) params.set('profession', filters.profession);
   if (filters?.ingredient) params.set('ingredient', filters.ingredient);
   const suffix = params.size ? `?${params.toString()}` : '';
-  return withLocalFallback(apiFetch<CraftsOverview>(`/api/crafts${suffix}`), () => getLocalCrafts(filters));
+  return getCraftsWithLocalComplements(`/api/crafts${suffix}`, filters);
 }
 
 export function getCraft(slug: string) {
@@ -190,7 +217,11 @@ export function getCraft(slug: string) {
 }
 
 export function getPokemon() {
-  return withLocalFallback(apiFetch<PokemonOverview>('/api/pokemon'), getLocalPokemon);
+  return withNonEmptyLocalFallback(
+    apiFetch<PokemonOverview>('/api/pokemon'),
+    getLocalPokemon,
+    (overview) => !overview.pokemon.length,
+  );
 }
 
 export function getPokemonDetail(slug: string) {
@@ -201,7 +232,11 @@ export function getPokemonDetail(slug: string) {
 }
 
 export function getItems() {
-  return withLocalFallback(apiFetch<ItemsOverview>('/api/items'), getLocalItems);
+  return withNonEmptyLocalFallback(
+    apiFetch<ItemsOverview>('/api/items'),
+    getLocalItems,
+    (overview) => !overview.categories.length,
+  );
 }
 
 export function getItemCategory(slug: string) {
@@ -244,4 +279,29 @@ export function searchAll(query: string) {
   return withLocalFallback(apiFetch<SearchOverview>(`/api/search?${params.toString()}`), () =>
     searchLocalData(query),
   );
+}
+
+async function getCraftsWithLocalComplements(
+  path: string,
+  filters?: {
+    item?: string;
+    profession?: string;
+    ingredient?: string;
+  },
+): Promise<CraftsOverview> {
+  const localCrafts = await getLocalCrafts(filters);
+  const remoteCrafts = await withLocalFallback(apiFetch<CraftsOverview>(path), () => Promise.resolve(localCrafts));
+
+  if (!remoteCrafts.crafts.length) {
+    return localCrafts;
+  }
+
+  if (!localCrafts.crafts.length) {
+    return remoteCrafts;
+  }
+
+  const remoteSlugs = new Set(remoteCrafts.crafts.map((craft) => craft.slug));
+  return {
+    crafts: [...remoteCrafts.crafts, ...localCrafts.crafts.filter((craft) => !remoteSlugs.has(craft.slug))],
+  };
 }
