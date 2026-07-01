@@ -13,22 +13,15 @@ import type { ItemCategoryDetail, ItemDetail, ItemsOverview } from '@/types/item
 import type { PokemonDetail, PokemonOverview } from '@/types/pokemon';
 import type { SearchOverview, SearchResult } from '@/types/search';
 
-const DATA_DIR_CANDIDATES = [
-  resolve(process.cwd(), 'data'),
-  resolve(/* turbopackIgnore: true */ process.cwd(), '..', 'data'),
-];
+const DATA_DIR = resolve(process.cwd(), 'data');
 
 async function readDataFile<T>(fileName: string, fallback: T): Promise<T> {
-  for (const dataDir of DATA_DIR_CANDIDATES) {
-    try {
-      const content = await readFile(resolve(dataDir, fileName), 'utf8');
-      return JSON.parse(content.replace(/^\uFEFF/, '')) as T;
-    } catch {
-      // Try the next candidate path. Local dev can run from the repo root or frontend/.
-    }
+  try {
+    const content = await readFile(resolve(DATA_DIR, fileName), 'utf8');
+    return JSON.parse(content.replace(/^\uFEFF/, '')) as T;
+  } catch {
+    return fallback;
   }
-
-  return fallback;
 }
 
 function slugify(value: string) {

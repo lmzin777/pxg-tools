@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://wiki.pokexgames.com/index.php/Itens_Gerais",
-  "scrapedAt": "2026-06-29T02:31:23.382Z",
+  "scrapedAt": "2026-07-01T14:05:31.658Z",
   "categories": [
     {
       "slug": "mochilas",
@@ -18328,6 +18328,906 @@
             "Holder": "",
             "Nome": "Christmas Poké Ball Holder",
             "Como Conseguir": "Evento de Natal"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "alchemy-lab",
+      "title": "Alchemy Lab",
+      "group": "Profissoes",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab",
+      "iconUrl": "https://wiki.pokexgames.com/images/d/d9/Yellow_Alchemy_Lab.png",
+      "summary": "Alchemy Lab é um Workshop craftado por Professores para produzir as Materias necessárias para Boostar um Pokémon +50 ao +70. Existem 4 modelos diferentes de Alchemy Lab, porém todos são capazes de craftar as mesmas Materias.",
+      "sections": [
+        {
+          "title": "Introdução",
+          "anchor": "Introdução",
+          "level": 1
+        },
+        {
+          "title": "Como Produzir Materias",
+          "anchor": "Como_Produzir_Materias",
+          "level": 1
+        }
+      ],
+      "items": [
+        {
+          "slug": "yellow-alchemy-lab",
+          "name": "Yellow Alchemy Lab",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d9/Yellow_Alchemy_Lab.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "5 Dias",
+            "Materiais": "50 Glass, 1 Boost Stone, 150 Electric Rat Tail, 8 Strong Nature Energy"
+          }
+        },
+        {
+          "slug": "cyan-alchemy-lab",
+          "name": "Cyan Alchemy Lab",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/bf/Cyan_Alchemy_Lab.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "5 Dias",
+            "Materiais": "50 Glass, 2 Crystal Stone, 10 Zap, 8 Strong Nature Energy"
+          }
+        },
+        {
+          "slug": "purple-alchemy-lab",
+          "name": "Purple Alchemy Lab",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6d/Purple_Alchemy_Lab.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "5 Dias",
+            "Materiais": "50 Glass, 2 Ancient Stone, 180 Crimson Feather, 8 Strong Nature Energy"
+          }
+        },
+        {
+          "slug": "red-alchemy-lab",
+          "name": "Red Alchemy Lab",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b4/Red_Alchemy_Lab.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "5 Dias",
+            "Materiais": "50 Glass, 1 Boost Stone, 150 Lobster Claw, 8 Strong Nature Energy"
+          }
+        },
+        {
+          "slug": "volcanic-chemical",
+          "name": "Volcanic Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/02/Volcanic_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 35 Pot of Lava, 25 Fire Feather, 5 Strange Bones, 5 Compressed Fire, 1 Magma Foot"
+          }
+        },
+        {
+          "slug": "seavell-chemical",
+          "name": "Seavell Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/39/Seavell_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 30 Water Pendant, 20 Ice Blocks, 15 Water Plant, 15 Gift Bag, 1 Ice Bra"
+          }
+        },
+        {
+          "slug": "naturia-chemical",
+          "name": "Naturia Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d8/Naturia_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 30 Leaves, 1 Palm Leaves, 20 Pot of Moss Bug, 10 Insect Claw, 15 Greens, 1 Scythe"
+          }
+        },
+        {
+          "slug": "raibolt-chemical",
+          "name": "Raibolt Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Raibolt_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 10 Electric Box, 20 Shock Topknot, 8 Electric Rat Tail, 8 Sheep Wool, 1 Electric Tail"
+          }
+        },
+        {
+          "slug": "psycraft-chemical",
+          "name": "Psycraft Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/af/Psycraft_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 30 Future Orb, 2 Linearly Guided Hypnosis, 30 Mediling, 8 Strange Wing"
+          }
+        },
+        {
+          "slug": "malefic-chemical",
+          "name": "Malefic Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Malefic_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 23 Venom Flutes, 1 Big Crystal, 25 Poisonous Tail"
+          }
+        },
+        {
+          "slug": "gardestrike-chemical",
+          "name": "Gardestrike Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ab/Gardestrike_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 6 Martial Arts Scroll, 10 Cow Tail, 14 Eruption Ears, 1 Belt of Champion, 14 Cute Ball"
+          }
+        },
+        {
+          "slug": "orebound-chemical",
+          "name": "Orebound Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9b/Orebound_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 25 Stone Orb, 10 Horn Drill, 8 Strange Rock, 22 Gligar Claws"
+          }
+        },
+        {
+          "slug": "wingeon-chemical",
+          "name": "Wingeon Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/88/Wingeon_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 40 Feather, 15 Owl Feather, 13 Colored Feather, 10 Piece Of Blimp, 1 Dragon Tooth"
+          }
+        },
+        {
+          "slug": "ironhard-chemical",
+          "name": "Ironhard Chemical",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/50/Ironhard_Chemical2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Introdução",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Habilidade": "Skill 100",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "40 Pure Strong Grass, 16 Metal Hull, 25 Compressed Steel, 6 Steel Wing"
+          }
+        },
+        {
+          "slug": "volcanic-materia",
+          "name": "Volcanic Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3f/Volcanic_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Volcanic Chemical, 4 Fire Stones"
+          }
+        },
+        {
+          "slug": "volcanic-enhanced-materia",
+          "name": "Volcanic Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/dc/Volcanic_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Volcanic Chemical, 15 Fire Stones"
+          }
+        },
+        {
+          "slug": "volcanic-superior-materia",
+          "name": "Volcanic Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/f/fa/Volcanic_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Volcanic Chemical, 1 Scarlet Shard"
+          }
+        },
+        {
+          "slug": "volcanic-mastered-materia",
+          "name": "Volcanic Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b3/Volcanic_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Volcanic Chemicals, 10 Fire Stones, 1 Scarlet Shard"
+          }
+        },
+        {
+          "slug": "seavell-materia",
+          "name": "Seavell Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0e/Seavell_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "2 Water Stones, 2 Ice Stones, Ice-stone"
+          }
+        },
+        {
+          "slug": "seavell-enhanced-materia",
+          "name": "Seavell Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9f/Seavell_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Seavell Chemical, 7 Water Stones, 8 Ice Stones"
+          }
+        },
+        {
+          "slug": "seavell-superior-materia",
+          "name": "Seavell Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/e/e1/Seavell_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Seavell Chemical, 1 Azure Shard"
+          }
+        },
+        {
+          "slug": "seavell-mastered-materia",
+          "name": "Seavell Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0e/Seavell_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Seavell Chemicals, 5 Water Stones, 5 Ice Stones, 1 Azure Shard"
+          }
+        },
+        {
+          "slug": "naturia-materia",
+          "name": "Naturia Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/e/e4/Naturia_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "2 Leaf Stones, 2 Cocoon Stones, 2 Cocoon stone"
+          }
+        },
+        {
+          "slug": "naturia-enhanced-materia",
+          "name": "Naturia Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2e/Naturia_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "7 Leaf Stones, 8 Cocoon Stones, 8 Cocoon stone"
+          }
+        },
+        {
+          "slug": "naturia-superior-materia",
+          "name": "Naturia Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2b/Naturia_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Harlequin Shard, 1 Harlequin Shard"
+          }
+        },
+        {
+          "slug": "naturia-mastered-materia",
+          "name": "Naturia Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/83/Naturia_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Naturia Chemicals, 5 Leaf Stones, 5 Cocoon Stones, 1 Harlequin Shard"
+          }
+        },
+        {
+          "slug": "raibolt-materia",
+          "name": "Raibolt Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2d/Raibolt_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Raibolt Chemical, 4 Thunder Stones"
+          }
+        },
+        {
+          "slug": "raibolt-enhanced-materia",
+          "name": "Raibolt Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/68/Raibolt_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Raibolt Chemical, 15 Thunder Stones"
+          }
+        },
+        {
+          "slug": "raibolt-superior-materia",
+          "name": "Raibolt Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/cd/Raibolt_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Raibolt Chemical, 1 Sunflower Shard"
+          }
+        },
+        {
+          "slug": "raibolt-mastered-materia",
+          "name": "Raibolt Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/96/Raibolt_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Raibolt Chemicals, 10 Thunder Stones, 1 Sunflower Shard"
+          }
+        },
+        {
+          "slug": "psycraft-materia",
+          "name": "Psycraft Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f9/Psycraft_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Psycraft Chemical, 4 Enigma Stones"
+          }
+        },
+        {
+          "slug": "psycraft-enhanced-materia",
+          "name": "Psycraft Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/aa/Psycraft_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Psycraft Chemical, 15 Enigma Stones"
+          }
+        },
+        {
+          "slug": "psycraft-superior-materia",
+          "name": "Psycraft Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/37/Psycraft_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Psycraft Chemical, 1 Cerise Shard"
+          }
+        },
+        {
+          "slug": "psycraft-mastered-materia",
+          "name": "Psycraft Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/68/Psycraft_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Psycraft Chemicals, 10 Enigma Stones, 1 Cerise Shard"
+          }
+        },
+        {
+          "slug": "malefic-materia",
+          "name": "Malefic Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b2/Malefic_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Malefic Chemical, 2 Venom Stones, 2 Darkness Stones"
+          }
+        },
+        {
+          "slug": "malefic-enhanced-materia",
+          "name": "Malefic Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/4/44/Malefic_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Malefic Chemical, 7 Venom Stones, 8 Darkness Stones"
+          }
+        },
+        {
+          "slug": "malefic-superior-materia",
+          "name": "Malefic Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/4/40/Malefic_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Malefic Chemical, 1 Damson Shard"
+          }
+        },
+        {
+          "slug": "malefic-mastered-materia",
+          "name": "Malefic Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/1/1a/Malefic_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Malefic Chemicals, 5 Venom Stones, 5 Darkness Stones, 1 Damson Shard"
+          }
+        },
+        {
+          "slug": "gardestrike-materia",
+          "name": "Gardestrike Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7f/Gardestrike_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Gardestrike Chemical, 2 Heart Stones, 2 Punch Stones"
+          }
+        },
+        {
+          "slug": "gardestrike-enhanced-materia",
+          "name": "Gardestrike Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b7/Gardestrike_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Gardestrike Chemical, 7 Heart Stones, 8 Punch Stones"
+          }
+        },
+        {
+          "slug": "gardestrike-superior-materia",
+          "name": "Gardestrike Superior Materia.",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/90/Gardestrike_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Gardestrike Chemical, 1 Kermes Shard"
+          }
+        },
+        {
+          "slug": "gardestrike-mastered-materia",
+          "name": "Gardestrike Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2a/Gardestrike_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Gardestrike Chemicals, 5 Heart Stones, 5 Punch Stones, 1 Kermes Shard"
+          }
+        },
+        {
+          "slug": "orebound-materia",
+          "name": "Orebound Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/72/Orebound_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Orebound Chemical, 2 Rock Stones, 2 Earth Stones"
+          }
+        },
+        {
+          "slug": "orebound-enhanced-materia",
+          "name": "Orebound Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0a/Orebound_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Orebound Chemical, 7 Rock Stones, 8 Earth Stones"
+          }
+        },
+        {
+          "slug": "orebound-superior-materia",
+          "name": "Orebound Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c3/Orebound_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Orebound Chemical, 1 Indigo Shard"
+          }
+        },
+        {
+          "slug": "orebound-mastered-materia",
+          "name": "Orebound Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6a/Orebound_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Orebound Chemicals, 5 Rock Stones, 5 Earth Stones, 1 Indigo Shard"
+          }
+        },
+        {
+          "slug": "wingeon-materia",
+          "name": "Wingeon Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/4/48/Wingeon_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Wingeon Chemical, 4 Feather Stones"
+          }
+        },
+        {
+          "slug": "wingeon-enhanced-materia",
+          "name": "Wingeon Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/4/4b/Wingeon_Enhanced_Materia_22.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Wingeon Chemical, 5 Feather Stones, 1 Crystal Stone"
+          }
+        },
+        {
+          "slug": "wingeon-superior-materia",
+          "name": "Wingeon Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b2/Wingeon_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Wingeon Chemical, 1 Shell Shard"
+          }
+        },
+        {
+          "slug": "wingeon-mastered-materia",
+          "name": "Wingeon Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7e/Wingeon_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Wingeon Chemicals, 1 Crystal Stone, 1 Shell Shard"
+          }
+        },
+        {
+          "slug": "ironhard-materia",
+          "name": "Ironhard Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/70/Ironhard_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Minuto",
+            "Materiais": "1 Ironhard Chemical, 1 Metal Stone"
+          }
+        },
+        {
+          "slug": "ironhard-enhanced-materia",
+          "name": "Ironhard Enhanced Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/93/Ironhard_Enhanced_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "10 Minutos",
+            "Materiais": "1 Ironhard Chemical, 2 Metal Stones"
+          }
+        },
+        {
+          "slug": "ironhard-superior-materia",
+          "name": "Ironhard Superior Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0e/Ironhard_Superior_Materia_2.png",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "1 Hora",
+            "Materiais": "1 Ironhard Chemical, 1 Slate Shard"
+          }
+        },
+        {
+          "slug": "ironhard-mastered-materia",
+          "name": "Ironhard Mastered Materia",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/80/Ironhard_Mastered_Materia_2.gif",
+          "description": "Item produzido no Alchemy Lab por Professor Alquimista.",
+          "section": "Como Produzir Materias",
+          "table": "Alchemy Lab",
+          "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+          "attributes": {
+            "Origem": "Alchemy Lab",
+            "Profissao": "Professor",
+            "Especializacao": "Alquimista",
+            "Tempo de espera": "3 Horas",
+            "Materiais": "3 Ironhard Chemicals, 1 Metal Stone, 1 Slate Shard"
           }
         }
       ]

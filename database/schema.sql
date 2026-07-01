@@ -291,8 +291,11 @@ create table if not exists pokemon_moves (
   cooldown text not null default '',
   required_level text not null default '',
   description text not null default '',
+  icons_json jsonb not null default '[]'::jsonb,
   sort_order integer not null default 0
 );
+
+alter table pokemon_moves add column if not exists icons_json jsonb not null default '[]'::jsonb;
 
 create table if not exists pokemon_versions (
   id uuid primary key default gen_random_uuid(),

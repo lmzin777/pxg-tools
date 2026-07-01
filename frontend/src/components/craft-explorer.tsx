@@ -20,7 +20,6 @@ type CraftExplorerProps = {
   initialQuery?: string;
   initialProfession?: string;
   initialSubprofession?: string;
-  initialCategory?: string;
   initialRank?: string;
 };
 
@@ -35,13 +34,11 @@ export function CraftExplorer({
   initialQuery = '',
   initialProfession = '',
   initialSubprofession = '',
-  initialCategory = '',
   initialRank = '',
 }: CraftExplorerProps) {
   const [query, setQuery] = useState(initialQuery);
   const [profession, setProfession] = useState(initialProfession);
   const [subprofession, setSubprofession] = useState(initialSubprofession);
-  const [category, setCategory] = useState(initialCategory);
   const [rank, setRank] = useState(initialRank);
   const [sort, setSort] = useState<SortMode>('default');
   const normalizedQuery = normalizeText(query);
@@ -52,10 +49,6 @@ export function CraftExplorer({
   );
   const subprofessionOptions = useMemo(
     () => uniqueSorted(crafts.map((craft) => craft.subprofession).filter(Boolean)),
-    [crafts],
-  );
-  const categoryOptions = useMemo(
-    () => uniqueSorted(crafts.map((craft) => craft.category).filter(Boolean)),
     [crafts],
   );
   const rankOptions = useMemo(() => {
@@ -84,13 +77,12 @@ export function CraftExplorer({
         (!normalizedQuery || normalizeText(searchable).includes(normalizedQuery)) &&
         (!profession || craft.profession === profession) &&
         (!subprofession || craft.subprofession === subprofession) &&
-        (!category || craft.category === category) &&
         (!rank || craft.rank === rank || craft.category === rank)
       );
     });
 
     return sortCrafts(rows, sort);
-  }, [category, crafts, normalizedQuery, profession, rank, sort, subprofession]);
+  }, [crafts, normalizedQuery, profession, rank, sort, subprofession]);
 
   const visibleCrafts = compact ? filteredCrafts.slice(0, 24) : filteredCrafts;
 
@@ -107,8 +99,8 @@ export function CraftExplorer({
           </div>
         </div>
 
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-6">
-          <label className="grid gap-2 text-sm font-bold text-slate-300 xl:col-span-2">
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-[minmax(16rem,2fr)_repeat(4,minmax(10rem,1fr))]">
+          <label className="grid gap-2 text-sm font-bold text-slate-300">
             Nome ou ingrediente
             <span className="relative">
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
@@ -124,9 +116,8 @@ export function CraftExplorer({
             <FilterSelect label="Profissao" value={profession} onChange={setProfession} options={professionOptions} />
           ) : null}
           {showSubprofessionFilter ? (
-            <FilterSelect label="Subprofissao" value={subprofession} onChange={setSubprofession} options={subprofessionOptions} />
+            <FilterSelect label="Especializacao" value={subprofession} onChange={setSubprofession} options={subprofessionOptions} />
           ) : null}
-          <FilterSelect label="Categoria" value={category} onChange={setCategory} options={categoryOptions} />
           {showRankFilter ? (
             <FilterSelect label="Rank" value={rank} onChange={setRank} options={rankOptions} allLabel="Todos os ranks" />
           ) : null}

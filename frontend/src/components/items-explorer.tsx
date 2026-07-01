@@ -8,13 +8,46 @@ import { RelatedCrafts, RelatedProfessions } from '@/components/related-sections
 import { normalizeText } from '@/lib/format';
 import { findCraftsCreatingItem, findCraftsUsingItem, findProfessionsForItem } from '@/lib/relationships';
 import type { Craft } from '@/types/crafts';
-import type { ItemCategoryDetail, ItemCategorySummary } from '@/types/items';
+import type { ItemAttribute, ItemCategoryDetail, ItemCategorySummary } from '@/types/items';
 
-export function ItemsExplorer({ categories, initialQuery = '' }: { categories: ItemCategorySummary[]; initialQuery?: string }) {
+export function ItemsExplorer({
+  categories,
+  categoryDetails = [],
+  initialQuery = '',
+}: {
+  categories: ItemCategorySummary[];
+  categoryDetails?: ItemCategoryDetail[];
+  initialQuery?: string;
+}) {
   const [query, setQuery] = useState(initialQuery);
   const [group, setGroup] = useState('');
   const normalizedQuery = normalizeText(query);
   const groups = useMemo(() => [...new Set(categories.map((category) => category.group))].sort(), [categories]);
+  const itemResults = useMemo(() => {
+    if (!normalizedQuery) return [];
+
+    return categoryDetails
+      .flatMap((category) =>
+        category.items.map((item) => ({
+          item,
+          category,
+          attributes: getItemAttributes(item),
+        })),
+      )
+      .filter(({ item, category, attributes }) => {
+        const searchable = [
+          item.name,
+          item.description,
+          item.section,
+          item.table,
+          category.title,
+          category.group,
+          ...attributes.flatMap((attribute) => [attribute.name, attribute.value]),
+        ].join(' ');
+        return normalizeText(searchable).includes(normalizedQuery);
+      })
+      .slice(0, 80);
+  }, [categoryDetails, normalizedQuery]);
   const filteredCategories = categories.filter((category) => {
     const searchable = [category.title, category.group, category.summary].join(' ');
     return (!normalizedQuery || normalizeText(searchable).includes(normalizedQuery)) && (!group || category.group === group);
@@ -43,6 +76,31 @@ export function ItemsExplorer({ categories, initialQuery = '' }: { categories: I
         </div>
       </section>
 
+      {normalizedQuery && itemResults.length ? (
+        <section className="grid gap-3">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">{itemResults.length} itens encontrados</span>
+            <h3 className="mt-1 text-xl font-black text-white">Resultados por item</h3>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {itemResults.map(({ item, category, attributes }) => (
+              <Link
+                key={`${category.slug}-${item.slug}-${item.name}`}
+                href={itemHref(item.slug, item.name)}
+                className="grid grid-cols-[48px_1fr] gap-3 rounded-lg border border-white/10 bg-white/[0.035] p-3 transition hover:border-cyan-300/70"
+              >
+                {item.iconUrl ? <img src={item.iconUrl} alt="" className="h-12 w-12 object-contain" loading="lazy" /> : <span />}
+                <span className="min-w-0">
+                  <span className="text-xs font-bold uppercase tracking-[0.14em] text-cyan-200">{category.title}</span>
+                  <span className="mt-1 block font-black text-white">{item.name}</span>
+                  <span className="mt-1 line-clamp-2 block text-xs text-slate-300">{item.description || attributes.map((attribute) => `${attribute.name}: ${attribute.value}`).join(' | ')}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
         {filteredCategories.map((category) => (
           <Link key={category.slug} href={`/items/${category.slug}`} className="grid grid-cols-[56px_1fr] gap-3 rounded-lg border border-white/10 bg-white/[0.035] p-4 transition hover:border-cyan-300/70">
@@ -66,13 +124,14 @@ export function ItemCategoryView({ category, crafts = [] }: { category: ItemCate
   const [attribute, setAttribute] = useState('');
   const normalizedQuery = normalizeText(query);
   const sections = useMemo(() => [...new Set(category.items.map((item) => item.section).filter(Boolean))].sort(), [category.items]);
-  const attributes = useMemo(() => [...new Set(category.items.flatMap((item) => item.attributes.map((attr) => attr.name)).filter(Boolean))].sort(), [category.items]);
+  const attributes = useMemo(() => [...new Set(category.items.flatMap((item) => getItemAttributes(item).map((attr) => attr.name)).filter(Boolean))].sort(), [category.items]);
   const filteredItems = category.items.filter((item) => {
-    const searchable = [item.name, item.description, item.section, item.table, ...item.attributes.flatMap((attr) => [attr.name, attr.value])].join(' ');
+    const itemAttributes = getItemAttributes(item);
+    const searchable = [item.name, item.description, item.section, item.table, ...itemAttributes.flatMap((attr) => [attr.name, attr.value])].join(' ');
     return (
       (!normalizedQuery || normalizeText(searchable).includes(normalizedQuery)) &&
       (!section || item.section === section) &&
-      (!attribute || item.attributes.some((attr) => attr.name === attribute))
+      (!attribute || itemAttributes.some((attr) => attr.name === attribute))
     );
   });
 
@@ -110,6 +169,7 @@ function ItemCard({ item, crafts }: { item: ItemCategoryDetail['items'][number];
   const createdBy = findCraftsCreatingItem(crafts, item);
   const usedBy = findCraftsUsingItem(crafts, item);
   const professions = findProfessionsForItem(crafts, item);
+  const attributes = getItemAttributes(item);
 
   return (
     <article className="rounded-lg border border-white/10 bg-white/[0.035] p-4">
@@ -124,7 +184,7 @@ function ItemCard({ item, crafts }: { item: ItemCategoryDetail['items'][number];
       </div>
       <p className="mt-3 line-clamp-4 text-sm leading-6 text-slate-300">{item.description || 'Sem descricao.'}</p>
       <div className="mt-3 flex flex-wrap gap-2">
-        {item.attributes.slice(0, 6).map((attr) => <span key={`${item.slug}-${attr.name}-${attr.value}`} className="rounded-full border border-white/10 px-2.5 py-1 text-xs font-bold text-slate-200">{attr.name}: {attr.value}</span>)}
+        {attributes.slice(0, 6).map((attr) => <span key={`${item.slug}-${attr.name}-${attr.value}`} className="rounded-full border border-white/10 px-2.5 py-1 text-xs font-bold text-slate-200">{attr.name}: {attr.value}</span>)}
       </div>
       {createdBy.length || usedBy.length ? (
         <div className="mt-4 grid gap-3">
@@ -135,6 +195,28 @@ function ItemCard({ item, crafts }: { item: ItemCategoryDetail['items'][number];
       ) : null}
     </article>
   );
+}
+
+function getItemAttributes(item: ItemCategoryDetail['items'][number]): ItemAttribute[] {
+  const rawAttributes = item.attributes as unknown;
+
+  if (Array.isArray(rawAttributes)) {
+    return rawAttributes
+      .map((attribute) => ({
+        name: String(attribute?.name || ''),
+        value: String(attribute?.value || ''),
+      }))
+      .filter((attribute) => attribute.name || attribute.value);
+  }
+
+  if (rawAttributes && typeof rawAttributes === 'object') {
+    return Object.entries(rawAttributes).map(([name, value]) => ({
+      name,
+      value: Array.isArray(value) ? value.join(', ') : String(value ?? ''),
+    }));
+  }
+
+  return [];
 }
 
 function Filter({ label, value, onChange, options }: { label: string; value: string; onChange: (value: string) => void; options: string[] }) {

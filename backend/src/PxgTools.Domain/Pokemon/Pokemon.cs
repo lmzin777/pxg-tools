@@ -26,7 +26,12 @@ public sealed record PokemonMove(
     string Type,
     string Cooldown,
     string Level,
-    string Description);
+    string Description,
+    IReadOnlyList<PokemonMoveIcon> Icons);
+
+public sealed record PokemonMoveIcon(
+    string Label,
+    string IconUrl);
 
 public sealed record PokemonVersion(
     string Name,
@@ -52,6 +57,7 @@ public sealed record PokemonDetail(
     IReadOnlyList<PokemonEvolution> Evolutions,
     string Description,
     IReadOnlyList<PokemonEffectivenessGroup> Effectiveness,
+    IReadOnlyList<PokemonMove> Moves,
     IReadOnlyList<PokemonMove> PvpMoves,
     IReadOnlyList<PokemonMove> PveMoves,
     IReadOnlyList<PokemonVersion> OtherVersions);

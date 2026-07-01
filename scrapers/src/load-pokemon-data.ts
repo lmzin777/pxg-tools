@@ -22,6 +22,12 @@ type PokemonMoveRecord = {
   cooldown: string;
   level: string;
   description: string;
+  icons?: PokemonMoveIconRecord[];
+};
+
+type PokemonMoveIconRecord = {
+  label: string;
+  iconUrl: string;
 };
 
 type PokemonVersionRecord = {
@@ -51,6 +57,7 @@ type PokemonRecord = {
   effectiveness: PokemonEffectivenessRecord[];
   pvpMoves?: PokemonMoveRecord[];
   pveMoves?: PokemonMoveRecord[];
+  moves?: PokemonMoveRecord[];
   otherVersions?: PokemonVersionRecord[];
 };
 
@@ -183,11 +190,14 @@ async function main() {
           effectivenessRows.push([pokemonId, group.category, type, index]);
         });
       });
+      (pokemon.moves ?? []).forEach((move, index) => {
+        moveRows.push([pokemonId, 'generic', move.name, move.type ?? '', move.cooldown ?? '', move.level ?? '', move.description ?? '', JSON.stringify(move.icons ?? []), index]);
+      });
       (pokemon.pvpMoves ?? []).forEach((move, index) => {
-        moveRows.push([pokemonId, 'pvp', move.name, move.type ?? '', move.cooldown ?? '', move.level ?? '', move.description ?? '', index]);
+        moveRows.push([pokemonId, 'pvp', move.name, move.type ?? '', move.cooldown ?? '', move.level ?? '', move.description ?? '', JSON.stringify(move.icons ?? []), index]);
       });
       (pokemon.pveMoves ?? []).forEach((move, index) => {
-        moveRows.push([pokemonId, 'pve', move.name, move.type ?? '', move.cooldown ?? '', move.level ?? '', move.description ?? '', index]);
+        moveRows.push([pokemonId, 'pve', move.name, move.type ?? '', move.cooldown ?? '', move.level ?? '', move.description ?? '', JSON.stringify(move.icons ?? []), index]);
       });
       (pokemon.otherVersions ?? []).forEach((version, index) => {
         versionRows.push([pokemonId, version.name, version.slug ?? '', version.iconUrl ?? '', version.sourceUrl ?? '', index]);
@@ -200,7 +210,7 @@ async function main() {
     await insertChunked(
       client,
       'pokemon_moves',
-      ['pokemon_id', 'battle_mode', 'move_name', 'move_type', 'cooldown', 'required_level', 'description', 'sort_order'],
+      ['pokemon_id', 'battle_mode', 'move_name', 'move_type', 'cooldown', 'required_level', 'description', 'icons_json', 'sort_order'],
       moveRows,
     );
     await insertChunked(

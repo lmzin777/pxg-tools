@@ -224,11 +224,19 @@ export function getPokemon() {
   );
 }
 
-export function getPokemonDetail(slug: string) {
-  return withNullableLocalFallback(
-    apiFetch<PokemonDetail>(`/api/pokemon/${encodeURIComponent(slug)}`),
-    () => getLocalPokemonDetail(slug),
-  );
+export async function getPokemonDetail(slug: string) {
+  const localPokemon = await getLocalPokemonDetail(slug);
+
+  try {
+    const remotePokemon = await apiFetch<PokemonDetail>(`/api/pokemon/${encodeURIComponent(slug)}`);
+    return localPokemon ? mergePokemonDetail(remotePokemon, localPokemon) : remotePokemon;
+  } catch (error) {
+    if (error instanceof ApiError && localPokemon) {
+      return localPokemon;
+    }
+
+    throw error;
+  }
 }
 
 export function getItems() {
@@ -303,5 +311,24 @@ async function getCraftsWithLocalComplements(
   const remoteSlugs = new Set(remoteCrafts.crafts.map((craft) => craft.slug));
   return {
     crafts: [...remoteCrafts.crafts, ...localCrafts.crafts.filter((craft) => !remoteSlugs.has(craft.slug))],
+  };
+}
+
+function mergePokemonDetail(remotePokemon: PokemonDetail, localPokemon: PokemonDetail): PokemonDetail {
+  return {
+    ...remotePokemon,
+    detailSpriteUrl: remotePokemon.detailSpriteUrl || localPokemon.detailSpriteUrl,
+    abilities: remotePokemon.abilities || localPokemon.abilities,
+    boost: remotePokemon.boost || localPokemon.boost,
+    material: remotePokemon.material || localPokemon.material,
+    evolutionStone: remotePokemon.evolutionStone || localPokemon.evolutionStone,
+    description: remotePokemon.description || localPokemon.description,
+    elements: remotePokemon.elements?.length ? remotePokemon.elements : localPokemon.elements,
+    evolutions: remotePokemon.evolutions?.length ? remotePokemon.evolutions : localPokemon.evolutions,
+    effectiveness: remotePokemon.effectiveness?.length ? remotePokemon.effectiveness : localPokemon.effectiveness,
+    moves: remotePokemon.moves?.length ? remotePokemon.moves : localPokemon.moves,
+    pvpMoves: remotePokemon.pvpMoves?.length ? remotePokemon.pvpMoves : localPokemon.pvpMoves,
+    pveMoves: remotePokemon.pveMoves?.length ? remotePokemon.pveMoves : localPokemon.pveMoves,
+    otherVersions: remotePokemon.otherVersions?.length ? remotePokemon.otherVersions : localPokemon.otherVersions,
   };
 }

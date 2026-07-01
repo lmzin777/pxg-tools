@@ -1,6 +1,7 @@
 using Npgsql;
 using PxgTools.Application.Pokemon;
 using PxgTools.Domain.Pokemon;
+using System.Text.Json;
 
 namespace PxgTools.Infrastructure.Persistence;
 
@@ -131,6 +132,7 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
             await ReadEvolutionsAsync(pokemonId, cancellationToken),
             detail.Description,
             await ReadEffectivenessAsync(pokemonId, cancellationToken),
+            await ReadMovesAsync(pokemonId, "generic", cancellationToken),
             await ReadMovesAsync(pokemonId, "pvp", cancellationToken),
             await ReadMovesAsync(pokemonId, "pve", cancellationToken),
             await ReadVersionsAsync(pokemonId, cancellationToken));
@@ -184,7 +186,7 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
     private async Task<IReadOnlyList<PokemonMove>> ReadMovesAsync(Guid pokemonId, string battleMode, CancellationToken cancellationToken)
     {
         const string sql = """
-            select move_name, move_type, cooldown, required_level, description
+            select move_name, move_type, cooldown, required_level, description, icons_json::text
             from pokemon_moves
             where pokemon_id = @pokemonId and battle_mode = @battleMode
             order by sort_order, move_name;
@@ -203,10 +205,31 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
                 reader.GetString(1),
                 reader.GetString(2),
                 reader.GetString(3),
-                reader.GetString(4)));
+                reader.GetString(4),
+                ReadMoveIcons(reader.GetString(5))));
         }
 
         return moves;
+    }
+
+    private static IReadOnlyList<PokemonMoveIcon> ReadMoveIcons(string iconsJson)
+    {
+        if (string.IsNullOrWhiteSpace(iconsJson))
+        {
+            return [];
+        }
+
+        try
+        {
+            return JsonSerializer.Deserialize<IReadOnlyList<PokemonMoveIcon>>(iconsJson, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            }) ?? [];
+        }
+        catch (JsonException)
+        {
+            return [];
+        }
     }
 
     private async Task<IReadOnlyList<PokemonVersion>> ReadVersionsAsync(Guid pokemonId, CancellationToken cancellationToken)

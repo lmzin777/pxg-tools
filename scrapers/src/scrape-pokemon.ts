@@ -44,6 +44,12 @@ type PokemonMoveRecord = {
   cooldown: string;
   level: string;
   description: string;
+  icons: PokemonMoveIconRecord[];
+};
+
+type PokemonMoveIconRecord = {
+  label: string;
+  iconUrl: string;
 };
 
 type PokemonVersionRecord = {
@@ -64,6 +70,7 @@ type PokemonRecord = PokemonListRecord & {
   evolutions: PokemonEvolutionRecord[];
   description: string;
   effectiveness: PokemonEffectivenessRecord[];
+  moves: PokemonMoveRecord[];
   pvpMoves: PokemonMoveRecord[];
   pveMoves: PokemonMoveRecord[];
   otherVersions: PokemonVersionRecord[];
@@ -79,6 +86,27 @@ const GENERATION_TITLES = [
   'Alola',
   'Galar',
   'Paldea',
+];
+const MOVE_TYPE_NAMES = [
+  'Normal',
+  'Fire',
+  'Water',
+  'Electric',
+  'Grass',
+  'Ice',
+  'Fighting',
+  'Poison',
+  'Ground',
+  'Flying',
+  'Psychic',
+  'Bug',
+  'Rock',
+  'Ghost',
+  'Dragon',
+  'Dark',
+  'Steel',
+  'Fairy',
+  'Crystal',
 ];
 
 function absoluteUrl(value: string) {
@@ -347,16 +375,30 @@ function sectionElementsByHeading($: cheerio.CheerioAPI, headingNames: string[])
 function parseMovesFromHtml(html: string) {
   const $ = cheerio.load(html);
   const section = sectionElementsByHeading($, ['Movimentos']);
+  const rowMoves = parseMoveRowsFromSection($, section);
+
+  if (rowMoves.length) {
+    return { moves: rowMoves, pvpMoves: [], pveMoves: [] };
+  }
+
+  const moves: PokemonMoveRecord[] = [];
   const pvpMoves: PokemonMoveRecord[] = [];
   const pveMoves: PokemonMoveRecord[] = [];
   let currentMode: 'pvp' | 'pve' = 'pve';
+  let hasModeHeading = false;
 
   for (const element of section) {
     const tag = element.tagName?.toLowerCase() ?? '';
     if (/^h[3-6]$/.test(tag)) {
       const title = normalizeKey($(element).text());
-      if (title.includes('pvp')) currentMode = 'pvp';
-      if (title.includes('pve')) currentMode = 'pve';
+      if (title.includes('pvp')) {
+        currentMode = 'pvp';
+        hasModeHeading = true;
+      }
+      if (title.includes('pve')) {
+        currentMode = 'pve';
+        hasModeHeading = true;
+      }
       continue;
     }
 
@@ -381,15 +423,138 @@ function parseMovesFromHtml(html: string) {
           cooldown: normalizeText($(cells[2]).text()),
           level: normalizeText($(cells[3]).text()),
           description: normalizeText($(cells.slice(4)).text()),
+          icons: extractMoveIcons($, row),
         };
-        const target = currentMode === 'pvp' ? pvpMoves : pveMoves;
+        const target = hasModeHeading ? (currentMode === 'pvp' ? pvpMoves : pveMoves) : moves;
         if (!target.some((entry) => entry.name === move.name)) {
           target.push(move);
         }
       });
   }
 
-  return { pvpMoves, pveMoves };
+  const sectionText = normalizeText(section.map((element) => $(element).text()).join(' '));
+  const textMoves = parseMovesFromText(sectionText);
+
+  if (textMoves.length) {
+    return { moves: textMoves, pvpMoves, pveMoves };
+  }
+
+  return { moves, pvpMoves, pveMoves };
+}
+
+function parseMoveRowsFromSection($: cheerio.CheerioAPI, section: Element[]) {
+  const moves: PokemonMoveRecord[] = [];
+  const rows = cheerio.load('<root></root>')('root');
+  section.forEach((element) => rows.append($(element).clone()));
+
+  rows.find('tr').each((_, row) => {
+    const moveNumber = normalizeText($(row).children('th').first().text());
+    if (!/^M\d+$/i.test(moveNumber)) {
+      return;
+    }
+
+    const moveCell = $(row)
+      .children('td')
+      .toArray()
+      .find((cell) => /\([^)]+\)/.test(normalizeText($(cell).text())));
+    const moveText = moveCell ? normalizeText($(moveCell).text()) : '';
+    const moveMatch = moveText.match(/^(.+?)\s*\(([^)]+)\)$/);
+    if (!moveMatch) {
+      return;
+    }
+
+    const nextRowText = normalizeText($(row).next('tr').text());
+    const levelMatch = nextRowText.match(/Level\s*([0-9]+)/i);
+
+    moves.push({
+      name: normalizeText(moveMatch[1]),
+      type: findMoveTypeInRow($, row),
+      cooldown: normalizeText(moveMatch[2]),
+      level: normalizeText(levelMatch?.[1] ?? ''),
+      description: '',
+      icons: extractMoveIcons($, row),
+    });
+  });
+
+  return moves;
+}
+
+function findMoveTypeInRow($: cheerio.CheerioAPI, row: any) {
+  const labels = $(row)
+    .find('a[title], img[alt], img[title]')
+    .toArray()
+    .flatMap((element) => [
+      normalizeText($(element).attr('title') ?? ''),
+      normalizeText($(element).attr('alt') ?? ''),
+    ])
+    .filter(Boolean);
+
+  return MOVE_TYPE_NAMES.find((type) => labels.some((label) => label.toLowerCase() === type.toLowerCase())) ?? '';
+}
+
+function parseMovesFromText(text: string) {
+  const moves: PokemonMoveRecord[] = [];
+  const pattern = /\bM\d+\s+(.+?)\s*\(([^)]+)\)(.*?)(?:Level\s*([0-9]+))?(?=\s+M\d+\s+|$)/gi;
+  let match: RegExpExecArray | null;
+
+  while ((match = pattern.exec(text)) !== null) {
+    const name = normalizeText(match[1]).replace(/\s+\([^)]+\)$/g, '');
+    if (!name || /arquivo|file|editar|level\s+\d+/i.test(name)) {
+      continue;
+    }
+
+    const description = normalizeMoveDescription(match[3] ?? '');
+    moves.push({
+      name,
+      type: inferMoveType(description),
+      cooldown: normalizeText(match[2]),
+      level: normalizeText(match[4] ?? ''),
+      description,
+      icons: [],
+    });
+  }
+
+  return moves;
+}
+
+function extractMoveIcons($: cheerio.CheerioAPI, row: any) {
+  const seen = new Set<string>();
+
+  return $(row)
+    .find('img')
+    .toArray()
+    .map((image) => {
+      const label = normalizeText($(image).attr('alt') ?? $(image).attr('title') ?? '');
+      const src = $(image).attr('src') ?? '';
+      return {
+        label,
+        iconUrl: src ? absoluteUrl(src) : '',
+      };
+    })
+    .filter((icon) => {
+      const key = `${icon.label}:${icon.iconUrl}`;
+      if (!icon.label || !icon.iconUrl || seen.has(key)) {
+        return false;
+      }
+
+      seen.add(key);
+      return true;
+    });
+}
+
+function normalizeMoveDescription(value: string) {
+  return normalizeText(value)
+    .replace(/\bImage:\s*/gi, '')
+    .replace(/\s+Level\s+\d+$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function inferMoveType(description: string) {
+  const tokens = description.split(/\s+/).map((token) => normalizeText(token));
+  return [...MOVE_TYPE_NAMES]
+    .reverse()
+    .find((type) => tokens.some((token) => token.toLowerCase() === type.toLowerCase())) ?? '';
 }
 
 function parseOtherVersionsFromHtml(html: string, currentName: string) {
@@ -440,6 +605,7 @@ async function enrichPokemon(base: PokemonListRecord): Promise<PokemonRecord> {
       evolutions: parseEvolutions(wikitext),
       description: parseDescription(wikitext),
       effectiveness: parseEffectiveness(wikitext),
+      moves: moves.moves,
       pvpMoves: moves.pvpMoves,
       pveMoves: moves.pveMoves,
       otherVersions: parseOtherVersionsFromHtml(html, base.name),
@@ -458,6 +624,7 @@ async function enrichPokemon(base: PokemonListRecord): Promise<PokemonRecord> {
       evolutions: [],
       description: '',
       effectiveness: [],
+      moves: [],
       pvpMoves: [],
       pveMoves: [],
       otherVersions: [],

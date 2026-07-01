@@ -25,10 +25,9 @@ export default async function CraftsPage({ searchParams }: CraftsPageProps) {
       initialQuery={query}
       initialProfession={firstParam(params.profession)}
       initialSubprofession={firstParam(params.subprofession)}
-      initialCategory={firstParam(params.category)}
       initialRank={firstParam(params.rank)}
       title="Crafts"
-      description="Busca central de crafts por item criado, ingrediente, profissao, subprofissao, categoria, rank, habilidade e tempo."
+      description="Busca central de crafts por item criado, ingrediente, profissao, especializacao, rank, habilidade e tempo."
     />
   );
 }

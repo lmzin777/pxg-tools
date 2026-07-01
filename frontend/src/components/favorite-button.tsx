@@ -38,8 +38,8 @@ export function FavoriteButton({ entity, compact = false }: { entity: FavoriteEn
       aria-label={isFavorite ? `Remover ${entity.title} dos favoritos` : `Favoritar ${entity.title}`}
       title={isFavorite ? 'Remover dos favoritos' : 'Favoritar'}
       className={[
-        'inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border text-sm font-black transition',
-        compact ? 'w-10 px-0' : 'px-3',
+        'inline-flex items-center justify-center gap-2 rounded-lg border text-sm font-black transition',
+        compact ? 'h-9 w-9 shrink-0 px-0' : 'min-h-10 px-3',
         isFavorite
           ? 'border-amber-300/60 bg-amber-300/15 text-amber-100'
           : 'border-white/10 bg-slate-900 text-slate-100 hover:border-amber-300/50 hover:text-amber-100',

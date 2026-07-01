@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://wiki.pokexgames.com/index.php/Craft_Profiss%C3%B5es_-_Engenheiro",
-  "scrapedAt": "2026-06-29T22:37:06.349Z",
+  "scrapedAt": "2026-07-01T14:05:31.666Z",
   "crafts": [
     {
       "slug": "engenheiro-geral-rank-e-poke-ball-100x",
@@ -85842,6 +85842,2378 @@
           "itemSlug": "",
           "quantity": "40",
           "iconUrl": "https://wiki.pokexgames.com/images/d/d3/Sentry_Remains.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-yellow-alchemy-lab",
+      "itemName": "Yellow Alchemy Lab",
+      "itemSlug": "yellow-alchemy-lab",
+      "imageUrl": "https://wiki.pokexgames.com/images/d/d9/Yellow_Alchemy_Lab.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "5 Dias",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Yellow Alchemy Lab",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "5 Dias",
+        "Materiais": "50 Glass 1 Boost Stone 150 Electric Rat Tail 8 Strong Nature Energy"
+      },
+      "ingredients": [
+        {
+          "name": "Glass",
+          "itemSlug": "",
+          "quantity": "50",
+          "iconUrl": "https://wiki.pokexgames.com/images/1/15/Glass.png"
+        },
+        {
+          "name": "Boost Stone",
+          "itemSlug": "boost-stone",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/01/Boost1.png"
+        },
+        {
+          "name": "Electric Rat Tail",
+          "itemSlug": "",
+          "quantity": "150",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d9/Electric_Rat_Tail.png"
+        },
+        {
+          "name": "Strong Nature Energy",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5f/Strong_Nature_Energy.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-cyan-alchemy-lab",
+      "itemName": "Cyan Alchemy Lab",
+      "itemSlug": "cyan-alchemy-lab",
+      "imageUrl": "https://wiki.pokexgames.com/images/b/bf/Cyan_Alchemy_Lab.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "5 Dias",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Cyan Alchemy Lab",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "5 Dias",
+        "Materiais": "50 Glass 2 Crystal Stone 10 Zap 8 Strong Nature Energy"
+      },
+      "ingredients": [
+        {
+          "name": "Glass",
+          "itemSlug": "",
+          "quantity": "50",
+          "iconUrl": "https://wiki.pokexgames.com/images/1/15/Glass.png"
+        },
+        {
+          "name": "Crystal Stone",
+          "itemSlug": "crystal-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d4/Crystal-stone.gif"
+        },
+        {
+          "name": "Zap",
+          "itemSlug": "",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/4/4f/Zap1.png"
+        },
+        {
+          "name": "Strong Nature Energy",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5f/Strong_Nature_Energy.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-purple-alchemy-lab",
+      "itemName": "Purple Alchemy Lab",
+      "itemSlug": "purple-alchemy-lab",
+      "imageUrl": "https://wiki.pokexgames.com/images/6/6d/Purple_Alchemy_Lab.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "5 Dias",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Purple Alchemy Lab",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "5 Dias",
+        "Materiais": "50 Glass 2 Ancient Stone 180 Crimson Feather 8 Strong Nature Energy"
+      },
+      "ingredients": [
+        {
+          "name": "Glass",
+          "itemSlug": "",
+          "quantity": "50",
+          "iconUrl": "https://wiki.pokexgames.com/images/1/15/Glass.png"
+        },
+        {
+          "name": "Ancient Stone",
+          "itemSlug": "ancient-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/32/Ancient-stone.gif"
+        },
+        {
+          "name": "Crimson Feather",
+          "itemSlug": "",
+          "quantity": "180",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/de/Crimson_Feather.png"
+        },
+        {
+          "name": "Strong Nature Energy",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5f/Strong_Nature_Energy.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-red-alchemy-lab",
+      "itemName": "Red Alchemy Lab",
+      "itemSlug": "red-alchemy-lab",
+      "imageUrl": "https://wiki.pokexgames.com/images/b/b4/Red_Alchemy_Lab.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "5 Dias",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Red Alchemy Lab",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "5 Dias",
+        "Materiais": "50 Glass 1 Boost Stone 150 Lobster Claw 8 Strong Nature Energy"
+      },
+      "ingredients": [
+        {
+          "name": "Glass",
+          "itemSlug": "",
+          "quantity": "50",
+          "iconUrl": "https://wiki.pokexgames.com/images/1/15/Glass.png"
+        },
+        {
+          "name": "Boost Stone",
+          "itemSlug": "boost-stone",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/01/Boost1.png"
+        },
+        {
+          "name": "Lobster Claw",
+          "itemSlug": "",
+          "quantity": "150",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9e/Lobster_Claw.png"
+        },
+        {
+          "name": "Strong Nature Energy",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5f/Strong_Nature_Energy.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-volcanic-chemical",
+      "itemName": "Volcanic Chemical",
+      "itemSlug": "volcanic-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/0/02/Volcanic_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Volcanic Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 35 Pot of Lava 25 Fire Feather 5 Strange Bones 5 Compressed Fire 1 Magma Foot"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Pot of Lava",
+          "itemSlug": "",
+          "quantity": "35",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/21/PotOfLava.png"
+        },
+        {
+          "name": "Fire Feather",
+          "itemSlug": "",
+          "quantity": "25",
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f3/Fire_Feather.png"
+        },
+        {
+          "name": "Strange Bones",
+          "itemSlug": "",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/af/Strange_Bone.png"
+        },
+        {
+          "name": "Compressed Fire",
+          "itemSlug": "",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/56/CompressedFire.gif"
+        },
+        {
+          "name": "Magma Foot",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/1/11/Magma_Foot.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-seavell-chemical",
+      "itemName": "Seavell Chemical",
+      "itemSlug": "seavell-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/3/39/Seavell_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Seavell Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 30 Water Pendant 20 Ice Blocks 15 Water Plant 15 Gift Bag 1 Ice Bra"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Water Pendant",
+          "itemSlug": "",
+          "quantity": "30",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/27/WaterPendant.png"
+        },
+        {
+          "name": "Ice Blocks",
+          "itemSlug": "",
+          "quantity": "20",
+          "iconUrl": "https://wiki.pokexgames.com/images/e/e2/Ice_Blocks.png"
+        },
+        {
+          "name": "Water Plant",
+          "itemSlug": "",
+          "quantity": "15",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/89/Water_Plant.png"
+        },
+        {
+          "name": "Gift Bag",
+          "itemSlug": "",
+          "quantity": "15",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5a/Gift_Bag.png"
+        },
+        {
+          "name": "Ice Bra",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3e/Ice_Bra.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-naturia-chemical",
+      "itemName": "Naturia Chemical",
+      "itemSlug": "naturia-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/d/d8/Naturia_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Naturia Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 30 Leaves 1 Palm Leaves 20 Pot of Moss Bug 10 Insect Claw 15 Greens 1 Scythe"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Leaves",
+          "itemSlug": "",
+          "quantity": "30",
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f1/Leaves.png"
+        },
+        {
+          "name": "Palm Leaves",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/66/Palm_Leaves.png"
+        },
+        {
+          "name": "Pot of Moss Bug",
+          "itemSlug": "",
+          "quantity": "20",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/05/PotOfMossBug.png"
+        },
+        {
+          "name": "Insect Claw",
+          "itemSlug": "",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3f/Insect_Claw.png"
+        },
+        {
+          "name": "Greens",
+          "itemSlug": "",
+          "quantity": "15",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/54/Greens.png"
+        },
+        {
+          "name": "Scythe",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2f/Scythe1.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-raibolt-chemical",
+      "itemName": "Raibolt Chemical",
+      "itemSlug": "raibolt-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/6/6b/Raibolt_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Raibolt Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 10 Electric Box 20 Shock Topknot 8 Electric Rat Tail 8 Sheep Wool 1 Electric Tail"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Electric Box",
+          "itemSlug": "",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6c/ElectricBox.png"
+        },
+        {
+          "name": "Shock Topknot",
+          "itemSlug": "",
+          "quantity": "20",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6e/Shock_Topknot.png"
+        },
+        {
+          "name": "Electric Rat Tail",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d9/Electric_Rat_Tail.png"
+        },
+        {
+          "name": "Sheep Wool",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/f/fe/Sheep_Wool.png"
+        },
+        {
+          "name": "Electric Tail",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/1/15/Electric_Tail.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-psycraft-chemical",
+      "itemName": "Psycraft Chemical",
+      "itemSlug": "psycraft-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/a/af/Psycraft_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Psycraft Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 30 Future Orb 2 Linearly Guided Hypnosis 30 Mediling 8 Strange Wing"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Future Orb",
+          "itemSlug": "",
+          "quantity": "30",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/86/FutureooOrb.png"
+        },
+        {
+          "name": "Linearly Guided Hypnosis",
+          "itemSlug": "",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2d/Linearly_Guided_Hypnose.png"
+        },
+        {
+          "name": "Mediling",
+          "itemSlug": "",
+          "quantity": "30",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/75/Mediling.png"
+        },
+        {
+          "name": "Strange Wing",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9b/Strange_Wing.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-malefic-chemical",
+      "itemName": "Malefic Chemical",
+      "itemSlug": "malefic-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/6/6b/Malefic_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Malefic Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 23 Venom Flutes 1 Big Crystal 25 Poisonous Tail"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Venom Flutes",
+          "itemSlug": "",
+          "quantity": "23",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/92/Venom_Flute.png"
+        },
+        {
+          "name": "Big Crystal",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c4/Big_Crystal.png"
+        },
+        {
+          "name": "Poisonous Tail",
+          "itemSlug": "",
+          "quantity": "25",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/82/Poisonous_Tail.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-gardestrike-chemical",
+      "itemName": "Gardestrike Chemical",
+      "itemSlug": "gardestrike-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/a/ab/Gardestrike_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Gardestrike Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 6 Martial Arts Scroll 10 Cow Tail 14 Eruption Ears 1 Belt of Champion 14 Cute Ball"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Martial Arts Scroll",
+          "itemSlug": "",
+          "quantity": "6",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d8/Martial_Arts_Scroll.png"
+        },
+        {
+          "name": "Cow Tail",
+          "itemSlug": "",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/60/Cow_Tail.png"
+        },
+        {
+          "name": "Eruption Ears",
+          "itemSlug": "",
+          "quantity": "14",
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f0/Eruption_Ears.png"
+        },
+        {
+          "name": "Belt of Champion",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2e/Belt_Of_Champion.png"
+        },
+        {
+          "name": "Cute Ball",
+          "itemSlug": "",
+          "quantity": "14",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/68/Cute_Ball.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-orebound-chemical",
+      "itemName": "Orebound Chemical",
+      "itemSlug": "orebound-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/9/9b/Orebound_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Orebound Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 25 Stone Orb 10 Horn Drill 8 Strange Rock 22 Gligar Claws"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Stone Orb",
+          "itemSlug": "",
+          "quantity": "25",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/a1/StoneOrb.png"
+        },
+        {
+          "name": "Horn Drill",
+          "itemSlug": "",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d2/Horn_Drill.png"
+        },
+        {
+          "name": "Strange Rock",
+          "itemSlug": "",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3b/Strange_Rock.png"
+        },
+        {
+          "name": "Gligar Claws",
+          "itemSlug": "",
+          "quantity": "22",
+          "iconUrl": "https://wiki.pokexgames.com/images/f/f1/Gligar_Claw.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-wingeon-chemical",
+      "itemName": "Wingeon Chemical",
+      "itemSlug": "wingeon-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/8/88/Wingeon_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Wingeon Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 40 Feather 15 Owl Feather 13 Colored Feather 10 Piece Of Blimp 1 Dragon Tooth"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Feather",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/7f/FeatherMark.png"
+        },
+        {
+          "name": "Owl Feather",
+          "itemSlug": "",
+          "quantity": "15",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c9/Owl_Feather.png"
+        },
+        {
+          "name": "Colored Feather",
+          "itemSlug": "",
+          "quantity": "13",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/27/Colored_Feather.png"
+        },
+        {
+          "name": "Piece Of Blimp",
+          "itemSlug": "",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2c/Piece_Of_Blimp.png"
+        },
+        {
+          "name": "Dragon Tooth",
+          "itemSlug": "",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9f/DragonTooth.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-introducao-ironhard-chemical",
+      "itemName": "Ironhard Chemical",
+      "itemSlug": "ironhard-chemical",
+      "imageUrl": "https://wiki.pokexgames.com/images/5/50/Ironhard_Chemical2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Introdução",
+      "rank": "",
+      "skill": "Skill 100",
+      "craftTime": "1 Minuto",
+      "requirements": "Habilidade Skill 100",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Introdução",
+      "columns": {
+        "Item": "Ironhard Chemical",
+        "Habilidade": "Skill 100",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "40 Pure Strong Grass 16 Metal Hull 25 Compressed Steel 6 Steel Wing"
+      },
+      "ingredients": [
+        {
+          "name": "Pure Strong Grass",
+          "itemSlug": "",
+          "quantity": "40",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/63/Pure_Strong_Grass.png"
+        },
+        {
+          "name": "Metal Hull",
+          "itemSlug": "",
+          "quantity": "16",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c7/Metal_Hull.png"
+        },
+        {
+          "name": "Compressed Steel",
+          "itemSlug": "",
+          "quantity": "25",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/25/CompressedSteel.png"
+        },
+        {
+          "name": "Steel Wing",
+          "itemSlug": "",
+          "quantity": "6",
+          "iconUrl": "https://wiki.pokexgames.com/images/e/e5/Steel_Wing.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-volcanic-materia",
+      "itemName": "Volcanic Materia",
+      "itemSlug": "volcanic-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/3/3f/Volcanic_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Volcanic Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Volcanic Chemical 4 Fire Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Volcanic Chemical",
+          "itemSlug": "volcanic-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/02/Volcanic_Chemical2.png"
+        },
+        {
+          "name": "Fire Stones",
+          "itemSlug": "fire-stone",
+          "quantity": "4",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9a/Fire-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-volcanic-enhanced-materia",
+      "itemName": "Volcanic Enhanced Materia",
+      "itemSlug": "volcanic-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/d/dc/Volcanic_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Volcanic Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Volcanic Chemical 15 Fire Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Volcanic Chemical",
+          "itemSlug": "volcanic-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/02/Volcanic_Chemical2.png"
+        },
+        {
+          "name": "Fire Stones",
+          "itemSlug": "fire-stone",
+          "quantity": "15",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9a/Fire-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-volcanic-superior-materia",
+      "itemName": "Volcanic Superior Materia",
+      "itemSlug": "volcanic-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/f/fa/Volcanic_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Volcanic Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Volcanic Chemical 1 Scarlet Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Volcanic Chemical",
+          "itemSlug": "volcanic-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/02/Volcanic_Chemical2.png"
+        },
+        {
+          "name": "Scarlet Shard",
+          "itemSlug": "scarlet-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/aa/Scarlet_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-volcanic-mastered-materia",
+      "itemName": "Volcanic Mastered Materia",
+      "itemSlug": "volcanic-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/b/b3/Volcanic_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Volcanic Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Volcanic Chemicals 10 Fire Stones 1 Scarlet Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Volcanic Chemicals",
+          "itemSlug": "volcanic-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/02/Volcanic_Chemical2.png"
+        },
+        {
+          "name": "Fire Stones",
+          "itemSlug": "fire-stone",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9a/Fire-stone.gif"
+        },
+        {
+          "name": "Scarlet Shard",
+          "itemSlug": "scarlet-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/aa/Scarlet_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-seavell-materia",
+      "itemName": "Seavell Materia",
+      "itemSlug": "seavell-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/0/0e/Seavell_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Seavell Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "Seavell Chemical 2 Water Stones 2 Ice Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Water Stones",
+          "itemSlug": "water-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/39/Seavell_Chemical2.png"
+        },
+        {
+          "name": "Ice Stones",
+          "itemSlug": "ice-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/80/Water-stone.gif"
+        },
+        {
+          "name": "Ice-stone",
+          "itemSlug": "ice-stone",
+          "quantity": "",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/34/Ice-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-seavell-enhanced-materia",
+      "itemName": "Seavell Enhanced Materia",
+      "itemSlug": "seavell-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/9/9f/Seavell_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Seavell Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Seavell Chemical 7 Water Stones 8 Ice Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Seavell Chemical",
+          "itemSlug": "seavell-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/39/Seavell_Chemical2.png"
+        },
+        {
+          "name": "Water Stones",
+          "itemSlug": "water-stone",
+          "quantity": "7",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/80/Water-stone.gif"
+        },
+        {
+          "name": "Ice Stones",
+          "itemSlug": "ice-stone",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/34/Ice-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-seavell-superior-materia",
+      "itemName": "Seavell Superior Materia",
+      "itemSlug": "seavell-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/e/e1/Seavell_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Seavell Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Seavell Chemical 1 Azure Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Seavell Chemical",
+          "itemSlug": "seavell-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/39/Seavell_Chemical2.png"
+        },
+        {
+          "name": "Azure Shard",
+          "itemSlug": "azure-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/25/Azure_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-seavell-mastered-materia",
+      "itemName": "Seavell Mastered Materia",
+      "itemSlug": "seavell-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/0/0e/Seavell_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Seavell Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Seavell Chemicals 5 Water Stones 5 Ice Stones 1 Azure Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Seavell Chemicals",
+          "itemSlug": "seavell-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/39/Seavell_Chemical2.png"
+        },
+        {
+          "name": "Water Stones",
+          "itemSlug": "water-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/80/Water-stone.gif"
+        },
+        {
+          "name": "Ice Stones",
+          "itemSlug": "ice-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/34/Ice-stone.gif"
+        },
+        {
+          "name": "Azure Shard",
+          "itemSlug": "azure-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/25/Azure_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-naturia-materia",
+      "itemName": "Naturia Materia",
+      "itemSlug": "naturia-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/e/e4/Naturia_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Naturia Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "Naturia Chemical 2 Leaf Stones 2 Cocoon Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Leaf Stones",
+          "itemSlug": "leaf-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d8/Naturia_Chemical2.png"
+        },
+        {
+          "name": "Cocoon Stones",
+          "itemSlug": "cocoon-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c8/Leaf-stone.gif"
+        },
+        {
+          "name": "Cocoon stone",
+          "itemSlug": "cocoon-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/28/Cocoon_stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-naturia-enhanced-materia",
+      "itemName": "Naturia Enhanced Materia",
+      "itemSlug": "naturia-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/2/2e/Naturia_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Naturia Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "Naturia Chemical 7 Leaf Stones 8 Cocoon Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Leaf Stones",
+          "itemSlug": "leaf-stone",
+          "quantity": "7",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d8/Naturia_Chemical2.png"
+        },
+        {
+          "name": "Cocoon Stones",
+          "itemSlug": "cocoon-stone",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c8/Leaf-stone.gif"
+        },
+        {
+          "name": "Cocoon stone",
+          "itemSlug": "cocoon-stone",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/28/Cocoon_stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-naturia-superior-materia",
+      "itemName": "Naturia Superior Materia",
+      "itemSlug": "naturia-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/2/2b/Naturia_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Naturia Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "Naturia Chemical 1 Harlequin Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Harlequin Shard",
+          "itemSlug": "harlequin-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d8/Naturia_Chemical2.png"
+        },
+        {
+          "name": "Harlequin Shard",
+          "itemSlug": "harlequin-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/ba/Harlequin_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-naturia-mastered-materia",
+      "itemName": "Naturia Mastered Materia",
+      "itemSlug": "naturia-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/8/83/Naturia_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Naturia Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Naturia Chemicals 5 Leaf Stones 5 Cocoon Stones 1 Harlequin Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Naturia Chemicals",
+          "itemSlug": "naturia-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d8/Naturia_Chemical2.png"
+        },
+        {
+          "name": "Leaf Stones",
+          "itemSlug": "leaf-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/c8/Leaf-stone.gif"
+        },
+        {
+          "name": "Cocoon Stones",
+          "itemSlug": "cocoon-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/28/Cocoon_stone.gif"
+        },
+        {
+          "name": "Harlequin Shard",
+          "itemSlug": "harlequin-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/ba/Harlequin_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-raibolt-materia",
+      "itemName": "Raibolt Materia",
+      "itemSlug": "raibolt-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/2/2d/Raibolt_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Raibolt Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Raibolt Chemical 4 Thunder Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Raibolt Chemical",
+          "itemSlug": "raibolt-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Raibolt_Chemical2.png"
+        },
+        {
+          "name": "Thunder Stones",
+          "itemSlug": "thunder-stone",
+          "quantity": "4",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d3/Thunder-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-raibolt-enhanced-materia",
+      "itemName": "Raibolt Enhanced Materia",
+      "itemSlug": "raibolt-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/6/68/Raibolt_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Raibolt Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Raibolt Chemical 15 Thunder Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Raibolt Chemical",
+          "itemSlug": "raibolt-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Raibolt_Chemical2.png"
+        },
+        {
+          "name": "Thunder Stones",
+          "itemSlug": "thunder-stone",
+          "quantity": "15",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d3/Thunder-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-raibolt-superior-materia",
+      "itemName": "Raibolt Superior Materia",
+      "itemSlug": "raibolt-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/c/cd/Raibolt_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Raibolt Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Raibolt Chemical 1 Sunflower Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Raibolt Chemical",
+          "itemSlug": "raibolt-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Raibolt_Chemical2.png"
+        },
+        {
+          "name": "Sunflower Shard",
+          "itemSlug": "sunflower-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/dc/Sunflower_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-raibolt-mastered-materia",
+      "itemName": "Raibolt Mastered Materia",
+      "itemSlug": "raibolt-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/9/96/Raibolt_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Raibolt Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Raibolt Chemicals 10 Thunder Stones 1 Sunflower Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Raibolt Chemicals",
+          "itemSlug": "raibolt-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Raibolt_Chemical2.png"
+        },
+        {
+          "name": "Thunder Stones",
+          "itemSlug": "thunder-stone",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d3/Thunder-stone.gif"
+        },
+        {
+          "name": "Sunflower Shard",
+          "itemSlug": "sunflower-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/dc/Sunflower_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-psycraft-materia",
+      "itemName": "Psycraft Materia",
+      "itemSlug": "psycraft-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/f/f9/Psycraft_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Psycraft Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Psycraft Chemical 4 Enigma Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Psycraft Chemical",
+          "itemSlug": "psycraft-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/af/Psycraft_Chemical2.png"
+        },
+        {
+          "name": "Enigma Stones",
+          "itemSlug": "enigma-stone",
+          "quantity": "4",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0a/Enigma-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-psycraft-enhanced-materia",
+      "itemName": "Psycraft Enhanced Materia",
+      "itemSlug": "psycraft-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/a/aa/Psycraft_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Psycraft Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Psycraft Chemical 15 Enigma Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Psycraft Chemical",
+          "itemSlug": "psycraft-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/af/Psycraft_Chemical2.png"
+        },
+        {
+          "name": "Enigma Stones",
+          "itemSlug": "enigma-stone",
+          "quantity": "15",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0a/Enigma-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-psycraft-superior-materia",
+      "itemName": "Psycraft Superior Materia",
+      "itemSlug": "psycraft-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/3/37/Psycraft_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Psycraft Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Psycraft Chemical 1 Cerise Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Psycraft Chemical",
+          "itemSlug": "psycraft-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/af/Psycraft_Chemical2.png"
+        },
+        {
+          "name": "Cerise Shard",
+          "itemSlug": "cerise-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/ca/Cerise_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-psycraft-mastered-materia",
+      "itemName": "Psycraft Mastered Materia",
+      "itemSlug": "psycraft-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/6/68/Psycraft_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Psycraft Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Psycraft Chemicals 10 Enigma Stones 1 Cerise Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Psycraft Chemicals",
+          "itemSlug": "psycraft-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/af/Psycraft_Chemical2.png"
+        },
+        {
+          "name": "Enigma Stones",
+          "itemSlug": "enigma-stone",
+          "quantity": "10",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0a/Enigma-stone.gif"
+        },
+        {
+          "name": "Cerise Shard",
+          "itemSlug": "cerise-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/c/ca/Cerise_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-malefic-materia",
+      "itemName": "Malefic Materia",
+      "itemSlug": "malefic-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/b/b2/Malefic_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Malefic Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Malefic Chemical 2 Venom Stones 2 Darkness Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Malefic Chemical",
+          "itemSlug": "malefic-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Malefic_Chemical2.png"
+        },
+        {
+          "name": "Venom Stones",
+          "itemSlug": "venom-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ac/Venom-stone.gif"
+        },
+        {
+          "name": "Darkness Stones",
+          "itemSlug": "darkness-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5d/HrnVNwK.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-malefic-enhanced-materia",
+      "itemName": "Malefic Enhanced Materia",
+      "itemSlug": "malefic-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/4/44/Malefic_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Malefic Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Malefic Chemical 7 Venom Stones 8 Darkness Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Malefic Chemical",
+          "itemSlug": "malefic-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Malefic_Chemical2.png"
+        },
+        {
+          "name": "Venom Stones",
+          "itemSlug": "venom-stone",
+          "quantity": "7",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ac/Venom-stone.gif"
+        },
+        {
+          "name": "Darkness Stones",
+          "itemSlug": "darkness-stone",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5d/HrnVNwK.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-malefic-superior-materia",
+      "itemName": "Malefic Superior Materia",
+      "itemSlug": "malefic-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/4/40/Malefic_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Malefic Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Malefic Chemical 1 Damson Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Malefic Chemical",
+          "itemSlug": "malefic-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Malefic_Chemical2.png"
+        },
+        {
+          "name": "Damson Shard",
+          "itemSlug": "damson-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2b/Damson_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-malefic-mastered-materia",
+      "itemName": "Malefic Mastered Materia",
+      "itemSlug": "malefic-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/1/1a/Malefic_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Malefic Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Malefic Chemicals 5 Venom Stones 5 Darkness Stones 1 Damson Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Malefic Chemicals",
+          "itemSlug": "malefic-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/6/6b/Malefic_Chemical2.png"
+        },
+        {
+          "name": "Venom Stones",
+          "itemSlug": "venom-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ac/Venom-stone.gif"
+        },
+        {
+          "name": "Darkness Stones",
+          "itemSlug": "darkness-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5d/HrnVNwK.png"
+        },
+        {
+          "name": "Damson Shard",
+          "itemSlug": "damson-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/2/2b/Damson_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-gardestrike-materia",
+      "itemName": "Gardestrike Materia",
+      "itemSlug": "gardestrike-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/7/7f/Gardestrike_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Gardestrike Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Gardestrike Chemical 2 Heart Stones 2 Punch Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Gardestrike Chemical",
+          "itemSlug": "gardestrike-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ab/Gardestrike_Chemical2.png"
+        },
+        {
+          "name": "Heart Stones",
+          "itemSlug": "heart-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3e/Heart-stone.gif"
+        },
+        {
+          "name": "Punch Stones",
+          "itemSlug": "punch-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/da/3mDejdt.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-gardestrike-enhanced-materia",
+      "itemName": "Gardestrike Enhanced Materia",
+      "itemSlug": "gardestrike-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/b/b7/Gardestrike_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Gardestrike Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Gardestrike Chemical 7 Heart Stones 8 Punch Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Gardestrike Chemical",
+          "itemSlug": "gardestrike-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ab/Gardestrike_Chemical2.png"
+        },
+        {
+          "name": "Heart Stones",
+          "itemSlug": "heart-stone",
+          "quantity": "7",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3e/Heart-stone.gif"
+        },
+        {
+          "name": "Punch Stones",
+          "itemSlug": "punch-stone",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/da/3mDejdt.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-gardestrike-superior-materia",
+      "itemName": "Gardestrike Superior Materia.",
+      "itemSlug": "gardestrike-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/9/90/Gardestrike_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Gardestrike Superior Materia.",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Gardestrike Chemical 1 Kermes Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Gardestrike Chemical",
+          "itemSlug": "gardestrike-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ab/Gardestrike_Chemical2.png"
+        },
+        {
+          "name": "Kermes Shard",
+          "itemSlug": "kermes-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/75/Kermes_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-gardestrike-mastered-materia",
+      "itemName": "Gardestrike Mastered Materia",
+      "itemSlug": "gardestrike-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/2/2a/Gardestrike_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Gardestrike Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Gardestrike Chemicals 5 Heart Stones 5 Punch Stones 1 Kermes Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Gardestrike Chemicals",
+          "itemSlug": "gardestrike-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/a/ab/Gardestrike_Chemical2.png"
+        },
+        {
+          "name": "Heart Stones",
+          "itemSlug": "heart-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/3e/Heart-stone.gif"
+        },
+        {
+          "name": "Punch Stones",
+          "itemSlug": "punch-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/da/3mDejdt.png"
+        },
+        {
+          "name": "Kermes Shard",
+          "itemSlug": "kermes-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/7/75/Kermes_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-orebound-materia",
+      "itemName": "Orebound Materia",
+      "itemSlug": "orebound-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/7/72/Orebound_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Orebound Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Orebound Chemical 2 Rock Stones 2 Earth Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Orebound Chemical",
+          "itemSlug": "orebound-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9b/Orebound_Chemical2.png"
+        },
+        {
+          "name": "Rock Stones",
+          "itemSlug": "rock-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/dc/Rock-stone.gif"
+        },
+        {
+          "name": "Earth Stones",
+          "itemSlug": "earth-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0f/Earth-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-orebound-enhanced-materia",
+      "itemName": "Orebound Enhanced Materia",
+      "itemSlug": "orebound-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/0/0a/Orebound_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Orebound Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Orebound Chemical 7 Rock Stones 8 Earth Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Orebound Chemical",
+          "itemSlug": "orebound-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9b/Orebound_Chemical2.png"
+        },
+        {
+          "name": "Rock Stones",
+          "itemSlug": "rock-stone",
+          "quantity": "7",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/dc/Rock-stone.gif"
+        },
+        {
+          "name": "Earth Stones",
+          "itemSlug": "earth-stone",
+          "quantity": "8",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0f/Earth-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-orebound-superior-materia",
+      "itemName": "Orebound Superior Materia",
+      "itemSlug": "orebound-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/c/c3/Orebound_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Orebound Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Orebound Chemical 1 Indigo Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Orebound Chemical",
+          "itemSlug": "orebound-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9b/Orebound_Chemical2.png"
+        },
+        {
+          "name": "Indigo Shard",
+          "itemSlug": "indigo-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9a/Indigo_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-orebound-mastered-materia",
+      "itemName": "Orebound Mastered Materia",
+      "itemSlug": "orebound-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/6/6a/Orebound_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Orebound Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Orebound Chemicals 5 Rock Stones 5 Earth Stones 1 Indigo Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Orebound Chemicals",
+          "itemSlug": "orebound-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9b/Orebound_Chemical2.png"
+        },
+        {
+          "name": "Rock Stones",
+          "itemSlug": "rock-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/dc/Rock-stone.gif"
+        },
+        {
+          "name": "Earth Stones",
+          "itemSlug": "earth-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/0/0f/Earth-stone.gif"
+        },
+        {
+          "name": "Indigo Shard",
+          "itemSlug": "indigo-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9a/Indigo_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-wingeon-materia",
+      "itemName": "Wingeon Materia",
+      "itemSlug": "wingeon-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/4/48/Wingeon_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Wingeon Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Wingeon Chemical 4 Feather Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Wingeon Chemical",
+          "itemSlug": "wingeon-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/88/Wingeon_Chemical2.png"
+        },
+        {
+          "name": "Feather Stones",
+          "itemSlug": "feather-stone",
+          "quantity": "4",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5c/Feather1.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-wingeon-enhanced-materia",
+      "itemName": "Wingeon Enhanced Materia",
+      "itemSlug": "wingeon-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/4/4b/Wingeon_Enhanced_Materia_22.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Wingeon Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Wingeon Chemical 5 Feather Stones 1 Crystal Stone"
+      },
+      "ingredients": [
+        {
+          "name": "Wingeon Chemical",
+          "itemSlug": "wingeon-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/88/Wingeon_Chemical2.png"
+        },
+        {
+          "name": "Feather Stones",
+          "itemSlug": "feather-stone",
+          "quantity": "5",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/5c/Feather1.png"
+        },
+        {
+          "name": "Crystal Stone",
+          "itemSlug": "crystal-stone",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d4/Crystal-stone.gif"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-wingeon-superior-materia",
+      "itemName": "Wingeon Superior Materia",
+      "itemSlug": "wingeon-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/b/b2/Wingeon_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Wingeon Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Wingeon Chemical 1 Shell Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Wingeon Chemical",
+          "itemSlug": "wingeon-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/88/Wingeon_Chemical2.png"
+        },
+        {
+          "name": "Shell Shard",
+          "itemSlug": "shell-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9d/Shell_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-wingeon-mastered-materia",
+      "itemName": "Wingeon Mastered Materia",
+      "itemSlug": "wingeon-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/7/7e/Wingeon_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Wingeon Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Wingeon Chemicals 1 Crystal Stone 1 Shell Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Wingeon Chemicals",
+          "itemSlug": "wingeon-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/8/88/Wingeon_Chemical2.png"
+        },
+        {
+          "name": "Crystal Stone",
+          "itemSlug": "crystal-stone",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/d/d4/Crystal-stone.gif"
+        },
+        {
+          "name": "Shell Shard",
+          "itemSlug": "shell-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/9/9d/Shell_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-ironhard-materia",
+      "itemName": "Ironhard Materia",
+      "itemSlug": "ironhard-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/7/70/Ironhard_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Minuto",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Ironhard Materia",
+        "Tempo de espera": "1 Minuto",
+        "Materiais": "1 Ironhard Chemical 1 Metal Stone"
+      },
+      "ingredients": [
+        {
+          "name": "Ironhard Chemical",
+          "itemSlug": "ironhard-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/50/Ironhard_Chemical2.png"
+        },
+        {
+          "name": "Metal Stone",
+          "itemSlug": "metal-stone",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b9/MetalStone.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-ironhard-enhanced-materia",
+      "itemName": "Ironhard Enhanced Materia",
+      "itemSlug": "ironhard-enhanced-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/9/93/Ironhard_Enhanced_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "10 Minutos",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Ironhard Enhanced Materia",
+        "Tempo de espera": "10 Minutos",
+        "Materiais": "1 Ironhard Chemical 2 Metal Stones"
+      },
+      "ingredients": [
+        {
+          "name": "Ironhard Chemical",
+          "itemSlug": "ironhard-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/50/Ironhard_Chemical2.png"
+        },
+        {
+          "name": "Metal Stones",
+          "itemSlug": "metal-stone",
+          "quantity": "2",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b9/MetalStone.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-ironhard-superior-materia",
+      "itemName": "Ironhard Superior Materia",
+      "itemSlug": "ironhard-superior-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/0/0e/Ironhard_Superior_Materia_2.png",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "1 Hora",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Ironhard Superior Materia",
+        "Tempo de espera": "1 Hora",
+        "Materiais": "1 Ironhard Chemical 1 Slate Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Ironhard Chemical",
+          "itemSlug": "ironhard-chemical",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/50/Ironhard_Chemical2.png"
+        },
+        {
+          "name": "Slate Shard",
+          "itemSlug": "slate-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/37/Slate_Shard.png"
+        }
+      ]
+    },
+    {
+      "slug": "professor-alquimista-como-produzir-materias-ironhard-mastered-materia",
+      "itemName": "Ironhard Mastered Materia",
+      "itemSlug": "ironhard-mastered-materia",
+      "imageUrl": "https://wiki.pokexgames.com/images/8/80/Ironhard_Mastered_Materia_2.gif",
+      "profession": "Professor",
+      "professionSlug": "professor",
+      "subprofession": "Alquimista",
+      "subprofessionSlug": "alquimista",
+      "category": "Como Produzir Materias",
+      "rank": "",
+      "skill": "",
+      "craftTime": "3 Horas",
+      "requirements": "",
+      "sourcePage": "Alchemy Lab",
+      "sourceUrl": "https://wiki.pokexgames.com/index.php/Alchemy_Lab#Como_Produzir_Materias",
+      "columns": {
+        "Item": "Ironhard Mastered Materia",
+        "Tempo de espera": "3 Horas",
+        "Materiais": "3 Ironhard Chemicals 1 Metal Stone 1 Slate Shard"
+      },
+      "ingredients": [
+        {
+          "name": "Ironhard Chemicals",
+          "itemSlug": "ironhard-chemical",
+          "quantity": "3",
+          "iconUrl": "https://wiki.pokexgames.com/images/5/50/Ironhard_Chemical2.png"
+        },
+        {
+          "name": "Metal Stone",
+          "itemSlug": "metal-stone",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/b/b9/MetalStone.png"
+        },
+        {
+          "name": "Slate Shard",
+          "itemSlug": "slate-shard",
+          "quantity": "1",
+          "iconUrl": "https://wiki.pokexgames.com/images/3/37/Slate_Shard.png"
         }
       ]
     }

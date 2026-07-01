@@ -4,10 +4,11 @@ import { FavoriteButton } from '@/components/favorite-button';
 import { RelatedCrafts, RelatedProfessions, RelatedPokemon } from '@/components/related-sections';
 import { findCraftsCreatingItem, findCraftsUsingItem, findProfessionsForItem } from '@/lib/relationships';
 import type { Craft } from '@/types/crafts';
-import type { ItemDetail } from '@/types/items';
+import type { ItemAttribute, ItemDetail } from '@/types/items';
 import type { PokemonListItem } from '@/types/pokemon';
 
 export function ItemDetailView({ item, crafts, pokemon = [] }: { item: ItemDetail; crafts: Craft[]; pokemon?: PokemonListItem[] }) {
+  const attributes = getItemAttributes(item);
   const createdBy = findCraftsCreatingItem(crafts, item);
   const usedBy = findCraftsUsingItem(crafts, item);
   const professions = findProfessionsForItem(crafts, item);
@@ -47,8 +48,8 @@ export function ItemDetailView({ item, crafts, pokemon = [] }: { item: ItemDetai
       <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
         <h3 className="text-lg font-black text-white">Atributos</h3>
         <div className="mt-3 flex flex-wrap gap-2">
-          {item.attributes.length ? (
-            item.attributes.map((attr) => <span key={`${attr.name}-${attr.value}`} className="rounded-full border border-white/10 px-2.5 py-1 text-xs font-bold text-slate-200">{attr.name}: {attr.value}</span>)
+          {attributes.length ? (
+            attributes.map((attr) => <span key={`${attr.name}-${attr.value}`} className="rounded-full border border-white/10 px-2.5 py-1 text-xs font-bold text-slate-200">{attr.name}: {attr.value}</span>)
           ) : (
             <p className="text-sm text-slate-400">Nenhum atributo listado.</p>
           )}
@@ -63,4 +64,26 @@ export function ItemDetailView({ item, crafts, pokemon = [] }: { item: ItemDetai
       <RelatedPokemon pokemon={relatedPokemon} />
     </article>
   );
+}
+
+function getItemAttributes(item: ItemDetail): ItemAttribute[] {
+  const rawAttributes = item.attributes as unknown;
+
+  if (Array.isArray(rawAttributes)) {
+    return rawAttributes
+      .map((attribute) => ({
+        name: String(attribute?.name || ''),
+        value: String(attribute?.value || ''),
+      }))
+      .filter((attribute) => attribute.name || attribute.value);
+  }
+
+  if (rawAttributes && typeof rawAttributes === 'object') {
+    return Object.entries(rawAttributes).map(([name, value]) => ({
+      name,
+      value: Array.isArray(value) ? value.join(', ') : String(value ?? ''),
+    }));
+  }
+
+  return [];
 }

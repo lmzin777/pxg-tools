@@ -28,6 +28,12 @@ export type PokemonMove = {
   cooldown: string;
   level: string;
   description: string;
+  icons: PokemonMoveIcon[];
+};
+
+export type PokemonMoveIcon = {
+  label: string;
+  iconUrl: string;
 };
 
 export type PokemonVersion = {
@@ -46,6 +52,7 @@ export type PokemonDetail = PokemonListItem & {
   evolutions: PokemonEvolution[];
   description: string;
   effectiveness: PokemonEffectivenessGroup[];
+  moves?: PokemonMove[];
   pvpMoves: PokemonMove[];
   pveMoves: PokemonMove[];
   otherVersions: PokemonVersion[];

@@ -3,6 +3,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 import type { ClanDetail, ClanIconLabel } from '@/types/clans';
 
 export function ClanDetailView({ clan }: { clan: ClanDetail }) {
+  const pokemonVisuals = buildPokemonVisualIndex(clan);
+
   return (
     <article className="grid gap-5">
       <div className="flex flex-col gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-4 sm:flex-row sm:items-start sm:justify-between">
@@ -52,7 +54,9 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
               <span className="text-xs font-bold uppercase tracking-[0.14em] text-amber-200">
                 {row.label}
               </span>
-              <p className="mt-2 text-sm font-black text-white">{row.pokemon}</p>
+              <Link href={pokemonHref(row.pokemon)} className="mt-2 inline-flex text-sm font-black text-cyan-100 hover:text-amber-100">
+                {row.pokemon}
+              </Link>
               <p className="mt-1 text-sm text-slate-300">
                 {row.npc} - {row.location}
               </p>
@@ -86,7 +90,9 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
                       <div className="h-12 w-12 rounded-md bg-slate-900" />
                     )}
                     <div className="min-w-0">
-                      <p className="text-sm font-black text-white">{pokemon.name}</p>
+                      <Link href={pokemonHref(pokemon.name)} className="text-sm font-black text-cyan-100 hover:text-amber-100">
+                        {pokemon.name}
+                      </Link>
                       <p className="text-xs text-slate-400">{pokemon.dex}</p>
                       <IconLabelRow labels={pokemon.elements} />
                       <IconLabelRow labels={[...pokemon.pveRoles, ...pokemon.pvpRoles, ...pokemon.helds]} compact />
@@ -104,20 +110,46 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
           <h3 className="text-lg font-black text-white">Rotacao</h3>
           <div className="mt-3 grid gap-3">
             {clan.rotation.map((group) => (
-              <div key={group.element} className="rounded-lg border border-white/10 bg-slate-950/50 p-3">
-                <h4 className="text-sm font-black uppercase tracking-[0.14em] text-amber-200">
-                  {group.element}
-                </h4>
-                <div className="mt-3 grid gap-2">
-                  {group.rows.map((row) => (
-                    <div
-                      key={`${group.element}-${row.pokemon}-${row.role}`}
-                      className="flex items-center justify-between gap-3 rounded-md bg-white/[0.04] px-3 py-2"
-                    >
-                      <span className="text-sm font-bold text-white">{row.pokemon}</span>
-                      <span className="text-xs text-slate-300">{row.role} - {row.tier}</span>
-                    </div>
-                  ))}
+              <div key={group.element} className="overflow-hidden rounded-lg border border-white/10 bg-slate-950/50">
+                <div className="flex items-center justify-center gap-2 border-b border-white/10 bg-white/[0.04] px-3 py-2">
+                  <IconLabel label={{ label: group.element, icon: pokemonVisuals.elementIcons.get(group.element) || '' }} />
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[680px] border-collapse text-sm">
+                    <thead className="bg-cyan-300/10 text-cyan-100">
+                      <tr>
+                        <th className="border border-white/10 p-2 text-left">Pokemon</th>
+                        <th className="border border-white/10 p-2 text-left">Elemento</th>
+                        <th className="border border-white/10 p-2 text-left">Funcao</th>
+                        <th className="border border-white/10 p-2 text-left">Tier</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {group.rows.map((row) => {
+                        const visual = pokemonVisuals.byName.get(normalizePokemonName(row.pokemon));
+                        const roleIcon = row.roleIcon || visual?.roleIcon || '';
+                        return (
+                          <tr key={`${group.element}-${row.pokemon}-${row.role}-${row.tier}`} className="odd:bg-white/[0.025] even:bg-white/[0.05]">
+                            <td className="border border-white/10 p-2">
+                              <div className="flex items-center gap-2 font-bold text-white">
+                                {visual?.icon ? <img src={visual.icon} alt="" className="h-8 w-8 object-contain" loading="lazy" /> : null}
+                                <Link href={pokemonHref(row.pokemon)} className="text-cyan-100 hover:text-amber-100">
+                                  {row.pokemon}
+                                </Link>
+                              </div>
+                            </td>
+                            <td className="border border-white/10 p-2">
+                              <IconLabelRow labels={visual?.elements || [{ label: group.element, icon: pokemonVisuals.elementIcons.get(group.element) || '' }]} compact />
+                            </td>
+                            <td className="border border-white/10 p-2">
+                              <IconLabel label={{ label: row.role, icon: roleIcon }} />
+                            </td>
+                            <td className="border border-white/10 p-2 text-slate-200">{row.tier}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             ))}
@@ -129,15 +161,61 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
           <p className="mt-2 text-sm text-slate-300">{clan.pvpNote}</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {clan.pvpExclusive.map((pokemon) => (
-              <span key={pokemon} className="rounded-full border border-rose-300/25 px-2.5 py-1 text-xs font-bold text-rose-100">
+              <Link key={pokemon} href={pokemonHref(pokemon)} className="rounded-full border border-rose-300/25 px-2.5 py-1 text-xs font-bold text-rose-100 hover:border-amber-300/50 hover:text-amber-100">
                 {pokemon}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
     </article>
   );
+}
+
+function buildPokemonVisualIndex(clan: ClanDetail) {
+  const byName = new Map<string, { icon: string; elements: ClanIconLabel[]; roleIcon: string }>();
+  const elementIcons = new Map<string, string>();
+
+  for (const tier of clan.tiers) {
+    for (const pokemon of tier.pokemon) {
+      for (const element of pokemon.elements) {
+        if (element.label && element.icon && !elementIcons.has(element.label)) {
+          elementIcons.set(element.label, element.icon);
+        }
+      }
+
+      const firstRole = [...pokemon.pveRoles, ...pokemon.pvpRoles].find((role) => role.icon);
+      byName.set(normalizePokemonName(pokemon.name), {
+        icon: pokemon.icon,
+        elements: pokemon.elements,
+        roleIcon: firstRole?.icon || '',
+      });
+    }
+  }
+
+  return { byName, elementIcons };
+}
+
+function normalizePokemonName(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function pokemonHref(name: string) {
+  return `/pokedex/${slugifyPokemonName(name)}`;
+}
+
+function slugifyPokemonName(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
 function Metric({ label, value }: { label: string; value: string }) {
@@ -157,16 +235,19 @@ function IconLabelRow({ labels, compact = false }: { labels: ClanIconLabel[]; co
   return (
     <div className={compact ? 'mt-2 flex flex-wrap gap-1.5' : 'mt-2 flex flex-wrap gap-2'}>
       {labels.map((label) => (
-        <span
-          key={`${label.label}-${label.icon}`}
-          className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-slate-900 px-2 py-1 text-[11px] font-bold text-slate-200"
-        >
-          {label.icon ? (
-            <img src={label.icon} alt="" className="h-4 w-4 object-contain" loading="lazy" />
-          ) : null}
-          {label.label}
-        </span>
+        <IconLabel key={`${label.label}-${label.icon}`} label={label} />
       ))}
     </div>
+  );
+}
+
+function IconLabel({ label }: { label: ClanIconLabel }) {
+  return (
+    <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-slate-900 px-2 py-1 text-[11px] font-bold text-slate-200">
+      {label.icon ? (
+        <img src={label.icon} alt="" className="h-4 w-4 object-contain" loading="lazy" />
+      ) : null}
+      {label.label}
+    </span>
   );
 }

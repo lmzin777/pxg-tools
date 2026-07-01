@@ -1,5 +1,6 @@
 import { ItemsExplorer } from '@/components/items-explorer';
-import { getItems } from '@/lib/api';
+import { getItemCategory, getItems } from '@/lib/api';
+import type { ItemCategoryDetail } from '@/types/items';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,8 +11,19 @@ type ItemsPageProps = {
 export default async function ItemsPage({ searchParams }: ItemsPageProps) {
   const params = await searchParams;
   const data = await getItems();
+  const categoryDetails = (
+    await Promise.all(
+      data.categories.map(async (category) => {
+        try {
+          return await getItemCategory(category.slug);
+        } catch {
+          return null;
+        }
+      }),
+    )
+  ).filter((category): category is ItemCategoryDetail => Boolean(category));
 
-  return <ItemsExplorer categories={data.categories} initialQuery={firstParam(params.item) || firstParam(params.q)} />;
+  return <ItemsExplorer categories={data.categories} categoryDetails={categoryDetails} initialQuery={firstParam(params.item) || firstParam(params.q)} />;
 }
 
 function firstParam(value: string | string[] | undefined) {
