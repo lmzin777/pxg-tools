@@ -16,6 +16,21 @@ type PokemonEffectivenessRecord = {
   types: string[];
 };
 
+type PokemonMoveRecord = {
+  name: string;
+  type: string;
+  cooldown: string;
+  level: string;
+  description: string;
+};
+
+type PokemonVersionRecord = {
+  name: string;
+  slug: string;
+  iconUrl: string;
+  sourceUrl: string;
+};
+
 type PokemonRecord = {
   slug: string;
   dexNumber: number;
@@ -34,6 +49,9 @@ type PokemonRecord = {
   evolutions: PokemonEvolutionRecord[];
   description: string;
   effectiveness: PokemonEffectivenessRecord[];
+  pvpMoves?: PokemonMoveRecord[];
+  pveMoves?: PokemonMoveRecord[];
+  otherVersions?: PokemonVersionRecord[];
 };
 
 type PokemonPayload = {
@@ -144,6 +162,8 @@ async function main() {
     const elementRows: unknown[][] = [];
     const evolutionRows: unknown[][] = [];
     const effectivenessRows: unknown[][] = [];
+    const moveRows: unknown[][] = [];
+    const versionRows: unknown[][] = [];
 
     for (const pokemon of payload.pokemon) {
       const pokemonId = pokemonIds.get(pokemon.slug);
@@ -163,11 +183,32 @@ async function main() {
           effectivenessRows.push([pokemonId, group.category, type, index]);
         });
       });
+      (pokemon.pvpMoves ?? []).forEach((move, index) => {
+        moveRows.push([pokemonId, 'pvp', move.name, move.type ?? '', move.cooldown ?? '', move.level ?? '', move.description ?? '', index]);
+      });
+      (pokemon.pveMoves ?? []).forEach((move, index) => {
+        moveRows.push([pokemonId, 'pve', move.name, move.type ?? '', move.cooldown ?? '', move.level ?? '', move.description ?? '', index]);
+      });
+      (pokemon.otherVersions ?? []).forEach((version, index) => {
+        versionRows.push([pokemonId, version.name, version.slug ?? '', version.iconUrl ?? '', version.sourceUrl ?? '', index]);
+      });
     }
 
     await insertChunked(client, 'pokemon_elements', ['pokemon_id', 'type_name', 'sort_order'], elementRows);
     await insertChunked(client, 'pokemon_evolutions', ['pokemon_id', 'pokemon_name', 'required_level', 'sort_order'], evolutionRows);
     await insertChunked(client, 'pokemon_effectiveness', ['pokemon_id', 'category', 'type_name', 'sort_order'], effectivenessRows);
+    await insertChunked(
+      client,
+      'pokemon_moves',
+      ['pokemon_id', 'battle_mode', 'move_name', 'move_type', 'cooldown', 'required_level', 'description', 'sort_order'],
+      moveRows,
+    );
+    await insertChunked(
+      client,
+      'pokemon_versions',
+      ['pokemon_id', 'pokemon_name', 'pokemon_slug', 'icon_url', 'source_url', 'sort_order'],
+      versionRows,
+    );
 
     await client.query("update sync_runs set status = 'succeeded', finished_at = now(), message = $1 where scope = 'pokemon' and status = 'running'", [
       'Pokemon data loaded successfully.',

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { getTypeIconSrc } from '@/lib/tools-data';
 import type { Clan } from '@/types/clans';
 
 export function ClanExplorer({ clans }: { clans: Clan[] }) {
@@ -74,23 +75,43 @@ function ClanCard({ clan }: { clan: Clan }) {
       className="group grid min-h-60 gap-4 rounded-lg border border-white/10 bg-white/[0.035] p-4 transition hover:border-cyan-300/70 hover:bg-white/[0.06]"
     >
       <div>
-        <div className="flex flex-wrap gap-2">
-          {clan.types.map((type) => (
-            <span
-              key={type}
-              className="rounded-full border border-cyan-300/25 bg-cyan-300/10 px-2.5 py-1 text-xs font-bold text-cyan-100"
-            >
-              {type}
-            </span>
-          ))}
+        <div className="flex items-start gap-3">
+          {clan.iconUrl ? (
+            <img
+              src={clan.iconUrl}
+              alt={`Simbolo do cla ${clan.name}`}
+              className="h-16 w-16 shrink-0 object-contain"
+              loading="lazy"
+            />
+          ) : (
+            <span className="h-16 w-16 shrink-0 rounded-lg border border-white/10 bg-slate-950" />
+          )}
+          <div className="min-w-0">
+            <div className="flex flex-wrap gap-2">
+              {clan.types.map((type) => (
+                <ElementPill key={type} type={type} />
+              ))}
+            </div>
+            <h3 className="mt-3 text-xl font-black text-white group-hover:text-cyan-100">
+              {clan.name}
+            </h3>
+            <p className="mt-1 text-sm font-semibold text-amber-100">{clan.focus}</p>
+          </div>
         </div>
-        <h3 className="mt-4 text-xl font-black text-white group-hover:text-cyan-100">
-          {clan.name}
-        </h3>
-        <p className="mt-1 text-sm font-semibold text-amber-100">{clan.focus}</p>
       </div>
       <p className="line-clamp-4 text-sm leading-6 text-slate-300">{clan.summary}</p>
       <span className="mt-auto text-sm font-black text-cyan-200">Abrir detalhes</span>
     </Link>
+  );
+}
+
+function ElementPill({ type }: { type: string }) {
+  const iconSrc = getTypeIconSrc(type);
+
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-2.5 py-1 text-xs font-bold text-cyan-100">
+      {iconSrc ? <img src={iconSrc} alt="" className="h-4 w-4" loading="lazy" /> : null}
+      {type}
+    </span>
   );
 }

@@ -14,6 +14,8 @@ type ClanCatalogPayload = {
     types: string[];
     focus: string;
     summary: string;
+    iconUrl?: string;
+    sourceUrl?: string;
   }>;
 };
 
@@ -137,14 +139,14 @@ async function main() {
     for (const clan of catalog.clans) {
       const slug = slugify(clan.name);
       const detail = detailBySlug.get(slug);
-      const sourceUrl = detail?.sourceUrl ?? `https://wiki.pokexgames.com/index.php/${encodeURIComponent(clan.name)}`;
+      const sourceUrl = detail?.sourceUrl ?? clan.sourceUrl ?? `https://wiki.pokexgames.com/index.php/${encodeURIComponent(clan.name)}`;
       const clanResult = await client.query<{ id: string }>(
         `
-          insert into clans (slug, name, focus, summary, source_url)
-          values ($1, $2, $3, $4, $5)
+          insert into clans (slug, name, focus, summary, icon_url, source_url)
+          values ($1, $2, $3, $4, $5, $6)
           returning id
         `,
-        [slug, clan.name, clan.focus, clan.summary, sourceUrl],
+        [slug, clan.name, clan.focus, clan.summary, clan.iconUrl ?? '', sourceUrl],
       );
       const clanId = clanResult.rows[0].id;
 

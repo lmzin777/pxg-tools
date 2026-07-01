@@ -7,6 +7,20 @@ import type { ProfessionDetail, ProfessionsOverview } from '@/types/professions'
 import type { AdminHealth, AdminStats, SyncRun } from '@/types/admin';
 import type { SearchOverview } from '@/types/search';
 import type { WikiDomainDetail, WikiDomainsOverview } from '@/types/wiki';
+import {
+  getLocalClanDetail,
+  getLocalClans,
+  getLocalCraft,
+  getLocalCrafts,
+  getLocalItemCategory,
+  getLocalItemDetail,
+  getLocalItems,
+  getLocalPokemon,
+  getLocalPokemonDetail,
+  getLocalProfessionDetail,
+  getLocalProfessions,
+  searchLocalData,
+} from '@/lib/local-data';
 
 const DEFAULT_API_BASE_URL = 'http://localhost:5000';
 
@@ -28,8 +42,21 @@ function getApiBaseUrl() {
   ).replace(/\/$/, '');
 }
 
+function getConnectionErrorMessage(baseUrl: string) {
+  if (process.env.NODE_ENV === 'production') {
+    return 'Nao foi possivel conectar a API publica. Tente novamente em alguns instantes.';
+  }
+
+  if (baseUrl.includes('localhost') || baseUrl.includes('127.0.0.1')) {
+    return 'A API local nao esta rodando. Inicie a API em http://localhost:5000.';
+  }
+
+  return 'Nao foi possivel conectar a API configurada. Tente novamente em alguns instantes.';
+}
+
 async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
-  const url = `${getApiBaseUrl()}${path}`;
+  const apiBaseUrl = getApiBaseUrl();
+  const url = `${apiBaseUrl}${path}`;
 
   let response: Response;
   try {
@@ -41,15 +68,23 @@ async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
       },
       cache: 'no-store',
     });
-  } catch (error) {
-    throw new ApiError(
-      `Nao foi possivel conectar na API .NET em ${getApiBaseUrl()}. Confirme se o backend esta rodando e se API_BASE_URL esta correto.`,
-    );
+  } catch {
+    throw new ApiError(getConnectionErrorMessage(apiBaseUrl));
   }
 
   if (!response.ok) {
+    if (process.env.NODE_ENV === 'production') {
+      console.error('PXG Tools API response error', {
+        path,
+        apiBaseUrl,
+        status: response.status,
+      });
+    }
+
     throw new ApiError(
-      `A API respondeu ${response.status} para ${path}.`,
+      process.env.NODE_ENV === 'production'
+        ? 'A API publica respondeu com erro. Tente novamente em alguns instantes.'
+        : `A API respondeu ${response.status} para ${path}.`,
       response.status,
     );
   }
@@ -57,20 +92,81 @@ async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
   return response.json() as Promise<T>;
 }
 
-export function getClans() {
-  return apiFetch<Clan[]>('/api/clans');
+async function withLocalFallback<T>(remote: Promise<T>, fallback: () => Promise<T>): Promise<T> {
+  try {
+    return await remote;
+  } catch (error) {
+    if (error instanceof ApiError) {
+      return fallback();
+    }
+
+    throw error;
+  }
 }
 
-export function getClanDetail(slug: string) {
-  return apiFetch<ClanDetail>(`/api/clans/${encodeURIComponent(slug)}`);
+async function withNullableLocalFallback<T>(remote: Promise<T>, fallback: () => Promise<T | null>): Promise<T> {
+  try {
+    return await remote;
+  } catch (error) {
+    if (error instanceof ApiError) {
+      const localValue = await fallback();
+      if (localValue) {
+        return localValue;
+      }
+    }
+
+    throw error;
+  }
+}
+
+export async function getClans() {
+  try {
+    const remoteClans = await apiFetch<Clan[]>('/api/clans');
+    const localClans = await getLocalClans();
+    const localBySlug = new Map(localClans.map((clan) => [clan.slug, clan]));
+
+    return remoteClans.map((clan) => ({
+      ...clan,
+      iconUrl: clan.iconUrl || localBySlug.get(clan.slug)?.iconUrl || '',
+    }));
+  } catch (error) {
+    if (error instanceof ApiError) {
+      return getLocalClans();
+    }
+
+    throw error;
+  }
+}
+
+export async function getClanDetail(slug: string) {
+  try {
+    const remoteClan = await apiFetch<ClanDetail>(`/api/clans/${encodeURIComponent(slug)}`);
+    if (!remoteClan.tiers.length || !remoteClan.rotation.length) {
+      return (await getLocalClanDetail(slug)) || remoteClan;
+    }
+
+    return remoteClan;
+  } catch (error) {
+    if (error instanceof ApiError) {
+      const localClan = await getLocalClanDetail(slug);
+      if (localClan) {
+        return localClan;
+      }
+    }
+
+    throw error;
+  }
 }
 
 export function getProfessions() {
-  return apiFetch<ProfessionsOverview>('/api/professions');
+  return withLocalFallback(apiFetch<ProfessionsOverview>('/api/professions'), getLocalProfessions);
 }
 
 export function getProfessionDetail(slug: string) {
-  return apiFetch<ProfessionDetail>(`/api/professions/${encodeURIComponent(slug)}`);
+  return withNullableLocalFallback(
+    apiFetch<ProfessionDetail>(`/api/professions/${encodeURIComponent(slug)}`),
+    () => getLocalProfessionDetail(slug),
+  );
 }
 
 export function getCrafts(filters?: {
@@ -83,31 +179,43 @@ export function getCrafts(filters?: {
   if (filters?.profession) params.set('profession', filters.profession);
   if (filters?.ingredient) params.set('ingredient', filters.ingredient);
   const suffix = params.size ? `?${params.toString()}` : '';
-  return apiFetch<CraftsOverview>(`/api/crafts${suffix}`);
+  return withLocalFallback(apiFetch<CraftsOverview>(`/api/crafts${suffix}`), () => getLocalCrafts(filters));
 }
 
 export function getCraft(slug: string) {
-  return apiFetch<Craft>(`/api/crafts/${encodeURIComponent(slug)}`);
+  return withNullableLocalFallback(
+    apiFetch<Craft>(`/api/crafts/${encodeURIComponent(slug)}`),
+    () => getLocalCraft(slug),
+  );
 }
 
 export function getPokemon() {
-  return apiFetch<PokemonOverview>('/api/pokemon');
+  return withLocalFallback(apiFetch<PokemonOverview>('/api/pokemon'), getLocalPokemon);
 }
 
 export function getPokemonDetail(slug: string) {
-  return apiFetch<PokemonDetail>(`/api/pokemon/${encodeURIComponent(slug)}`);
+  return withNullableLocalFallback(
+    apiFetch<PokemonDetail>(`/api/pokemon/${encodeURIComponent(slug)}`),
+    () => getLocalPokemonDetail(slug),
+  );
 }
 
 export function getItems() {
-  return apiFetch<ItemsOverview>('/api/items');
+  return withLocalFallback(apiFetch<ItemsOverview>('/api/items'), getLocalItems);
 }
 
 export function getItemCategory(slug: string) {
-  return apiFetch<ItemCategoryDetail>(`/api/items/categories/${encodeURIComponent(slug)}`);
+  return withNullableLocalFallback(
+    apiFetch<ItemCategoryDetail>(`/api/items/categories/${encodeURIComponent(slug)}`),
+    () => getLocalItemCategory(slug),
+  );
 }
 
 export function getItemDetail(slug: string) {
-  return apiFetch<ItemDetail>(`/api/items/detail/${encodeURIComponent(slug)}`);
+  return withNullableLocalFallback(
+    apiFetch<ItemDetail>(`/api/items/detail/${encodeURIComponent(slug)}`),
+    () => getLocalItemDetail(slug),
+  );
 }
 
 export function getAdminHealth() {
@@ -133,5 +241,7 @@ export function getWikiDomain(domain: string) {
 export function searchAll(query: string) {
   const params = new URLSearchParams();
   if (query) params.set('q', query);
-  return apiFetch<SearchOverview>(`/api/search?${params.toString()}`);
+  return withLocalFallback(apiFetch<SearchOverview>(`/api/search?${params.toString()}`), () =>
+    searchLocalData(query),
+  );
 }

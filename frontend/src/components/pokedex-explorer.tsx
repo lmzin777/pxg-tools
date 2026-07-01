@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { normalizeText } from '@/lib/format';
+import { canonicalPokemonType, getTypeIconSrc, parsePokemonTypes, pokemonTypes, type PokemonType } from '@/lib/tools-data';
 import type { PokemonListItem } from '@/types/pokemon';
 
 export function PokedexExplorer({
@@ -15,23 +16,39 @@ export function PokedexExplorer({
 }) {
   const [query, setQuery] = useState('');
   const [generation, setGeneration] = useState('');
-  const [type, setType] = useState('');
+  const [primaryType, setPrimaryType] = useState('');
+  const [secondaryType, setSecondaryType] = useState('');
   const normalizedQuery = normalizeText(query);
-  const typeOptions = useMemo(
-    () => [...new Set(pokemon.flatMap((entry) => entry.elements))].sort((a, b) => a.localeCompare(b, 'pt-BR')),
-    [pokemon],
-  );
+  const typeOptions = useMemo(() => {
+    const presentTypes = new Set<PokemonType>();
+    pokemon.forEach((entry) => {
+      entry.elements.forEach((element) => {
+        parsePokemonTypes(element).forEach((type) => presentTypes.add(type));
+      });
+    });
+
+    return pokemonTypes.filter((type) => presentTypes.has(type));
+  }, [pokemon]);
   const filteredPokemon = useMemo(
     () =>
       pokemon.filter((entry) => {
-        const searchable = [entry.name, entry.dex, entry.generation, entry.level, entry.elements.join(' ')].join(' ');
+        const entryTypes = getEntryTypes(entry.elements);
+        const searchable = [
+          entry.name,
+          entry.dex,
+          entry.generation,
+          entry.level,
+          entry.elements.join(' '),
+          entryTypes.join(' '),
+        ].join(' ');
         return (
           (!normalizedQuery || normalizeText(searchable).includes(normalizedQuery)) &&
           (!generation || entry.generation === generation) &&
-          (!type || entry.elements.includes(type))
+          (!primaryType || entryTypes.includes(primaryType as PokemonType)) &&
+          (!secondaryType || entryTypes.includes(secondaryType as PokemonType))
         );
       }),
-    [generation, normalizedQuery, pokemon, type],
+    [generation, normalizedQuery, pokemon, primaryType, secondaryType],
   );
 
   return (
@@ -41,7 +58,7 @@ export function PokedexExplorer({
           {filteredPokemon.length} de {pokemon.length}
         </span>
         <h2 className="mt-1 text-2xl font-black text-white">Pokedex</h2>
-        <div className="mt-4 grid gap-3 md:grid-cols-3">
+        <div className="mt-4 grid gap-3 md:grid-cols-4">
           <label className="grid gap-2 text-sm font-bold text-slate-300">
             Nome
             <span className="relative">
@@ -50,25 +67,30 @@ export function PokedexExplorer({
             </span>
           </label>
           <Select label="Geracao" value={generation} onChange={setGeneration} options={generations} />
-          <Select label="Tipo" value={type} onChange={setType} options={typeOptions} />
+          <Select label="Tipo 1" value={primaryType} onChange={setPrimaryType} options={typeOptions} />
+          <Select label="Tipo 2" value={secondaryType} onChange={setSecondaryType} options={typeOptions} />
         </div>
       </section>
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {filteredPokemon.map((entry) => (
-          <Link key={entry.slug} href={`/pokedex/${entry.slug}`} className="rounded-lg border border-white/10 bg-white/[0.035] p-4 transition hover:border-cyan-300/70">
+          <Link key={entry.slug} href={`/pokedex/${entry.slug}`} className="group grid min-h-64 gap-3 rounded-lg border border-white/10 bg-white/[0.035] p-4 transition hover:border-cyan-300/70 hover:bg-white/[0.06]">
             <div className="flex items-center gap-3">
               {entry.spriteUrl ? <img src={entry.spriteUrl} alt={entry.name} className="h-16 w-16 object-contain" loading="lazy" /> : null}
-              <div>
+              <div className="min-w-0">
                 <span className="text-xs font-bold text-slate-400">{entry.dex}</span>
-                <h3 className="font-black text-white">{entry.name}</h3>
+                <h3 className="truncate font-black text-white group-hover:text-cyan-100">{entry.name}</h3>
                 <p className="text-xs text-slate-400">{entry.generation}</p>
               </div>
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {entry.elements.map((element) => <Pill key={element}>{element}</Pill>)}
+              {getEntryTypes(entry.elements).map((element) => <TypePill key={element} type={element} />)}
             </div>
-            {entry.level ? <p className="mt-3 text-sm text-slate-300">Level: {entry.level}</p> : null}
+            <div className="mt-auto grid gap-2 text-sm text-slate-300">
+              <InfoLine label="Level" value={entry.level} strong />
+              <InfoLine label="Boost" value={entry.boost} />
+              <InfoLine label="Materia" value={entry.material} />
+            </div>
           </Link>
         ))}
       </div>
@@ -76,7 +98,7 @@ export function PokedexExplorer({
   );
 }
 
-function Select({ label, value, onChange, options }: { label: string; value: string; onChange: (value: string) => void; options: string[] }) {
+function Select({ label, value, onChange, options }: { label: string; value: string; onChange: (value: string) => void; options: readonly string[] }) {
   return (
     <label className="grid gap-2 text-sm font-bold text-slate-300">
       {label}
@@ -88,6 +110,29 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   );
 }
 
-function Pill({ children }: { children: React.ReactNode }) {
-  return <span className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-2.5 py-1 text-xs font-bold text-cyan-100">{children}</span>;
+function TypePill({ type }: { type: string }) {
+  const displayType = canonicalPokemonType(type) || type;
+  const iconSrc = getTypeIconSrc(displayType);
+
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-2.5 py-1 text-xs font-bold text-cyan-100">
+      {iconSrc ? <img src={iconSrc} alt="" className="h-4 w-4" loading="lazy" /> : null}
+      {displayType}
+    </span>
+  );
+}
+
+function getEntryTypes(elements: string[]) {
+  return [...new Set(elements.flatMap((element) => parsePokemonTypes(element)))];
+}
+
+function InfoLine({ label, value, strong = false }: { label: string; value: string; strong?: boolean }) {
+  if (!value) return null;
+
+  return (
+    <span className="flex items-center justify-between gap-3 rounded-md border border-white/10 bg-slate-950/60 px-2.5 py-1.5">
+      <span className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">{label}</span>
+      <span className={strong ? 'font-black text-amber-100' : 'truncate font-bold text-slate-200'}>{value}</span>
+    </span>
+  );
 }

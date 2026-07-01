@@ -972,7 +972,7 @@ function renderTypeLabel(type) {
 
   return `
     <span class="type-label">
-      <img class="type-icon" src="assets/type-icons/${iconFile}" alt="${type} type icon" loading="lazy">
+      <img class="type-icon" src="../assets/type-icons/${iconFile}" alt="${type} type icon" loading="lazy">
       <span>${type}</span>
     </span>
   `;
@@ -4454,7 +4454,7 @@ function renderBallLabel(ballName) {
 
   return `
     <span class="ball-inline-label">
-      <img class="ball-inline-icon" src="assets/ball-icons/${iconFile}" alt="${ballName} icon" loading="lazy">
+      <img class="ball-inline-icon" src="../assets/ball-icons/${iconFile}" alt="${ballName} icon" loading="lazy">
       <span>${ballName}</span>
     </span>
   `;
@@ -4488,7 +4488,7 @@ function renderBallCatalog() {
     card.className = 'ball-card';
     const iconFile = BALL_ICON_FILES[ball.name];
     card.innerHTML = localizeHtml(`
-      ${iconFile ? `<span class="ball-icon-shell"><img class="ball-icon" src="assets/ball-icons/${iconFile}" alt="${ball.name} icon" loading="lazy"></span>` : ''}
+      ${iconFile ? `<span class="ball-icon-shell"><img class="ball-icon" src="../assets/ball-icons/${iconFile}" alt="${ball.name} icon" loading="lazy"></span>` : ''}
       <span class="ball-card-copy">
         <strong>${ball.name}</strong>
         <span>${formatBallBestFor(ball.bestFor)} - ${formatBallRate(ball.rate)}</span>

@@ -15,10 +15,29 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
+        var configuredOrigins = builder.Configuration.GetSection("Cors:Origins").Get<string[]>() ?? [];
+        var commaSeparatedOrigins = (builder.Configuration["CORS_ORIGINS"] ?? string.Empty)
+            .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        var allowedOrigins = configuredOrigins
+            .Concat(commaSeparatedOrigins)
+            .Where(origin => !string.IsNullOrWhiteSpace(origin))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToArray();
+
         policy
             .AllowAnyHeader()
-            .AllowAnyMethod()
-            .WithOrigins(builder.Configuration.GetSection("Cors:Origins").Get<string[]>() ?? []);
+            .AllowAnyMethod();
+
+        if (allowedOrigins.Length > 0)
+        {
+            policy.WithOrigins(allowedOrigins);
+            return;
+        }
+
+        if (builder.Environment.IsDevelopment())
+        {
+            policy.AllowAnyOrigin();
+        }
     });
 });
 

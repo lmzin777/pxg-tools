@@ -7,6 +7,8 @@ export type PokemonListItem = {
   spriteUrl: string;
   sourceUrl: string;
   level: string;
+  boost: string;
+  material: string;
   elements: string[];
 };
 
@@ -20,6 +22,21 @@ export type PokemonEffectivenessGroup = {
   types: string[];
 };
 
+export type PokemonMove = {
+  name: string;
+  type: string;
+  cooldown: string;
+  level: string;
+  description: string;
+};
+
+export type PokemonVersion = {
+  name: string;
+  slug: string;
+  iconUrl: string;
+  sourceUrl: string;
+};
+
 export type PokemonDetail = PokemonListItem & {
   detailSpriteUrl: string;
   abilities: string;
@@ -29,6 +46,9 @@ export type PokemonDetail = PokemonListItem & {
   evolutions: PokemonEvolution[];
   description: string;
   effectiveness: PokemonEffectivenessGroup[];
+  pvpMoves: PokemonMove[];
+  pveMoves: PokemonMove[];
+  otherVersions: PokemonVersion[];
 };
 
 export type PokemonOverview = {

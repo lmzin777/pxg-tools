@@ -20,12 +20,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <h1 className="text-2xl font-black text-white">Database de jogo</h1>
             </div>
             <p className="max-w-2xl text-sm text-slate-300">
-              Frontend Next.js consumindo a API .NET. A tela inicial ja abre na lista de clas.
+              Consulte ferramentas, clas, Pokemon, itens, crafts e profissoes em um so lugar.
             </p>
             <SearchBox />
           </div>
 
-          <nav className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8">
+          <nav className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
             {navigationItems.map((item) => {
               const Icon = item.icon;
               const isActive =

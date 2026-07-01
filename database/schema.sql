@@ -21,9 +21,12 @@ create table if not exists clans (
   name text not null,
   focus text not null,
   summary text not null,
+  icon_url text not null default '',
   source_url text not null,
   updated_at timestamptz not null default now()
 );
+
+alter table clans add column if not exists icon_url text not null default '';
 
 create table if not exists clan_types (
   clan_id uuid not null references clans(id) on delete cascade,
@@ -279,6 +282,28 @@ create table if not exists pokemon_effectiveness (
   sort_order integer not null default 0
 );
 
+create table if not exists pokemon_moves (
+  id uuid primary key default gen_random_uuid(),
+  pokemon_id uuid not null references pokemon(id) on delete cascade,
+  battle_mode text not null,
+  move_name text not null,
+  move_type text not null default '',
+  cooldown text not null default '',
+  required_level text not null default '',
+  description text not null default '',
+  sort_order integer not null default 0
+);
+
+create table if not exists pokemon_versions (
+  id uuid primary key default gen_random_uuid(),
+  pokemon_id uuid not null references pokemon(id) on delete cascade,
+  pokemon_name text not null,
+  pokemon_slug text not null default '',
+  icon_url text not null default '',
+  source_url text not null default '',
+  sort_order integer not null default 0
+);
+
 create table if not exists item_categories (
   id uuid primary key default gen_random_uuid(),
   slug text not null unique,
@@ -397,6 +422,9 @@ create index if not exists ix_pokemon_generation_name on pokemon(generation_name
 create index if not exists ix_pokemon_elements_type_name on pokemon_elements(type_name);
 create index if not exists ix_pokemon_evolutions_pokemon_id on pokemon_evolutions(pokemon_id);
 create index if not exists ix_pokemon_effectiveness_pokemon_id on pokemon_effectiveness(pokemon_id);
+create index if not exists ix_pokemon_moves_pokemon_id on pokemon_moves(pokemon_id);
+create index if not exists ix_pokemon_moves_battle_mode on pokemon_moves(battle_mode);
+create index if not exists ix_pokemon_versions_pokemon_id on pokemon_versions(pokemon_id);
 create index if not exists ix_item_categories_slug on item_categories(slug);
 create index if not exists ix_item_categories_group_name on item_categories(group_name);
 create index if not exists ix_items_category_id on items(category_id);

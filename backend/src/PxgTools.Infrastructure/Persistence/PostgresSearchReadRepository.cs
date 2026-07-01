@@ -15,7 +15,7 @@ public sealed class PostgresSearchReadRepository(NpgsqlDataSource dataSource) : 
         }
 
         const string sql = """
-            select 'Cla' as type, name as title, slug, '/clans/' || slug as url, '' as image_url, summary
+            select 'Cla' as type, name as title, slug, '/clans/' || slug as url, icon_url as image_url, summary
             from clans
             where name ilike @queryLike or focus ilike @queryLike or summary ilike @queryLike
 

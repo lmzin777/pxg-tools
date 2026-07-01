@@ -18,6 +18,8 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
               p.sprite_url,
               p.source_url,
               p.required_level,
+              p.boost,
+              p.material,
               coalesce(array_agg(pe.type_name order by pe.sort_order) filter (where pe.type_name is not null), '{}') as elements
             from pokemon p
             left join pokemon_elements pe on pe.pokemon_id = p.id
@@ -47,7 +49,9 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
                 reader.GetString(5),
                 reader.GetString(6),
                 reader.GetString(7),
-                reader.GetFieldValue<string[]>(8)));
+                reader.GetString(8),
+                reader.GetString(9),
+                reader.GetFieldValue<string[]>(10)));
         }
 
         return new PokemonOverview(generations, pokemon);
@@ -126,7 +130,10 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
             detail.EvolutionStone,
             await ReadEvolutionsAsync(pokemonId, cancellationToken),
             detail.Description,
-            await ReadEffectivenessAsync(pokemonId, cancellationToken));
+            await ReadEffectivenessAsync(pokemonId, cancellationToken),
+            await ReadMovesAsync(pokemonId, "pvp", cancellationToken),
+            await ReadMovesAsync(pokemonId, "pve", cancellationToken),
+            await ReadVersionsAsync(pokemonId, cancellationToken));
     }
 
     private async Task<IReadOnlyList<PokemonEvolution>> ReadEvolutionsAsync(Guid pokemonId, CancellationToken cancellationToken)
@@ -172,5 +179,59 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
         }
 
         return groups;
+    }
+
+    private async Task<IReadOnlyList<PokemonMove>> ReadMovesAsync(Guid pokemonId, string battleMode, CancellationToken cancellationToken)
+    {
+        const string sql = """
+            select move_name, move_type, cooldown, required_level, description
+            from pokemon_moves
+            where pokemon_id = @pokemonId and battle_mode = @battleMode
+            order by sort_order, move_name;
+            """;
+
+        await using var command = dataSource.CreateCommand(sql);
+        command.Parameters.AddWithValue("pokemonId", pokemonId);
+        command.Parameters.AddWithValue("battleMode", battleMode);
+        await using var reader = await command.ExecuteReaderAsync(cancellationToken);
+        var moves = new List<PokemonMove>();
+
+        while (await reader.ReadAsync(cancellationToken))
+        {
+            moves.Add(new PokemonMove(
+                reader.GetString(0),
+                reader.GetString(1),
+                reader.GetString(2),
+                reader.GetString(3),
+                reader.GetString(4)));
+        }
+
+        return moves;
+    }
+
+    private async Task<IReadOnlyList<PokemonVersion>> ReadVersionsAsync(Guid pokemonId, CancellationToken cancellationToken)
+    {
+        const string sql = """
+            select pokemon_name, pokemon_slug, icon_url, source_url
+            from pokemon_versions
+            where pokemon_id = @pokemonId
+            order by sort_order, pokemon_name;
+            """;
+
+        await using var command = dataSource.CreateCommand(sql);
+        command.Parameters.AddWithValue("pokemonId", pokemonId);
+        await using var reader = await command.ExecuteReaderAsync(cancellationToken);
+        var versions = new List<PokemonVersion>();
+
+        while (await reader.ReadAsync(cancellationToken))
+        {
+            versions.Add(new PokemonVersion(
+                reader.GetString(0),
+                reader.GetString(1),
+                reader.GetString(2),
+                reader.GetString(3)));
+        }
+
+        return versions;
     }
 }

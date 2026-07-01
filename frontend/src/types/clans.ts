@@ -3,6 +3,7 @@ export type Clan = {
   name: string;
   focus: string;
   summary: string;
+  iconUrl: string;
   sourceUrl: string;
   types: string[];
 };

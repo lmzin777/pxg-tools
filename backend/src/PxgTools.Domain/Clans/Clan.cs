@@ -5,6 +5,7 @@ public sealed record Clan(
     string Name,
     string Focus,
     string Summary,
+    string IconUrl,
     string SourceUrl,
     IReadOnlyList<string> Types);
 

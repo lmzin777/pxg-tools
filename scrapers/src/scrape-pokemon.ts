@@ -1,6 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import * as cheerio from 'cheerio';
+import type { Element } from 'domhandler';
 import { ROOT_DIR } from './env.js';
 
 const WIKI_ORIGIN = 'https://wiki.pokexgames.com';
@@ -37,6 +38,21 @@ type PokemonEffectivenessRecord = {
   types: string[];
 };
 
+type PokemonMoveRecord = {
+  name: string;
+  type: string;
+  cooldown: string;
+  level: string;
+  description: string;
+};
+
+type PokemonVersionRecord = {
+  name: string;
+  slug: string;
+  iconUrl: string;
+  sourceUrl: string;
+};
+
 type PokemonRecord = PokemonListRecord & {
   detailSpriteUrl: string;
   level: string;
@@ -48,6 +64,9 @@ type PokemonRecord = PokemonListRecord & {
   evolutions: PokemonEvolutionRecord[];
   description: string;
   effectiveness: PokemonEffectivenessRecord[];
+  pvpMoves: PokemonMoveRecord[];
+  pveMoves: PokemonMoveRecord[];
+  otherVersions: PokemonVersionRecord[];
 };
 
 const GENERATION_TITLES = [
@@ -85,6 +104,15 @@ function normalizeText(value: string) {
 
 function cleanHeading(value: string) {
   return normalizeText(value.replace(/\[editar\]/g, ''));
+}
+
+function normalizeKey(value: string) {
+  return normalizeText(value)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
 }
 
 function pageFromSourceUrl(sourceUrl: string) {
@@ -208,6 +236,24 @@ function extractSection(wikitext: string, title: string) {
   return match ? match[1].trim() : '';
 }
 
+function extractSectionLoose(wikitext: string, titles: string[]) {
+  const expected = titles.map(normalizeKey);
+  const headingPattern = /^={2,6}\s*'?([^=\n'].*?)'?\s*={2,6}\s*$/gm;
+  const headings = [...wikitext.matchAll(headingPattern)].map((match) => ({
+    index: match.index ?? 0,
+    end: (match.index ?? 0) + match[0].length,
+    title: normalizeKey(match[1]),
+  }));
+
+  const heading = headings.find((candidate) => expected.some((title) => candidate.title.includes(title)));
+  if (!heading) {
+    return '';
+  }
+
+  const next = headings.find((candidate) => candidate.index > heading.index);
+  return wikitext.slice(heading.end, next?.index ?? wikitext.length).trim();
+}
+
 function splitTypes(value: string) {
   return value
     .split(/\s*(?:\/|,|\band\b)\s*|\s+e\s+/i)
@@ -216,7 +262,7 @@ function splitTypes(value: string) {
 }
 
 function parseEvolutions(wikitext: string) {
-  const section = extractSection(wikitext, 'Evoluções');
+  const section = extractSection(wikitext, 'Evoluções') || extractSectionLoose(wikitext, ['Evolucoes', 'Evoluções']);
   const evolutions: PokemonEvolutionRecord[] = [];
   const pattern = /'''([^']+)'''\s+precisa de Level\s+([^.<\n]+)/gi;
   let match: RegExpExecArray | null;
@@ -232,12 +278,15 @@ function parseEvolutions(wikitext: string) {
 }
 
 function parseDescription(wikitext: string) {
-  const section = extractSection(wikitext, 'Descrição:') || extractSection(wikitext, 'Descrição');
+  const section =
+    extractSection(wikitext, 'Descrição:') ||
+    extractSection(wikitext, 'Descrição') ||
+    extractSectionLoose(wikitext, ['Descricao', 'Descrição']);
   return cleanWikiText(section);
 }
 
 function parseEffectiveness(wikitext: string) {
-  const section = cleanWikiText(extractSection(wikitext, 'Efetividades'));
+  const section = cleanWikiText(extractSection(wikitext, 'Efetividades') || extractSectionLoose(wikitext, ['Efetividades']));
   const categoryPattern = /(Muito Efetivo|Muito Inefetivo|Efetivo|Normal|Inefetivo|Imune|Nulo):/gi;
   const matches = [...section.matchAll(categoryPattern)];
   const result: PokemonEffectivenessRecord[] = [];
@@ -264,11 +313,120 @@ function extractDetailSprite(html: string) {
   return image.attr('src') ? absoluteUrl(image.attr('src') ?? '') : '';
 }
 
+function sectionElementsByHeading($: cheerio.CheerioAPI, headingNames: string[]) {
+  const expected = headingNames.map(normalizeKey);
+  const result: Element[] = [];
+  let collecting = false;
+
+  $('.mw-parser-output')
+    .children()
+    .each((_, element) => {
+      const tag = element.tagName?.toLowerCase() ?? '';
+      const isHeading = /^h[1-6]$/.test(tag);
+
+      if (isHeading) {
+        const title = normalizeKey($(element).text());
+        if (expected.some((heading) => title.includes(heading))) {
+          collecting = true;
+          return;
+        }
+
+        if (collecting && tag === 'h2') {
+          collecting = false;
+        }
+      }
+
+      if (collecting && !isHeading) {
+        result.push(element);
+      }
+    });
+
+  return result;
+}
+
+function parseMovesFromHtml(html: string) {
+  const $ = cheerio.load(html);
+  const section = sectionElementsByHeading($, ['Movimentos']);
+  const pvpMoves: PokemonMoveRecord[] = [];
+  const pveMoves: PokemonMoveRecord[] = [];
+  let currentMode: 'pvp' | 'pve' = 'pve';
+
+  for (const element of section) {
+    const tag = element.tagName?.toLowerCase() ?? '';
+    if (/^h[3-6]$/.test(tag)) {
+      const title = normalizeKey($(element).text());
+      if (title.includes('pvp')) currentMode = 'pvp';
+      if (title.includes('pve')) currentMode = 'pve';
+      continue;
+    }
+
+    $(element)
+      .find('tr')
+      .each((_, row) => {
+        const cells = $(row).children('td').toArray();
+        if (cells.length === 0) return;
+
+        const firstTextCell = cells.find((cell) => {
+          const text = normalizeText($(cell).text());
+          return text.length > 1 && !/^\d+$/.test(text);
+        });
+        const link = firstTextCell ? $(firstTextCell).find('a[title]').first() : $(row).find('a[title]').first();
+        const name = normalizeText(link.attr('title') ?? $(firstTextCell ?? cells[0]).text());
+
+        if (!name || /arquivo|file|editar/i.test(name)) return;
+
+        const move: PokemonMoveRecord = {
+          name,
+          type: normalizeText($(cells[1]).text()),
+          cooldown: normalizeText($(cells[2]).text()),
+          level: normalizeText($(cells[3]).text()),
+          description: normalizeText($(cells.slice(4)).text()),
+        };
+        const target = currentMode === 'pvp' ? pvpMoves : pveMoves;
+        if (!target.some((entry) => entry.name === move.name)) {
+          target.push(move);
+        }
+      });
+  }
+
+  return { pvpMoves, pveMoves };
+}
+
+function parseOtherVersionsFromHtml(html: string, currentName: string) {
+  const $ = cheerio.load(html);
+  const section = sectionElementsByHeading($, ['Outras Versoes', 'Outras Versões']);
+  const versions = new Map<string, PokemonVersionRecord>();
+
+  for (const element of section) {
+    $(element)
+      .find('a[href]')
+      .each((_, anchor) => {
+        const href = $(anchor).attr('href') ?? '';
+        const title = normalizeText($(anchor).attr('title') ?? $(anchor).text());
+        if (!href.startsWith('/index.php/') || !title || title === currentName || /arquivo|file|editar/i.test(title)) {
+          return;
+        }
+
+        const image = $(anchor).find('img').first();
+        const sourceUrl = absoluteUrl(href);
+        versions.set(title, {
+          name: title,
+          slug: slugify(title),
+          iconUrl: image.attr('src') ? absoluteUrl(image.attr('src') ?? '') : '',
+          sourceUrl,
+        });
+      });
+  }
+
+  return [...versions.values()];
+}
+
 async function enrichPokemon(base: PokemonListRecord): Promise<PokemonRecord> {
   try {
     const detail = await fetchPage(base.pageTitle);
     const html = detail.parse.text['*'];
     const wikitext = detail.parse.wikitext?.['*'] ?? '';
+    const moves = parseMovesFromHtml(html);
 
     return {
       ...base,
@@ -282,6 +440,9 @@ async function enrichPokemon(base: PokemonListRecord): Promise<PokemonRecord> {
       evolutions: parseEvolutions(wikitext),
       description: parseDescription(wikitext),
       effectiveness: parseEffectiveness(wikitext),
+      pvpMoves: moves.pvpMoves,
+      pveMoves: moves.pveMoves,
+      otherVersions: parseOtherVersionsFromHtml(html, base.name),
     };
   } catch (error) {
     console.warn(`Pokemon detail skipped for ${base.name}:`, error instanceof Error ? error.message : error);
@@ -297,6 +458,9 @@ async function enrichPokemon(base: PokemonListRecord): Promise<PokemonRecord> {
       evolutions: [],
       description: '',
       effectiveness: [],
+      pvpMoves: [],
+      pveMoves: [],
+      otherVersions: [],
     };
   }
 }

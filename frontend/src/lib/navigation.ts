@@ -1,4 +1,4 @@
-import { Boxes, Database, FlaskConical, Hammer, Heart, Shield, Sparkles, Wrench } from 'lucide-react';
+import { Boxes, FlaskConical, Hammer, Heart, Shield, Sparkles, Wrench } from 'lucide-react';
 import type { ComponentType } from 'react';
 
 type NavigationItem = {
@@ -10,6 +10,13 @@ type NavigationItem = {
 };
 
 export const navigationItems: NavigationItem[] = [
+  {
+    href: '/tools',
+    label: 'Ferramentas',
+    description: 'Calculadoras e tabelas rapidas',
+    icon: Wrench,
+    ready: true,
+  },
   {
     href: '/',
     label: 'Clas',
@@ -43,20 +50,6 @@ export const navigationItems: NavigationItem[] = [
     label: 'Crafts',
     description: 'Busca por item, profissao e ingrediente',
     icon: FlaskConical,
-    ready: true,
-  },
-  {
-    href: '/wiki-data',
-    label: 'Wiki Data',
-    description: 'Novos dominios da Wiki',
-    icon: Database,
-    ready: true,
-  },
-  {
-    href: '/admin',
-    label: 'Admin',
-    description: 'Saude dos dados e scrapers',
-    icon: Wrench,
     ready: true,
   },
   {

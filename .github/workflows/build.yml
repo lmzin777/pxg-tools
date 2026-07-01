@@ -55,6 +55,16 @@ jobs:
       - name: Build API
         run: dotnet build backend/src/PxgTools.Api/PxgTools.Api.csproj --configuration Release
 
+  api-container:
+    name: API Docker image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build API Docker image
+        run: docker build -f backend/src/PxgTools.Api/Dockerfile -t pxg-tools-api:ci .
+
   scrapers:
     name: Scrapers TypeScript
     runs-on: ubuntu-latest

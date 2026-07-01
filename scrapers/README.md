@@ -28,6 +28,8 @@ Outputs:
 - `../data/professor-students.json`
 - `../data/wiki-<domain>.json`
 
+O scraper de Pokemon captura informacoes gerais, evolucoes, descricao, efetividades, movimentos PvP/PvE e outras versoes quando esses blocos existem na Wiki. Loot/drop nao e coletado pelo projeto.
+
 ## Dominios novos da Wiki
 
 Os scripts `scrape:<domain>` e `db:load-wiki -- <domain>` foram criados para:

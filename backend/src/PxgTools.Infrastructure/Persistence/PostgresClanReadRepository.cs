@@ -9,7 +9,7 @@ public sealed class PostgresClanReadRepository(NpgsqlDataSource dataSource) : IC
     public async Task<IReadOnlyList<Clan>> ListAsync(CancellationToken cancellationToken)
     {
         const string sql = """
-            select c.slug, c.name, c.focus, c.summary, c.source_url,
+            select c.slug, c.name, c.focus, c.summary, c.icon_url, c.source_url,
                    coalesce(array_agg(ct.type_name order by ct.sort_order) filter (where ct.type_name is not null), '{}') as types
             from clans c
             left join clan_types ct on ct.clan_id = c.id
@@ -29,7 +29,8 @@ public sealed class PostgresClanReadRepository(NpgsqlDataSource dataSource) : IC
                 reader.GetString(2),
                 reader.GetString(3),
                 reader.GetString(4),
-                reader.GetFieldValue<string[]>(5)));
+                reader.GetString(5),
+                reader.GetFieldValue<string[]>(6)));
         }
 
         return clans;
