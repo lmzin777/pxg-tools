@@ -1,11 +1,11 @@
-import { Boxes, FlaskConical, Hammer, Heart, Shield, Sparkles, Wrench } from 'lucide-react';
-import type { ComponentType } from 'react';
+﻿import { Boxes, FlaskConical, Hammer, Heart, Shield, Sparkles, Wrench } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 type NavigationItem = {
   href: string;
   label: string;
   description: string;
-  icon: ComponentType<{ className?: string }>;
+  icon: LucideIcon;
   ready: boolean;
 };
 
@@ -60,3 +60,5 @@ export const navigationItems: NavigationItem[] = [
     ready: true,
   },
 ];
+
+

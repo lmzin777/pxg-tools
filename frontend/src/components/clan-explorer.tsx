@@ -42,7 +42,7 @@ export function ClanExplorer({ clans }: { clans: Clan[] }) {
         <label className="grid gap-2 text-sm font-bold text-slate-300">
           Buscar cla
           <span className="relative">
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
+            <Search suppressHydrationWarning className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}

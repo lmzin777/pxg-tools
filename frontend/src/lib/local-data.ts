@@ -196,17 +196,88 @@ export async function getLocalCraft(slug: string): Promise<Craft | null> {
 }
 
 export async function getLocalPokemon(): Promise<PokemonOverview> {
-  const payload = await readDataFile<PokemonOverview>('pokemon.json', {
-    generations: [],
-    pokemon: [],
-  });
+  const [payload, clanPayload] = await Promise.all([
+    readDataFile<PokemonOverview>('pokemon.json', {
+      generations: [],
+      pokemon: [],
+    }),
+    readDataFile<{ clans: ClanDetail[] }>('clan-details.json', { clans: [] }),
+  ]);
+  const clanIndex = buildPokemonClanIndex(clanPayload.clans || []);
 
   return {
     generations: payload.generations || [],
-    pokemon: payload.pokemon || [],
+    pokemon: (payload.pokemon || []).map((pokemon) => ({
+      ...pokemon,
+      clanNames: getPokemonClanNames(pokemon.name, pokemon.slug, clanIndex),
+    })),
   };
 }
 
+function buildPokemonClanIndex(clans: ClanDetail[]) {
+  const index = new Map<string, Set<string>>();
+
+  clans.forEach((clan) => {
+    const pokemonNames = new Set<string>();
+    (clan.tiers || []).forEach((tier) => {
+      (tier.pokemon || []).forEach((pokemon) => pokemonNames.add(pokemon.name));
+    });
+    (clan.rotation || []).forEach((group) => {
+      (group.rows || []).forEach((row) => pokemonNames.add(row.pokemon));
+    });
+    (clan.pvpExclusive || []).forEach((pokemon) => pokemonNames.add(pokemon));
+    (clan.npcPokemon || []).forEach((entry) => splitPokemonList(entry.pokemon).forEach((pokemon) => pokemonNames.add(pokemon)));
+
+    pokemonNames.forEach((pokemonName) => {
+      pokemonClanLookupKeys(pokemonName).forEach((key) => {
+        const current = index.get(key) || new Set<string>();
+        current.add(clan.name);
+        index.set(key, current);
+      });
+    });
+  });
+
+  return index;
+}
+
+function getPokemonClanNames(name: string, slug: string, clanIndex: Map<string, Set<string>>) {
+  const clans = new Set<string>();
+  [slug, ...pokemonClanLookupKeys(name)].forEach((key) => {
+    clanIndex.get(key)?.forEach((clan) => clans.add(clan));
+  });
+
+  return [...clans].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+}
+
+function pokemonClanLookupKeys(value: unknown) {
+  const cleanValue = cleanClanPokemonName(value);
+  if (!cleanValue) return [];
+
+  const withoutForm = cleanValue.replace(/\s+\([^)]*\)\s*$/g, '').trim();
+  return [...new Set([
+    slugify(cleanValue),
+    normalize(cleanValue),
+    slugify(withoutForm),
+    normalize(withoutForm),
+  ].filter(Boolean))];
+}
+
+function cleanClanPokemonName(value: unknown) {
+  if (typeof value !== 'string') return '';
+
+  return value
+    .replace(/\s*\((?:TM|TR)\)\s*$/i, '')
+    .replace(/\s+\b(?:TM|TR)\b\s*$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function splitPokemonList(value: string) {
+  return value
+    .split(/\s+(?:ou|or)\s+|\s*,\s*/i)
+    .map((pokemon) => cleanClanPokemonName(pokemon))
+    .filter(Boolean);
+}
 export async function getLocalPokemonDetail(slug: string): Promise<PokemonDetail | null> {
   const payload = await readDataFile<{ pokemon: PokemonDetail[] }>('pokemon.json', { pokemon: [] });
   const exactMatch = payload.pokemon.find((pokemon) => pokemon.slug === slug);

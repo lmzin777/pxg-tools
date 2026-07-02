@@ -39,7 +39,7 @@ export function ItemDetailView({ item, crafts, pokemon = [] }: { item: ItemDetai
               }}
             />
             <a href={item.sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-white/10 bg-slate-900 px-3 text-sm font-black text-slate-100 hover:border-amber-300/50">
-              Wiki <ExternalLink className="h-4 w-4" />
+              Wiki <ExternalLink suppressHydrationWarning className="h-4 w-4" />
             </a>
           </div>
         </div>

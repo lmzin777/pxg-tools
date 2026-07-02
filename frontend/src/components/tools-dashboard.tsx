@@ -89,13 +89,13 @@ export function ToolsDashboard() {
               type="button"
               onClick={() => setActiveTool(tool.id)}
               className={[
-                'grid min-h-28 grid-cols-[44px_1fr] gap-3 rounded-lg border p-3 text-left transition',
+                'grid grid-cols-[44px_1fr] items-center gap-3 rounded-lg border p-3 text-left transition',
                 isActive
                   ? 'border-cyan-300/70 bg-cyan-300/12'
                   : 'border-white/10 bg-white/[0.035] hover:border-amber-300/60 hover:bg-white/[0.06]',
               ].join(' ')}
             >
-              <span className="rounded-md border border-white/10 bg-slate-900 p-2 text-cyan-200">
+              <span className="inline-flex h-11 w-11 items-center justify-center self-center rounded-md border border-white/10 bg-slate-900 text-cyan-200">
                 <Icon className="h-5 w-5" />
               </span>
               <span>

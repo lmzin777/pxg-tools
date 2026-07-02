@@ -50,7 +50,7 @@ export function ProfessionDetailView({
             ) : null}
             <div>
               <Link href="/professions" className="inline-flex items-center gap-2 text-sm font-black text-cyan-200 hover:text-cyan-100">
-                <ArrowLeft className="h-4 w-4" />
+                <ArrowLeft suppressHydrationWarning className="h-4 w-4" />
                 Voltar para profissoes
               </Link>
               <h2 className="mt-3 text-3xl font-black text-white">{profession.name}</h2>
@@ -65,7 +65,7 @@ export function ProfessionDetailView({
               className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-white/10 bg-slate-900 px-3 text-sm font-black text-slate-100 hover:border-amber-300/50 hover:text-amber-100"
             >
               Wiki
-              <ExternalLink className="h-4 w-4" />
+              <ExternalLink suppressHydrationWarning className="h-4 w-4" />
             </a>
             <FavoriteButton
               entity={{
@@ -359,7 +359,7 @@ function BackToProfessionHome({ onClick }: { onClick: () => void }) {
       onClick={onClick}
       className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm font-black text-cyan-100 transition hover:border-cyan-300/60 hover:bg-cyan-300/10"
     >
-      <ArrowLeft className="h-4 w-4" />
+      <ArrowLeft suppressHydrationWarning className="h-4 w-4" />
       Voltar para a visao geral
     </button>
   );

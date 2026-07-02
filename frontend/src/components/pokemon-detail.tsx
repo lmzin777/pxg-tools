@@ -13,7 +13,7 @@ export function PokemonDetailView({ pokemon }: { pokemon: PokemonDetail }) {
     <article className="grid gap-5">
       <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
         <Link href="/pokedex" className="inline-flex items-center gap-2 text-sm font-black text-cyan-200 hover:text-cyan-100">
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft suppressHydrationWarning className="h-4 w-4" />
           Voltar para Pokedex
         </Link>
         <div className="mt-4 grid gap-5 lg:grid-cols-[160px_1fr_auto] lg:items-start">
@@ -32,7 +32,7 @@ export function PokemonDetailView({ pokemon }: { pokemon: PokemonDetail }) {
           </div>
           <div className="flex flex-wrap gap-2 lg:justify-end">
             <a href={safePokemon.sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-white/10 bg-slate-900 px-3 text-sm font-black text-slate-100 hover:border-amber-300/50">
-              Wiki <ExternalLink className="h-4 w-4" />
+              Wiki <ExternalLink suppressHydrationWarning className="h-4 w-4" />
             </a>
             <FavoriteButton
               entity={{
@@ -85,6 +85,10 @@ function getVisiblePokemonLoot(pokemon: PokemonDetail) {
   return loot.filter((item) => !item.isVariant);
 }
 
+function cleanWikiEditSuffix(value?: string | null) {
+  return value?.replace(/\s*\[(?:editar|edit)\]\s*$/i, '').trim() || '';
+}
+
 function PokemonLootTable({ loot }: { loot: PokemonLootItem[] }) {
   return (
     <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
@@ -114,7 +118,7 @@ function PokemonLootTable({ loot }: { loot: PokemonLootItem[] }) {
                       <span className="mt-1 block text-xs text-slate-500">EN: {item.itemNameEn}</span>
                     ) : null}
                   </td>
-                  <td className="border border-white/10 p-3 text-slate-300">{item.category || '-'}</td>
+                  <td className="border border-white/10 p-3 text-slate-300">{cleanWikiEditSuffix(item.category) || '-'}</td>
                   <td className="border border-white/10 p-3">
                     {item.sourceUrl ? (
                       <a href={item.sourceUrl} target="_blank" rel="noreferrer" className="font-bold text-cyan-100 hover:text-amber-100">

@@ -10,6 +10,7 @@ export type PokemonListItem = {
   boost: string;
   material: string;
   elements: string[];
+  clanNames?: string[];
 };
 
 export type PokemonEvolution = {

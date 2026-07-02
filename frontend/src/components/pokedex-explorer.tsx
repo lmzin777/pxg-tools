@@ -17,6 +17,7 @@ type PokedexFilters = {
   generation?: string;
   primaryType?: string;
   secondaryType?: string;
+  clan?: string;
   minLevel?: string;
   maxLevel?: string;
   sort?: string;
@@ -37,6 +38,7 @@ export function PokedexExplorer({
   const [generation, setGeneration] = useState(initialFilters.generation || '');
   const [primaryType, setPrimaryType] = useState(initialFilters.primaryType || '');
   const [secondaryType, setSecondaryType] = useState(initialFilters.secondaryType || '');
+  const [clan, setClan] = useState(initialFilters.clan || '');
   const [minLevel, setMinLevel] = useState(initialFilters.minLevel || '');
   const [maxLevel, setMaxLevel] = useState(initialFilters.maxLevel || '');
   const [sort, setSort] = useState<SortMode>(isSortMode(initialFilters.sort) ? initialFilters.sort : 'dex-asc');
@@ -55,6 +57,7 @@ export function PokedexExplorer({
     ),
     [pokemon],
   );
+  const clanOptions = useMemo(() => uniqueSorted(pokemon.flatMap((entry) => entry.clanNames || [])), [pokemon]);
   const typeOptions = useMemo(() => {
     const presentTypes = new Set<PokemonType>();
     pokemon.forEach((entry) => {
@@ -84,15 +87,16 @@ export function PokedexExplorer({
           (!generation || generationLabelForRegion(entry.generation) === generation) &&
           (!primaryType || entryTypes.includes(primaryType as PokemonType)) &&
           (!secondaryType || entryTypes.includes(secondaryType as PokemonType)) &&
+          (!clan || (entry.clanNames || []).includes(clan)) &&
           (!minLevelValue || (entryLevel !== null && entryLevel >= minLevelValue)) &&
           (!maxLevelValue || (entryLevel !== null && entryLevel <= maxLevelValue))
         );
       });
 
     return sortPokemon(rows, sort);
-  }, [generation, maxLevelValue, minLevelValue, normalizedQuery, pokemon, primaryType, region, secondaryType, sort]);
+  }, [clan, generation, maxLevelValue, minLevelValue, normalizedQuery, pokemon, primaryType, region, secondaryType, sort]);
 
-  const hasActiveFilters = Boolean(query || region || generation || primaryType || secondaryType || minLevel || maxLevel || sort !== 'dex-asc');
+  const hasActiveFilters = Boolean(query || region || generation || primaryType || secondaryType || clan || minLevel || maxLevel || sort !== 'dex-asc');
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -101,13 +105,14 @@ export function PokedexExplorer({
     if (generation) params.set('generation', generation);
     if (primaryType) params.set('type', primaryType);
     if (secondaryType) params.set('type2', secondaryType);
+    if (clan) params.set('clan', clan);
     if (minLevel) params.set('minLevel', minLevel);
     if (maxLevel) params.set('maxLevel', maxLevel);
     if (sort !== 'dex-asc') params.set('sort', sort);
 
     const nextUrl = params.size ? `${pathname}?${params.toString()}` : pathname;
     window.history.replaceState(null, '', nextUrl);
-  }, [generation, maxLevel, minLevel, pathname, primaryType, query, region, secondaryType, sort]);
+  }, [clan, generation, maxLevel, minLevel, pathname, primaryType, query, region, secondaryType, sort]);
 
   function clearFilters() {
     setQuery('');
@@ -115,6 +120,7 @@ export function PokedexExplorer({
     setGeneration('');
     setPrimaryType('');
     setSecondaryType('');
+    setClan('');
     setMinLevel('');
     setMaxLevel('');
     setSort('dex-asc');
@@ -131,7 +137,7 @@ export function PokedexExplorer({
           <label className="grid gap-2 text-sm font-bold text-slate-300">
             Nome
             <span className="relative">
-              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
+              <Search suppressHydrationWarning className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
               <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Pikachu, #025..." className="h-11 w-full rounded-lg border border-white/10 bg-slate-950 pl-9 pr-3 text-sm text-white outline-none focus:border-cyan-300" />
             </span>
           </label>
@@ -139,6 +145,7 @@ export function PokedexExplorer({
           <Select label="Geracao" value={generation} onChange={setGeneration} options={generationOptions} />
           <Select label="Elemento 1" value={primaryType} onChange={setPrimaryType} options={typeOptions} />
           <Select label="Elemento 2" value={secondaryType} onChange={setSecondaryType} options={typeOptions} />
+          <Select label="Cla" value={clan} onChange={setClan} options={clanOptions} />
           <NumberInput label="Nivel minimo" value={minLevel} onChange={setMinLevel} placeholder="20" />
           <NumberInput label="Nivel maximo" value={maxLevel} onChange={setMaxLevel} placeholder="80" />
           <SortSelect value={sort} onChange={setSort} />
@@ -177,6 +184,7 @@ export function PokedexExplorer({
                 <InfoLine label="Nivel" value={entry.level} strong highlight />
                 <InfoLine label="Boost" value={formatCompactPokemonInfo(entry.boost)} />
                 <InfoLine label="Materia" value={formatCompactPokemonInfo(entry.material)} />
+                <InfoLine label="Cla" value={(entry.clanNames || []).join(', ')} />
               </div>
             </Link>
           </article>

@@ -45,7 +45,7 @@ export function FavoriteButton({ entity, compact = false }: { entity: FavoriteEn
           : 'border-white/10 bg-slate-900 text-slate-100 hover:border-amber-300/50 hover:text-amber-100',
       ].join(' ')}
     >
-      <Heart className={['h-4 w-4', isFavorite ? 'fill-amber-200' : ''].join(' ')} />
+      <Heart suppressHydrationWarning className={['h-4 w-4', isFavorite ? 'fill-amber-200' : ''].join(' ')} />
       {compact ? <span className="sr-only">{isFavorite ? 'Favorito' : 'Favoritar'}</span> : isFavorite ? 'Favorito' : 'Favoritar'}
     </button>
   );

@@ -21,6 +21,7 @@ export default async function PokedexPage({ searchParams }: PokedexPageProps) {
         generation: firstParam(params.generation),
         primaryType: firstParam(params.type),
         secondaryType: firstParam(params.type2),
+        clan: firstParam(params.clan),
         minLevel: firstParam(params.minLevel),
         maxLevel: firstParam(params.maxLevel),
         sort: firstParam(params.sort),

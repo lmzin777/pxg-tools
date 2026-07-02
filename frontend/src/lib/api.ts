@@ -216,12 +216,22 @@ export function getCraft(slug: string) {
   );
 }
 
-export function getPokemon() {
-  return withNonEmptyLocalFallback(
-    apiFetch<PokemonOverview>('/api/pokemon'),
-    getLocalPokemon,
-    (overview) => !overview.pokemon.length,
-  );
+export async function getPokemon() {
+  const localPokemon = await getLocalPokemon();
+  const remotePokemon = await withLocalFallback(apiFetch<PokemonOverview>('/api/pokemon'), () => Promise.resolve(localPokemon));
+
+  if (!remotePokemon.pokemon.length) {
+    return localPokemon;
+  }
+
+  const localBySlug = new Map(localPokemon.pokemon.map((pokemon) => [pokemon.slug, pokemon]));
+  return {
+    generations: remotePokemon.generations.length ? remotePokemon.generations : localPokemon.generations,
+    pokemon: remotePokemon.pokemon.map((pokemon) => ({
+      ...pokemon,
+      clanNames: pokemon.clanNames?.length ? pokemon.clanNames : localBySlug.get(pokemon.slug)?.clanNames || [],
+    })),
+  };
 }
 
 export async function getPokemonDetail(slug: string) {

@@ -43,7 +43,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   ].join(' ')}
                 >
                   <span className="rounded-md border border-white/10 bg-slate-900 p-2 text-cyan-200 group-hover:text-amber-200">
-                    <Icon className="h-4 w-4" />
+                    <Icon suppressHydrationWarning className="h-4 w-4" />
                   </span>
                   <span className="min-w-0">
                     <span className="flex items-center gap-2 text-sm font-black text-white">
@@ -67,3 +67,4 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+
