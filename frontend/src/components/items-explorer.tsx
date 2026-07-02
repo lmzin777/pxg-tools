@@ -119,6 +119,14 @@ export function ItemsExplorer({
 }
 
 export function ItemCategoryView({ category, crafts = [] }: { category: ItemCategoryDetail; crafts?: Craft[] }) {
+  if (category.slug === 'held-itens') {
+    return <HeldItemsView category={category} />;
+  }
+
+  return <DefaultItemCategoryView category={category} crafts={crafts} />;
+}
+
+function DefaultItemCategoryView({ category, crafts = [] }: { category: ItemCategoryDetail; crafts?: Craft[] }) {
   const [query, setQuery] = useState('');
   const [section, setSection] = useState('');
   const [attribute, setAttribute] = useState('');
@@ -163,6 +171,294 @@ export function ItemCategoryView({ category, crafts = [] }: { category: ItemCate
       </div>
     </article>
   );
+}
+
+type CategoryItem = ItemCategoryDetail['items'][number];
+
+function HeldItemsView({ category }: { category: ItemCategoryDetail }) {
+  const [utilityType, setUtilityType] = useState<'X' | 'Y'>('X');
+  const [combatType, setCombatType] = useState<'Ofensivos' | 'Defensivos'>('Ofensivos');
+  const removalPokemon = itemsBySection(category, 'Como remover um Held Item de seu Pokémon');
+  const removalDevice = itemsBySection(category, 'Como remover um Held Item de seu Device');
+  const offensiveDefensive = itemsBySection(category, 'Ofensivos e Defensivos');
+  const offensiveItems = offensiveDefensive.filter((item) => offensiveHeldNames.has(item.name));
+  const defensiveItems = offensiveDefensive.filter((item) => defensiveHeldNames.has(item.name));
+  const combatItems = combatType === 'Ofensivos' ? offensiveItems : defensiveItems;
+  const utilityItems = itemsBySection(category, 'Utilitários').filter((item) => item.name.startsWith(`${utilityType}-`));
+  const xBoostRows = buildXBoostRows(itemsBySection(category, 'Informações sobre o X-Boost'));
+  const ticketItems = itemsBySection(category, 'Held Item Ticket');
+
+  return (
+    <article className="grid gap-5">
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <Link href="/items" className="text-sm font-black text-cyan-200 hover:text-cyan-100">Voltar para itens</Link>
+        <div className="mt-4 grid gap-4 sm:grid-cols-[72px_1fr]">
+          {category.iconUrl ? <img src={category.iconUrl} alt="" className="h-20 w-20 object-contain" loading="lazy" /> : null}
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">{category.group}</span>
+            <h2 className="mt-1 text-3xl font-black text-white">{category.title}</h2>
+            <p className="mt-2 max-w-5xl text-sm leading-6 text-slate-300">{category.summary}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">Utilitarios</span>
+            <h3 className="mt-1 text-xl font-black text-white">Held Items {utilityType}</h3>
+          </div>
+          <div className="inline-flex rounded-lg border border-white/10 bg-slate-950 p-1">
+            {(['X', 'Y'] as const).map((type) => (
+              <button
+                key={type}
+                type="button"
+                onClick={() => setUtilityType(type)}
+                className={[
+                  'min-h-9 rounded-md px-4 text-sm font-black transition',
+                  utilityType === type ? 'bg-cyan-300/20 text-cyan-100' : 'text-slate-300 hover:text-white',
+                ].join(' ')}
+              >
+                Utilitarios {type}
+              </button>
+            ))}
+          </div>
+        </div>
+        <HeldTierTable items={utilityItems} />
+      </section>
+
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">Categorias</span>
+            <h3 className="mt-1 text-xl font-black text-white">{combatType}</h3>
+          </div>
+          <div className="inline-flex rounded-lg border border-white/10 bg-slate-950 p-1">
+            {(['Ofensivos', 'Defensivos'] as const).map((type) => (
+              <button
+                key={type}
+                type="button"
+                onClick={() => setCombatType(type)}
+                className={[
+                  'min-h-9 rounded-md px-4 text-sm font-black transition',
+                  combatType === type ? 'bg-cyan-300/20 text-cyan-100' : 'text-slate-300 hover:text-white',
+                ].join(' ')}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        </div>
+        <HeldTierTable items={combatItems} />
+      </section>
+
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <h3 className="text-xl font-black text-white">Informacoes sobre o X-Boost</h3>
+        <p className="mt-2 max-w-5xl text-sm leading-6 text-slate-300">
+          O X-Boost concede bonus de boost que escalam por tier e faixa de nivel do jogador. O bonus de vida acompanha o valor do boost,
+          e o bonus de ataque usa o dobro desse valor fora das excecoes de PvP.
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full min-w-[760px] border-collapse text-sm">
+            <thead className="bg-cyan-300/10 text-left text-cyan-100">
+              <tr>
+                <th className="border border-white/10 p-3">Tier</th>
+                <th className="border border-white/10 p-3">0 a 99</th>
+                <th className="border border-white/10 p-3">100 a 149</th>
+                <th className="border border-white/10 p-3">150 a 399</th>
+                <th className="border border-white/10 p-3">400 a 625</th>
+              </tr>
+            </thead>
+            <tbody>
+              {xBoostRows.map((row) => (
+                <tr key={row.tier} className="odd:bg-slate-950/40 even:bg-white/[0.03]">
+                  <td className="border border-white/10 p-3 font-black text-white">{row.tier}</td>
+                  {row.values.map((value, index) => (
+                    <td key={`${row.tier}-${index}`} className="border border-white/10 p-3 text-slate-300">{value || '-'}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <h3 className="text-xl font-black text-white">Preco para Remover Held Item</h3>
+        <div className="mt-4 grid gap-5 xl:grid-cols-2">
+          <RemovalPriceTable title="Held Item direto no Pokemon" items={removalPokemon} />
+          <RemovalPriceTable title="Held Item do Device" items={removalDevice} />
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <h3 className="text-xl font-black text-white">Held Item Ticket</h3>
+        <p className="mt-2 max-w-5xl text-sm leading-6 text-slate-300">
+          O ticket pode ser trocado com a NPC Victoria por alguns Held Items X selecionados. Tiers 3 a 7 aparecem como recompensas
+          de quests e eventos especificos.
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {ticketItems.map((item) => (
+            <div key={item.slug} className="grid grid-cols-[56px_1fr] gap-3 rounded-lg border border-white/10 bg-slate-950/50 p-3">
+              {item.iconUrl ? <img src={item.iconUrl} alt="" className="h-14 w-14 object-contain" loading="lazy" /> : <span />}
+              <span>
+                <span className="font-black text-white">{item.name}</span>
+                <span className="mt-1 block text-sm leading-6 text-slate-300">{attributeValue(item, 'Descrição') || item.description}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <h3 className="text-xl font-black text-white">Detalhes Especificos</h3>
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {heldSpecificDetails.map((detail) => (
+            <div key={detail.name} className="rounded-lg border border-white/10 bg-slate-950/50 p-3">
+              <h4 className="font-black text-cyan-100">{detail.name}</h4>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{detail.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </article>
+  );
+}
+
+function HeldTierTable({ items }: { items: CategoryItem[] }) {
+  return (
+    <div className="mt-4 overflow-x-auto">
+      <table className="w-full min-w-[980px] border-collapse text-sm">
+        <thead className="bg-cyan-300/10 text-left text-cyan-100">
+          <tr>
+            <th className="border border-white/10 p-3">Icone</th>
+            <th className="border border-white/10 p-3">Nome</th>
+            {tierHeaders.map((tier) => <th key={tier} className="border border-white/10 p-3">{tier}</th>)}
+            <th className="border border-white/10 p-3">Descricao</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item) => (
+            <tr key={`${item.section}-${item.name}`} className="odd:bg-slate-950/40 even:bg-white/[0.03]">
+              <td className="border border-white/10 p-3">
+                {item.iconUrl ? <img src={item.iconUrl} alt="" className="h-8 w-8 object-contain" loading="lazy" /> : null}
+              </td>
+              <td className="border border-white/10 p-3 font-black text-white">{item.name}</td>
+              {tierHeaders.map((tier) => (
+                <td key={`${item.name}-${tier}`} className="border border-white/10 p-3 text-slate-300">{attributeValue(item, tier) || '-'}</td>
+              ))}
+              <td className="border border-white/10 p-3 text-slate-300">{attributeValue(item, 'Descrição') || item.description || '-'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RemovalPriceTable({ title, items }: { title: string; items: CategoryItem[] }) {
+  return (
+    <div className="overflow-hidden rounded-lg border border-white/10 bg-slate-950/50">
+      <h4 className="border-b border-white/10 bg-white/[0.04] p-3 font-black text-white">{title}</h4>
+      <table className="w-full border-collapse text-sm">
+        <thead className="bg-cyan-300/10 text-left text-cyan-100">
+          <tr>
+            <th className="border border-white/10 p-3">Held</th>
+            <th className="border border-white/10 p-3">Preco</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item) => (
+            <tr key={`${title}-${attributeValue(item, 'Held')}`} className="odd:bg-slate-950/40 even:bg-white/[0.03]">
+              <td className="border border-white/10 p-3 font-bold text-white">{attributeValue(item, 'Held')}</td>
+              <td className="border border-white/10 p-3 text-slate-300">{attributeValue(item, 'Preço') || item.name}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const tierHeaders = ['Tier 1', 'Tier 2', 'Tier 3', 'Tier 4', 'Tier 5', 'Tier 6', 'Tier 7', 'Tier 8', 'Tier 9'];
+const offensiveHeldNames = new Set(['X-Attack', 'X-Critical', 'X-Boost']);
+const defensiveHeldNames = new Set(['X-Defense', 'X-Block', 'X-Vitality', 'X-Harden']);
+
+const heldSpecificDetails = [
+  {
+    name: 'X-Haste',
+    description: 'Nao aumenta a velocidade de Fly ou Ride.',
+  },
+  {
+    name: 'X-Lucky',
+    description: 'Aumenta a chance final de drop com base na chance original do item.',
+  },
+  {
+    name: 'X-Return',
+    description: 'O retorno contra Pokemon selvagem usa multiplicador maior do que contra Pokemon de jogadores.',
+  },
+  {
+    name: 'X-Boost',
+    description: 'Mesmo com boost alto, o bonus de desvio de status negativo respeita o limite equivalente a um Pokemon +50.',
+  },
+  {
+    name: 'X-Harden, X-Agility, X-Strafe e X-Rage',
+    description: 'Funcionam apenas enquanto o Pokemon estiver atacando o adversario.',
+  },
+  {
+    name: 'X-Elemental',
+    description: 'Em Pokemon com dois elementos, a passiva escolhe um elemento aleatorio. Jogadores abaixo do level 100 recebem reducao de dano.',
+  },
+  {
+    name: 'X-Cooldown',
+    description: 'Nao reduz ataques que ja tenham recarga igual ou menor que 10 segundos.',
+  },
+  {
+    name: 'X-Upgrade',
+    description: 'Funciona apenas com Held X e evolui o Held equipado no Pokemon ou no Attachment Device.',
+  },
+  {
+    name: 'Y-Cure',
+    description: 'Nao funciona em duelo.',
+  },
+  {
+    name: 'Y-Regeneration',
+    description: 'A regeneracao e limitada para jogadores de level baixo e tambem nao funciona em duelo.',
+  },
+  {
+    name: 'Y-Upgrade',
+    description: 'Funciona apenas com Held Y e evolui o Held equipado no Pokemon ou no Attachment Device.',
+  },
+];
+
+function itemsBySection(category: ItemCategoryDetail, section: string) {
+  return category.items.filter((item) => item.section === section && !item.section.toLowerCase().includes('fusao'));
+}
+
+function attributeValue(item: CategoryItem, name: string) {
+  return getItemAttributes(item).find((attribute) => attribute.name === name)?.value || '';
+}
+
+function buildXBoostRows(items: CategoryItem[]) {
+  const ranges = ['0 a 99', '100 a 149', '150 a 399', '400 a 625'];
+  const rows: Array<{ tier: string; values: string[] }> = [];
+
+  for (let start = 0; start < items.length; start += ranges.length) {
+    const group = items.slice(start, start + ranges.length);
+    if (!group.length) {
+      continue;
+    }
+
+    rows.push({
+      tier: `Tier ${rows.length + 1}`,
+      values: ranges.map((range) => {
+        const match = group.find((item) => attributeValue(item, 'Faixa de Nível') === range);
+        return match ? attributeValue(match, 'Boost') || match.name : '';
+      }),
+    });
+  }
+
+  return rows;
 }
 
 function ItemCard({ item, crafts }: { item: ItemCategoryDetail['items'][number]; crafts: Craft[] }) {

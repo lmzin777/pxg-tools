@@ -135,7 +135,8 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
             await ReadMovesAsync(pokemonId, "generic", cancellationToken),
             await ReadMovesAsync(pokemonId, "pvp", cancellationToken),
             await ReadMovesAsync(pokemonId, "pve", cancellationToken),
-            await ReadVersionsAsync(pokemonId, cancellationToken));
+            await ReadVersionsAsync(pokemonId, cancellationToken),
+            await ReadLootAsync(pokemonId, cancellationToken));
     }
 
     private async Task<IReadOnlyList<PokemonEvolution>> ReadEvolutionsAsync(Guid pokemonId, CancellationToken cancellationToken)
@@ -256,5 +257,37 @@ public sealed class PostgresPokemonReadRepository(NpgsqlDataSource dataSource) :
         }
 
         return versions;
+    }
+
+    private async Task<IReadOnlyList<PokemonLootItem>> ReadLootAsync(Guid pokemonId, CancellationToken cancellationToken)
+    {
+        const string sql = """
+            select item_name, item_name_en, item_name_pt_br, item_slug, icon_url, category, source_url, pokemon_name, pokemon_slug, is_variant
+            from pokemon_loot
+            where pokemon_id = @pokemonId
+            order by sort_order, item_name;
+            """;
+
+        await using var command = dataSource.CreateCommand(sql);
+        command.Parameters.AddWithValue("pokemonId", pokemonId);
+        await using var reader = await command.ExecuteReaderAsync(cancellationToken);
+        var loot = new List<PokemonLootItem>();
+
+        while (await reader.ReadAsync(cancellationToken))
+        {
+            loot.Add(new PokemonLootItem(
+                reader.GetString(0),
+                reader.GetString(1),
+                reader.GetString(2),
+                reader.GetString(3),
+                reader.GetString(4),
+                reader.GetString(5),
+                reader.GetString(6),
+                reader.GetString(7),
+                reader.GetString(8),
+                reader.GetBoolean(9)));
+        }
+
+        return loot;
     }
 }

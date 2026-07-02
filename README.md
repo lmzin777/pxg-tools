@@ -103,6 +103,16 @@ O workflow `.github/workflows/scrapers.yml` roda os scrapers e carrega dados no 
 
 As rotas `/admin` e `/wiki-data` continuam acessiveis por URL direta, mas nao aparecem no menu publico.
 
+### Filtros da Pokedex
+
+A rota `/pokedex` aceita filtros pela URL para compartilhar buscas:
+
+```text
+/pokedex?q=char&type=Fire&maxLevel=80&sort=level-asc
+```
+
+Parametros disponiveis: `q`, `region`, `generation`, `type`, `type2`, `minLevel`, `maxLevel` e `sort`.
+
 ## Regras do projeto
 
 - Nao implementar login por enquanto.

@@ -307,6 +307,22 @@ create table if not exists pokemon_versions (
   sort_order integer not null default 0
 );
 
+create table if not exists pokemon_loot (
+  id uuid primary key default gen_random_uuid(),
+  pokemon_id uuid not null references pokemon(id) on delete cascade,
+  item_name text not null,
+  item_name_en text not null default '',
+  item_name_pt_br text not null default '',
+  item_slug text not null default '',
+  icon_url text not null default '',
+  category text not null default '',
+  source_url text not null default '',
+  pokemon_name text not null default '',
+  pokemon_slug text not null default '',
+  is_variant boolean not null default false,
+  sort_order integer not null default 0
+);
+
 create table if not exists item_categories (
   id uuid primary key default gen_random_uuid(),
   slug text not null unique,
@@ -428,6 +444,8 @@ create index if not exists ix_pokemon_effectiveness_pokemon_id on pokemon_effect
 create index if not exists ix_pokemon_moves_pokemon_id on pokemon_moves(pokemon_id);
 create index if not exists ix_pokemon_moves_battle_mode on pokemon_moves(battle_mode);
 create index if not exists ix_pokemon_versions_pokemon_id on pokemon_versions(pokemon_id);
+create index if not exists ix_pokemon_loot_pokemon_id on pokemon_loot(pokemon_id);
+create index if not exists ix_pokemon_loot_item_slug on pokemon_loot(item_slug);
 create index if not exists ix_item_categories_slug on item_categories(slug);
 create index if not exists ix_item_categories_group_name on item_categories(group_name);
 create index if not exists ix_items_category_id on items(category_id);

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PokemonDetailView } from '@/components/pokemon-detail';
-import { ApiError, getCrafts, getPokemonDetail } from '@/lib/api';
+import { ApiError, getPokemonDetail } from '@/lib/api';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,8 +23,8 @@ export default async function PokemonPage({ params }: PokemonPageProps) {
   const { slug } = await params;
 
   try {
-    const [pokemon, craftData] = await Promise.all([getPokemonDetail(slug), getCrafts()]);
-    return <PokemonDetailView pokemon={pokemon} crafts={craftData.crafts} />;
+    const pokemon = await getPokemonDetail(slug);
+    return <PokemonDetailView pokemon={pokemon} />;
   } catch (error) {
     if (error instanceof ApiError && error.status === 404) {
       notFound();

@@ -10,7 +10,7 @@ import type {
 import type { Clan, ClanDetail, ClanIconLabel, ClanTierPokemon } from '@/types/clans';
 import type { Craft, CraftsOverview } from '@/types/crafts';
 import type { ItemCategoryDetail, ItemDetail, ItemsOverview } from '@/types/items';
-import type { PokemonDetail, PokemonOverview } from '@/types/pokemon';
+import type { PokemonDetail, PokemonOverview, PokemonVersion } from '@/types/pokemon';
 import type { SearchOverview, SearchResult } from '@/types/search';
 
 const DATA_DIR = resolve(process.cwd(), 'data');
@@ -209,7 +209,128 @@ export async function getLocalPokemon(): Promise<PokemonOverview> {
 
 export async function getLocalPokemonDetail(slug: string): Promise<PokemonDetail | null> {
   const payload = await readDataFile<{ pokemon: PokemonDetail[] }>('pokemon.json', { pokemon: [] });
-  return payload.pokemon.find((pokemon) => pokemon.slug === slug) || null;
+  const exactMatch = payload.pokemon.find((pokemon) => pokemon.slug === slug);
+  if (exactMatch) {
+    return exactMatch;
+  }
+
+  const versionMatch = findPokemonVersionDetail(payload.pokemon, slug);
+  if (versionMatch) {
+    return versionMatch;
+  }
+
+  const index = new Map<string, PokemonDetail>();
+  for (const pokemon of payload.pokemon) {
+    addPokemonLookupAlias(index, pokemon.slug, pokemon);
+    addPokemonLookupAlias(index, pokemon.name, pokemon);
+  }
+
+  for (const candidate of pokemonLookupCandidates(slug)) {
+    const match = index.get(normalize(candidate));
+    if (match) {
+      return isNamedVariantPokemon(slug) && match.slug !== slug ? buildAdHocVersionPokemonDetail(match, slug) : match;
+    }
+  }
+
+  return null;
+}
+
+function findPokemonVersionDetail(pokemonList: PokemonDetail[], slug: string): PokemonDetail | null {
+  const requestedSlug = slugify(slug);
+
+  for (const basePokemon of pokemonList) {
+    const versions = Array.isArray(basePokemon.otherVersions) ? basePokemon.otherVersions : [];
+    const version = versions.find((currentVersion) => {
+      const versionSlug = currentVersion.slug || slugify(currentVersion.name);
+      return versionSlug === requestedSlug;
+    });
+
+    if (version) {
+      return buildVersionPokemonDetail(basePokemon, version, requestedSlug);
+    }
+  }
+
+  return null;
+}
+
+function buildVersionPokemonDetail(basePokemon: PokemonDetail, version: PokemonVersion, requestedSlug: string): PokemonDetail {
+  const versionSlug = version.slug || requestedSlug;
+  const versionImage = version.iconUrl || basePokemon.detailSpriteUrl || basePokemon.spriteUrl;
+  const siblingVersions = (basePokemon.otherVersions || []).filter((currentVersion) => {
+    const currentSlug = currentVersion.slug || slugify(currentVersion.name);
+    return currentSlug !== versionSlug;
+  });
+
+  return {
+    ...basePokemon,
+    slug: versionSlug,
+    name: version.name,
+    spriteUrl: versionImage,
+    detailSpriteUrl: versionImage,
+    sourceUrl: version.sourceUrl || basePokemon.sourceUrl,
+    otherVersions: [
+      {
+        name: basePokemon.name,
+        slug: basePokemon.slug,
+        iconUrl: basePokemon.spriteUrl || basePokemon.detailSpriteUrl,
+        sourceUrl: basePokemon.sourceUrl,
+      },
+      ...siblingVersions,
+    ],
+  };
+}
+
+function buildAdHocVersionPokemonDetail(basePokemon: PokemonDetail, requestedSlug: string): PokemonDetail {
+  const versionName = titleizePokemonSlug(requestedSlug);
+
+  return {
+    ...basePokemon,
+    slug: slugify(requestedSlug),
+    name: versionName,
+    otherVersions: [
+      {
+        name: basePokemon.name,
+        slug: basePokemon.slug,
+        iconUrl: basePokemon.spriteUrl || basePokemon.detailSpriteUrl,
+        sourceUrl: basePokemon.sourceUrl,
+      },
+      ...(basePokemon.otherVersions || []),
+    ].filter((version) => (version.slug || slugify(version.name)) !== slugify(requestedSlug)),
+  };
+}
+
+function isNamedVariantPokemon(value: string) {
+  return /^(mega|shiny|baby|alolan|galarian|hisuian)(-|_|\s+)/i.test(value.trim());
+}
+
+function titleizePokemonSlug(value: string) {
+  return value
+    .replace(/[-_]+/g, ' ')
+    .replace(/\b\w/g, (letter) => letter.toUpperCase())
+    .replace(/\bTm\b/g, 'TM')
+    .replace(/\bTr\b/g, 'TR');
+}
+
+function addPokemonLookupAlias(index: Map<string, PokemonDetail>, value: string, pokemon: PokemonDetail) {
+  const key = normalize(value);
+  if (key && !index.has(key)) {
+    index.set(key, pokemon);
+  }
+}
+
+function pokemonLookupCandidates(value: string) {
+  const normalized = value.replace(/[-_]+/g, ' ');
+  const withoutParentheses = normalized.replace(/\([^)]*\)/g, ' ');
+  const withoutPrefixes = withoutParentheses.replace(/^(mega|shiny|baby|alolan|galarian|hisuian)\s+/i, '');
+  const withoutSuffixes = withoutPrefixes.replace(/\s+(female|male|tm|tr|x|y)$/i, '');
+
+  return [
+    value,
+    normalized,
+    withoutParentheses,
+    withoutPrefixes,
+    withoutSuffixes,
+  ].filter(Boolean);
 }
 
 export async function getLocalItems(): Promise<ItemsOverview> {

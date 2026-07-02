@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import type { ClanDetail, ClanIconLabel } from '@/types/clans';
+import type { PokemonListItem } from '@/types/pokemon';
 
-export function ClanDetailView({ clan }: { clan: ClanDetail }) {
-  const pokemonVisuals = buildPokemonVisualIndex(clan);
+export function ClanDetailView({ clan, pokemon = [] }: { clan: ClanDetail; pokemon?: PokemonListItem[] }) {
+  const pokemonVisuals = buildPokemonVisualIndex(clan, pokemon);
 
   return (
     <article className="grid gap-5">
@@ -54,7 +55,7 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
               <span className="text-xs font-bold uppercase tracking-[0.14em] text-amber-200">
                 {row.label}
               </span>
-              <Link href={pokemonHref(row.pokemon)} className="mt-2 inline-flex text-sm font-black text-cyan-100 hover:text-amber-100">
+              <Link href={pokemonHref(row.pokemon, pokemonVisuals.slugByName)} className="mt-2 inline-flex text-sm font-black text-cyan-100 hover:text-amber-100">
                 {row.pokemon}
               </Link>
               <p className="mt-1 text-sm text-slate-300">
@@ -90,7 +91,7 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
                       <div className="h-12 w-12 rounded-md bg-slate-900" />
                     )}
                     <div className="min-w-0">
-                      <Link href={pokemonHref(pokemon.name)} className="text-sm font-black text-cyan-100 hover:text-amber-100">
+                      <Link href={pokemonHref(pokemon.name, pokemonVisuals.slugByName)} className="text-sm font-black text-cyan-100 hover:text-amber-100">
                         {pokemon.name}
                       </Link>
                       <p className="text-xs text-slate-400">{pokemon.dex}</p>
@@ -133,7 +134,7 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
                             <td className="border border-white/10 p-2">
                               <div className="flex items-center gap-2 font-bold text-white">
                                 {visual?.icon ? <img src={visual.icon} alt="" className="h-8 w-8 object-contain" loading="lazy" /> : null}
-                                <Link href={pokemonHref(row.pokemon)} className="text-cyan-100 hover:text-amber-100">
+                                <Link href={pokemonHref(row.pokemon, pokemonVisuals.slugByName)} className="text-cyan-100 hover:text-amber-100">
                                   {row.pokemon}
                                 </Link>
                               </div>
@@ -161,7 +162,7 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
           <p className="mt-2 text-sm text-slate-300">{clan.pvpNote}</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {clan.pvpExclusive.map((pokemon) => (
-              <Link key={pokemon} href={pokemonHref(pokemon)} className="rounded-full border border-rose-300/25 px-2.5 py-1 text-xs font-bold text-rose-100 hover:border-amber-300/50 hover:text-amber-100">
+              <Link key={pokemon} href={pokemonHref(pokemon, pokemonVisuals.slugByName)} className="rounded-full border border-rose-300/25 px-2.5 py-1 text-xs font-bold text-rose-100 hover:border-amber-300/50 hover:text-amber-100">
                 {pokemon}
               </Link>
             ))}
@@ -172,9 +173,10 @@ export function ClanDetailView({ clan }: { clan: ClanDetail }) {
   );
 }
 
-function buildPokemonVisualIndex(clan: ClanDetail) {
+function buildPokemonVisualIndex(clan: ClanDetail, pokedex: PokemonListItem[]) {
   const byName = new Map<string, { icon: string; elements: ClanIconLabel[]; roleIcon: string }>();
   const elementIcons = new Map<string, string>();
+  const slugByName = buildPokedexSlugIndex(pokedex);
 
   for (const tier of clan.tiers) {
     for (const pokemon of tier.pokemon) {
@@ -193,7 +195,7 @@ function buildPokemonVisualIndex(clan: ClanDetail) {
     }
   }
 
-  return { byName, elementIcons };
+  return { byName, elementIcons, slugByName };
 }
 
 function normalizePokemonName(value: string) {
@@ -205,8 +207,9 @@ function normalizePokemonName(value: string) {
     .trim();
 }
 
-function pokemonHref(name: string) {
-  return `/pokedex/${slugifyPokemonName(name)}`;
+function pokemonHref(name: string, slugByName: Map<string, string>) {
+  const resolvedSlug = resolvePokemonSlug(name, slugByName);
+  return `/pokedex/${resolvedSlug}`;
 }
 
 function slugifyPokemonName(value: string) {
@@ -216,6 +219,56 @@ function slugifyPokemonName(value: string) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
+}
+
+function buildPokedexSlugIndex(pokedex: PokemonListItem[]) {
+  const index = new Map<string, string>();
+
+  for (const pokemon of pokedex) {
+    addPokemonSlugAlias(index, pokemon.slug, pokemon.slug);
+    addPokemonSlugAlias(index, pokemon.name, pokemon.slug);
+  }
+
+  return index;
+}
+
+function addPokemonSlugAlias(index: Map<string, string>, value: string, slug: string) {
+  const key = normalizePokemonName(value);
+  if (key && !index.has(key)) {
+    index.set(key, slug);
+  }
+}
+
+function resolvePokemonSlug(name: string, slugByName: Map<string, string>) {
+  if (isNamedVariantPokemon(name)) {
+    return slugifyPokemonName(name);
+  }
+
+  for (const candidate of pokemonLookupCandidates(name)) {
+    const slug = slugByName.get(normalizePokemonName(candidate));
+    if (slug) {
+      return slug;
+    }
+  }
+
+  return slugifyPokemonName(name);
+}
+
+function isNamedVariantPokemon(name: string) {
+  return /^(mega|shiny|baby|alolan|galarian|hisuian)\s+/i.test(name.trim());
+}
+
+function pokemonLookupCandidates(name: string) {
+  const withoutParentheses = name.replace(/\([^)]*\)/g, ' ');
+  const withoutPrefixes = withoutParentheses.replace(/^(mega|shiny|baby|alolan|galarian|hisuian)\s+/i, '');
+  const withoutSuffixes = withoutPrefixes.replace(/\s+(female|male|tm|tr|x|y)$/i, '');
+
+  return [
+    name,
+    withoutParentheses,
+    withoutPrefixes,
+    withoutSuffixes,
+  ].filter(Boolean);
 }
 
 function Metric({ label, value }: { label: string; value: string }) {

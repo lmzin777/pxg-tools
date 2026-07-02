@@ -43,6 +43,19 @@ export type PokemonVersion = {
   sourceUrl: string;
 };
 
+export type PokemonLootItem = {
+  itemName: string;
+  itemNameEn: string;
+  itemNamePtBr: string;
+  itemSlug: string;
+  iconUrl: string;
+  category: string;
+  sourceUrl: string;
+  pokemonName: string;
+  pokemonSlug: string;
+  isVariant: boolean;
+};
+
 export type PokemonDetail = PokemonListItem & {
   detailSpriteUrl: string;
   abilities: string;
@@ -56,6 +69,7 @@ export type PokemonDetail = PokemonListItem & {
   pvpMoves: PokemonMove[];
   pveMoves: PokemonMove[];
   otherVersions: PokemonVersion[];
+  loot?: PokemonLootItem[];
 };
 
 export type PokemonOverview = {

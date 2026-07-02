@@ -37,6 +37,19 @@ type PokemonVersionRecord = {
   sourceUrl: string;
 };
 
+type PokemonLootRecord = {
+  itemName: string;
+  itemNameEn: string;
+  itemNamePtBr: string;
+  itemSlug: string;
+  iconUrl: string;
+  category: string;
+  sourceUrl: string;
+  pokemonName: string;
+  pokemonSlug: string;
+  isVariant: boolean;
+};
+
 type PokemonRecord = {
   slug: string;
   dexNumber: number;
@@ -59,6 +72,7 @@ type PokemonRecord = {
   pveMoves?: PokemonMoveRecord[];
   moves?: PokemonMoveRecord[];
   otherVersions?: PokemonVersionRecord[];
+  loot?: PokemonLootRecord[];
 };
 
 type PokemonPayload = {
@@ -171,6 +185,7 @@ async function main() {
     const effectivenessRows: unknown[][] = [];
     const moveRows: unknown[][] = [];
     const versionRows: unknown[][] = [];
+    const lootRows: unknown[][] = [];
 
     for (const pokemon of payload.pokemon) {
       const pokemonId = pokemonIds.get(pokemon.slug);
@@ -202,6 +217,22 @@ async function main() {
       (pokemon.otherVersions ?? []).forEach((version, index) => {
         versionRows.push([pokemonId, version.name, version.slug ?? '', version.iconUrl ?? '', version.sourceUrl ?? '', index]);
       });
+      (pokemon.loot ?? []).forEach((lootItem, index) => {
+        lootRows.push([
+          pokemonId,
+          lootItem.itemName ?? '',
+          lootItem.itemNameEn ?? lootItem.itemName ?? '',
+          lootItem.itemNamePtBr ?? lootItem.itemName ?? '',
+          lootItem.itemSlug ?? '',
+          lootItem.iconUrl ?? '',
+          lootItem.category ?? '',
+          lootItem.sourceUrl ?? '',
+          lootItem.pokemonName ?? pokemon.name,
+          lootItem.pokemonSlug ?? pokemon.slug,
+          Boolean(lootItem.isVariant),
+          index,
+        ]);
+      });
     }
 
     await insertChunked(client, 'pokemon_elements', ['pokemon_id', 'type_name', 'sort_order'], elementRows);
@@ -218,6 +249,12 @@ async function main() {
       'pokemon_versions',
       ['pokemon_id', 'pokemon_name', 'pokemon_slug', 'icon_url', 'source_url', 'sort_order'],
       versionRows,
+    );
+    await insertChunked(
+      client,
+      'pokemon_loot',
+      ['pokemon_id', 'item_name', 'item_name_en', 'item_name_pt_br', 'item_slug', 'icon_url', 'category', 'source_url', 'pokemon_name', 'pokemon_slug', 'is_variant', 'sort_order'],
+      lootRows,
     );
 
     await client.query("update sync_runs set status = 'succeeded', finished_at = now(), message = $1 where scope = 'pokemon' and status = 'running'", [

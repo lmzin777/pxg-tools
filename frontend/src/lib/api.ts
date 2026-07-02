@@ -330,5 +330,6 @@ function mergePokemonDetail(remotePokemon: PokemonDetail, localPokemon: PokemonD
     pvpMoves: remotePokemon.pvpMoves?.length ? remotePokemon.pvpMoves : localPokemon.pvpMoves,
     pveMoves: remotePokemon.pveMoves?.length ? remotePokemon.pveMoves : localPokemon.pveMoves,
     otherVersions: remotePokemon.otherVersions?.length ? remotePokemon.otherVersions : localPokemon.otherVersions,
+    loot: remotePokemon.loot?.length ? remotePokemon.loot : localPokemon.loot,
   };
 }

@@ -39,6 +39,18 @@ public sealed record PokemonVersion(
     string IconUrl,
     string SourceUrl);
 
+public sealed record PokemonLootItem(
+    string ItemName,
+    string ItemNameEn,
+    string ItemNamePtBr,
+    string ItemSlug,
+    string IconUrl,
+    string Category,
+    string SourceUrl,
+    string PokemonName,
+    string PokemonSlug,
+    bool IsVariant);
+
 public sealed record PokemonDetail(
     string Slug,
     int DexNumber,
@@ -60,7 +72,8 @@ public sealed record PokemonDetail(
     IReadOnlyList<PokemonMove> Moves,
     IReadOnlyList<PokemonMove> PvpMoves,
     IReadOnlyList<PokemonMove> PveMoves,
-    IReadOnlyList<PokemonVersion> OtherVersions);
+    IReadOnlyList<PokemonVersion> OtherVersions,
+    IReadOnlyList<PokemonLootItem> Loot);
 
 public sealed record PokemonOverview(
     IReadOnlyList<string> Generations,

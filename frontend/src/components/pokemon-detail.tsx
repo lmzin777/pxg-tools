@@ -2,15 +2,12 @@ import Link from 'next/link';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { EntityLink, entityQueryHref } from '@/components/entity-link';
 import { FavoriteButton } from '@/components/favorite-button';
-import { RelatedCrafts } from '@/components/related-sections';
-import { findCraftsForPokemonMaterials } from '@/lib/relationships';
-import { canonicalPokemonType, getTypeIconSrc } from '@/lib/tools-data';
-import type { Craft } from '@/types/crafts';
-import type { PokemonDetail, PokemonEffectivenessGroup, PokemonEvolution, PokemonMove, PokemonVersion } from '@/types/pokemon';
+import { canonicalPokemonType, getCombinedMultiplier, getTypeIconSrc, pokemonTypes, type PokemonType } from '@/lib/tools-data';
+import type { PokemonDetail, PokemonEvolution, PokemonLootItem, PokemonMove, PokemonVersion } from '@/types/pokemon';
 
-export function PokemonDetailView({ pokemon, crafts = [] }: { pokemon: PokemonDetail; crafts?: Craft[] }) {
+export function PokemonDetailView({ pokemon }: { pokemon: PokemonDetail }) {
   const safePokemon = normalizePokemonDetail(pokemon);
-  const materialCrafts = findCraftsForPokemonMaterials(safePokemon, crafts);
+  const visibleLoot = getVisiblePokemonLoot(safePokemon);
 
   return (
     <article className="grid gap-5">
@@ -52,17 +49,13 @@ export function PokemonDetailView({ pokemon, crafts = [] }: { pokemon: PokemonDe
       </section>
 
       <PokemonInfoPanel pokemon={safePokemon} />
-      <RelatedCrafts
-        title="Crafts ligados aos materiais"
-        crafts={materialCrafts}
-        empty="Nenhum craft ligado aos materiais deste Pokemon foi encontrado nos dados atuais."
-      />
+      <PokemonLootTable loot={visibleLoot} />
       <div className="grid gap-5 xl:grid-cols-[1fr_1fr]">
         <PokemonEvolutionChain evolutions={safePokemon.evolutions} />
         <PokemonVersionsGrid versions={safePokemon.otherVersions} fallbackImageUrl={safePokemon.detailSpriteUrl || safePokemon.spriteUrl} />
       </div>
       <PokemonMovesSection pokemon={safePokemon} />
-      <PokemonEffectivenessTable groups={safePokemon.effectiveness} />
+      <PokemonEffectivenessTable pokemon={safePokemon} />
     </article>
   );
 }
@@ -77,7 +70,72 @@ function normalizePokemonDetail(pokemon: PokemonDetail): PokemonDetail {
     pvpMoves: Array.isArray(pokemon.pvpMoves) ? pokemon.pvpMoves : [],
     pveMoves: Array.isArray(pokemon.pveMoves) ? pokemon.pveMoves : [],
     otherVersions: withInferredVersions(pokemon, Array.isArray(pokemon.otherVersions) ? pokemon.otherVersions : []),
+    loot: Array.isArray(pokemon.loot) ? pokemon.loot : [],
   };
+}
+
+function getVisiblePokemonLoot(pokemon: PokemonDetail) {
+  const loot = Array.isArray(pokemon.loot) ? pokemon.loot : [];
+  const exactLoot = loot.filter((item) => item.pokemonSlug === pokemon.slug);
+
+  if (exactLoot.length) {
+    return exactLoot;
+  }
+
+  return loot.filter((item) => !item.isVariant);
+}
+
+function PokemonLootTable({ loot }: { loot: PokemonLootItem[] }) {
+  return (
+    <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+      <h3 className="text-lg font-black text-white">Loot</h3>
+      <p className="mt-1 text-sm text-slate-400">Itens conhecidos que podem cair deste Pokemon. As chances de drop ficam fora desta versao.</p>
+      <div className="mt-3 overflow-x-auto">
+        <table className="w-full min-w-[620px] border-collapse text-sm">
+          <thead className="bg-cyan-300/10 text-left text-cyan-100">
+            <tr>
+              <th className="border border-white/10 p-3">Item</th>
+              <th className="border border-white/10 p-3">Categoria</th>
+              <th className="border border-white/10 p-3">Fonte</th>
+            </tr>
+          </thead>
+          <tbody>
+            {loot.length ? (
+              loot.map((item, index) => (
+                <tr key={`${item.pokemonSlug}-${item.itemSlug}-${index}`} className="odd:bg-slate-950/40 even:bg-white/[0.03]">
+                  <td className="border border-white/10 p-3">
+                    <EntityLink href={entityQueryHref('/items', 'item', item.itemSlug || item.itemName)}>
+                      <span className="inline-flex items-center gap-2 font-black text-cyan-100">
+                        {item.iconUrl ? <img src={item.iconUrl} alt="" className="h-7 w-7 object-contain" loading="lazy" /> : null}
+                        {item.itemNamePtBr || item.itemName}
+                      </span>
+                    </EntityLink>
+                    {item.itemNameEn && item.itemNameEn !== item.itemNamePtBr ? (
+                      <span className="mt-1 block text-xs text-slate-500">EN: {item.itemNameEn}</span>
+                    ) : null}
+                  </td>
+                  <td className="border border-white/10 p-3 text-slate-300">{item.category || '-'}</td>
+                  <td className="border border-white/10 p-3">
+                    {item.sourceUrl ? (
+                      <a href={item.sourceUrl} target="_blank" rel="noreferrer" className="font-bold text-cyan-100 hover:text-amber-100">
+                        Wiki
+                      </a>
+                    ) : (
+                      <span className="text-slate-500">-</span>
+                    )}
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td className="border border-white/10 p-3 text-slate-400" colSpan={3}>Nenhum loot listado para este Pokemon nos dados atuais.</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
 }
 
 function PokemonInfoPanel({ pokemon }: { pokemon: PokemonDetail }) {
@@ -133,8 +191,8 @@ function PokemonMovesTable({ title, moves = [] }: { title: string; moves?: Pokem
           </thead>
           <tbody>
             {moves.length ? (
-              moves.map((move) => (
-                <tr key={`${title}-${move.name}`} className="bg-slate-950/40">
+              moves.map((move, index) => (
+                <tr key={`${title}-${move.name}-${move.cooldown}-${move.level}-${index}`} className="bg-slate-950/40">
                   <td className="border border-white/10 p-3">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="font-bold text-white">{move.name}</span>
@@ -150,7 +208,7 @@ function PokemonMovesTable({ title, moves = [] }: { title: string; moves?: Pokem
               ))
             ) : (
               <tr>
-                <td className="border border-white/10 p-3 text-slate-400" colSpan={5}>Nenhum movimento listado para esta categoria.</td>
+                <td className="border border-white/10 p-3 text-slate-400" colSpan={4}>Nenhum movimento listado para esta categoria.</td>
               </tr>
             )}
           </tbody>
@@ -230,25 +288,157 @@ function PokemonMovesSection({ pokemon }: { pokemon: PokemonDetail }) {
   );
 }
 
-function PokemonEffectivenessTable({ groups = [] }: { groups?: PokemonEffectivenessGroup[] }) {
+function PokemonEffectivenessTable({ pokemon }: { pokemon: PokemonDetail }) {
+  const defenseTypes = getCanonicalTypes(pokemon.elements);
+  const defenseRows = buildDefenseEffectivenessRows(defenseTypes);
+  const attackRows = buildAttackEffectivenessRows(defenseTypes);
+
+  return (
+    <div className="grid gap-5 xl:grid-cols-2">
+      <EffectivenessMatrix
+        title={`Efetivo contra ${pokemon.name}`}
+        description={`Tipos de ataque que causam mais ou menos dano em ${pokemon.name}.`}
+        empty="Tipos defensivos nao listados para este Pokemon."
+        rows={defenseRows}
+        firstColumn="Tipo atacante"
+      />
+      <EffectivenessMatrix
+        title={`${pokemon.name} contra outros tipos`}
+        description={`Melhor cobertura usando os tipos de ${pokemon.name}.`}
+        empty="Tipos ofensivos nao listados para este Pokemon."
+        rows={attackRows}
+        firstColumn="Tipo defensivo"
+        showAttackType
+      />
+    </div>
+  );
+}
+
+type EffectivenessRow = {
+  type: PokemonType;
+  multiplier: number;
+  attackType?: PokemonType;
+};
+
+function getCanonicalTypes(elements: string[]) {
+  return elements
+    .map((element) => canonicalPokemonType(element))
+    .filter((type): type is PokemonType => Boolean(type));
+}
+
+function buildDefenseEffectivenessRows(defenseTypes: PokemonType[]): EffectivenessRow[] {
+  if (!defenseTypes.length) return [];
+
+  return pokemonTypes
+    .map((attackType) => ({
+      type: attackType,
+      multiplier: getCombinedMultiplier(attackType, defenseTypes),
+    }))
+    .sort(sortEffectivenessRows);
+}
+
+function buildAttackEffectivenessRows(attackTypes: PokemonType[]): EffectivenessRow[] {
+  if (!attackTypes.length) return [];
+
+  return pokemonTypes
+    .map((defenseType) => {
+      const bestAttack = attackTypes
+        .map((attackType) => ({
+          attackType,
+          multiplier: getCombinedMultiplier(attackType, [defenseType]),
+        }))
+        .sort((first, second) => second.multiplier - first.multiplier || first.attackType.localeCompare(second.attackType))[0];
+
+      return {
+        type: defenseType,
+        attackType: bestAttack.attackType,
+        multiplier: bestAttack.multiplier,
+      };
+    })
+    .sort(sortEffectivenessRows);
+}
+
+function sortEffectivenessRows(first: EffectivenessRow, second: EffectivenessRow) {
+  return second.multiplier - first.multiplier || first.type.localeCompare(second.type);
+}
+
+function EffectivenessMatrix({
+  title,
+  description,
+  empty,
+  rows,
+  firstColumn,
+  showAttackType = false,
+}: {
+  title: string;
+  description: string;
+  empty: string;
+  rows: EffectivenessRow[];
+  firstColumn: string;
+  showAttackType?: boolean;
+}) {
   return (
     <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
-      <h3 className="text-lg font-black text-white">Efetividades</h3>
-      <div className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-        {groups.length ? (
-          groups.map((group) => (
-            <div key={group.category} className="rounded-lg border border-white/10 bg-slate-950/50 p-3">
-              <h4 className="font-black text-white">{group.category}</h4>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {group.types.map((type) => <Pill key={`${group.category}-${type}`}>{type}</Pill>)}
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="text-sm text-slate-400">Efetividades nao listadas.</p>
-        )}
+      <h3 className="text-lg font-black text-white">{title}</h3>
+      <p className="mt-1 text-sm text-slate-400">{description}</p>
+      <div className="mt-3 overflow-x-auto">
+        <table className="w-full min-w-[520px] border-collapse text-sm">
+          <thead className="bg-cyan-300/10 text-left text-cyan-100">
+            <tr>
+              <th className="border border-white/10 p-3">{firstColumn}</th>
+              {showAttackType ? <th className="border border-white/10 p-3">Melhor tipo atacante</th> : null}
+              <th className="border border-white/10 p-3">Resultado</th>
+              <th className="border border-white/10 p-3">Multiplicador</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.length ? (
+              rows.map((row) => (
+                <tr key={`${title}-${row.type}`} className="odd:bg-slate-950/40 even:bg-white/[0.03]">
+                  <td className="border border-white/10 p-3">
+                    <TypeBadge type={row.type} />
+                  </td>
+                  {showAttackType ? (
+                    <td className="border border-white/10 p-3">
+                      {row.attackType ? <TypeBadge type={row.attackType} /> : <span className="text-slate-500">-</span>}
+                    </td>
+                  ) : null}
+                  <td className="border border-white/10 p-3 text-slate-300">{effectivenessLabel(row.multiplier)}</td>
+                  <td className="border border-white/10 p-3 font-black text-white">{formatMultiplier(row.multiplier)}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td className="border border-white/10 p-3 text-slate-400" colSpan={showAttackType ? 4 : 3}>{empty}</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </section>
+  );
+}
+
+function effectivenessLabel(multiplier: number) {
+  if (multiplier >= 4) return 'Extremamente efetivo';
+  if (multiplier > 1) return 'Muito efetivo';
+  if (multiplier === 1) return 'Normal';
+  if (multiplier === 0) return 'Sem efeito';
+  return 'Pouco efetivo';
+}
+
+function formatMultiplier(multiplier: number) {
+  return `${Number.isInteger(multiplier) ? multiplier : multiplier.toFixed(2).replace(/0$/, '')}x`;
+}
+
+function TypeBadge({ type }: { type: PokemonType }) {
+  const iconSrc = getTypeIconSrc(type);
+
+  return (
+    <span className="inline-flex items-center gap-2 font-bold text-white">
+      {iconSrc ? <img src={iconSrc} alt="" className="h-5 w-5 object-contain" loading="lazy" /> : null}
+      {type}
+    </span>
   );
 }
 
@@ -271,6 +461,7 @@ function PokemonVersionsGrid({ versions = [], fallbackImageUrl = '' }: { version
 
 function PokemonVersionLink({ version, fallbackImageUrl }: { version: PokemonVersion; fallbackImageUrl: string }) {
   const imageUrl = version.iconUrl || fallbackImageUrl;
+  const versionSlug = version.slug || slugify(version.name);
   const content = (
     <span className="grid grid-cols-[36px_1fr] items-center gap-2 rounded-lg border border-white/10 bg-slate-950/50 p-2 text-sm font-black text-cyan-100 transition hover:border-amber-300/50 hover:text-amber-100">
       {imageUrl ? <img src={imageUrl} alt="" className="h-9 w-9 object-contain" loading="lazy" /> : <span className="h-9 w-9 rounded-md bg-slate-900" />}
@@ -278,15 +469,7 @@ function PokemonVersionLink({ version, fallbackImageUrl }: { version: PokemonVer
     </span>
   );
 
-  if (version.sourceUrl) {
-    return (
-      <a href={version.sourceUrl} target="_blank" rel="noreferrer">
-        {content}
-      </a>
-    );
-  }
-
-  return <EntityLink href={`/pokedex/${version.slug || slugify(version.name)}`}>{content}</EntityLink>;
+  return <EntityLink href={`/pokedex/${versionSlug}`}>{content}</EntityLink>;
 }
 
 function Info({ title, value, linkValue = false, wide = false }: { title: string; value: string; linkValue?: boolean; wide?: boolean }) {
